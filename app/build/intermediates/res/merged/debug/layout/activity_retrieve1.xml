@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_background"
+    android:orientation="vertical"
+    tools:context=".retrievePassword.view.RetrieveActivity1">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/navigation_retrieve1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/base_bg_color"
+        app:left_src="@drawable/back_top"
+        app:right_src="@null"
+        app:text_title="找回密码"
+        app:title_color="@color/text_color"
+        app:title_size="7sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/shoppinglist"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext_black"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帐号"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_code_retrieve1"
+                android:layout_marginLeft="10dp"
+                android:background="@color/base_bg_color"
+                android:hint="用户名/邮箱/手机号"
+                android:textColorHint="@color/hint_color"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_retrieve1_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/register_next"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="下一步"
+            android:textColor="@color/base_bg_color"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

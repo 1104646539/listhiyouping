@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_main">10sp</dimen>
+    <dimen name="button_margin">2dp</dimen>
+    <dimen name="margin_Size10">10dp</dimen>
+    <dimen name="img_margin">2dp</dimen>
+    <dimen name="bigimg_margin">6dp</dimen>
+    <dimen name="title_margin">6dp</dimen>
+    <dimen name="recommend_textsize">14sp</dimen>
+    <dimen name="recommend_textmargin">5dp</dimen>
+    <!-- 首页的item高度，1800*1200分辨率下 -->
+    <dimen name="home_height_90">150dp</dimen>
+    <dimen name="home_height_170">260dp</dimen>
+    <dimen name="home_height_150">250dp</dimen>
+    <dimen name="topnatigationbar_left">10dp</dimen>
+
+    <dimen name="titleBar_PaddingTop">0dp</dimen>
+</resources>

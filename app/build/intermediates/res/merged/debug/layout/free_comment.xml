@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/comment_headPortrait"
+            android:scaleType="centerCrop"
+            android:src="@drawable/commend_head"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/comment_name"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="168****1111"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/comment_time"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="2016-10-08 17:30:20"
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/comment_info"
+                android:paddingRight="8dp"
+                android:text="宝贝收到了，很开心，非常实用呢"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/comment_reply_iv"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/commend_reply"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/comment_reply_tv"
+                    android:layout_marginLeft="3dp"
+                    android:text="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/comment_zan_iv"
+                    android:layout_marginLeft="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/commend_zan"/>
+
+                <TextView
+                    android:id="@+id/comment_zan_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.lishi.baijiaxing.view.MyListView
+        android:id="@+id/listView_comment_reply"
+        android:layout_width="match_parent"
+        android:divider="@color/item_padding"
+        android:background="@color/item_padding"
+        android:layout_height="wrap_content">
+    </com.lishi.baijiaxing.view.MyListView>
+</LinearLayout>

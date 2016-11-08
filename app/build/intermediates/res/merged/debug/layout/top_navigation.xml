@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_top_navigation"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:background="#FFFFFF"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_topnavigation_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="8dp"
+            android:drawableTop="@drawable/scanner_white"
+            android:gravity="center"
+            android:text="扫一扫"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="7"
+        android:background="@drawable/top_navigation_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#00FFFFFF"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:src="@drawable/search"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#00FFFFFF"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_top_navigation_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="8dp"
+        android:drawableTop="@drawable/message_white"
+        android:gravity="center"
+        android:text="消息"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"/>
+    </LinearLayout>
+</LinearLayout>

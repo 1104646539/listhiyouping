@@ -1,0 +1,70 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- 这两个属性让软件的开启速度看起来要快（其实就是让程序初始化时窗口是透明的） -->
+        <!--<item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>-->
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="StyleProgressBarMini" parent="Widget.AppCompat.ProgressBar.Horizontal">
+
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/rob_progressbar_sytle</item>
+
+    </style>
+
+    <style name="YiYuanProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:maxWidth">160dp</item>
+        <item name="android:progressDrawable">@drawable/rob_progressbar_sytle</item>
+
+    </style>
+
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_background</item>
+        <item name="android:minHeight">14dp</item>
+        <item name="android:maxHeight">50dp</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="MyDialogStyleBottom" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        ;!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        ;!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        ;!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        ;!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        ;!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        ;!-- 模糊 -->
+    </style>
+</resources>

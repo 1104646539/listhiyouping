@@ -1,0 +1,582 @@
+[
+    {
+        "outputFile": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\values-1800x1200\\values-1800x1200.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 57,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 55,
+                        "endOffset": 202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 43,
+                    "endOffset": 208
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 383,
+                        "endColumn": 43,
+                        "endOffset": 422
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 213,
+                    "endColumn": 43,
+                    "endOffset": 252
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 250,
+                        "endColumn": 43,
+                        "endOffset": 289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 257,
+                    "endColumn": 47,
+                    "endOffset": 300
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 710,
+                        "endColumn": 47,
+                        "endOffset": 753
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 305,
+                    "endColumn": 47,
+                    "endOffset": 348
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 661,
+                        "endColumn": 47,
+                        "endOffset": 704
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 353,
+                    "endColumn": 46,
+                    "endOffset": 395
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 613,
+                        "endColumn": 46,
+                        "endOffset": 655
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 400,
+                    "endColumn": 40,
+                    "endOffset": 436
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 341,
+                        "endColumn": 40,
+                        "endOffset": 377
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 441,
+                    "endColumn": 44,
+                    "endOffset": 481
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 44,
+                        "endOffset": 335
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 486,
+                    "endColumn": 50,
+                    "endOffset": 532
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 523,
+                        "endColumn": 50,
+                        "endOffset": 569
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 537,
+                    "endColumn": 49,
+                    "endOffset": 582
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 472,
+                        "endColumn": 49,
+                        "endOffset": 517
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 587,
+                    "endColumn": 40,
+                    "endOffset": 623
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 208,
+                        "endColumn": 40,
+                        "endOffset": 244
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 628,
+                    "endColumn": 49,
+                    "endOffset": 673
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 815,
+                        "endColumn": 49,
+                        "endOffset": 860
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 678,
+                    "endColumn": 42,
+                    "endOffset": 716
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 428,
+                        "endColumn": 42,
+                        "endOffset": 466
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 721,
+                    "endColumn": 52,
+                    "endOffset": 769
+                },
+                "from": {
+                    "file": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 759,
+                        "endColumn": 52,
+                        "endOffset": 807
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\values-1800x1200\\values-1800x1200.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 57,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 55,
+                        "endOffset": 202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 43,
+                    "endOffset": 208
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 383,
+                        "endColumn": 43,
+                        "endOffset": 422
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 213,
+                    "endColumn": 43,
+                    "endOffset": 252
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 250,
+                        "endColumn": 43,
+                        "endOffset": 289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 257,
+                    "endColumn": 47,
+                    "endOffset": 300
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 710,
+                        "endColumn": 47,
+                        "endOffset": 753
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 305,
+                    "endColumn": 47,
+                    "endOffset": 348
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 661,
+                        "endColumn": 47,
+                        "endOffset": 704
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 353,
+                    "endColumn": 46,
+                    "endOffset": 395
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 613,
+                        "endColumn": 46,
+                        "endOffset": 655
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 400,
+                    "endColumn": 40,
+                    "endOffset": 436
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 341,
+                        "endColumn": 40,
+                        "endOffset": 377
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 441,
+                    "endColumn": 44,
+                    "endOffset": 481
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 44,
+                        "endOffset": 335
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 486,
+                    "endColumn": 50,
+                    "endOffset": 532
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 523,
+                        "endColumn": 50,
+                        "endOffset": 569
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 537,
+                    "endColumn": 49,
+                    "endOffset": 582
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 472,
+                        "endColumn": 49,
+                        "endOffset": 517
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 587,
+                    "endColumn": 40,
+                    "endOffset": 623
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 208,
+                        "endColumn": 40,
+                        "endOffset": 244
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 628,
+                    "endColumn": 49,
+                    "endOffset": 673
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 815,
+                        "endColumn": 49,
+                        "endOffset": 860
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 678,
+                    "endColumn": 42,
+                    "endOffset": 716
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 428,
+                        "endColumn": 42,
+                        "endOffset": 466
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 721,
+                    "endColumn": 52,
+                    "endOffset": 769
+                },
+                "from": {
+                    "file": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\values-1800x1200\\dimens.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 759,
+                        "endColumn": 52,
+                        "endOffset": 807
+                    }
+                }
+            }
+        ]
+    }
+]

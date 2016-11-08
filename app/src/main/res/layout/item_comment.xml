@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:background="@color/item_padding"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/base_bg_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_comment_photo"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/user_photo"/>
+
+            <TextView
+                android:id="@+id/tv_comment_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="咸鱼"
+                android:textColor="@color/tv_gray_commodity"/>
+
+            <ImageView
+                android:id="@+id/iv_comment_user_level"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/user_leve"/>
+
+            <TextView
+                android:id="@+id/tv_comment_commentdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:gravity="center|right"
+                android:text="2016-7-8"
+                android:textColor="@color/tv_black"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/item_padding"/>
+
+        <ImageView
+            android:id="@+id/iv_comment_comment_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/star"/>
+
+        <TextView
+            android:id="@+id/tv_comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="真东西真好!!"
+            android:textSize="12sp"/>
+
+        <com.lishi.baijiaxing.view.MyGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:visibility="gone"
+            android:id="@+id/gridview_comment"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:numColumns="3"/>
+
+        <TextView
+            android:id="@+id/tv_comment_shoppingdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:text="购买日期：2016-7-1"
+            android:textColor="@color/tv_black"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

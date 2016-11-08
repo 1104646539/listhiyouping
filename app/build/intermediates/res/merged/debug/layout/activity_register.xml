@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_background"
+    android:orientation="vertical"
+    tools:context=".register.view.RegisterActivity1">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/navigation_register1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/base_bg_color"
+        app:left_src="@drawable/back_top"
+        app:right_src="@null"
+        app:text_title="快速注册"
+        app:title_color="@color/text_color"
+        app:title_size="7sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/shoppinglist"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edittext_black"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="+86"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="0.5px"
+                android:layout_height="match_parent"
+                android:background="#c8c8c8"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:maxLength="11"
+                android:id="@+id/edit_code_register1"
+                android:singleLine="true"
+                android:phoneNumber="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@color/base_bg_color"
+                android:hint="请输入手机号"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="25dp"
+            android:layout_gravity="center"
+            android:layout_height="25dp"
+            android:id="@+id/checkbox_register1"
+            android:button="@drawable/checkbox_register"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同意"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="百姓图腾用户协议"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_next"
+        android:clickable="true"
+        android:gravity="center"
+        android:id="@+id/tv_register1_next"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="下一步"
+        android:textColor="@color/base_bg_color"
+        android:textSize="16sp"/>
+</LinearLayout>

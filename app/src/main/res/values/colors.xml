@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_bg_color">#FFFFFF</color>
+    <color name="item_padding">#F4F4F4</color>
+    <color name="text_red">#ed292a</color>
+    <color name="text_gray">#969696</color>
+    <color name="integral_gray">#BBBBBB</color>
+    <color name="integral_blue">#2973ed</color>
+    <color name="integral_red">#ff8431</color>
+    <color name="cart_button_red">#ed292a</color>
+    <color name="background_topteacher">#eeeadf</color>
+    <color name="background_collect">#e1dcd6</color>
+    <color name="text_color">#323232</color>
+    <color name="tv_green">#7bbc52</color>
+    <color name="tv_orange">#d99341</color>
+    <color name="tv_black">#999999</color>
+    <color name="tv_black_selected">#3d3d3d</color>
+    <color name="tv_gray_commodity">#666666</color>
+    <color name="tv_gray_details">#333333</color>
+    <color name="shoppinglist">#dcdcdc</color>
+    <color name="tv_yellow">#f7a416</color>
+    <color name="top">#77e1dac3</color>
+    <color name="login_underline">#c8c8c8</color>
+    <color name="baixingtuteng">#714738</color>
+    <color name="login_background">#fafafa</color>
+    <color name="login_button_background">#a6634a</color>
+    <color name="hint_color">#BEBEBE</color>    
+    <color name="rob_red">#ef2b2c</color>
+    <color name="rob_progressbar">#f79592</color>
+    <color name="background_myorderform">#f1f2f6</color>
+    <color name="home_textColor_red">#ed292a</color>
+    <color name="home_item_textColor_orange">#fc8200</color>
+    <color name="item4_2_name">#575757</color>
+    <color name="free_item_margin">#e2e2e2</color>
+    <color name="black">#000000</color>
+    <color name="yiyuan_details_textColor">#8d8d8f</color>
+    <color name="yiyuan_details_bg">#f8f8f8</color>
+    <color name="customize_bg">#F4F4F4</color>
+    <color name="submit_order_textcolor">#38383c</color>
+    <color name="gray_bg">#f1f2f6</color>
+    <color name="text_gray_red">#de5152</color>
+
+
+</resources>
