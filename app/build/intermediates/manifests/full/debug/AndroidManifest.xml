@@ -81,9 +81,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
-            android:name="com.lishi.baijiaxing.wxapi.WXEntryActivity"
+            android:name="com.lishi.baijiaxing.wxapi.LoginActivity"
             android:exported="true"
-            android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
@@ -128,7 +127,9 @@
             android:name="com.lishi.baijiaxing.free.view.FreeWinningActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
-        <activity android:name="com.lishi.baijiaxing.yiyuan.view.YiYuanActivity" >
+        <activity
+            android:name="com.lishi.baijiaxing.yiyuan.view.YiYuanActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name="com.lishi.baijiaxing.yiyuan.view.YiYuanDetailsActivity"
@@ -194,6 +195,12 @@
         <activity
             android:name="com.lishi.baijiaxing.freeDesign.view.ServiceProgressActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/myWxStyle" >
         </activity>
     </application>
 

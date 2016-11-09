@@ -4131,6 +4131,7 @@
     <color name="text_gray_red">#de5152</color>
     <color name="text_red">#ed292a</color>
     <color name="top">#77e1dac3</color>
+    <color name="transparent">#00000000</color>
     <color name="tv_black">#999999</color>
     <color name="tv_black_selected">#3d3d3d</color>
     <color name="tv_gray_commodity">#666666</color>
@@ -5914,5 +5915,11 @@
         <item name="android:maxWidth">160dp</item>
         <item name="android:progressDrawable">@drawable/rob_progressbar_sytle</item>
 
+    </style>
+    <style name="myWxStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
     </style>
 </resources>

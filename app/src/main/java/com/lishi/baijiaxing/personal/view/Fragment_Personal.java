@@ -2,7 +2,6 @@ package com.lishi.baijiaxing.personal.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +19,9 @@ import com.lishi.baijiaxing.myyiyuan.view.MyYiYuanActivity;
 import com.lishi.baijiaxing.personal.adapter.MyOrderFormAdapter;
 import com.lishi.baijiaxing.personal.presenter.PersonalPresenterImpl;
 import com.lishi.baijiaxing.utils.LocalUserInfo;
-import com.lishi.baijiaxing.wxapi.WXEntryActivity;
+import com.lishi.baijiaxing.wxapi.LoginActivity;
 import com.lishi.baijiaxing.userManager.view.UserManagerActivity;
 import com.lishi.baijiaxing.view.MyGridView;
-import com.lishi.baijiaxing.wxapi.model.WXUserInfo;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -69,7 +67,7 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.iv_user_icon://头像
-                Intent startLoginActivity = new Intent(getActivity(), WXEntryActivity.class);
+                Intent startLoginActivity = new Intent(getActivity(), LoginActivity.class);
                 startActivityForResult(startLoginActivity, 0);
                 break;
             case R.id.personal_userManager://帐号管理
@@ -180,9 +178,13 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (!LocalUserInfo.getInstance().isNull()) {
-            tv_user_name.setText(LocalUserInfo.getInstance().getNickName()+"");
-            Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon).onStart();
+        if (resultCode == getActivity().RESULT_OK) {
+            if (data.getStringExtra("result").equals("success")) {
+                if (!LocalUserInfo.getInstance().isNull()) {
+                    tv_user_name.setText(LocalUserInfo.getInstance().getNickName() + "");
+                    Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon).onStart();
+                }
+            }
         }
     }
 }

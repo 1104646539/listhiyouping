@@ -59,9 +59,6 @@ public class LocalUserInfo implements Parcelable {
         this.nickName = nickName;
     }
 
-    public static Creator<LocalUserInfo> getCREATOR() {
-        return CREATOR;
-    }
 
     private LocalUserInfo() {
     }
@@ -107,8 +104,10 @@ public class LocalUserInfo implements Parcelable {
     };
 
     public boolean isNull() {
-        if (nid.equals("") || nickName.equals("")) {
-            return true;
+        if (LocalUserInfoHolder.localUserInfo != null) {
+            if (LocalUserInfoHolder.localUserInfo.nid==null|| LocalUserInfoHolder.localUserInfo.nickName==null) {
+                return true;
+            }
         }
         return false;
     }

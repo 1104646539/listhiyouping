@@ -1,28 +1,22 @@
 package com.lishi.baijiaxing.wxapi;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.lishi.baijiaxing.R;
-import com.lishi.baijiaxing.activity.MainActivity;
-import com.lishi.baijiaxing.register.RegisterManger;
-import com.lishi.baijiaxing.register.view.RegisterActivity1;
-import com.lishi.baijiaxing.retrievePassword.view.RetrieveActivity1;
 import com.lishi.baijiaxing.base.BaseActivity;
+import com.lishi.baijiaxing.register.RegisterManger;
 import com.lishi.baijiaxing.utils.LocalUserInfo;
+import com.lishi.baijiaxing.utils.WXUtils;
 import com.lishi.baijiaxing.wxapi.model.WXTokenBean;
 import com.lishi.baijiaxing.wxapi.model.WXUserInfo;
-import com.lishi.baijiaxing.wxapi.view.SignInView;
-import com.lishi.baijiaxing.utils.WXUtils;
-import com.lishi.baijiaxing.view.TopNavigationBar;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
@@ -38,24 +32,19 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * 登录
- */
-public class WXEntryActivity extends BaseActivity implements View.OnClickListener, SignInView, IWXAPIEventHandler {
-    private String TAG = "WXEntryActivity";
-    private TextView tv_login_register;//注册
-    private TextView tv_login_retrievepassword;
-    private TopNavigationBar mTopNavigationBar;
-    private ImageView login_wxChar, login_qq;
+public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler {
     private IWXAPI api;//微信
     private OkHttpClient httpClient;
-    /**
-     * 是否已经登录
-     */
-    private boolean isEntrySuccess = false;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
+            if (msg.what == 0) {
+                Intent ss = new Intent();
+                ss.putExtra("result", "success");
+                setResult(RESULT_OK, ss);
+                Log.e("handleMessage", "页面关闭页面关闭页面关闭页面关闭");
+            }
+
             finish();
         }
     };
@@ -63,74 +52,25 @@ public class WXEntryActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login2);
+
         //注册到微信
         if (api == null) {
             registerWxChar(WXUtils.WXAPP_ID);
             api.handleIntent(getIntent(), this);
         }
-
-        RegisterManger.getInstantion().addActivity(this);
-        findId();
-        initView();
+        if (!api.isWXAppInstalled()) {
+            Toast.makeText(this, "请先安装微信", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        wxLogin();
     }
-
-    private void initView() {
-        tv_login_register.setOnClickListener(this);
-        tv_login_retrievepassword.setOnClickListener(this);
-        mTopNavigationBar.setOnTopClick(new TopNavigationBar.OnTopClick() {
-            @Override
-            public void onTopLeftClick(View view) {
-                finish();
-            }
-
-            @Override
-            public void onTopRightClick(View view) {
-
-            }
-        });
-
-        login_wxChar.setOnClickListener(this);
-        login_qq.setOnClickListener(this);
-    }
-
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
         api.handleIntent(intent, this);
         handleIntent(intent);
-    }
-
-    private void findId() {
-        tv_login_register = (TextView) findViewById(R.id.tv_login_register);
-        tv_login_retrievepassword = (TextView) findViewById(R.id.tv_login_retrievepassword);
-        mTopNavigationBar = (TopNavigationBar) findViewById(R.id.navigation_login);
-        login_wxChar = (ImageView) findViewById(R.id.login_wxChar);
-        login_qq = (ImageView) findViewById(R.id.login_qq);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tv_login_register://注册
-                Intent startRegisterActivity = new Intent(this, RegisterActivity1.class);
-                startActivity(startRegisterActivity);
-                break;
-            case R.id.tv_login_retrievepassword://找回密码
-                Intent startRetrieveActivity = new Intent(this, RetrieveActivity1.class);
-                startActivity(startRetrieveActivity);
-                break;
-            case R.id.login_wxChar://微信登录
-                if (!api.isWXAppInstalled()) {
-                    Toast.makeText(this, "请先安装微信", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                wxLogin();
-                break;
-            case R.id.login_qq:
-                break;
-        }
     }
 
     /**
@@ -149,30 +89,16 @@ public class WXEntryActivity extends BaseActivity implements View.OnClickListene
      * @param wxappId
      */
     private void registerWxChar(String wxappId) {
-        api = WXAPIFactory.createWXAPI(this, wxappId, true);
+        api = WXAPIFactory.createWXAPI(this, wxappId);
         api.registerApp(wxappId);
-    }
-
-    @Override
-    public void onSignIn() {
-
-    }
-
-    @Override
-    public void onSignInSuccess() {
-        Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onSignInFailed() {
-
     }
 
     // 微信发送请求到第三方应用时，会回调到该方法
     @Override
     public void onReq(BaseReq req) {
-        switch (req.getType()) {
-        }
+//        switch (req.getType()) {
+//        }
+        Log.e("onReq", "ddsf" + req.getType());
     }
 
     // 第三方应用发送到微信的请求处理后的响应结果，会回调到该方法
@@ -184,12 +110,16 @@ public class WXEntryActivity extends BaseActivity implements View.OnClickListene
                 result = R.string.errcode_success;
                 String code = ((SendAuth.Resp) resp).code;
                 startWxToken(code);
+                Toast.makeText(this, "result=" + "发送成功", Toast.LENGTH_SHORT).show();
                 break;
             case BaseResp.ErrCode.ERR_USER_CANCEL:
                 result = R.string.errcode_cancel;
+                Toast.makeText(this, "result=" + "发送取消", Toast.LENGTH_SHORT).show();
+                mHandler.sendEmptyMessage(2);
                 break;
             case BaseResp.ErrCode.ERR_AUTH_DENIED:
                 result = R.string.errcode_deny;
+                Toast.makeText(this, "result=" + "发送拒绝", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 result = R.string.errcode_unknown;
@@ -210,14 +140,14 @@ public class WXEntryActivity extends BaseActivity implements View.OnClickListene
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.i("onFailure", "error=" + e.toString());
+                Log.e("onFailure", "error=" + e.toString());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 Gson gson = new Gson();
                 WXTokenBean wxToken = gson.fromJson(response.body().string(), WXTokenBean.class);
-                Log.i("onResponse", "gson=" + wxToken.toString());
+                Log.e("onResponse", " =" + wxToken.toString());
                 getUserInfo(wxToken);
             }
         });
@@ -238,46 +168,24 @@ public class WXEntryActivity extends BaseActivity implements View.OnClickListene
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.i("onFailure", "userInfo error=" + e.toString());
+                Log.e("onFailure", "userInfo error=" + e.toString());
+                mHandler.sendEmptyMessage(1);
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 Gson gson = new Gson();
                 WXUserInfo wxUserInfo = gson.fromJson(response.body().string(), WXUserInfo.class);
-                Log.i("onResponse", "userInfo success=" + wxUserInfo.toString());
+                Log.e("onResponse", "userInfo success=" + wxUserInfo.toString());
                 LocalUserInfo.getInstance().setNickName(wxUserInfo.getNickname());
-                LocalUserInfo.getInstance().setNid("wx"+wxUserInfo.getNickname());
+                LocalUserInfo.getInstance().setNid("wx" + wxUserInfo.getNickname());
                 LocalUserInfo.getInstance().setSex(wxUserInfo.getSex() == 0 ? "女" : "男");
                 LocalUserInfo.getInstance().setPhotoUrl(wxUserInfo.getHeadimgurl());
-               RegisterManger.getInstantion().closeAll();
+                mHandler.sendEmptyMessage(0);
             }
         });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i("onResume", "onResume ");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i("onPause", "onPause");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.i("onRestart", "onRestart");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i("onDestroy", "onDestroy");
-    }
 
     /**
      * 获取根据Token,OpenId得到的微信授权Token的Get请求地址
@@ -292,13 +200,6 @@ public class WXEntryActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void handleIntent(Intent intent) {
-        SendAuth.Resp resp = new SendAuth.Resp(intent.getExtras());
-        if (resp.errCode == BaseResp.ErrCode.ERR_OK) {
-//            String code = resp.code;
-//            Toast.makeText(this, "errcode_success" + code, Toast.LENGTH_SHORT).show();
-//            startWxToken(code);
-            finish();
-        }
     }
 
     /**

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
@@ -16,12 +16,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_bottom.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
@@ -48,12 +48,44 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_popup_enter.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\push_bottom_out.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_fab_out.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\rotating.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\rotating.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\update_loading_progressbar_anim.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\anim\\update_loading_progressbar_anim.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pull_arrow_up.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\pull_arrow_up.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\push_bottom_out.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
@@ -72,20 +104,28 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\anim\\pull_arrow_up.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_snackbar_in.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_fab_in.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\alpha_in.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\anim\\alpha_in.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\push_bottom_out.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pull_arrow_down.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\pull_arrow_down.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\push_bottom_in.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\reverse_anim.xml",
@@ -104,12 +144,16 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_bottom_sheet_slide_out.xml"
     },
     {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pull_arrow_down.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\pull_arrow_down.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pull_arrow_down.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\pull_arrow_down.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
@@ -118,6 +162,10 @@
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\rotating.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\anim\\rotating.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
@@ -132,12 +180,24 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\anim\\push_bottom_in.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\reverse_anim.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\reverse_anim.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
@@ -148,16 +208,32 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\pull_arrow_up.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_bottom_sheet_slide_in.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_fade_out.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_popup_enter.xml"
     },
     {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\update_loading_progressbar_anim.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\anim\\update_loading_progressbar_anim.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\reverse_anim.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\reverse_anim.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
@@ -172,6 +248,10 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\update_loading_progressbar_anim.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\update_loading_progressbar_anim.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_fade_out.xml"
     },
@@ -180,12 +260,28 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_fab_in.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\rotating.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\rotating.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pull_arrow_down.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\anim\\pull_arrow_down.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\alpha_in.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\anim\\alpha_in.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\anim\\alpha_in.xml",

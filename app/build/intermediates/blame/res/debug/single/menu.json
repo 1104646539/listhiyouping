@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\menu\\main.xml"
     },

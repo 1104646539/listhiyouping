@@ -1,47 +1,115 @@
 [
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\discount_icon.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\discount_icon.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circlerect.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\circlerect.xml"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\classity_background.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\classity_background.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_classity_checkbox.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_classity_checkbox.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_classity_checkbox.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_classity_checkbox.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_hot.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\home_hot.xml"
     },
     {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_cart_checkbox.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_cart_checkbox.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_btn_bg.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_btn_bg.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_cart_checkbox.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_cart_checkbox.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_weike_checkbox.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_weike_checkbox.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\latest_buy_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\latest_buy_bg.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar_sytle.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_progressbar_sytle.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\myyiyuan_buy_bg.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\myyiyuan_buy_bg.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\plus_math.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\plus_math.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_register.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\checkbox_register.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_home_checkbox.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_home_checkbox.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circlerect.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\circlerect.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circlerect.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\circlerect.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\discount_icon.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\discount_icon.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_classity_checkbox.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_classity_checkbox.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_classity_checkbox.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_classity_checkbox.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_my_checkbox.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\table_my_checkbox.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\top_navigation_background.xml",
@@ -50,14 +118,6 @@
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_weike_checkbox.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_weike_checkbox.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar_sytle.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_progressbar_sytle.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\register_password.xml",
@@ -72,10 +132,6 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\top_navigation_background.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
@@ -84,48 +140,48 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_button.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\login_button.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_button.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\login_button.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\myyiyuan_buy_bg.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\myyiyuan_buy_bg.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_icon.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\rob_icon.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\classity_background.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\classity_background.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_checked.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\cart_checked.xml"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow.xml"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_checked.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\cart_checked.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_details_bg.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_details_bg.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\plus_math.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\plus_math.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\minus_math.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\minus_math.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_home_checkbox.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_home_checkbox.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_classity_checkbox.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\table_classity_checkbox.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_comment_edit.xml",
@@ -134,14 +190,6 @@
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_progressbar.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_progressbar.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circlerect.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\circlerect.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_btn_bg_white.xml",
@@ -156,10 +204,6 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
@@ -168,36 +212,48 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_btn_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\yiyuan_btn_bg.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\wheel_val.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_circular.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\button_circular.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_background.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\star_background.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_my_checkbox.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_my_checkbox.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_normal.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\point_yellow_normal.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_design_helper_dialoge.xml",
@@ -208,16 +264,32 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_details_bg.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_black.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\edittext_black.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_black.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\edittext_black.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_anonymity.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\checkbox_anonymity.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_design_apply.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\free_design_apply.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
@@ -232,6 +304,10 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_weike_checkbox.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
     },
@@ -244,6 +320,10 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\plus_math.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_progressbar.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_progressbar.xml"
     },
@@ -254,6 +334,10 @@
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_cart_checkbox.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\table_cart_checkbox.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -272,12 +356,24 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\free_design_helper_dialoge.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_black.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\edittext_black.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\item_cart_frame.xml",
@@ -292,40 +388,48 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_register.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\checkbox_register.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_design_helper_dialoge.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\free_design_helper_dialoge.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_normal.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_normal.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_btn_bg_white.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\yiyuan_btn_bg_white.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\register_password.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\register_password.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_lighted.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_lighted.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\discount_icon.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\discount_icon.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_design_apply.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\free_design_apply.xml"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
@@ -336,10 +440,6 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\register_password.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\myyiyuan_buy_bg.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\myyiyuan_buy_bg.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_anonymity.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\checkbox_anonymity.xml"
     },
@@ -348,56 +448,24 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\checkbox_anonymity.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_icon.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_icon.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_home_checkbox.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_home_checkbox.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_progressbar.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\discount_icon.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\discount_icon.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_checked.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\cart_checked.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\item_cart_frame.xml",
@@ -412,24 +480,144 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_icon.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_hot.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\home_hot.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_normal.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_normal.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_lighted.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\point_yellow_lighted.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_cart_checkbox.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_cart_checkbox.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\latest_buy_bg.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\latest_buy_bg.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_progressbar.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\yiyuan_progressbar.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circlerect.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\circlerect.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\point_yellow.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\plus_math.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\plus_math.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_details_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\yiyuan_details_bg.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_normal.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_normal.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_lighted.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_lighted.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar_sytle.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\rob_progressbar_sytle.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_design_apply.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\free_design_apply.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ind.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\ind.jpg"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\myyiyuan_buy_bg.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\myyiyuan_buy_bg.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_home_checkbox.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_home_checkbox.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\discount_icon.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\discount_icon.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_checked.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\cart_checked.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_hot.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\home_hot.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_yellow_normal.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_normal.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\latest_buy_bg.xml",
@@ -440,8 +628,88 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\classity_background.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_weike_checkbox.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\table_weike_checkbox.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\myyiyuan_buy_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\myyiyuan_buy_bg.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_btn_bg_white.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_btn_bg_white.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\top_navigation_background.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\top_navigation_background.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\rob_progressbar.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ind.jpg",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\ind.jpg"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_comment_edit.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\free_comment_edit.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_background.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\star_background.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\minus_math.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\minus_math.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_register.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\login_register.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_black.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\edittext_black.xml"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\item_cart_frame.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\item_cart_frame.xml"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\latest_buy_bg.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\latest_buy_bg.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\free_design_apply.xml",
@@ -452,20 +720,20 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\checkbox_register.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yiyuan_btn_bg_white.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\yiyuan_btn_bg_white.xml"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar.xml",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_progressbar.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_progressbar.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
@@ -476,20 +744,32 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\point_yellow_lighted.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_checked.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\cart_checked.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ind.jpg",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\ind.jpg"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_home_checkbox.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\table_home_checkbox.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\minus_math.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\minus_math.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_button.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\login_button.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\wheel_val.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_circular.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\button_circular.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
@@ -504,40 +784,32 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\table_my_checkbox.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_black.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\edittext_black.xml"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_register.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\login_register.xml"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_button.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable\\login_button.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_hot.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\home_hot.xml"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_circular.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\button_circular.xml"
-    },
-    {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rob_progressbar_sytle.xml",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable\\rob_progressbar_sytle.xml"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",

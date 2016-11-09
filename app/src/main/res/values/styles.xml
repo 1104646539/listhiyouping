@@ -52,6 +52,13 @@
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
     </style>
 
+    <style name="myWxStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
     <style name="MyDialogStyleBottom" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/AnimBottom</item>
         <item name="android:windowFrame">@null</item>
@@ -67,4 +74,6 @@
         <item name="android:backgroundDimEnabled">true</item>
         ;!-- 模糊 -->
     </style>
+
+    <color name="transparent">#00000000</color>
 </resources>
