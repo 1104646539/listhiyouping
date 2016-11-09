@@ -44,7 +44,7 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
                 setResult(RESULT_OK, ss);
                 Log.e("handleMessage", "页面关闭页面关闭页面关闭页面关闭");
             }
-
+            Log.i("handleMessage","");
             finish();
         }
     };
