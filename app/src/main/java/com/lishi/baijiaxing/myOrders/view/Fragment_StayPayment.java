@@ -155,9 +155,10 @@ public class Fragment_StayPayment extends BaseFragmentV4 implements OrdersView {
 
         adapter.setOnItemClickListener(new OrderFormAdpter.OnListItemClickListener() {
             @Override
-            public void onListItemClickListener(View v, StoreBean storeBean) {
+            public void onListItemClickListener(View v, StoreBean storeBean,int state) {
                 Intent startOrderDetails = new Intent(getActivity(), OrderDetailsActivity.class);
                 startOrderDetails.putExtra("data", storeBean);
+                startOrderDetails.putExtra("state",state);
                 startActivity(startOrderDetails);
             }
         });

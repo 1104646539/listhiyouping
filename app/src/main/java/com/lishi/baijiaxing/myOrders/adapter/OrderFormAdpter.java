@@ -2,6 +2,7 @@ package com.lishi.baijiaxing.myOrders.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,17 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
     private ArrayList<MyOrderFormBean> mMyOrderFormBeens;
     private LayoutInflater mLayoutInflater;
     private int mPosition;
+
+
+    private OnListItemClickListener mOnItemClickListener;
+    /**
+     * 待评价
+     */
+    private OnStayEvaluateItemClick mOnStayEvaluateItemClick;
+
+    public void setOnStayEvaluateItemClick(OnStayEvaluateItemClick onStayEvaluateItemClick) {
+        mOnStayEvaluateItemClick = onStayEvaluateItemClick;
+    }
 
     public OrderFormAdpter(Context context, ArrayList<MyOrderFormBean> myOrderFormBeans) {
         this.mContext = context;
@@ -98,7 +110,7 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
             holder.btn_myorderform_remindshipments = (Button) convertView.findViewById(R.id.btn_myorderform_remindshipments);
 
             holder.btn_myorderform_deleteorderform = (Button) convertView.findViewById(R.id.btn_myorderform_deleteorderform);
-            holder.btn_myorderform_checklogistics1 = (Button) convertView.findViewById(R.id.btn_myorderform_checklogistics1);
+//            holder.btn_myorderform_checklogistics1 = (Button) convertView.findViewById(R.id.btn_myorderform_checklogistics1);
             holder.btn_myorderform_evaluate = (Button) convertView.findViewById(R.id.btn_myorderform_evaluate);
 
             holder.btn_myorderform_recommendgoods1 = (Button) convertView.findViewById(R.id.btn_myorderform_recommendgoods1);
@@ -120,13 +132,46 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
         holder.tv_store_name.setText(myOrderFormBean.getStoreBean().getCommStore());
 
         switchState(myOrderFormBean.getState(), holder);
-        OrderFormItemAdapter formItemAdapter = new OrderFormItemAdapter(myOrderFormBean.getStoreBean());
+        OrderFormItemAdapter formItemAdapter = new OrderFormItemAdapter(myOrderFormBean);
         holder.mMyListView.setAdapter(formItemAdapter);
 
         holder.tv_count_number.setText("共计" + myOrderFormBean.getNumber() + "件商品，实付款：");
         holder.tv_total_price.setText("￥:" + myOrderFormBean.getTotalPrice());
         sTateListener(myOrderFormBean.getStoreBean(), holder);
+        setListener(holder);
         return convertView;
+    }
+
+    /**
+     * 设置监听
+     *
+     * @param holder
+     */
+    private void setListener(MyOrderFormViewHolder holder) {
+        holder.btn_myorderform_evaluate.setOnClickListener(this);
+        //代付款
+        holder.btn_cancel.setOnClickListener(this);//取消订单
+        holder.btn_payment.setOnClickListener(this);//付款
+        //已发货
+        holder.btn_myorderform_applyaftersale.setOnClickListener(this);//申请售后
+        holder.btn_myorderform_checklogistics.setOnClickListener(this);//查看物流
+        holder.btn_myorderform_affirmtakegoods.setOnClickListener(this);//确定收货
+        //待发货
+        holder.btn_myorderform_applyaftersale1.setOnClickListener(this);//申请售后
+        holder.btn_myorderform_remindshipments.setOnClickListener(this);//提醒发货
+        //待评价
+        holder.btn_myorderform_deleteorderform.setOnClickListener(this);//删除订单
+//        holder.btn_myorderform_checklogistics1.setOnClickListener(this);//查看物流
+        holder.btn_myorderform_evaluate.setOnClickListener(this);//评价
+        //完成交易
+        holder.btn_myorderform_recommendgoods1.setOnClickListener(this);//宝贝推荐
+        holder.btn_myorderform_againbuy.setOnClickListener(this);//再次购买
+        //退款中
+        holder.btn_myorderform_recommendgoods2.setOnClickListener(this);//宝贝推荐
+        holder.btn_myorderform_checkprogress.setOnClickListener(this);//进度查询
+        //退款完成
+        holder.btn_myorderform_recommendgoods3.setOnClickListener(this);//宝贝推荐
+        holder.btn_myorderform_refundtowhere.setOnClickListener(this);//查询退款去向
     }
 
 
@@ -244,7 +289,7 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
         Button btn_myorderform_remindshipments;//提醒发货
         //待评价
         Button btn_myorderform_deleteorderform;//删除订单
-        Button btn_myorderform_checklogistics1;//查看物流
+//        Button btn_myorderform_checklogistics1;//查看物流
         Button btn_myorderform_evaluate;//评价
         //完成交易
         Button btn_myorderform_recommendgoods1;//宝贝推荐
@@ -260,9 +305,11 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
 
     class OrderFormItemAdapter extends BaseAdapter {
         StoreBean mStoreBean;
+        MyOrderFormBean mMyOrderFormBean;
 
-        public OrderFormItemAdapter(StoreBean storeBean) {
-            this.mStoreBean = storeBean;
+        public OrderFormItemAdapter(MyOrderFormBean orderFormBean) {
+            this.mStoreBean = orderFormBean.getStoreBean();
+            this.mMyOrderFormBean = orderFormBean;
         }
 
         @Override
@@ -299,7 +346,7 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
                 @Override
                 public void onClick(View v) {
                     if (mOnItemClickListener != null) {
-                        mOnItemClickListener.onListItemClickListener(v, mStoreBean);
+                        mOnItemClickListener.onListItemClickListener(v, mStoreBean, mMyOrderFormBean.getState());
                     }
                 }
             });
@@ -313,14 +360,22 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
         }
     }
 
-    private OnListItemClickListener mOnItemClickListener;
 
     public void setOnItemClickListener(OnListItemClickListener onItemClickListener) {
         mOnItemClickListener = onItemClickListener;
     }
 
     public interface OnListItemClickListener {
+        void onListItemClickListener(View v, StoreBean storeBean,int state);
+    }
+
+
+    public interface OnStayEvaluateItemClick {
         void onListItemClickListener(View v, StoreBean storeBean);
+
+        void onBottom1(View v);
+
+        void onBottom2(View v);
     }
 
 }

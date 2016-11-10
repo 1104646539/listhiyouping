@@ -113,7 +113,9 @@
             android:name=".myOrders.MyOrderFormActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".activity.EvaluateActivity">
+        <activity
+            android:name=".activity.EvaluateActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
             android:name=".free.view.FreeActivity"
@@ -206,7 +208,7 @@
             android:name=".myOrders.view.OrderDetailsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <!-- qq授权-->
+        <!-- qq授权 -->
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
@@ -223,7 +225,11 @@
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            ></activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".shoppingCart.ShoppingCartActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
+
 </manifest>

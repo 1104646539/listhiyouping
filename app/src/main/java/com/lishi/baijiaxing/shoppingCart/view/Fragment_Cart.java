@@ -18,6 +18,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.activity.MainActivity;
 import com.lishi.baijiaxing.base.BaseFragment;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
@@ -27,6 +28,7 @@ import com.lishi.baijiaxing.shoppingCart.model.ShoppingBean;
 import com.lishi.baijiaxing.shoppingCart.model.StoreBean;
 import com.lishi.baijiaxing.shoppingCart.presenter.ShoppingCartPresenterImpl;
 import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
+import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
 import com.lishi.baijiaxing.view.MyGridView;
 
 import java.util.ArrayList;
@@ -121,6 +123,12 @@ public class Fragment_Cart extends BaseFragment implements SwipeRefreshLayout.On
             adapter.notifyDataSetChanged();
         }
         tv_cart_totalprice.setText("0.0");
+        if (mStoreBeens != null) {
+            ShoppingBadgeUtil.getInstance().setBadgeCount(mCommodityBeens.size());
+            if (ShoppingBadgeUtil.getInstance().getBadgeCount() != 0) {
+                MainActivity.mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+            }
+        }
     }
 
     private void initView(View view) {
@@ -187,6 +195,12 @@ public class Fragment_Cart extends BaseFragment implements SwipeRefreshLayout.On
                 break;
             case R.id.btn_cart_delete://删除
                 delete();
+                if (mStoreBeens != null) {
+                    ShoppingBadgeUtil.getInstance().setBadgeCount(mCommodityBeens.size());
+                    if (ShoppingBadgeUtil.getInstance().getBadgeCount() != 0) {
+                        MainActivity.mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+                    }
+                }
                 break;
             case R.id.tv_cart_count://去结算
                 startSubmitOrderActivity();

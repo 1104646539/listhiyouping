@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/base_bg_color"
+              android:orientation="horizontal"
+              android:padding="12dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/order_details_commodity_photo"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/order_details_com_photo"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:id="@+id/order_details_commodity_name"
+            android:text="韩国进口九日儿童海苔2gX40包饭紫菜片即 食寿司专用好吃的零食品"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_details_commodity_num"
+            android:layout_marginTop="5dp"
+            android:text="x1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/order_details_commodity_price"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="￥49:00"/>
+</LinearLayout>

@@ -48,11 +48,11 @@ public class OrderDetailsAdapter extends BaseAdapter {
         OrderDetailsViewHolder viewHolder = null;
         if (convertView == null) {
             viewHolder = new OrderDetailsViewHolder();
-            convertView = mLayoutInflater.inflate(R.layout.item_shoppinglist, parent, false);
-            viewHolder.tv_number = (TextView) convertView.findViewById(R.id.submit_order_num);
-            viewHolder.tv_price = (TextView) convertView.findViewById(R.id.submit_order_price);
-            viewHolder.iv_photo = (ImageView) convertView.findViewById(R.id.submit_order_photo);
-            viewHolder.tv_name = (TextView) convertView.findViewById(R.id.submit_order_name);
+            convertView = mLayoutInflater.inflate(R.layout.item_myorder, parent, false);
+            viewHolder.tv_number = (TextView) convertView.findViewById(R.id.order_details_commodity_num);
+            viewHolder.tv_price = (TextView) convertView.findViewById(R.id.order_details_commodity_price);
+            viewHolder.iv_photo = (ImageView) convertView.findViewById(R.id.order_details_commodity_photo);
+            viewHolder.tv_name = (TextView) convertView.findViewById(R.id.order_details_commodity_name);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (OrderDetailsViewHolder) convertView.getTag();
@@ -60,8 +60,8 @@ public class OrderDetailsAdapter extends BaseAdapter {
         CommodityBean commodityBean = mCommodityBeen.get(position);
 
         viewHolder.tv_name.setText(commodityBean.getCommTitle());
-        viewHolder.tv_number.setText("数量:x  " + commodityBean.getCommNum());
-        viewHolder.iv_photo.setImageResource(R.drawable.classity_item);
+        viewHolder.tv_number.setText("x  " + commodityBean.getCommNum());
+        viewHolder.iv_photo.setImageResource(R.drawable.order_details_com_photo);
         viewHolder.tv_price.setText("￥" + commodityBean.getCommPrice());
 
         return convertView;

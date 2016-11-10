@@ -113,7 +113,9 @@
             android:name="com.lishi.baijiaxing.myOrders.MyOrderFormActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
-        <activity android:name="com.lishi.baijiaxing.activity.EvaluateActivity" >
+        <activity
+            android:name="com.lishi.baijiaxing.activity.EvaluateActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name="com.lishi.baijiaxing.free.view.FreeActivity"
@@ -224,6 +226,10 @@
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

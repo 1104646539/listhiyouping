@@ -1,5 +1,6 @@
 package com.lishi.baijiaxing.yiyuan.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
+import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
 import com.lishi.baijiaxing.yiyuan.YiYuanHotDetailsCallback;
 import com.lishi.baijiaxing.yiyuan.YiYuanNewestDetailsCallback;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotDetailsAdapter;
@@ -63,14 +65,14 @@ public class Fragment_YiYuanDetails extends BaseFragmentV4 implements View.OnCli
         if (!isPrepare || !isVisible) {
             return;
         }
-        
+
         type = getActivity().getIntent().getIntExtra("type", 0);
         if (type == YiYuanActivity.TYPE_HOT) {
             if (mYiYuanHotDetailsPresenter == null) {
                 mYiYuanHotDetailsPresenter = new YiYuanHotDetailsPresenterImpl(this);
             }
             mYiYuanHotDetailsPresenter.loadData(type);
-            
+
         } else if (type == YiYuanActivity.TYPE_NEWEST) {
             if (mYiYuanNewestDetailsPresenter == null) {
                 mYiYuanNewestDetailsPresenter = new YiYuanNewestDetailsPresenterImpl(this);

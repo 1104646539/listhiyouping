@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ import com.lishi.baijiaxing.free.adapter.FreeDetailsAdapter;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
 import com.lishi.baijiaxing.free.model.FreeDetailsBean;
 import com.lishi.baijiaxing.free.presenter.FreeDetailsPresenterImpl;
+import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,6 +47,7 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
     private TextView[] tv_bottom2;
 
     private FreeDetailsPresenterImpl mFreeDatailsPresenterImpl;
+    private ImageView free_details_shoppingcart;
 
 
     public static Fragment_FreeDetails_Details newInstance() {
@@ -137,7 +140,8 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
         tv_bottom2_4 = (TextView) mView.findViewById(R.id.free_details_bottom2_4);
         tv_bottom1 = new TextView[]{tv_bottom1_1, tv_bottom1_2, tv_bottom1_3, tv_bottom1_4};
         tv_bottom2 = new TextView[]{tv_bottom2_1, tv_bottom2_2, tv_bottom2_3, tv_bottom2_4};
-
+        free_details_shoppingcart = (ImageView) mView.findViewById(R.id.free_details_shoppingcart);
+        free_details_shoppingcart.setOnClickListener(this);
         tv_bottom1_1.setOnClickListener(this);
         tv_bottom1_2.setOnClickListener(this);
         tv_bottom1_3.setOnClickListener(this);
@@ -189,6 +193,10 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
             case R.id.free_details_bottom2_4:
                 Intent startWinningActivity = new Intent(getActivity(), FreeWinningActivity.class);
                 startActivity(startWinningActivity);
+                break;
+            case R.id.free_details_shoppingcart:
+                Intent startShoppingCart = new Intent(getActivity(), ShoppingCartActivity.class);
+                startActivity(startShoppingCart);
                 break;
         }
 

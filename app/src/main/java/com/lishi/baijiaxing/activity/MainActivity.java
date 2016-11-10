@@ -8,6 +8,8 @@ import com.lishi.baijiaxing.home.view.Fragment_Home;
 import com.lishi.baijiaxing.personal.view.Fragment_Personal;
 import com.lishi.baijiaxing.inter.ClassityChange;
 import com.lishi.baijiaxing.utils.NetUtils;
+import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
+import com.lishi.baijiaxing.view.BadgeView;
 import com.tencent.tauth.Tencent;
 
 import android.app.Fragment;
@@ -33,6 +35,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
     private ImageView iv_cart;
     private ImageView iv_my;
     private ImageView[] imageViews;
+    public static BadgeView mBadgeView;
     private TextView tv_home, tv_classity, tv_cart, tv_my;
     private LinearLayout mLayout_main1, mLayout_main2, mLayout_main3, mLayout_main4;
     private TextView[] mTextViews;
@@ -62,12 +65,23 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
         initView();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (ShoppingBadgeUtil.getInstance().getBadgeCount() != 0) {
+            MainActivity.mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+        }
+    }
+
     private void initView() {
         iv_home = (ImageView) findViewById(R.id.iv_main_navi1);
         iv_classity = (ImageView) findViewById(R.id.iv_main_navi2);
         iv_cart = (ImageView) findViewById(R.id.iv_main_navi3);
         iv_my = (ImageView) findViewById(R.id.iv_main_navi4);
         imageViews = new ImageView[]{iv_home, iv_classity, iv_cart, iv_my};
+        mBadgeView = new BadgeView(this);
+        mBadgeView.setTargetView(iv_cart);
+        mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
 
         mLayout_main1 = (LinearLayout) findViewById(R.id.ll_main_1);
         mLayout_main2 = (LinearLayout) findViewById(R.id.ll_main_2);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/commodity_details_root"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -46,7 +47,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:text="客服"
                     android:textSize="8sp"/>
             </LinearLayout>
@@ -72,7 +72,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:text="首页"
                     android:textSize="8sp"/>
             </LinearLayout>
@@ -97,9 +96,8 @@
                     android:src="@drawable/details_collect"/>
 
                 <TextView
-                    android:layout_width="wrap_content" 
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:text="收藏"
                     android:textSize="8sp"/>
             </LinearLayout>
@@ -125,7 +123,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:text="购物车"
                     android:textSize="8sp"/>
             </LinearLayout>
@@ -146,6 +143,7 @@
                     android:text="加入购物车"
                     android:textColor="@color/base_bg_color"/>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

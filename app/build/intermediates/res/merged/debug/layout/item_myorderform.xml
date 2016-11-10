@@ -295,7 +295,7 @@
                 android:text="删除订单"
                 android:textSize="12sp"/>
 
-            <Button
+     <!--       <Button
                 android:id="@+id/btn_myorderform_checklogistics1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -305,7 +305,7 @@
                 android:padding="5dp"
                 android:text="查看物流"
                 android:textSize="12sp"/>
-
+-->
 
             <Button
                 android:id="@+id/btn_myorderform_evaluate"

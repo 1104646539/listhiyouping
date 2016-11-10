@@ -1,6 +1,7 @@
 package com.lishi.baijiaxing.myOrders.view;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,6 +16,7 @@ import com.lishi.baijiaxing.myOrders.adapter.OrderFormAdpter;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.myOrders.model.MyOrderFormBean;
 import com.lishi.baijiaxing.myOrders.presenter.OrdersPresenterImpl;
+import com.lishi.baijiaxing.shoppingCart.model.StoreBean;
 import com.lishi.baijiaxing.utils.ProgressBarUtil;
 import com.lishi.baijiaxing.view.MyListView;
 
@@ -34,14 +36,15 @@ public class Fragment_ReturnedGoods extends BaseFragmentV4 implements OrdersView
     private MyListView mMyListView;
     private OrdersPresenterImpl mOrdersPresenter;
     private ProgressBarUtil progressBarUtil;
-    private Handler mHandler = new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 55){
+            if (msg.what == 55) {
                 mOrdersPresenter.LoadData(TAG);
             }
         }
     };
+
     public static Fragment_ReturnedGoods newInstantiation() {
         if (mFragment_returnedGoods == null) {
             mFragment_returnedGoods = new Fragment_ReturnedGoods();
@@ -130,6 +133,17 @@ public class Fragment_ReturnedGoods extends BaseFragmentV4 implements OrdersView
         mMyListView.setAdapter(adapter);
         Log.i(TAG, "加载数据完成" + TAG + "==============");
         progressBarUtil.dismiss();
+
+        adapter.setOnItemClickListener(new OrderFormAdpter.OnListItemClickListener() {
+            @Override
+            public void onListItemClickListener(View v, StoreBean storeBean, int state) {
+                Intent startOrderDetails = new Intent(getActivity(), OrderDetailsActivity.class);
+                startOrderDetails.putExtra("data", storeBean);
+                startOrderDetails.putExtra("state", state);
+                startActivity(startOrderDetails);
+            }
+        });
+
     }
 
     @Override

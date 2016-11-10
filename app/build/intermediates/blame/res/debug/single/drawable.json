@@ -152,6 +152,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\rob_icon.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\order_details_pay_bg.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\order_details_pay_bg.xml"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
@@ -766,6 +770,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_checked.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\cart_checked.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\good_evaluate.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable\\good_evaluate.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
