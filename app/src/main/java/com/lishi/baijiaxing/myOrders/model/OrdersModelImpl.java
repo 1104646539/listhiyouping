@@ -19,10 +19,10 @@ public class OrdersModelImpl implements OrdersModel {
             for (int j = 0; j < 2; j++) {
                 List<CommodityBean> commodityBeans = new ArrayList<CommodityBean>();
                 for (int i = 0; i < 2; i++) {
-                    CommodityBean cbean = new CommodityBean("", "百姓图腾《百姓珍邮》本商品只接受在线个性化预订，详情敬请拨   打400 859 000", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
+                    CommodityBean cbean = new CommodityBean("", "利世优品《虎符U盘》", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
                     commodityBeans.add(cbean);
                 }
-                StoreBean storeBean = new StoreBean(false, 2000, "百姓图腾商城旗舰店", "", commodityBeans);
+                StoreBean storeBean = new StoreBean(false, 2000, "利世优品", "", commodityBeans);
                 MyOrderFormBean myOrderFormBean = new MyOrderFormBean(MyOrderFormBean.STAYPAYMENT, storeBean, 5, 6666);
                 mMyOrderFormBeen.add(myOrderFormBean);
             }
@@ -30,10 +30,10 @@ public class OrdersModelImpl implements OrdersModel {
             for (int j = 0; j < 2; j++) {
                 List<CommodityBean> commodityBeans = new ArrayList<CommodityBean>();
                 for (int i = 0; i < 2; i++) {
-                    CommodityBean cbean = new CommodityBean("", "百姓图腾《百姓珍邮》本商品只接受在线个性化预订，详情敬请拨   打400 859 000", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
+                    CommodityBean cbean = new CommodityBean("", "利世优品《虎符U盘》", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
                     commodityBeans.add(cbean);
                 }
-                StoreBean storeBean = new StoreBean(false, 2000, "百姓图腾商城旗舰店", "", commodityBeans);
+                StoreBean storeBean = new StoreBean(false, 2000, "利世优品", "", commodityBeans);
                 MyOrderFormBean myOrderFormBean = new MyOrderFormBean(MyOrderFormBean.STAYPAYMENT, storeBean, 5, 6666);
                 if (j == 0) {
                     myOrderFormBean.setState(MyOrderFormBean.STAYSHIPMENTS);
@@ -47,10 +47,10 @@ public class OrdersModelImpl implements OrdersModel {
             for (int j = 0; j < 2; j++) {
                 List<CommodityBean> commodityBeans = new ArrayList<CommodityBean>();
                 for (int i = 0; i < 2; i++) {
-                    CommodityBean cbean = new CommodityBean("", "百姓图腾《百姓珍邮》本商品只接受在线个性化预订，详情敬请拨   打400 859 000", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
+                    CommodityBean cbean = new CommodityBean("", "利世优品《虎符U盘》", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
                     commodityBeans.add(cbean);
                 }
-                StoreBean storeBean = new StoreBean(false, 2000, "百姓图腾商城旗舰店", "", commodityBeans);
+                StoreBean storeBean = new StoreBean(false, 2000, "利世优品", "", commodityBeans);
                 MyOrderFormBean myOrderFormBean = new MyOrderFormBean(MyOrderFormBean.STAYEVALUATE, storeBean, 5, 6666);
                 mMyOrderFormBeen.add(myOrderFormBean);
             }
@@ -60,10 +60,10 @@ public class OrdersModelImpl implements OrdersModel {
             for (int j = 0; j < 3; j++) {
                 List<CommodityBean> commodityBeans = new ArrayList<CommodityBean>();
                 for (int i = 0; i < 2; i++) {
-                    CommodityBean cbean = new CommodityBean("", "百姓图腾《百姓珍邮》本商品只接受在线个性化预订，详情敬请拨   打400 859 000", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
+                    CommodityBean cbean = new CommodityBean("", "利世优品《虎符U盘》", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
                     commodityBeans.add(cbean);
                 }
-                StoreBean storeBean = new StoreBean(false, 2000, "百姓图腾商城旗舰店", "", commodityBeans);
+                StoreBean storeBean = new StoreBean(false, 2000, "利世优品", "", commodityBeans);
                 MyOrderFormBean myOrderFormBean = new MyOrderFormBean(MyOrderFormBean.STAYPAYMENT, storeBean, 5, 6666);
                 if (j == 0) {
                     myOrderFormBean.setState(MyOrderFormBean.DEALFINISH);

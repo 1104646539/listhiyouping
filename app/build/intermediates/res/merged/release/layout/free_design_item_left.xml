@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#cdbfa5"
+              android:layout_marginTop="10dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/free_design_left_photo"
+        android:src="@drawable/freedesign_item1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/free_design_left_name"
+            android:text="开门红福袋"
+            android:textColor="#a42c2d"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/free_design_left_brief"
+            android:text="含春联、利是封含春联、利是封"
+            android:textColor="@color/text_color"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/base_bg_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/free_design_left_num"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="100个起订"
+            android:textColor="@color/text_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/free_design_left_oldPrice"
+            android:layout_marginTop="5dp"
+            android:text="原价：12.6元"
+            android:textColor="@color/text_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/free_design_left_nowPrice"
+            android:layout_marginTop="5dp"
+            android:text="现价：8.8元"
+            android:textColor="@color/text_color"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/base_bg_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:id="@+id/free_design_left_info"
+            android:text="新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福新春纳福"
+            android:textColor="@color/text_color"/>
+    </LinearLayout>
+</LinearLayout>

@@ -48,6 +48,8 @@
     <string name="errcode_cancel">发送取消</string>
     <string name="errcode_deny">发送被拒绝</string>
     <string name="errcode_unknown">发送返回</string>
+    <string name="cancel_order">取消订单后，本单享有的优惠可能会一并取消。是否继续？</string>
+    <string name="qqAppId">1105736969</string>
 
     <string-array name="province_item">
         <item>北京</item>

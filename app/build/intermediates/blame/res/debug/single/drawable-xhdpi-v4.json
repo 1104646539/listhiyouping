@@ -20,24 +20,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\usermanager_headphoto.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\myfree_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\myfree_photo.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commodity_photo.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commodity_photo.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\myfree_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\myfree_photo.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_grand1.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_grand1.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful4.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful4.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_config_nocheckable.png",
@@ -52,12 +52,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\collect_title.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_discounticon_flase.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_discounticon_flase.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home1_2.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home1_2.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_discounticon_flase.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_discounticon_flase.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_cart.png",
@@ -92,12 +92,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_weike.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_white.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\message_white.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_warn.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_warn.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_white.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\message_white.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\shape_change.png",
@@ -144,12 +144,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform2.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform2.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_back.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_back.jpg"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform2.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform2.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_anonymity_dim.png",
@@ -164,12 +164,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circler_commoditydetails.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\b3.jpg",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\b3.jpg"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\usermanager_headphoto.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\usermanager_headphoto.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\b3.jpg",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\b3.jpg"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\collect_recommend.png",
@@ -200,20 +200,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\latest_item1_photo.jpg"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_norms_edit_bg.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customzie_norms_edit_bg.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\buy_meaningful.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\buy_meaningful.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\recommend_title.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\recommend_title.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_norms_edit_bg.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customzie_norms_edit_bg.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid3_1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid3_1.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\recommend_title.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\recommend_title.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\good_evaluate_light.png",
@@ -236,12 +236,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home4_1.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\store_photo.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_other3.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_other3.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\store_photo.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
@@ -316,16 +316,16 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_other1.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\more.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src3.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src3.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\more.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details_service.png",
@@ -348,20 +348,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info6.jpg",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info6.jpg"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src1.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src1.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info6.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info6.jpg"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_grand.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\background_grand.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
@@ -400,12 +400,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\ellipse.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details_home.png",
@@ -420,36 +420,36 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_green.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\yi.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\yi.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\star.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_anonymity_light.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_anonymity_light.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_rob_state.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_rob_state.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_anonymity_light.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_anonymity_light.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_love.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_love.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src3.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src3.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\collect.png",
@@ -464,44 +464,44 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_background.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_background.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commend_head.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commend_head.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_background.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_background.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_tour.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_tour.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_consent_false.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_consent_false.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_shopping_bottom_true.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_shopping_bottom_true.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_consent_false.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_consent_false.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\latest_item1_photo.jpg",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\latest_item1_photo.jpg"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more_collect.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\more_collect.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_share.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_share.jpg"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notinvoluntary0.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\notinvoluntary0.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more_collect.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\more_collect.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\search.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\search.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notinvoluntary0.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\notinvoluntary0.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_icon.png",
@@ -536,12 +536,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\top_teacher1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\takepicture.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\takepicture.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home3.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home3.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\takepicture.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\takepicture.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home8.png",
@@ -552,12 +552,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_gift_iv2.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item6.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item6.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star_light.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\star_light.jpg"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item6.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item6.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info1.jpg",
@@ -632,16 +632,16 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item1.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_login.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_login.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_settings.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_settings.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commend_reply.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commend_reply.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_settings.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_settings.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_login.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_login.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid1_4.png",
@@ -732,12 +732,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\register_next.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\level.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\level.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_shopping_bottom_true.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob_shopping_bottom_true.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\level.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\level.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
@@ -756,12 +756,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home_title.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_levelbackground.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_levelbackground.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\latest_item_head_bg.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\latest_item_head_bg.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_levelbackground.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_levelbackground.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful_line3.png",
@@ -772,20 +772,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home_title.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_title.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_icon.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_icon.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid3_2.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid3_2.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home_title.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_title.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_xuzhi.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_xuzhi.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid3_2.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid3_2.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home3_1.png",
@@ -808,36 +808,36 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_item_linear_bg.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_collect.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_collect.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_other4.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_other4.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_collect.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_collect.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\progress.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\progress.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src5.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src5.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star_dim.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\star_dim.jpg"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\weekly_choiceness_photo.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\weekly_choiceness_photo.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src5.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src5.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_backgroud_black.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_black.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\weekly_choiceness_photo.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\weekly_choiceness_photo.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circler_mycollect.png",
@@ -900,12 +900,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform2.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform5.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform5.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\topbar_search.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\topbar_search.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform5.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform5.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid1_4.png",
@@ -956,24 +956,24 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\frame_top_teacher.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star_dim.jpg",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\star_dim.jpg"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star_light.jpg",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\star_light.jpg"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star_dim.jpg",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\star_dim.jpg"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\cart.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\cart.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\advertisement.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\advertisement.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_my_clickble.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_my_clickble.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\advertisement.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\advertisement.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_commodityinfo.png",
@@ -988,12 +988,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src4.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_backgroud_green.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_green.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\artware_meaningful.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\artware_meaningful.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_backgroud_green.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_green.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral1.png",
@@ -1004,40 +1004,40 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\go.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\level.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\level.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningfu_grid2_2.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningfu_grid2_2.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notinvoluntary1.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\notinvoluntary1.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\level.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\level.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_design_helper_bg.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_design_helper_bg.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notinvoluntary1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\notinvoluntary1.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\star.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_design_helper_bg.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_design_helper_bg.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_title.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob_title.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\risevip28.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\risevip28.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\risevip28.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\risevip28.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_collect.png",
@@ -1080,12 +1080,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_integral3.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform1.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform1.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circular_red.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circular_red.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform1.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform1.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\weekly_choiceness_photo.png",
@@ -1100,12 +1100,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\service.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_my_clickble.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\navigation_my_clickble.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home6.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home6.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_my_clickble.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\navigation_my_clickble.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_edbg.png",
@@ -1116,28 +1116,28 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_photo.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningfu_grid2_2.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningfu_grid2_2.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningfu_grid2_2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningfu_grid2_2.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_weike.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_weike.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_discounticon_true.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob_discounticon_true.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_service.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_service.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_service.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_service.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_discounticon_true.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob_discounticon_true.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
@@ -1200,12 +1200,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_hot.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect4.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect4.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notinvoluntary1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\notinvoluntary1.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect4.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect4.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tea_meaningful.png",
@@ -1216,24 +1216,24 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\sellout.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\sellout.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_book.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_book.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\sellout.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\sellout.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral3.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_integral3.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item5.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item5.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_robicon_false.png",
@@ -1348,12 +1348,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob_hot.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_namebackground.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_namebackground.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral_margin.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_integral_margin.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_namebackground.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_namebackground.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home1_1.png",
@@ -1384,12 +1384,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_design_helper_photo.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral2.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_integral2.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home3_1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home3_1.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_integral2.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_btn.png",
@@ -1408,64 +1408,64 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid3_1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\latest_item2_photo.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\latest_item2_photo.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform5.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform5.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\latest_item2_photo.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\latest_item2_photo.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details_collect.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\details_collect.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\good_evaluate_dim.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\good_evaluate_dim.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commodity_details_photo.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commodity_details_photo.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\minus.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\minus.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commodity_details_photo.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commodity_details_photo.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\good_evaluate_dim.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\good_evaluate_dim.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful4.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful4.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\confirm.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\confirm.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circle_focus.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circle_focus.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\sellout.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\sellout.png"
     },
     {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circle_focus.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circle_focus.png"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_shopping_bottom_false.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_shopping_bottom_false.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_consent_true.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_consent_true.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\orderform2.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_login.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_login.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform2.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\orderform2.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_consent_true.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_consent_true.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\takepicture.png",
@@ -1476,12 +1476,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\go.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\mian.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\mian.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\latest_item_head.jpg",
@@ -1528,12 +1528,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\background_topteacher.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\plus.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\plus.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commend_head.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commend_head.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\plus.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\plus.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info4.jpg",
@@ -1568,24 +1568,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\user_leve.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circular_red.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circular_red.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_xuzhi.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_xuzhi.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details_shoppingcart.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\details_shoppingcart.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circular_red.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circular_red.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_config_nocheckable.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customzie_config_nocheckable.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details_shoppingcart.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\details_shoppingcart.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notinvoluntary0.png",
@@ -1608,12 +1608,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid2_2.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\cart.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\cart.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home8.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home8.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\cart.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\cart.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_config_minus.png",
@@ -1662,6 +1662,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\order_details_addr_service.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\order_details_addr_service.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src1.png",
@@ -1728,24 +1732,24 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\user_photo.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_gift_ivs.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_gift_ivs.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_love.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_love.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item3.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item3.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\service.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\service.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item3.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item3.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circular_red.png",
@@ -1796,12 +1800,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_head1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_payment.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\background_payment.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_payment.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\background_payment.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_photo.png",
@@ -1832,12 +1836,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checked_car_flase.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_background_orange.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tv_background_orange.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info5.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info5.jpg"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_background_orange.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tv_background_orange.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info1.jpg",
@@ -1872,12 +1876,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_integral2.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\myfree_photo.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\myfree_photo.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect1.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\myfree_photo.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\myfree_photo.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
@@ -1896,12 +1900,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home3.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_cart.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_cart.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_white.png",
@@ -1920,28 +1924,28 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\star_light.jpg"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\item_myorderform_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\item_myorderform_photo.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform_margin.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\orderform_margin.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tou.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tou.jpg"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform_margin.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\orderform_margin.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\item_myorderform_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\item_myorderform_photo.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tea_meaningful.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tea_meaningful.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_grid_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_grid_photo.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_design_helper_bg.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\free_design_helper_bg.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_grid_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_grid_photo.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_config_plus.png",
@@ -1960,12 +1964,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\award.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\login_weixin.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\login_weixin.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\address_right.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\address_right.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\login_weixin.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\login_weixin.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info5.jpg",
@@ -2028,28 +2032,28 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid2_2.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\progress.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\progress.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform_margin.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform_margin.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\progress.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\progress.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_backgroud_black.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_black.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_icon.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_icon.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_backgroud_black.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_black.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid1_3.png",
@@ -2160,6 +2164,10 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\register_next.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\order_details_addr_user.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\order_details_addr_user.png"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item4.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item4.png"
     },
@@ -2192,16 +2200,16 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_cart.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_topteacher.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\background_topteacher.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home7.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home7.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_topteacher.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\background_topteacher.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src4.png",
@@ -2224,12 +2232,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_gift.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\classity_item.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\classity_item.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\classity_item.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\classity_item.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
@@ -2272,20 +2280,20 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\latest_item2_photo_bg.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\weekly_choiceness_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\weekly_choiceness_photo.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circle_nofocus.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circle_nofocus.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item6.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item6.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\weekly_choiceness_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\weekly_choiceness_photo.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item6.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item6.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
@@ -2300,12 +2308,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\details.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_black.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\message_black.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
@@ -2324,12 +2332,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful_line2.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_grand_bottom.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_grand_bottom.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful_line1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful_line1.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_grand_bottom.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_grand_bottom.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful1.png",
@@ -2372,24 +2380,24 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_consent_false.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_white.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\message_white.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_ivlist.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_ivlist.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_white.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\message_white.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_clear_mtrl_alpha.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_store.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_store.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_clear_mtrl_alpha.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_clear_mtrl_alpha.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_ivlist.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_ivlist.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_gift.png",
@@ -2440,12 +2448,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful5.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src3.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src3.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home4_1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home4_1.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src3.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src3.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png",
@@ -2488,20 +2496,20 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_cart.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful_line2.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful_line2.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_robicon_true.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_robicon_true.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\sellout.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\sellout.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful_line2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful_line2.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform3.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform3.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\sellout.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\sellout.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
@@ -2532,16 +2540,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\navigation_home_clickble.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\user_leve.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\user_leve.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\topbar_search.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\topbar_search.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\topbar_search.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\topbar_search.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\user_leve.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\user_leve.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\back_top.png",
@@ -2564,12 +2572,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\yi.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_black.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\scanner_black.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home8.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home8.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_black.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\scanner_black.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful7.png",
@@ -2584,16 +2592,16 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful2.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_black.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\scanner_black.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform4.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform4.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customzie_config_checkable.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customzie_config_checkable.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform4.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\orderform4.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_black.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\scanner_black.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
@@ -2616,12 +2624,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect3.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tou.jpg",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tou.jpg"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\password_invisibility.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\password_invisibility.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tou.jpg",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tou.jpg"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_topteacher.png",
@@ -2636,16 +2644,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\notinvoluntary0.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item4.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item4.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_other1.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_other1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item4.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item4.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\mian.png",
@@ -2696,12 +2704,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\life_meaningful.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\life_meaningful.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\submit_order_photo.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\submit_order_photo.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\life_meaningful.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\life_meaningful.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\star_dim.jpg",
@@ -2740,12 +2748,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\latest_bottom.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\hot.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\hot.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\hot.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\hot.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_background_black.png",
@@ -2772,12 +2780,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\usermanager_headphoto.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home5.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_home5.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\recommend_title.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\recommend_title.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home5.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_home5.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_title.png",
@@ -2796,20 +2804,20 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\service.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_head1.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_head1.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful_grid1_2.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful_grid1_2.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\frame_top_teacher.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\frame_top_teacher.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_head1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_head1.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\user_photo.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\user_photo.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\frame_top_teacher.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\frame_top_teacher.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_home.png",
@@ -2820,12 +2828,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_photo.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\confirm.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\confirm.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_white.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\scanner_white.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\confirm.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\confirm.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_share.jpg",
@@ -2844,36 +2852,36 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src4.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src4.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\password_visibility.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\password_visibility.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tea_meaningful.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tea_meaningful.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\password_visibility.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\password_visibility.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src4.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src4.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home2_1.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home2_1.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_collect.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\store_collect.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more_collect.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\more_collect.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_tour.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_tour.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_collect.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\store_collect.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid3_2.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid3_2.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_tour.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_tour.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\orderform3.png",
@@ -2884,12 +2892,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commodity_details_more.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item1.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item1.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item2.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item2.png"
+    },
+    {
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_item1.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item1.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_item_linear_photo.png",
@@ -2912,12 +2920,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\free_design_timeline_true.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home1_2.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home1_2.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circler_mycollect.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circler_mycollect.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home1_2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home1_2.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect4.png",
@@ -2964,12 +2972,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\store_collect.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral1.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_integral1.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_my_clickble.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_my_clickble.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_integral1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_integral1.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_other2.png",
@@ -2984,12 +2992,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\yiyuan.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_cart_clickble.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_cart_clickble.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_my.png",
@@ -3040,16 +3048,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\risevip28.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\b3.jpg",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\b3.jpg"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\b3.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\b3.jpg"
+    },
+    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\store_icon.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\store_icon.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\order_details_addr_bg.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\order_details_addr_bg.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect1.png",
@@ -3068,12 +3080,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid1_1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_white.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\scanner_white.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect2.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect2.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\scanner_white.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\scanner_white.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home_line.png",
@@ -3092,12 +3104,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_share.jpg"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\more.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\risevip108.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\risevip108.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\more.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\more.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\background_payment.png",
@@ -3168,12 +3180,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\details.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_backgroud_black.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tv_backgroud_black.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\details.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\password_invisibility.png",
@@ -3212,12 +3224,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\latest_item2_photo.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_black.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\message_black.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_black.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\message_black.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details_home.png",
@@ -3256,32 +3268,32 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful4.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tou.jpg",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tou.jpg"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\myfree_photo.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\myfree_photo.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tou.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tou.jpg"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circle_grand.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\circle_grand.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\life_meaningful.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\life_meaningful.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_clear_mtrl_alpha.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_clear_mtrl_alpha.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\address.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\address.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\life_meaningful.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\life_meaningful.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\address.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\address.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\topbar_search.png",
@@ -3292,12 +3304,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src6.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src6.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\login_qq.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\login_qq.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\src6.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src6.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\award.png",
@@ -3324,12 +3336,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\line1_grand.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\user_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\user_photo.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\integral_exchange_brief.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\integral_exchange_brief.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\user_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\user_photo.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home6.png",
@@ -3380,12 +3392,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\tv_background_red.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info2.jpg",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info2.jpg"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info3.jpg",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info3.jpg"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info2.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info2.jpg"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png",
@@ -3520,12 +3532,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\src7.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_back.jpg",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_back.jpg"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\item_myorderform_photo.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\item_myorderform_photo.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_back.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_back.jpg"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_btn.png",
@@ -3556,12 +3568,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\arrows_right.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_background_green.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tv_background_green.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_meaningful3.png",
@@ -3580,16 +3592,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_design_timeline_false.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home_gridnavigation1.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home_gridnavigation1.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\free.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tv_background_black.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\tv_background_black.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\free.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home_gridnavigation1.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\home_gridnavigation1.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_book.png",
@@ -3608,12 +3620,12 @@
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_or.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_other4.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_other4.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\b2.jpg",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\b2.jpg"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\my_other4.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_other4.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\search.png",
@@ -3660,16 +3672,16 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid1_3.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid1_3.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bad_evaluate_dim.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\bad_evaluate_dim.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_gift_iv1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_gift_iv1.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bad_evaluate_dim.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\bad_evaluate_dim.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\iv_collect_grid1_3.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid1_3.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
@@ -3684,12 +3696,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circler_commoditydetails.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circler_commoditydetails.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
@@ -3704,12 +3716,12 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\my_background.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circle_nofocus.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circle_nofocus.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\back_top.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\back_top.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\circle_nofocus.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\circle_nofocus.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_ivlist.png",
@@ -3736,20 +3748,20 @@
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_icon.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_love.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_love.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commodity_config_norms_photo.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commodity_config_norms_photo.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home1.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_home1.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_details_love.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_love.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_home1.png"
     },
     {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\item_myorderform_photo.png",
@@ -3780,56 +3792,56 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checked_car_true.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\checked_car_true.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigation_classity.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\navigation_classity.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\submit_order_photo.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\submit_order_photo.png"
-    },
-    {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\freedesign_head1.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_head1.png"
     },
     {
-        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home4.png",
-        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home4.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\submit_order_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\submit_order_photo.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_discounticon_true.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_discounticon_true.png"
+        "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_home4.png",
+        "source": "E:\\StudioProject\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\icon_home4.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rob_discounticon_true.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\rob_discounticon_true.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\login_weixin.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\login_weixin.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\password_invisibility.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\password_invisibility.png"
     },
     {
-        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ellipse.png",
-        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\ellipse.png"
-    },
-    {
         "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\commoditydetaials_service.png",
         "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_service.png"
+    },
+    {
+        "merged": "E:\\Mvp\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ellipse.png",
+        "source": "E:\\Mvp\\BaiJiaXing\\app\\src\\main\\res\\drawable-xhdpi\\ellipse.png"
     },
     {
         "merged": "E:\\StudioProject\\BaiJiaXing\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\customize_gift_ivs.png",

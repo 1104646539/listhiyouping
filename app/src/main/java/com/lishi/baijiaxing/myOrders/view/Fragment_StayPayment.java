@@ -1,20 +1,25 @@
 package com.lishi.baijiaxing.myOrders.view;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.myOrders.adapter.OrderFormAdpter;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.myOrders.model.MyOrderFormBean;
 import com.lishi.baijiaxing.myOrders.presenter.OrdersPresenterImpl;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.shoppingCart.model.StoreBean;
 import com.lishi.baijiaxing.utils.ProgressBarUtil;
 import com.lishi.baijiaxing.view.MyListView;
 
@@ -34,14 +39,15 @@ public class Fragment_StayPayment extends BaseFragmentV4 implements OrdersView {
     private MyListView mListView;
     private OrdersPresenterImpl mOrdersPresenter;
     private ProgressBarUtil progressBarUtil;
-    private Handler mHandler = new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 55){
+            if (msg.what == 55) {
                 mOrdersPresenter.LoadData(TAG);
             }
         }
     };
+
     public static Fragment_StayPayment newInstantiation() {
         if (mFragment_StayPayment == null) {
             mFragment_StayPayment = new Fragment_StayPayment();
@@ -104,11 +110,11 @@ public class Fragment_StayPayment extends BaseFragmentV4 implements OrdersView {
             progressBarUtil = new ProgressBarUtil(getActivity());
         }
         progressBarUtil.show();
-        
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                
+
                 try {
                     Thread.sleep(1200);
                     mHandler.sendEmptyMessage(55);
@@ -146,6 +152,16 @@ public class Fragment_StayPayment extends BaseFragmentV4 implements OrdersView {
 
         Log.i(TAG, "加载数据完成" + TAG + "==============" + mMyOrderFormBeen.size());
         progressBarUtil.dismiss();
+
+        adapter.setOnItemClickListener(new OrderFormAdpter.OnListItemClickListener() {
+            @Override
+            public void onListItemClickListener(View v, StoreBean storeBean) {
+                Intent startOrderDetails = new Intent(getActivity(), OrderDetailsActivity.class);
+                startOrderDetails.putExtra("data", storeBean);
+                startActivity(startOrderDetails);
+            }
+        });
+
     }
 
     @Override

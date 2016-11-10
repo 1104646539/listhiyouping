@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    tools:context="com.lishi.baijiaxing.free.view.FreeWinningActivity">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/topbar_free_winning"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:left_src="@drawable/back_top"
+        app:text_title="中奖名单"
+        app:title_color="@color/text_color"
+        app:title_size="8sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/item_padding"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_free_winning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

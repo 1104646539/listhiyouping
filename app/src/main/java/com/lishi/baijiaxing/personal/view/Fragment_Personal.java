@@ -2,6 +2,7 @@ package com.lishi.baijiaxing.personal.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,6 +102,7 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
 
     @Override
     public void onLoginSuccess(UserBean userBean) {
+
         tv_user_name.setText(userBean.getUserName());
         iv_user_icon.setImageResource(userBean.getPhoto());
 
@@ -179,12 +181,18 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == getActivity().RESULT_OK) {
-            if (data.getStringExtra("result").equals("success")) {
+            if (data.getStringExtra("result").equals("wx")) {
                 if (!LocalUserInfo.getInstance().isNull()) {
                     tv_user_name.setText(LocalUserInfo.getInstance().getNickName() + "");
                     Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon).onStart();
+                    Log.i("onActivityResult","wx登录成功");
                 }
+            }else if (data.getStringExtra("result").equals("qq")){
+                tv_user_name.setText(LocalUserInfo.getInstance().getNickName() + "");
+                Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon).onStart();
+                Log.i("onActivityResult","qq登录成功");
             }
+            
         }
     }
 }

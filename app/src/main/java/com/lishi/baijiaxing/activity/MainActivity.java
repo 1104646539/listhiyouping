@@ -8,6 +8,7 @@ import com.lishi.baijiaxing.home.view.Fragment_Home;
 import com.lishi.baijiaxing.personal.view.Fragment_Personal;
 import com.lishi.baijiaxing.inter.ClassityChange;
 import com.lishi.baijiaxing.utils.NetUtils;
+import com.tencent.tauth.Tencent;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -48,6 +49,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
     private HashMap<String, Fragment> mFragmentHashMap = new HashMap<String, Fragment>();
     private String[] mStrings = new String[]{"fragment_Home", "fragment_Classify", "fragment_cart", "fragment_My"};
     private int close = 0;
+    public static Tencent mTencent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -222,6 +224,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
         super.onDestroy();
         mFragmentHashMap.clear();
         mFragmentHashMap = null;
+        mTencent.logout(this);
     }
 
     @Override

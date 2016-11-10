@@ -14,8 +14,10 @@ import android.widget.TextView;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.activity.EvaluateActivity;
 import com.lishi.baijiaxing.myOrders.model.MyOrderFormBean;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.shoppingCart.model.StoreBean;
 import com.lishi.baijiaxing.view.MyListView;
+import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 
 import java.util.ArrayList;
 
@@ -279,7 +281,7 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             OrderFormItemViewHolder holder = null;
             if (convertView == null) {
                 convertView = mLayoutInflater.inflate(R.layout.item_myorderform_item, parent, false);
@@ -293,6 +295,15 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
             holder.iv_photo.setImageResource(R.drawable.item_myorderform_photo);
             holder.tv_title.setText(mStoreBean.getCommodityBeanList().get(position).getCommTitle());
 
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onListItemClickListener(v, mStoreBean);
+                    }
+                }
+            });
+
             return convertView;
         }
 
@@ -301,4 +312,15 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
             TextView tv_title;
         }
     }
+
+    private OnListItemClickListener mOnItemClickListener;
+
+    public void setOnItemClickListener(OnListItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    public interface OnListItemClickListener {
+        void onListItemClickListener(View v, StoreBean storeBean);
+    }
+
 }

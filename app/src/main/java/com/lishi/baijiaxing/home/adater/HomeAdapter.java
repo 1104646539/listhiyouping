@@ -148,40 +148,28 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        Log.i("getItemViewType", position + "");
         if (position == 0) {
-            Log.e("getItemViewType", "type=TYPE_YiYUAN_HEAD" + position);
             return TYPE_YiYUAN_HEAD;
         } else if (position > 0 && position < 4) {
-            Log.e("getItemViewType", "type=TYPE_YIYUAN" + position);
             return TYPE_YIYUAN;
         } else if (position == 4) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY1_HEAD" + position);
             return TYPE_COMMODITY1_HEAD;
         } else if (position == 5 || position == 13 || position == 21
                 || position == 29) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY_TITLE" + position);
             return TYPE_COMMODITY_TITLE;
         } else if (position == 12) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY2_HEAD" + position);
             return TYPE_COMMODITY2_HEAD;
         } else if (position == 20) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY3_HEAD" + position);
             return TYPE_COMMODITY3_HEAD;
         } else if (position == 28) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY4_HEAD" + position);
             return TYPE_COMMODITY4_HEAD;
         } else if (position > 5 && position < 12) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY1" + position);
             return TYPE_COMMODITY1;
         } else if (position > 13 && position < 20) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY2" + position);
             return TYPE_COMMODITY2;
         } else if (position > 21 && position < 28) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY3" + position);
             return TYPE_COMMODITY3;
         } else if (position > 29 && position < 36) {
-            Log.e("getItemViewType", "type=TYPE_COMMODITY4" + position);
             return TYPE_COMMODITY4;
         }
         return super.getItemViewType(position);
@@ -189,14 +177,12 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        Log.e("getItemCount", "getItemCount" + mCommodity.size());
         return mCommodity.size();
     }
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
-        Log.e("onAttachedToRecyclerView", "Size" + mCommodity.size());
         final RecyclerView.LayoutManager mManger = recyclerView.getLayoutManager();
         if (mManger instanceof GridLayoutManager) {
             final GridLayoutManager gmanager = ((GridLayoutManager) mManger);

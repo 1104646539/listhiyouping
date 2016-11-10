@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:2:1-207:12
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:2:1-229:12
 	xmlns:android
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -85,7 +85,7 @@ ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:18:5-78
 	android:name
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:18:22-76
 application
-ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:20:5-205:19
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:20:5-228:19
 MERGED from [com.android.support:support-v4:23.4.0] D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.wang.avi:library:1.0.1] D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.wang.avi\library\1.0.1\AndroidManifest.xml:11:5-14:19
@@ -387,3 +387,43 @@ ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:199:9-204:20
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:200:13-50
 	android:launchMode
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:202:13-44
+activity#com.lishi.baijiaxing.myOrders.view.OrderDetailsActivity
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:205:9-208:20
+	android:theme
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:207:13-69
+	android:name
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:206:13-63
+activity#com.tencent.tauth.AuthActivity
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:210:9-222:20
+	android:noHistory
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:213:13-37
+	android:name
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:211:13-58
+	android:launchMode
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:212:13-44
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:214:13-221:29
+action#android.intent.action.VIEW
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:215:17-68
+	android:name
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:215:25-66
+category#android.intent.category.DEFAULT
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:217:17-75
+	android:name
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:217:27-73
+category#android.intent.category.BROWSABLE
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:218:17-77
+	android:name
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:218:27-75
+data
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:220:17-59
+	android:scheme
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:220:23-57
+activity#com.tencent.connect.common.AssistActivity
+ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:223:9-227:25
+	android:configChanges
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:225:13-63
+	android:theme
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:226:13-72
+	android:name
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:224:13-69

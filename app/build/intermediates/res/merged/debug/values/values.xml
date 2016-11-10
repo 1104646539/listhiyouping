@@ -4378,6 +4378,7 @@
     <string name="app_name">利世优品</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="cancel_order">取消订单后，本单享有的优惠可能会一并取消。是否继续？</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="details_brief">  百姓图腾 手工恒温56°紫砂CEO杯，恒温紫砂CEO杯，养生佳品，用恒定温度呵护血管健康。全天24小时为你提供56°的贴心守望。恒心56°，是对心脏最好的温度.高端定制姓氏家徽，为你打造独一无二的专属尊贵。</string>
     <string name="details_material">产品材质：</string>
@@ -4429,6 +4430,7 @@
     <string name="pushmsg_center_pull_down_update_time">最后更新时间 : </string>
     <string name="pushmsg_center_pull_release_text">松开获取更多</string>
     <string name="pushmsg_center_pull_up_text">松开加载更多</string>
+    <string name="qqAppId">1105736969</string>
     <string name="refresh_fail">刷新失败</string>
     <string name="refresh_succeed">刷新成功</string>
     <string name="refreshing">正在刷新</string>

@@ -1,5 +1,6 @@
 package com.lishi.baijiaxing.wxapi;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,30 +14,30 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.activity.MainActivity;
+import com.lishi.baijiaxing.base.BaseActivity;
 import com.lishi.baijiaxing.register.RegisterManger;
 import com.lishi.baijiaxing.register.view.RegisterActivity1;
 import com.lishi.baijiaxing.retrievePassword.view.RetrieveActivity1;
-import com.lishi.baijiaxing.base.BaseActivity;
 import com.lishi.baijiaxing.utils.LocalUserInfo;
-import com.lishi.baijiaxing.wxapi.model.WXTokenBean;
-import com.lishi.baijiaxing.wxapi.model.WXUserInfo;
-import com.lishi.baijiaxing.wxapi.view.SignInView;
-import com.lishi.baijiaxing.utils.WXUtils;
 import com.lishi.baijiaxing.view.TopNavigationBar;
-import com.tencent.mm.sdk.modelbase.BaseReq;
-import com.tencent.mm.sdk.modelbase.BaseResp;
-import com.tencent.mm.sdk.modelmsg.SendAuth;
-import com.tencent.mm.sdk.openapi.IWXAPI;
-import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
-import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.lishi.baijiaxing.wxapi.model.QQTokenBean;
+import com.lishi.baijiaxing.wxapi.model.QQUserInfo;
+import com.lishi.baijiaxing.wxapi.view.SignInView;
+import com.tencent.connect.UserInfo;
+import com.tencent.connect.common.Constants;
+import com.tencent.open.utils.HttpUtils;
+import com.tencent.tauth.IRequestListener;
+import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
+import com.tencent.tauth.UiError;
+
+import org.apache.http.conn.ConnectTimeoutException;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
 
 /**
  * 登录
@@ -46,26 +47,75 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     private TextView tv_login_retrievepassword;
     private TopNavigationBar mTopNavigationBar;
     private ImageView login_wxChar, login_qq;
-
-    /**
-     * 是否已经登录
-     */
-    private boolean isEntrySuccess = false;
+    private BaseUiListener mBaseUiListener;
+    private BaseUserListener mBaseUserListener;
+    private UserInfo userinfo;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
+            if (msg.what == 2) {
+                Intent success = new Intent();
+                success.putExtra("result", "qq");
+                setResult(RESULT_OK, success);
+                Log.i("handleMessage", "qq登录成功");
+            }
             finish();
         }
     };
+    private String scope = "all";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if (MainActivity.mTencent != null) {
+            if (MainActivity.mTencent.isSessionValid()) {
+                MainActivity.mTencent.logout(this);
+            }
+        }
+        MainActivity.mTencent = Tencent.createInstance("1105736969", getApplicationContext());
 
         RegisterManger.getInstantion().addActivity(this);
         findId();
         initView();
+        mBaseUiListener = new BaseUiListener();
+    }
+
+    /**
+     * qq回调
+     */
+    private class BaseUiListener implements IUiListener {
+
+        @Override
+        public void onComplete(Object o) {
+            getQQUserInfo(o.toString());
+            Log.i("BaseUiListener", "调用了");
+        }
+
+        @Override
+        public void onError(UiError uiError) {
+            Log.i("BaseUiListener", "onError");
+        }
+
+        @Override
+        public void onCancel() {
+            Log.i("BaseUiListener", "onCancel");
+        }
+    }
+
+    /**
+     * 获取qq用户信息
+     *
+     * @param str
+     */
+    private void getQQUserInfo(String str) {
+        Gson gson = new Gson();
+        QQTokenBean qqTokenBean = gson.fromJson(str, QQTokenBean.class);
+        Log.i("getQQUserInfo", "qqTokenBean=" + qqTokenBean.toString());
+
+        mBaseUserListener = new BaseUserListener();
+        UserInfo userInfo = new UserInfo(this, MainActivity.mTencent.getQQToken());
+        userInfo.getUserInfo(mBaseUserListener);
     }
 
     private void initView() {
@@ -111,7 +161,17 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 startActivityForResult(startWxActivity, 0);
                 break;
             case R.id.login_qq:
+                qqLogin();
                 break;
+        }
+    }
+
+    /**
+     * qq登录
+     */
+    private void qqLogin() {
+        if (!MainActivity.mTencent.isSessionValid()) {
+            MainActivity.mTencent.login(this, scope, mBaseUiListener);
         }
     }
 
@@ -159,12 +219,46 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            if (data.getStringExtra("result").equals("success")) {
-                Intent success = new Intent();
-                success.putExtra("result", "success");
-                setResult(RESULT_OK, success);
-                finish();
+            if (data != null) {
+                if (data.getStringExtra("result") != null && data.getStringExtra("result").equals("success")) {
+                    Intent success = new Intent();
+                    success.putExtra("result", "wx");
+                    setResult(RESULT_OK, success);
+                    finish();
+                }
+            }
+        } else if (requestCode == Constants.REQUEST_API) {
+            if (resultCode == Constants.RESULT_LOGIN) {
+                Tencent.handleResultData(data, mBaseUiListener);
             }
         }
     }
+
+    /**
+     * 获取用户数据成功/失败
+     */
+    private class BaseUserListener implements IUiListener {
+        @Override
+        public void onComplete(Object o) {
+            Log.i("BaseApiListener", "success=" + o.toString());
+            Gson gson = new Gson();
+            QQUserInfo qqUserInfo = gson.fromJson(o.toString(), QQUserInfo.class);
+            LocalUserInfo.getInstance().setNickName(qqUserInfo.getNickname());
+            LocalUserInfo.getInstance().setSex(qqUserInfo.getGender());
+            LocalUserInfo.getInstance().setPhotoUrl(qqUserInfo.getFigureurl_qq_2());
+            LocalUserInfo.getInstance().setSex("QQ" + qqUserInfo.getNickname());
+            mHandler.sendEmptyMessage(2);
+        }
+
+        @Override
+        public void onError(UiError uiError) {
+
+        }
+
+        @Override
+        public void onCancel() {
+
+        }
+    }
+
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <com.lishi.baijiaxing.view.MyListView
+                android:id="@+id/listview_mycollect_store"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@+id/ll_mycollect_commodity_cancel"
+                android:layout_weight="7"/>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_mycollect_store_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/base_bg_color"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/background_collect"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#dd2726"
+                    android:gravity="center"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/tv_mycollect_store_cancel"
+                    android:paddingRight="20dp"
+                    android:paddingTop="6dp"
+                    android:text="取消关注"
+                    android:textColor="@color/base_bg_color"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
