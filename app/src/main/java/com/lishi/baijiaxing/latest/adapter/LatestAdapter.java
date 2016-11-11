@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.latest.model.LatestBean;
 import com.lishi.baijiaxing.latest.model.LatestCommodityBean;
+import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class LatestAdapter extends RecyclerView.Adapter {
     private LatestBean mLatestBean;
     private Context mContext;
     private LayoutInflater mLayoutInflater;
+    private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
 
     private final static int TYPE_TOP = 0X001;
     private final static int TYPE_BOTTOM = 0X002;
@@ -36,6 +38,10 @@ public class LatestAdapter extends RecyclerView.Adapter {
         this.mContext = context;
         this.mLatestBean = latestBean;
         this.mLayoutInflater = LayoutInflater.from(mContext);
+    }
+
+    public void setOnItemClickListener(YiYuanHotAdapter.OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -55,7 +61,7 @@ public class LatestAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         Log.e("onBindViewHolder", "onBindViewHolder: position=" + position);
         if (holder instanceof LatestTopBottomViewHolder) {
             LatestTopBottomViewHolder viewHolder = (LatestTopBottomViewHolder) holder;
@@ -70,14 +76,29 @@ public class LatestAdapter extends RecyclerView.Adapter {
         } else if (holder instanceof LatestItem1ViewHolder) {
             LatestItem1ViewHolder viewHolder = (LatestItem1ViewHolder) holder;
             viewHolder.photo.setImageResource(R.drawable.latest_item1_photo);
+            viewHolder.photo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onClickListener(v, position);
+                    }
+                }
+            });
         } else {
             LatestItem2ViewHolder viewHolder = (LatestItem2ViewHolder) holder;
             List<LatestCommodityBean> lcsb = mLatestBean.getLatestCommodityBeen();
             viewHolder.name.setText(lcsb.get(countItem2Position(position)).getName());
             viewHolder.brief.setText(lcsb.get(countItem2Position(position)).getBrief());
-            viewHolder.price.setText(lcsb.get(countItem2Position(position)).getPrice());
+            viewHolder.price.setText("￥"+lcsb.get(countItem2Position(position)).getPrice());
             viewHolder.photo.setImageResource(R.drawable.latest_item2_photo);
-
+            viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onClickListener(v, position);
+                    }
+                }
+            });
             if (position % 2 == 0) {
                 RecyclerView.LayoutParams lp = (RecyclerView.LayoutParams) viewHolder.itemView.getLayoutParams();
                 lp.rightMargin = lp.leftMargin;

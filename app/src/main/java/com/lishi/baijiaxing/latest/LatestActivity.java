@@ -1,5 +1,6 @@
 package com.lishi.baijiaxing.latest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -8,10 +9,12 @@ import android.view.View;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseActivity;
+import com.lishi.baijiaxing.details.CommodityDetailsActivity;
 import com.lishi.baijiaxing.latest.adapter.LatestAdapter;
 import com.lishi.baijiaxing.latest.model.LatestBean;
 import com.lishi.baijiaxing.latest.model.LatestCommodityBean;
 import com.lishi.baijiaxing.view.TopNavigationBar;
+import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +56,13 @@ public class LatestActivity extends BaseActivity {
         LatestAdapter adapter = new LatestAdapter(this, mLatestBean);
         mRecyclerView.setAdapter(adapter);
 
+        adapter.setOnItemClickListener(new YiYuanHotAdapter.OnItemClickListener() {
+            @Override
+            public void onClickListener(View view, int position) {
+                Intent startDetailsActivity = new Intent(LatestActivity.this, CommodityDetailsActivity.class);
+                startActivity(startDetailsActivity);
+            }
+        });
     }
 
     private void initData() {

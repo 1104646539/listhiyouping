@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
+import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
 import com.lishi.baijiaxing.yiyuan.YiYuanHotDetailsCallback;
 import com.lishi.baijiaxing.yiyuan.YiYuanNewestDetailsCallback;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotDetailsAdapter;
@@ -121,6 +122,11 @@ public class Fragment_YiYuanDetails extends BaseFragmentV4 implements View.OnCli
                 Toast.makeText(getActivity(), "点击了Newest购买", Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     @Override

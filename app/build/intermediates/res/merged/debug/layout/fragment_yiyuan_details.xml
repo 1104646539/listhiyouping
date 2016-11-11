@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="立即抢购"
+                android:text="追加购买"
                 android:textColor="@color/base_bg_color"
                 android:textSize="18sp"/>
 
@@ -50,7 +50,7 @@
                 android:gravity="center"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="追加购买"
+                android:text="立即抢购"
                 android:textColor="@color/base_bg_color"
                 android:textSize="18sp"
                 android:visibility="gone"/>

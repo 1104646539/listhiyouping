@@ -14,14 +14,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
+import com.lishi.baijiaxing.details.CommodityDetailsActivity;
 import com.lishi.baijiaxing.free.adapter.FreeDetailsAdapter;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
 import com.lishi.baijiaxing.free.model.FreeDetailsBean;
 import com.lishi.baijiaxing.free.presenter.FreeDetailsPresenterImpl;
+import com.lishi.baijiaxing.orderAddressManage.view.DeliveryAddressActivity;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
+import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
+import com.lishi.baijiaxing.view.BadgeView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,6 +55,7 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
 
     private FreeDetailsPresenterImpl mFreeDatailsPresenterImpl;
     private ImageView free_details_shoppingcart;
+    private BadgeView mBadgeView;
 
 
     public static Fragment_FreeDetails_Details newInstance() {
@@ -150,6 +158,9 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
         tv_bottom2_2.setOnClickListener(this);
         tv_bottom2_3.setOnClickListener(this);
         tv_bottom2_4.setOnClickListener(this);
+
+        mBadgeView = new BadgeView(getActivity());
+        mBadgeView.setTargetView(free_details_shoppingcart);
     }
 
     @Override
@@ -174,31 +185,72 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        if (mBadgeView != null) {
+            mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+        }
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.free_details_bottom1_1:
+            case R.id.free_details_bottom1_1://已结束-> 直接购买
+                Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
+                ArrayList<CommodityBean> commodityBeens1 = new ArrayList<>();
+                CommodityBean commodityBeen = new CommodityBean(""
+                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
+                commodityBeens1.add(commodityBeen);
+                startSubmitOrderActivity.putParcelableArrayListExtra("list",commodityBeens1);
+                startActivity(startSubmitOrderActivity);
                 break;
-            case R.id.free_details_bottom1_2:
+            case R.id.free_details_bottom1_2://进行中->已申请 付邮领
+                Intent startDeliveryAddress1Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
+                startActivityForResult(startDeliveryAddress1Activity, 1);
                 break;
-            case R.id.free_details_bottom1_3:
+            case R.id.free_details_bottom1_3://进行中->未申请 付邮领
+                Intent startDeliveryAddress2Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
+                startActivityForResult(startDeliveryAddress2Activity, 1);
                 break;
-            case R.id.free_details_bottom1_4:
+            case R.id.free_details_bottom1_4://即将开始-> 直接购买
+                Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
+                ArrayList<CommodityBean> commodityBeens2 = new ArrayList<>();
+                CommodityBean commodityBeen2 = new CommodityBean(""
+                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
+                commodityBeens2.add(commodityBeen2);
+                startSubmitOrder2Activity.putParcelableArrayListExtra("list",commodityBeens2);
+                startActivity(startSubmitOrder2Activity);
                 break;
-            case R.id.free_details_bottom2_1:
+            case R.id.free_details_bottom2_1://即将开始-> 即将开始
+                Toast.makeText(getActivity(), "活动即将开始，请持续关注", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.free_details_bottom2_2:
+            case R.id.free_details_bottom2_2://进行中->已申请 已申请
+                Toast.makeText(getActivity(), "您已参加过这次活动", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.free_details_bottom2_3:
+            case R.id.free_details_bottom2_3://进行中->未申请 免费申请
+                Intent startDeliveryAddress3Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
+                startActivityForResult(startDeliveryAddress3Activity, 2);
                 break;
-            case R.id.free_details_bottom2_4:
+            case R.id.free_details_bottom2_4://已结束-> 中奖名单
                 Intent startWinningActivity = new Intent(getActivity(), FreeWinningActivity.class);
                 startActivity(startWinningActivity);
                 break;
-            case R.id.free_details_shoppingcart:
+            case R.id.free_details_shoppingcart://购物车
                 Intent startShoppingCart = new Intent(getActivity(), ShoppingCartActivity.class);
                 startActivity(startShoppingCart);
                 break;
         }
+    }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == getActivity().RESULT_OK) {
+            if (requestCode == 1) {
+                Toast.makeText(getActivity(), "付邮领成功", Toast.LENGTH_SHORT).show();     
+            } else if (requestCode == 2) {
+                Toast.makeText(getActivity(), "免费申请成功", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

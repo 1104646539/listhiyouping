@@ -141,12 +141,12 @@ ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:38:9-41:20
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:40:13-69
 	android:name
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:39:13-61
-activity#com.lishi.baijiaxing.activity.MyCollectActivity
+activity#com.lishi.baijiaxing.myCollect.MyCollectActivity
 ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:42:9-45:20
 	android:theme
 		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:44:13-69
 	android:name
-		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:43:13-55
+		ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:43:13-56
 activity#com.lishi.baijiaxing.activity.LogisticsQueryActivity
 ADDED from D:\lsGit\listhiyouping\app\src\main\AndroidManifest.xml:46:9-49:20
 	android:theme

@@ -87,6 +87,7 @@ public class TopNavigationBar extends RelativeLayout {
             iv_left.setVisibility(View.VISIBLE);
             iv_left.setImageDrawable(left_iv);
             iv_left.setClickable(true);
+            iv_left.setPadding((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()), 0, (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()), 0);
             iv_left.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -11,9 +11,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.activity.BrowsingHistoryActivity;
 import com.lishi.baijiaxing.adapter.OtherAdapter;
 import com.lishi.baijiaxing.base.BaseFragment;
 import com.lishi.baijiaxing.bean.UserBean;
+import com.lishi.baijiaxing.myCollect.MyCollectActivity;
 import com.lishi.baijiaxing.myOrders.MyOrderFormActivity;
 import com.lishi.baijiaxing.myfree.MyFreeActivity;
 import com.lishi.baijiaxing.myyiyuan.view.MyYiYuanActivity;
@@ -131,10 +133,14 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
+                        Intent startMyCollectActivity = new Intent(getActivity(), MyCollectActivity.class);
+                        startActivity(startMyCollectActivity);
                         break;
                     case 1:
                         break;
                     case 2:
+                        Intent startBrowsingHistoryActivity = new Intent(getActivity(), BrowsingHistoryActivity.class);
+                        startActivity(startBrowsingHistoryActivity);
                         break;
                     case 3:
                         break;
@@ -185,14 +191,14 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
                 if (!LocalUserInfo.getInstance().isNull()) {
                     tv_user_name.setText(LocalUserInfo.getInstance().getNickName() + "");
                     Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon).onStart();
-                    Log.i("onActivityResult","wx登录成功");
+                    Log.i("onActivityResult", "wx登录成功");
                 }
-            }else if (data.getStringExtra("result").equals("qq")){
+            } else if (data.getStringExtra("result").equals("qq")) {
                 tv_user_name.setText(LocalUserInfo.getInstance().getNickName() + "");
                 Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon).onStart();
-                Log.i("onActivityResult","qq登录成功");
+                Log.i("onActivityResult", "qq登录成功");
             }
-            
+
         }
     }
 }

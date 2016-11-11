@@ -208,6 +208,7 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
 //            mCommodityBeen.add(c);
 //        }
         mCommodityBeen = getIntent().getParcelableArrayListExtra("list");
+        
         mSubmitOrderPresenter.loadOrderData(mCommodityBeen);
 
         Log.e("mCommodityBeen", "mCommodityBeen=" + mCommodityBeen.size()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!");

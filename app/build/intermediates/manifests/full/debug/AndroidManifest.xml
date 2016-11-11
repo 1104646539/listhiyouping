@@ -40,7 +40,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
-            android:name="com.lishi.baijiaxing.activity.MyCollectActivity"
+            android:name="com.lishi.baijiaxing.myCollect.MyCollectActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity

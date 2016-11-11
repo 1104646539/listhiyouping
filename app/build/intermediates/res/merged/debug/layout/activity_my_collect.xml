@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lishi.baijiaxing.activity.MyCollectActivity">
+    tools:context=".myCollect.MyCollectActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -18,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:padding="5dp"
-            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:id="@+id/back_mycollect"
             android:scaleType="fitCenter"
             android:src="@drawable/back_top"/>

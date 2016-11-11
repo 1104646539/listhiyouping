@@ -20,6 +20,9 @@ import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 礼品定制
+ */
 public class CustomizeGiftActivity extends BaseActivity implements YiYuanHotAdapter.OnItemClickListener, CustomizeGiftView {
     private RecyclerView mRecyclerView;
     private TopNavigationBar mTopNavigationBar;

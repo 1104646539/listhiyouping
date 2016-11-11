@@ -122,14 +122,21 @@
                     android:textSize="18sp"/>
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView_freeDesign"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/base_bg_color"
-                android:focusable="false"></android.support.v7.widget.RecyclerView>
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView_freeDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/base_bg_color"
+
+                    android:focusable="false"></android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

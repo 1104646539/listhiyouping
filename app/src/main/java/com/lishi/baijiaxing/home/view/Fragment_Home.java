@@ -25,16 +25,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
-import com.lishi.baijiaxing.activity.BrowsingHistoryActivity;
-import com.lishi.baijiaxing.activity.LogisticsQueryActivity;
-import com.lishi.baijiaxing.activity.MyCollectActivity;
 import com.lishi.baijiaxing.base.BaseFragment;
 import com.lishi.baijiaxing.bean.GridNavigationBean;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
 import com.lishi.baijiaxing.customize.view.CustomizeActivity;
 import com.lishi.baijiaxing.details.CommodityDetailsActivity;
-import com.lishi.baijiaxing.free.model.FreeBean;
-import com.lishi.baijiaxing.free.model.FreeCommentBean;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
 import com.lishi.baijiaxing.free.view.FreeActivity;
 import com.lishi.baijiaxing.free.view.FreeDetailsActivity;
@@ -50,7 +45,6 @@ import com.lishi.baijiaxing.latest.LatestActivity;
 import com.lishi.baijiaxing.view.MyGridView;
 import com.lishi.baijiaxing.view.MyScrollView;
 import com.lishi.baijiaxing.weeklyChoiceness.WeeklyChoicenessActivity;
-import com.lishi.baijiaxing.weeklyChoiceness.adapter.WeeklyChoicenessAdapter;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanActivity;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanDetailsActivity;
@@ -84,6 +78,10 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
     private ImageView free_photo1;
     private ImageView free_photo2;
     private ImageView free_photo3;
+    /**
+     * 免费领更多
+     */
+    private TextView free_more;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -97,6 +95,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
             }
         }
     };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -118,6 +117,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
         ll = (LinearLayout) view.findViewById(R.id.ll_homeroot);
 //        footer = (LinearLayout) view.findViewById(R.id.footer);
         mScroll = (MyScrollView) view.findViewById(R.id.scroll_home);
+        free_more = (TextView) view.findViewById(R.id.free_more);
 
         free_photo1 = (ImageView) view.findViewById(R.id.free_photo1);
         free_photo2 = (ImageView) view.findViewById(R.id.free_photo2);
@@ -125,6 +125,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
         free_photo1.setOnClickListener(this);
         free_photo2.setOnClickListener(this);
         free_photo3.setOnClickListener(this);
+        free_more.setOnClickListener(this);
     }
 
     private void initView(View view) {
@@ -349,6 +350,10 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
                 startFreeDetailsActivity3.putExtra("type", FreeCommodityBean.TYPE_FINISH);
                 startActivity(startFreeDetailsActivity3);
                 break;
+            case R.id.free_more:
+                Intent startFreeActivity = new Intent(getActivity(), FreeActivity.class);
+                startActivity(startFreeActivity);
+                break;
         }
     }
 
@@ -419,7 +424,13 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
 
     @Override
     public void onClickListener(View view, int position) {
-        Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
-        startActivity(startCommodityDetails);
+        if (position > 0 && position <= 3) {
+            Intent startYiYuanDetails = new Intent(getActivity(), YiYuanDetailsActivity.class);
+            startYiYuanDetails.putExtra("type",YiYuanActivity.TYPE_HOT);
+            startActivity(startYiYuanDetails);
+        }else {
+            Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
+            startActivity(startCommodityDetails);
+        }
     }
 }

@@ -1,6 +1,7 @@
 package com.lishi.baijiaxing.home.adater;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,9 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.details.CommodityDetailsActivity;
 import com.lishi.baijiaxing.home.model.HomeCommodityBean;
 import com.lishi.baijiaxing.home.utils.GridSpacingItemDecoration;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
+import com.lishi.baijiaxing.yiyuan.view.YiYuanActivity;
 
 import java.util.ArrayList;
 
@@ -92,6 +95,14 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 }
             } else if (holder instanceof HolderTypeYiYuan_Head) {
                 HolderTypeYiYuan_Head mHolderTypeYiYuan_Head = (HolderTypeYiYuan_Head) holder;
+                mHolderTypeYiYuan_Head.more.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent startYiYuanActivity = new Intent(mContext, YiYuanActivity.class);
+                        mContext.startActivity(startYiYuanActivity);
+                    }
+                });
+
             } else if (holder instanceof HolderTypeCommodity1) {
                 HolderTypeCommodity1 mHolderTypeCommodity1 = (HolderTypeCommodity1) holder;
                 mHolderTypeCommodity1.mPhoto.setImageResource(R.drawable.home3_1);
@@ -124,6 +135,13 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             } else if (holder instanceof HolderTypeCommodityTitle) {
                 HolderTypeCommodityTitle mHolderTypeCommodityTitle = (HolderTypeCommodityTitle) holder;
                 mHolderTypeCommodityTitle.mTitle.setImageResource(R.drawable.home_title);
+                mHolderTypeCommodityTitle.mTitle.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent startCommodityDetailsActivity = new Intent(mContext, CommodityDetailsActivity.class);
+                        mContext.startActivity(startCommodityDetailsActivity);
+                    }
+                });
             } else if (holder instanceof HolderTypeCommodity_Head) {
                 HolderTypeCommodity_Head mHolderTypeCommodity_Head = (HolderTypeCommodity_Head) holder;
                 int type = getItemViewType(position);
@@ -214,9 +232,11 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     class HolderTypeYiYuan_Head extends RecyclerView.ViewHolder {
+        TextView more;
 
         public HolderTypeYiYuan_Head(View itemView) {
             super(itemView);
+            more = (TextView) itemView.findViewById(R.id.yiyuan_more);
         }
     }
 

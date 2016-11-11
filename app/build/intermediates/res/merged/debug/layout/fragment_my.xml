@@ -10,8 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/base_bg_color"
-        app:left_src="@drawable/my_settings"
-        app:right_src="@drawable/message_black"
         app:text_title="我的"
         app:title_color="@color/text_color"
         app:title_size="8sp"/>

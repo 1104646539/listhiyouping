@@ -23,6 +23,8 @@ import com.lishi.baijiaxing.details.adapter.FragmentDetailsAdapter;
 import com.lishi.baijiaxing.details.model.CommodityDetailsBean;
 import com.lishi.baijiaxing.details.presenter.CommodityDetailsPresenterImpl;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
 import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
 import com.lishi.baijiaxing.view.BadgeView;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
@@ -49,7 +51,8 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
     private PopupWindow configWindow;
     private TextView addShoppingCart;
     private BadgeView mBadgeView;
-    private ImageView commodity_details_shoppingcart;
+    private ImageView commodity_details_shoppingcart;//加入购物车
+    private TextView immediately_buy;//立即购买
 
     public static Fragment_Commodity_Details newInstance() {
         if (mFragment_Commodity_Details == null) {
@@ -175,9 +178,11 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
         mRecyclerView = (RecyclerView) mView.findViewById(R.id.recyclerView_commodity_Details);
         addShoppingCart = (TextView) mView.findViewById(R.id.commodity_details_addCart);
         commodity_details_shoppingcart = (ImageView) mView.findViewById(R.id.commodity_details_shoppingcart);
+        immediately_buy = (TextView) mView.findViewById(R.id.commodity_details_buy);
 
         addShoppingCart.setOnClickListener(this);
         commodity_details_shoppingcart.setOnClickListener(this);
+        immediately_buy.setOnClickListener(this);
     }
 
     @Override
@@ -199,6 +204,14 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
     @Override
     public void loadDataFailed(String error) {
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mBadgeView != null) {
+            mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+        }
     }
 
     @Override
@@ -241,6 +254,15 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
             case R.id.commodity_details_shoppingcart://启动购物车
                 Intent startShoppingCart = new Intent(getActivity(), ShoppingCartActivity.class);
                 startActivity(startShoppingCart);
+                break;
+            case R.id.commodity_details_buy:
+                Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
+                ArrayList<CommodityBean> commodityBeens = new ArrayList<>();
+                CommodityBean commodityBeen = new CommodityBean(mCommodityDetailsBean.getPhotoUrl()
+                        , mCommodityDetailsBean.getName(), "", mCommodityDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
+                commodityBeens.add(commodityBeen);
+                startSubmitOrderActivity.putParcelableArrayListExtra("list",commodityBeens);
+                startActivity(startSubmitOrderActivity);
                 break;
         }
     }

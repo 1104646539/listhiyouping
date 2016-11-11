@@ -21,6 +21,9 @@ import java.util.List;
 
 import rx.internal.operators.OnSubscribeFromIterable;
 
+/**
+ * 个性定制
+ */
 public class CustomizeActivity extends BaseActivity implements YiYuanHotAdapter.OnItemClickListener, CustomizeView {
     private CustomizeBean mCustomizeBean;
     private RecyclerView mRecyclerView;
@@ -53,6 +56,7 @@ public class CustomizeActivity extends BaseActivity implements YiYuanHotAdapter.
             case 1:
                 break;
             case 2://杂志定制
+                
                 break;
             case 3://相册定制
                 break;

@@ -92,7 +92,6 @@ public class DeliveryAddressActivity extends BaseActivity implements OnAddressCh
         if (resultCode == RESULT_OK) {
             DeliveryAddressBean deliveryAddress = data.getParcelableExtra("data");
             if (deliveryAddress != null) {//更新地址信息
-
                 if (requestCode == 0) {//编辑地址
                     mAddressPresenter.changeAddress(mDeliveryAddressBeans, mPosition, deliveryAddress);
                 } else if (requestCode == 1) {//新增地址

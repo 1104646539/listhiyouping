@@ -64,8 +64,15 @@ public class FreeDesignActivity extends BaseActivity implements View.OnClickList
 
             }
         });
-
-        LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        /**
+         * 禁止recyclerView的滑动，解决RecyclerView滑动不顺畅
+         */
+        LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) {
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        };
         mRecyclerView.setLayoutManager(manager);
 
         FreeDesignAdapter adapter = new FreeDesignAdapter(this, mFreeDesignBeans);

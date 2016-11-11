@@ -1,4 +1,4 @@
-package com.lishi.baijiaxing.activity;
+package com.lishi.baijiaxing.myCollect;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;

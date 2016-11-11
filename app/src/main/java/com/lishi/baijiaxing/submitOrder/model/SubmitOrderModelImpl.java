@@ -22,6 +22,7 @@ public class SubmitOrderModelImpl implements SubmitOrderModel {
         mCouponsBean = new CouponsBean("2016-9-9", 100, "全平台可用", 88, true);
 
         List<SubmitOrderCommodityBean> socbs = new ArrayList<>();
+        
         for (int i = 0; i < commodity.size(); i++) {
             SubmitOrderCommodityBean soc = new SubmitOrderCommodityBean(commodity.get(i).getCommImgUrl(), commodity.get(i).getCommTitle()
                     , commodity.get(i).getCommPrice(), commodity.get(i).getCommId(), commodity.get(i).getCommNum());

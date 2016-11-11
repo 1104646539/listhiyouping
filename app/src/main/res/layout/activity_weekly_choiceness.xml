@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         app:left_src="@drawable/back_top"
-        app:text_title="积分兑换"
+        app:text_title="每周精选"
         app:title_color="@color/text_color"
         app:title_size="8sp"/>
 
