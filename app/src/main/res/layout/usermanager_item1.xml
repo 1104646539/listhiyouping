@@ -23,10 +23,10 @@
             android:text="头像"
             android:textColor="@color/text_color"/>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/usermanager_item1_headPhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:layout_marginRight="5dp"
             android:layout_toLeftOf="@+id/usermanager_item1_right"
             android:maxHeight="42dp"

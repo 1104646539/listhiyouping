@@ -1,16 +1,20 @@
 package com.lishi.baijiaxing.classify.Widget;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragment;
 import com.lishi.baijiaxing.classify.model.OneClassify;
+import com.lishi.baijiaxing.classify.model.ThreeClassify;
 import com.lishi.baijiaxing.classify.model.TwoClassify;
+import com.lishi.baijiaxing.details.CommodityDetailsActivity;
 
 import java.util.List;
 
@@ -45,7 +49,15 @@ public class Fragment_ClassifyThree extends BaseFragment {
             LinearLayout root = (LinearLayout) view.findViewById(R.id.ll_classitythree_root);
             ThreeClassifyGridView threeClassityGridView = new ThreeClassifyGridView(getActivity(), tClassitys.get(i));
             root.addView(threeClassityGridView);
+            threeClassityGridView.getGridView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
+                    startActivity(startCommodityDetails);
+                }
+            });
         }
+
     }
 
     @Override

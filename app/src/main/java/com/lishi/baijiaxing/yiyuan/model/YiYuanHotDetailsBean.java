@@ -55,6 +55,19 @@ public class YiYuanHotDetailsBean extends BaseBean {
     String recordTime;
 
     /**
+     * 市场价
+     */
+    String price;
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    /**
      * 商品介绍
      */
     ArrayList<Integer> mSrcs;
@@ -139,8 +152,7 @@ public class YiYuanHotDetailsBean extends BaseBean {
         mSrcs = srcs;
     }
 
-    public YiYuanHotDetailsBean(JSONArray JSONArray, String name, int num, int needNum, int surplusNum, int participationNum, String winningNum, int type, String recordTime, ArrayList<Integer> srcs) {
-
+    public YiYuanHotDetailsBean(JSONArray JSONArray, String name, int num, int needNum, int surplusNum, int participationNum, String winningNum, int type, String recordTime, String price, ArrayList<Integer> srcs) {
         mJSONArray = JSONArray;
         this.name = name;
         this.num = num;
@@ -150,6 +162,7 @@ public class YiYuanHotDetailsBean extends BaseBean {
         this.winningNum = winningNum;
         this.type = type;
         this.recordTime = recordTime;
+        this.price = price;
         mSrcs = srcs;
     }
 

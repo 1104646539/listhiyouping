@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="tag_first" type="id"/>
+    <string name="all_images">所有图片</string>
+    <string name="app_name">library</string>
+    <string name="confirm">确定(%1$d/%2$d)</string>
+    <string name="confirm_single">确定</string>
+    <string name="maxnum">最多选择%1$d张图片</string>
+    <string name="open_camera_failure">打开相机失败</string>
+    <string name="permission_denied">请打开相机权限</string>
+    <string name="sd_disable">SD卡不可用</string>
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#FF4081</item>
+
+    </style>
+    <style name="SelTheme" parent="@style/BaseAppTheme">
+
+
+    </style>
+</resources>

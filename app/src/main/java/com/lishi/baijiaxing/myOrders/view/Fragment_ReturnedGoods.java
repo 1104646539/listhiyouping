@@ -29,6 +29,7 @@ import java.util.ArrayList;
 @SuppressLint("ValidFragment")
 public class Fragment_ReturnedGoods extends BaseFragmentV4 implements OrdersView {
     private static final String TAG = "Fragment_ReturnedGoods";
+    private static final int RETURNED_GOORD = 0X0001;
     private static Fragment_ReturnedGoods mFragment_returnedGoods;
     private View view;
     private boolean isPrepared;
@@ -36,6 +37,7 @@ public class Fragment_ReturnedGoods extends BaseFragmentV4 implements OrdersView
     private MyListView mMyListView;
     private OrdersPresenterImpl mOrdersPresenter;
     private ProgressBarUtil progressBarUtil;
+    private OrderFormAdpter adapter;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -129,22 +131,23 @@ public class Fragment_ReturnedGoods extends BaseFragmentV4 implements OrdersView
             mMyOrderFormBeen.clear();
         }
         mMyOrderFormBeen = myOrderFormBeen;
-        OrderFormAdpter adapter = new OrderFormAdpter(getActivity(), mMyOrderFormBeen);
+         adapter = new OrderFormAdpter(getActivity(), mMyOrderFormBeen);
         mMyListView.setAdapter(adapter);
         Log.i(TAG, "加载数据完成" + TAG + "==============");
         progressBarUtil.dismiss();
 
         adapter.setOnItemClickListener(new OrderFormAdpter.OnListItemClickListener() {
             @Override
-            public void onListItemClickListener(View v, StoreBean storeBean, int state) {
+            public void onListItemClickListener(View v, StoreBean storeBean, int state,int position) {
                 Intent startOrderDetails = new Intent(getActivity(), OrderDetailsActivity.class);
                 startOrderDetails.putExtra("data", storeBean);
-                startOrderDetails.putExtra("state", state);
-                startActivity(startOrderDetails);
+                startOrderDetails.putExtra("state", state);   startOrderDetails.putExtra("position", position);
+                startActivityForResult(startOrderDetails, RETURNED_GOORD);
             }
         });
 
     }
+
 
     @Override
     public void onFailed() {

@@ -240,4 +240,7 @@
     </style>
     <style name="Platform.ThemeOverlay.AppCompat.Dark"/>
     <style name="Platform.ThemeOverlay.AppCompat.Light"/>
+    <style name="SelTheme" parent="@style/BaseAppTheme">
+
+    </style>
 </resources>

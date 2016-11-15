@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.search.SearchActivity;
 import com.lishi.baijiaxing.base.BaseFragment;
 import com.lishi.baijiaxing.bean.GridNavigationBean;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
@@ -78,6 +79,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
     private ImageView free_photo1;
     private ImageView free_photo2;
     private ImageView free_photo3;
+    private ImageView top_search;
     /**
      * 免费领更多
      */
@@ -118,6 +120,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
 //        footer = (LinearLayout) view.findViewById(R.id.footer);
         mScroll = (MyScrollView) view.findViewById(R.id.scroll_home);
         free_more = (TextView) view.findViewById(R.id.free_more);
+        top_search = (ImageView) view.findViewById(R.id.top_search);
 
         free_photo1 = (ImageView) view.findViewById(R.id.free_photo1);
         free_photo2 = (ImageView) view.findViewById(R.id.free_photo2);
@@ -125,7 +128,9 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
         free_photo1.setOnClickListener(this);
         free_photo2.setOnClickListener(this);
         free_photo3.setOnClickListener(this);
+        top_search.setOnClickListener(this);
         free_more.setOnClickListener(this);
+        
     }
 
     private void initView(View view) {
@@ -354,6 +359,10 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
                 Intent startFreeActivity = new Intent(getActivity(), FreeActivity.class);
                 startActivity(startFreeActivity);
                 break;
+            case R.id.top_search:
+                Intent startSearchActivity = new Intent(getActivity(), SearchActivity.class);
+                startActivity(startSearchActivity);
+                break;
         }
     }
 
@@ -407,7 +416,6 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
         mRecyclerView = (RecyclerView) mView.findViewById(R.id.recyclerView_home);
         MyGridLayoutManager mManager = new MyGridLayoutManager(getActivity(), 6, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(mManager);
-
 
         HomeAdapter mAdapter = new HomeAdapter(getActivity(), comm);
         mRecyclerView.setAdapter(mAdapter);

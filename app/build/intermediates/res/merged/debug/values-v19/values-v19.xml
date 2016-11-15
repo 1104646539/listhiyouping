@@ -18,4 +18,7 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- API 11 theme customizations can go here. -->
     </style>
+    <style name="SelTheme" parent="@style/BaseAppTheme">
+
+    </style>
 </resources>

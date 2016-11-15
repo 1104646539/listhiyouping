@@ -4058,6 +4058,9 @@
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="cart_button_red">#ed292a</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
     <color name="customize_bg">#F4F4F4</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -4346,6 +4349,7 @@
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
+    <item name="tag_first" type="id"/>
     <item name="up" type="id"/>
     <item name="view_offset_helper" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
@@ -4376,11 +4380,14 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
     <string name="address">收货地址：广东省 深圳市 龙岗区 布吉西环路88号 文博宫 一号馆 3楼 利世机构</string>
+    <string name="all_images">所有图片</string>
     <string name="app_name">利世优品</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cancel_order">取消订单后，本单享有的优惠可能会一并取消。是否继续？</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="confirm">确定(%1$d/%2$d)</string>
+    <string name="confirm_single">确定</string>
     <string name="details_brief">  百姓图腾 手工恒温56°紫砂CEO杯，恒温紫砂CEO杯，养生佳品，用恒定温度呵护血管健康。全天24小时为你提供56°的贴心守望。恒心56°，是对心脏最好的温度.高端定制姓氏家徽，为你打造独一无二的专属尊贵。</string>
     <string name="details_material">产品材质：</string>
     <string name="details_model">产品型号：</string>
@@ -4402,12 +4409,19 @@
     <string name="load_fail">加载失败</string>
     <string name="load_succeed">加载成功</string>
     <string name="loading">正在加载</string>
+    <string name="magazine_item3_1">《保险生活》是目前市场上唯一传播正确保险理念的公开刊物   具有无可争议的公信力。</string>
+    <string name="magazine_item3_2">杂志内容涵盖意外、健康、养老、女性、少儿、理财、理赔案例等 与保险密切相关的方面。解构社会热点，解决人生难题 把保险与生活紧密</string>
+    <string name="magazine_item3_3">每两月一期一对一的服务，及杂志固有的广泛传阅性 使之具有持续的传播力与影响力！</string>
+    <string name="magazine_item3_4">个性定制具有专属性与极强的针对性！</string>
+    <string name="maxnum">最多选择%1$d张图片</string>
     <string name="my_integral1">福币余额</string>
     <string name="my_integral2">代金券</string>
     <string name="my_integral3">可用积分</string>
     <string name="my_mycollect_storename">百姓图腾</string>
     <string name="my_usermanager">帐号管理</string>
+    <string name="open_camera_failure">打开相机失败</string>
     <string name="password_hint">密码由6-20位字符组成，包含至少两种以上字母、数字，或者半角字符，区分大小写</string>
+    <string name="permission_denied">请打开相机权限</string>
     <string name="picture_image_loading">正在加载…</string>
     <string name="picture_load_image_failed">点击屏幕，重新加载</string>
     <string name="picture_next_album">下一组：</string>
@@ -4438,6 +4452,7 @@
     <string name="release_to_load">正在加载</string>
     <string name="release_to_refresh">刷新中</string>
     <string name="rob_text">抢购中，先下单先得哦</string>
+    <string name="sd_disable">SD卡不可用</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="text_cart_add">合计 : </string>
     <string name="text_cart_bom">再去逛逛呗</string>
@@ -5439,6 +5454,12 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#FF4081</item>
+
+    </style>
     <style name="MyDialogStyleBottom" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/AnimBottom</item>
         <item name="android:windowFrame">@null</item>
@@ -5602,6 +5623,10 @@
     <style name="RtlUnderlay.Widget.AppCompat.ActionButton.Overflow" parent="Base.Widget.AppCompat.ActionButton">
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
+    </style>
+    <style name="SelTheme" parent="@style/BaseAppTheme">
+
+
     </style>
     <style name="StyleProgressBarMini" parent="Widget.AppCompat.ProgressBar.Horizontal">
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/text_gray"
+        android:layout_height="1px"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="重量级客户见证"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/text_gray"
+        android:layout_height="1px"/>
+</LinearLayout>

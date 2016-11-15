@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/item_padding"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/customize_magazine_item_grid_photo"
+            android:layout_height="wrap_content"
+            android:src="@drawable/customize_magazine_item_grid_photo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/customize_magazine_item_grid_name"
+            android:layout_marginTop="5dp"
+            android:text="CMF大会荣誉主席丁庆年"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/customize_magazine_item_grid_brief"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="在高手如云，竞争激烈的深圳市场，运用《保险生活》提升形象，打入高端客户群体，占领富人圈，就是占领竞争制高点！"
+            android:textColor="@color/text_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

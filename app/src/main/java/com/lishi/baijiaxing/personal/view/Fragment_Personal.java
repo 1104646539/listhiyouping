@@ -32,8 +32,8 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
     private MyGridView gridview_orderform, gridview_other;
     private String[] orderFromTitles = new String[]{"待付款", "待收货", "待评价", "返修/退换", "我的订单"};
     private int[] orderFromSrcs = new int[]{R.drawable.orderform1, R.drawable.orderform2, R.drawable.orderform3, R.drawable.orderform4, R.drawable.orderform5};
-    private String[] otherTitles = new String[]{"我的收藏", "收藏店铺", "游览记录", "售后服务", "我的免费领", "我的一元拼"};
-    private int[] otherSrcs = new int[]{R.drawable.my_other1, R.drawable.my_other2, R.drawable.my_other3, R.drawable.my_other4, R.drawable.free, R.drawable.yiyuan};
+    private String[] otherTitles = new String[]{"我的收藏", "游览记录", "我的免费领", "我的一元拼"};
+    private int[] otherSrcs = new int[]{R.drawable.my_other1, R.drawable.my_other3, R.drawable.free, R.drawable.yiyuan};
     private CircleImageView iv_user_icon;//用户头像
     private TextView tv_user_name;
     private PersonalPresenterImpl mPersonalPresenter;
@@ -64,7 +64,6 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
         mPersonalPresenter = new PersonalPresenterImpl(this);
         mPersonalPresenter.obtainLogin();
     }
-
 
     @Override
     public void onClick(View v) {
@@ -98,15 +97,21 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
     @Override
     public void obtainLogin(boolean isLogin) {
         UserBean userBean = new UserBean("咸鱼这名也不给", "110110110", "wangluo", 0, R.drawable.tou);
+
         mPersonalPresenter.login(userBean);
         mPersonalPresenter.loadData();
     }
 
     @Override
     public void onLoginSuccess(UserBean userBean) {
+        LocalUserInfo.getInstance().setPhotoUrl("");
+        LocalUserInfo.getInstance().setNickName("咸鱼这名也不给起");
+        LocalUserInfo.getInstance().setSex("男");
+        LocalUserInfo.getInstance().setLevel("铜牌会员");
+        LocalUserInfo.getInstance().setNid("121212");
 
-        tv_user_name.setText(userBean.getUserName());
-        iv_user_icon.setImageResource(userBean.getPhoto());
+        tv_user_name.setText(LocalUserInfo.getInstance().getNickName());
+        iv_user_icon.setImageResource(R.drawable.tou);
 
         MyOrderFormAdapter orderFromAdapter = new MyOrderFormAdapter(getActivity(), orderFromTitles, orderFromSrcs);
         gridview_orderform.setAdapter(orderFromAdapter);
@@ -137,22 +142,17 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
                         startActivity(startMyCollectActivity);
                         break;
                     case 1:
-                        break;
-                    case 2:
                         Intent startBrowsingHistoryActivity = new Intent(getActivity(), BrowsingHistoryActivity.class);
                         startActivity(startBrowsingHistoryActivity);
                         break;
-                    case 3:
-                        break;
-                    case 4:
+                    case 2:
                         Intent startMyFreeActivity = new Intent(getActivity(), MyFreeActivity.class);
                         startActivity(startMyFreeActivity);
                         break;
-                    case 5:
+                    case 3:
                         Intent startMyYiYuanActivity = new Intent(getActivity(), MyYiYuanActivity.class);
                         startActivity(startMyYiYuanActivity);
                         break;
-
                 }
             }
         });
@@ -181,6 +181,21 @@ public class Fragment_Personal extends BaseFragment implements View.OnClickListe
     @Override
     public void loadDataFailed(String error) {
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        tv_user_name.setText(LocalUserInfo.getInstance().getNickName());
+        try {
+            if (LocalUserInfo.getInstance().getPhotoUrl() == null || LocalUserInfo.getInstance().getPhotoUrl().equals("")) {
+                Glide.with(this).load(R.drawable.tou).into(iv_user_icon);
+            } else {
+                Glide.with(this).load(LocalUserInfo.getInstance().getPhotoUrl()).into(iv_user_icon);
+            }
+        } catch (Exception e) {
+            Glide.with(this).load(R.drawable.tou).into(iv_user_icon);
+        }
     }
 
     @Override

@@ -2,14 +2,20 @@ package com.lishi.baijiaxing.myOrders.view;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.myOrders.adapter.OrderFormAdpter;
@@ -22,13 +28,16 @@ import com.lishi.baijiaxing.view.MyListView;
 
 import java.util.ArrayList;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * 待评价
  * Created by Administrator on 2016/8/3.
  */
 @SuppressLint("ValidFragment")
-public class Fragment_StayEvaluate extends BaseFragmentV4 implements OrdersView {
+public class Fragment_StayEvaluate extends BaseFragmentV4 implements OrdersView, View.OnClickListener, OrderFormAdpter.OnStayEvaluateItemClick {
     private static final String TAG = "Fragment_StayEvaluate";
+    private static final int STAY_EVALUATE = 0X003;
     private static Fragment_StayEvaluate mFragment_stayEvaluate;
     private View view;
     private boolean isPrepared;
@@ -36,14 +45,20 @@ public class Fragment_StayEvaluate extends BaseFragmentV4 implements OrdersView 
     private OrdersPresenterImpl mOrdersPresenter;
     private MyListView mMyListView;
     private ProgressBarUtil progressBarUtil;
-    private Handler mHandler = new Handler(){
+    private OrderFormAdpter adapter;
+    private int mPosition = -1;
+    private TextView cancel_ok, cancel_no;
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 55){
+            if (msg.what == 55) {
                 mOrdersPresenter.LoadData(TAG);
             }
         }
     };
+    private PopupWindow pop_cancelDialog;
+    private View cancel_root;
+
     public static Fragment_StayEvaluate newInstantiation() {
         if (mFragment_stayEvaluate == null) {
             mFragment_stayEvaluate = new Fragment_StayEvaluate();
@@ -110,6 +125,12 @@ public class Fragment_StayEvaluate extends BaseFragmentV4 implements OrdersView 
 
     private void findId() {
         mMyListView = (MyListView) view.findViewById(R.id.listview_myorderform_stayevaluate);
+        cancel_root = LayoutInflater.from(getActivity()).inflate(R.layout.cancel_order_dialog, null, false);
+        cancel_ok = (TextView) cancel_root.findViewById(R.id.cancel_yes);
+        cancel_no = (TextView) cancel_root.findViewById(R.id.cancel_no);
+
+        cancel_no.setOnClickListener(this);
+        cancel_ok.setOnClickListener(this);
     }
 
     @Override
@@ -128,21 +149,35 @@ public class Fragment_StayEvaluate extends BaseFragmentV4 implements OrdersView 
             mMyOrderFormBeen.clear();
         }
         mMyOrderFormBeen = myOrderFormBeen;
-        OrderFormAdpter adapter = new OrderFormAdpter(getActivity(), mMyOrderFormBeen);
+        adapter = new OrderFormAdpter(getActivity(), mMyOrderFormBeen);
         mMyListView.setAdapter(adapter);
         Log.i(TAG, "加载数据完成" + TAG + "==============");
         progressBarUtil.dismiss();
 
         adapter.setOnItemClickListener(new OrderFormAdpter.OnListItemClickListener() {
             @Override
-            public void onListItemClickListener(View v, StoreBean storeBean, int state) {
+            public void onListItemClickListener(View v, StoreBean storeBean, int state, int position) {
                 Intent startOrderDetails = new Intent(getActivity(), OrderDetailsActivity.class);
                 startOrderDetails.putExtra("data", storeBean);
-                startOrderDetails.putExtra("state",state);
-                startActivity(startOrderDetails);
+                startOrderDetails.putExtra("state", state);
+                startOrderDetails.putExtra("position", position);
+                startActivityForResult(startOrderDetails, STAY_EVALUATE);
             }
         });
+        adapter.setOnStayEvaluateItemClick(this);
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == getActivity().RESULT_OK) {
+            if (requestCode == STAY_EVALUATE) {
+                int position = data.getIntExtra("position", -1);
+                mMyOrderFormBeen.remove(position);
+                adapter.notifyDataSetChanged();
+            }
+        }
     }
 
     @Override
@@ -154,5 +189,65 @@ public class Fragment_StayEvaluate extends BaseFragmentV4 implements OrdersView 
     public void onDestroy() {
         super.onDestroy();
         mFragment_stayEvaluate = null;
+    }
+
+    /**
+     * 显示取消订单对话框
+     */
+    private void showCancelOrderWindow() {
+        pop_cancelDialog = new PopupWindow(cancel_root, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+        pop_cancelDialog.setFocusable(true);
+        pop_cancelDialog.setBackgroundDrawable(new BitmapDrawable());
+        setAlpha(0.4F);
+        pop_cancelDialog.showAtLocation(cancel_root, Gravity.CENTER, 0, 0);
+        pop_cancelDialog.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setAlpha(1.0F);
+                pop_cancelDialog.dismiss();
+            }
+        });
+    }
+
+    /**
+     * 修改窗体透明度
+     *
+     * @param alpha
+     */
+    private void setAlpha(float alpha) {
+        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+        lp.alpha = alpha;
+        getActivity().getWindow().setAttributes(lp);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.cancel_yes://确定
+                pop_cancelDialog.dismiss();
+                mMyOrderFormBeen.remove(mPosition);
+                adapter.notifyDataSetChanged();
+                break;
+            case R.id.cancel_no://取消
+                pop_cancelDialog.dismiss();
+                break;
+        }
+    }
+
+    @Override
+    public void onListItemClickListener(View v, StoreBean storeBean) {
+
+    }
+
+    @Override
+    public void onBottom1(View v, int position) {
+        mPosition = position;
+        showCancelOrderWindow();
+    }
+
+    @Override
+    public void onBottom2(View v, int position) {
+
     }
 }

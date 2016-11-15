@@ -47,9 +47,8 @@ public class YiYuanHotDetailsModelImpl extends BaseModel implements YiYuanHotDet
 
         if (type == YiYuanActivity.TYPE_HOT) {
             mYiYuanDetailsBean = new YiYuanHotDetailsBean(advertiseArray, "【利世优品】万仟堂陶瓷同心杯带盖过 滤办公茶杯水杯【利世优品】万仟堂陶瓷同心杯带盖过 滤办公茶杯水杯",
-                    322, 160, 120, 1, "12112323", type, "2016-12-16 12:00:00", srcIds);
+                    322, 160, 120, 1, "12112323", type, "2016-12-16 12:00:00", "69",srcIds);
         }
-//        callback.onLoadSuccess(mYiYuanDetailsBean);
         callback.loadDataHotDetailsSuccess(mYiYuanDetailsBean);
     }
 }

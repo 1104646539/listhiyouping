@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
 import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
 import com.lishi.baijiaxing.yiyuan.YiYuanHotDetailsCallback;
 import com.lishi.baijiaxing.yiyuan.YiYuanNewestDetailsCallback;
@@ -115,11 +117,28 @@ public class Fragment_YiYuanDetails extends BaseFragmentV4 implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.yiyuan_details_hot:
+            case R.id.yiyuan_details_hot://点击了Hot购买
                 Toast.makeText(getActivity(), "点击了Hot购买", Toast.LENGTH_SHORT).show();
+
+                Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
+                ArrayList<CommodityBean> commodityBeens = new ArrayList<>();
+                CommodityBean commodityBeen = new CommodityBean(""
+                        , mYiYuanHotDetailsBean.getName(), "", Integer.valueOf(mYiYuanHotDetailsBean.getPrice())
+                        , 11200, Integer.valueOf("1"), true);
+                commodityBeens.add(commodityBeen);
+                startSubmitOrderActivity.putParcelableArrayListExtra("list", commodityBeens);
+                startActivity(startSubmitOrderActivity);
                 break;
-            case R.id.yiyuan_details_newest:
+            case R.id.yiyuan_details_newest://点击了Newest购买
                 Toast.makeText(getActivity(), "点击了Newest购买", Toast.LENGTH_SHORT).show();
+                Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
+                ArrayList<CommodityBean> commodityBeens2 = new ArrayList<>();
+                CommodityBean commodityBeen2 = new CommodityBean(""
+                        , mYiYuanHotDetailsBean.getName(), "", Integer.valueOf(mYiYuanHotDetailsBean.getPrice())
+                        , 11200, Integer.valueOf("1"), true);
+                commodityBeens2.add(commodityBeen2);
+                startSubmitOrder2Activity.putParcelableArrayListExtra("list", commodityBeens2);
+                startActivity(startSubmitOrder2Activity);
                 break;
         }
     }

@@ -251,6 +251,16 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
                 startEvaluateActivity.putExtra("data", mMyOrderFormBeens.get(mPosition).getStoreBean());
                 mContext.startActivity(startEvaluateActivity);
                 break;
+            case R.id.btn_myorderform_cancel://代付款->取消订单
+                if (mOnStayEvaluateItemClick != null) {
+                    mOnStayEvaluateItemClick.onBottom1(v, getPosition());
+                }
+                break;
+            case R.id.btn_myorderform_deleteorderform://待评价->删除订单
+                if (mOnStayEvaluateItemClick != null) {
+                    mOnStayEvaluateItemClick.onBottom1(v, getPosition());
+                }
+                break;
         }
     }
 
@@ -289,7 +299,7 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
         Button btn_myorderform_remindshipments;//提醒发货
         //待评价
         Button btn_myorderform_deleteorderform;//删除订单
-//        Button btn_myorderform_checklogistics1;//查看物流
+        //        Button btn_myorderform_checklogistics1;//查看物流
         Button btn_myorderform_evaluate;//评价
         //完成交易
         Button btn_myorderform_recommendgoods1;//宝贝推荐
@@ -346,7 +356,7 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
                 @Override
                 public void onClick(View v) {
                     if (mOnItemClickListener != null) {
-                        mOnItemClickListener.onListItemClickListener(v, mStoreBean, mMyOrderFormBean.getState());
+                        mOnItemClickListener.onListItemClickListener(v, mStoreBean, mMyOrderFormBean.getState(), getPosition());
                     }
                 }
             });
@@ -366,16 +376,16 @@ public class OrderFormAdpter extends BaseAdapter implements View.OnClickListener
     }
 
     public interface OnListItemClickListener {
-        void onListItemClickListener(View v, StoreBean storeBean,int state);
+        void onListItemClickListener(View v, StoreBean storeBean, int state, int position);
     }
 
 
     public interface OnStayEvaluateItemClick {
         void onListItemClickListener(View v, StoreBean storeBean);
 
-        void onBottom1(View v);
+        void onBottom1(View v, int position);
 
-        void onBottom2(View v);
+        void onBottom2(View v, int position);
     }
 
 }

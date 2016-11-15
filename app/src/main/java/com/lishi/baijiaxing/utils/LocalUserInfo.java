@@ -26,6 +26,10 @@ public class LocalUserInfo implements Parcelable {
      * 昵称
      */
     String nickName;
+    /**
+     * 会员等级
+     */
+    String level;
 
     public String getNid() {
         return nid;
@@ -59,6 +63,13 @@ public class LocalUserInfo implements Parcelable {
         this.nickName = nickName;
     }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
 
     private LocalUserInfo() {
     }
@@ -69,6 +80,23 @@ public class LocalUserInfo implements Parcelable {
 
     private static class LocalUserInfoHolder {
         static LocalUserInfo localUserInfo = new LocalUserInfo();
+    }
+
+    public boolean isNull() {
+        if (LocalUserInfoHolder.localUserInfo != null) {
+            if (LocalUserInfoHolder.localUserInfo.nid == null || LocalUserInfoHolder.localUserInfo.nickName == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public LocalUserInfo(String nid, String photoUrl, String sex, String nickName, String level) {
+        this.nid = nid;
+        this.photoUrl = photoUrl;
+        this.sex = sex;
+        this.nickName = nickName;
+        this.level = level;
     }
 
     @Override
@@ -82,6 +110,7 @@ public class LocalUserInfo implements Parcelable {
         dest.writeString(this.photoUrl);
         dest.writeString(this.sex);
         dest.writeString(this.nickName);
+        dest.writeString(this.level);
     }
 
     protected LocalUserInfo(Parcel in) {
@@ -89,9 +118,10 @@ public class LocalUserInfo implements Parcelable {
         this.photoUrl = in.readString();
         this.sex = in.readString();
         this.nickName = in.readString();
+        this.level = in.readString();
     }
 
-    public static final Parcelable.Creator<LocalUserInfo> CREATOR = new Parcelable.Creator<LocalUserInfo>() {
+    public static final Creator<LocalUserInfo> CREATOR = new Creator<LocalUserInfo>() {
         @Override
         public LocalUserInfo createFromParcel(Parcel source) {
             return new LocalUserInfo(source);
@@ -102,13 +132,4 @@ public class LocalUserInfo implements Parcelable {
             return new LocalUserInfo[size];
         }
     };
-
-    public boolean isNull() {
-        if (LocalUserInfoHolder.localUserInfo != null) {
-            if (LocalUserInfoHolder.localUserInfo.nid==null|| LocalUserInfoHolder.localUserInfo.nickName==null) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

@@ -24,7 +24,8 @@
             android:gravity="center"
             android:text="扫一扫"
             android:textColor="#FFFFFF"
-            android:textSize="8sp"/>
+            android:textSize="8sp"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <LinearLayout
@@ -45,30 +46,30 @@
             android:paddingRight="6dp"
             android:src="@drawable/search"/>
 
-        <EditText
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/top_search"
             android:layout_gravity="center_vertical"
-            android:background="#00FFFFFF"
-            android:paddingBottom="3dp"
-            android:paddingTop="3dp"
-            android:textSize="16sp"/>
+            android:background="#00FFFFFF"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/tv_top_navigation_msg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="3dp"
-        android:layout_marginTop="8dp"
-        android:drawableTop="@drawable/message_white"
-        android:gravity="center"
-        android:text="消息"
-        android:textColor="#FFFFFF"
-        android:textSize="8sp"/>
+
+        <TextView
+            android:id="@+id/tv_top_navigation_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="搜索"
+            android:visibility="gone"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"/>
     </LinearLayout>
 </LinearLayout>

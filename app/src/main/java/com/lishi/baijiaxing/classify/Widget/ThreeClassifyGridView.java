@@ -28,6 +28,10 @@ public class ThreeClassifyGridView extends LinearLayout {
     private GridView mGridView;
     private List<ThreeClassify> datas;
 
+    public GridView getGridView() {
+        return mGridView;
+    }
+
     public ThreeClassifyGridView(Context context, TwoClassify data) {
         super(context);
         mData = data;

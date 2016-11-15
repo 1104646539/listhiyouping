@@ -51,7 +51,8 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
     private PopupWindow configWindow;
     private TextView addShoppingCart;
     private BadgeView mBadgeView;
-    private ImageView commodity_details_shoppingcart;//加入购物车
+    private ImageView commodity_details_shoppingcart;//购物车
+    private TextView commodity_details_shoppingcart_tv;
     private TextView immediately_buy;//立即购买
 
     public static Fragment_Commodity_Details newInstance() {
@@ -146,7 +147,6 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
         pop_name = (TextView) configView.findViewById(R.id.commodity_config_name);
         pop_price = (TextView) configView.findViewById(R.id.commodity_config_price);
         pop_photo = (ImageView) configView.findViewById(R.id.commodity_config_photo);
-
         pop_minus.setOnClickListener(this);
         pop_plus.setOnClickListener(this);
         pop_confirm.setOnClickListener(this);
@@ -169,7 +169,6 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
         getActivity().getWindow().setAttributes(lp);
     }
 
-
     private void initData() {
 
     }
@@ -179,7 +178,9 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
         addShoppingCart = (TextView) mView.findViewById(R.id.commodity_details_addCart);
         commodity_details_shoppingcart = (ImageView) mView.findViewById(R.id.commodity_details_shoppingcart);
         immediately_buy = (TextView) mView.findViewById(R.id.commodity_details_buy);
-
+        commodity_details_shoppingcart_tv = (TextView) mView.findViewById(R.id.commodity_details_shoppingcart_tv);
+        
+        commodity_details_shoppingcart_tv.setOnClickListener(this);
         addShoppingCart.setOnClickListener(this);
         commodity_details_shoppingcart.setOnClickListener(this);
         immediately_buy.setOnClickListener(this);
@@ -252,6 +253,7 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
                 ShoppingBadgeUtil.getInstance().setBadgeCount(count);
                 break;
             case R.id.commodity_details_shoppingcart://启动购物车
+            case R.id.commodity_details_shoppingcart_tv:
                 Intent startShoppingCart = new Intent(getActivity(), ShoppingCartActivity.class);
                 startActivity(startShoppingCart);
                 break;
@@ -261,7 +263,7 @@ public class Fragment_Commodity_Details extends BaseFragmentV4 implements Commod
                 CommodityBean commodityBeen = new CommodityBean(mCommodityDetailsBean.getPhotoUrl()
                         , mCommodityDetailsBean.getName(), "", mCommodityDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
                 commodityBeens.add(commodityBeen);
-                startSubmitOrderActivity.putParcelableArrayListExtra("list",commodityBeens);
+                startSubmitOrderActivity.putParcelableArrayListExtra("list", commodityBeens);
                 startActivity(startSubmitOrderActivity);
                 break;
         }

@@ -36,14 +36,15 @@ public class Fragment_StayTakeGoods extends BaseFragmentV4 implements OrdersView
     private MyListView mListView;
     private ProgressBarUtil progressBarUtil;
     private OrdersPresenterImpl mOrdersPresenter;
-    private Handler mHandler = new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 55){
+            if (msg.what == 55) {
                 mOrdersPresenter.LoadData(TAG);
             }
         }
     };
+
     public static Fragment_StayTakeGoods newInstantiation() {
         if (mFragment_stayTakeGoods == null) {
             mFragment_stayTakeGoods = new Fragment_StayTakeGoods();
@@ -134,10 +135,11 @@ public class Fragment_StayTakeGoods extends BaseFragmentV4 implements OrdersView
 
         adapter.setOnItemClickListener(new OrderFormAdpter.OnListItemClickListener() {
             @Override
-            public void onListItemClickListener(View v, StoreBean storeBean, int state) {
+            public void onListItemClickListener(View v, StoreBean storeBean, int state, int position) {
                 Intent startOrderDetails = new Intent(getActivity(), OrderDetailsActivity.class);
                 startOrderDetails.putExtra("data", storeBean);
-                startOrderDetails.putExtra("state",state);
+                startOrderDetails.putExtra("state", state);
+                startOrderDetails.putExtra("position", position);
                 startActivity(startOrderDetails);
             }
         });

@@ -50,6 +50,10 @@
     <string name="errcode_unknown">发送返回</string>
     <string name="cancel_order">取消订单后，本单享有的优惠可能会一并取消。是否继续？</string>
     <string name="qqAppId">1105736969</string>
+    <string name="magazine_item3_1">《保险生活》是目前市场上唯一传播正确保险理念的公开刊物   具有无可争议的公信力。</string>
+    <string name="magazine_item3_2">杂志内容涵盖意外、健康、养老、女性、少儿、理财、理赔案例等 与保险密切相关的方面。解构社会热点，解决人生难题 把保险与生活紧密</string>
+    <string name="magazine_item3_3">每两月一期一对一的服务，及杂志固有的广泛传阅性 使之具有持续的传播力与影响力！</string>
+    <string name="magazine_item3_4">个性定制具有专属性与极强的针对性！</string>
 
     <string-array name="province_item">
         <item>北京</item>

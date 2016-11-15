@@ -1,8 +1,12 @@
 package com.lishi.baijiaxing.userManager.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,15 +14,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.userManager.model.UserListBean;
+import com.lishi.baijiaxing.utils.LocalUserInfo;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 
 import org.apache.commons.cli.TypeHandler;
 
+import java.io.File;
 import java.util.IllegalFormatCodePointException;
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * 用户管理
@@ -26,17 +36,15 @@ import java.util.List;
  */
 public class UserManagerAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private UserListBean mUserListBeen;
     private LayoutInflater mLayoutInflater;
 
     private final static int TYPE_HEADPHOTO = 0X001;
     private final static int TYPE_ITEM = 0X002;
-    
+
     private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
 
-    public UserManagerAdapter(Context context, UserListBean userListBeen) {
+    public UserManagerAdapter(Context context) {
         this.mContext = context;
-        this.mUserListBeen = userListBeen;
         this.mLayoutInflater = LayoutInflater.from(mContext);
     }
 
@@ -57,21 +65,31 @@ public class UserManagerAdapter extends RecyclerView.Adapter {
         if (holder instanceof UserManagerItem1ViewHolder) {
             UserManagerItem1ViewHolder viewHolder = (UserManagerItem1ViewHolder) holder;
             viewHolder.tv_classify.setText("头像");
-            viewHolder.headPhoto.setImageResource(R.drawable.usermanager_headphoto);
+            try {
+                String path = LocalUserInfo.getInstance().getPhotoUrl();
+                if (path == null || path.equals("")) {
+                    Glide.with(mContext).load(R.drawable.tou).into(viewHolder.headPhoto);
+                } else {
+                    Glide.with(mContext).load(path).into(viewHolder.headPhoto);
+                }
+            } catch (Exception e) {
+                Toast.makeText(mContext, "找不到图片path", Toast.LENGTH_SHORT).show();
+            }
+
         } else {
             UserManagerItem2ViewHolder viewHolder = (UserManagerItem2ViewHolder) holder;
             switch (position) {
                 case 1:
                     viewHolder.tv_classify.setText("会员名");
-                    viewHolder.value.setText(mUserListBeen.getName());
+                    viewHolder.value.setText(LocalUserInfo.getInstance().getNid());
                     break;
                 case 2:
                     viewHolder.tv_classify.setText("昵称");
-                    viewHolder.value.setText(mUserListBeen.getNickname());
+                    viewHolder.value.setText(LocalUserInfo.getInstance().getNickName());
                     break;
                 case 3:
                     viewHolder.tv_classify.setText("性别");
-                    viewHolder.value.setText(mUserListBeen.getSex());
+                    viewHolder.value.setText(LocalUserInfo.getInstance().getSex());
                     break;
                 case 4:
                     viewHolder.tv_classify.setText("收货地址");
@@ -102,18 +120,18 @@ public class UserManagerAdapter extends RecyclerView.Adapter {
 
     class UserManagerItem1ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_classify, value;
-        ImageView headPhoto;
+        CircleImageView headPhoto;
 
         public UserManagerItem1ViewHolder(View itemView) {
             super(itemView);
             tv_classify = (TextView) itemView.findViewById(R.id.usermanager_item1_tv);
             value = (TextView) itemView.findViewById(R.id.usermanager_item2_tv);
-            headPhoto = (ImageView) itemView.findViewById(R.id.usermanager_item1_headPhoto);
+            headPhoto = (CircleImageView) itemView.findViewById(R.id.usermanager_item1_headPhoto);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (mOnItemClickListener!=null){
-                        mOnItemClickListener.onClickListener(v,getPosition());
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onClickListener(v, getPosition());
                     }
                 }
             });
@@ -130,8 +148,8 @@ public class UserManagerAdapter extends RecyclerView.Adapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (mOnItemClickListener!=null){
-                        mOnItemClickListener.onClickListener(v,getPosition());
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onClickListener(v, getPosition());
                     }
                 }
             });

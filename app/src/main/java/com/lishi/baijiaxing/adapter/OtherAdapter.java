@@ -14,7 +14,6 @@ import com.lishi.baijiaxing.R;
  * Created by Administrator on 2016/6/20.
  */
 public class OtherAdapter extends BaseAdapter {
-    private Context mContext;
     private String[] mTitles;
     private int[] mSrcids;
     private LayoutInflater mLayoutInflater;

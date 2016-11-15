@@ -230,7 +230,21 @@
             android:name=".shoppingCart.ShoppingCartActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".customize.view.CustomizeMagazineActivity">
+        <activity
+            android:name=".customize.view.CustomizeMagazineActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".customize.view.CustomizeMagazine2Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".customize.view.MagazineAboutUsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".search.SearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>
 

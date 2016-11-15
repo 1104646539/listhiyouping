@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseActivity;
 import com.lishi.baijiaxing.customize.adapter.CustomizeAdapter;
+import com.lishi.baijiaxing.customize.adapter.MagazineAdapter;
 import com.lishi.baijiaxing.customize.model.CustomizeBean;
 import com.lishi.baijiaxing.customize.presenter.CustomizePresenterImpl;
 import com.lishi.baijiaxing.view.TopNavigationBar;
@@ -56,7 +57,8 @@ public class CustomizeActivity extends BaseActivity implements YiYuanHotAdapter.
             case 1:
                 break;
             case 2://杂志定制
-                
+                Intent startCustomizeMagazineActivity = new Intent(this, CustomizeMagazineActivity.class);
+                startActivity(startCustomizeMagazineActivity);
                 break;
             case 3://相册定制
                 break;

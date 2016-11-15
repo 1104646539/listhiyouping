@@ -1,5 +1,6 @@
 package com.lishi.baijiaxing.myOrders.view;
 
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class OrderDetailsActivity extends BaseActivity implements View.OnClickLi
     private MyListView mMyListView;
     private StoreBean mStoreBean;
     private int mState;
+    private int mPosition;
     private TextView order_state;
     private LinearLayout bottom_ll1, bottom_ll2, bottom_ll3, bottom_ll4, bottom_ll5;
     private LinearLayout order_details_endTime;
@@ -69,6 +71,7 @@ public class OrderDetailsActivity extends BaseActivity implements View.OnClickLi
     private void initData() {
         mStoreBean = getIntent().getParcelableExtra("data");
         mState = getIntent().getIntExtra("state", -1);
+        mPosition = getIntent().getIntExtra("position", -1);
         switchState();
     }
 
@@ -204,6 +207,10 @@ public class OrderDetailsActivity extends BaseActivity implements View.OnClickLi
             case R.id.cancel_yes://确定
                 Toast.makeText(this, "确定取消", Toast.LENGTH_SHORT).show();
                 pop_cancelDialog.dismiss();
+                Intent result = new Intent();
+                result.putExtra("position", mPosition);
+                setResult(RESULT_OK,result);
+                finish();
                 break;
             case R.id.cancel_no://取消
                 pop_cancelDialog.dismiss();
@@ -215,6 +222,7 @@ public class OrderDetailsActivity extends BaseActivity implements View.OnClickLi
             case R.id.order_details__bottom1_pay:
                 break;
             case R.id.order_details__bottom2_deleteOrder:
+              
                 break;
             case R.id.order_details__bottom2_again:
                 break;
@@ -227,6 +235,7 @@ public class OrderDetailsActivity extends BaseActivity implements View.OnClickLi
             case R.id.order_details__bottom4_affirm:
                 break;
             case R.id.order_details__bottom5_deleteOrder:
+                showCancelOrderWindow();
                 break;
             case R.id.order_details__bottom5_payment:
                 break;
