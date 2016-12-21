@@ -2,26 +2,26 @@ package com.lishi.baijiaxing.home.adater;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextPaint;
 import android.util.Log;
-import android.util.LogPrinter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.details.CommodityDetailsActivity;
-import com.lishi.baijiaxing.home.model.HomeCommodityBean;
+import com.lishi.baijiaxing.home.model.Commodity;
 import com.lishi.baijiaxing.home.utils.GridSpacingItemDecoration;
+import com.lishi.baijiaxing.utils.MyBitmapImageViewTarget;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanActivity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/14.
@@ -33,30 +33,32 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     //商城热卖
     private static final int TYPE_COMMODITY1_HEAD = 0X002;
     private static final int TYPE_COMMODITY1 = 0X003;
-    //数码办公
+    // 定制礼品
     private static final int TYPE_COMMODITY2_HEAD = 0X004;
     private static final int TYPE_COMMODITY2 = 0X005;
-    //定制礼品
+    // 数码用品
     private static final int TYPE_COMMODITY3_HEAD = 0X006;
     private static final int TYPE_COMMODITY3 = 0X007;
-    //餐饮用具
+    // 餐饮用品
     private static final int TYPE_COMMODITY4_HEAD = 0X008;
     private static final int TYPE_COMMODITY4 = 0X009;
+    // 为你推荐
+    private static final int TYPE_COMMODITY5_HEAD = 0X010;
+    private static final int TYPE_COMMODITY5 = 0X011;
 
-    private static final int TYPE_COMMODITY_TITLE = 0X010;
-
+    private static final int TYPE_COMMODITY_TITLE = 0X111;
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    private ArrayList<HomeCommodityBean> mCommodity;
+    private List<Commodity.DataBean> mCommodity;
     private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
-
+    private String headUrl = "http://risevip.oss-cn-shenzhen.aliyuncs.com";
 
     public void setOnItemClickListener(YiYuanHotAdapter.OnItemClickListener onItemClickListener) {
         mOnItemClickListener = onItemClickListener;
     }
 
-    public HomeAdapter(Context context, ArrayList<HomeCommodityBean> commodity) {
+    public HomeAdapter(Context context, List<Commodity.DataBean> commodity) {
         this.mContext = context;
         this.mLayoutInflater = LayoutInflater.from(mContext);
         this.mCommodity = commodity;
@@ -74,10 +76,10 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else if (viewType == TYPE_COMMODITY1) {//商城热卖
             return new HolderTypeCommodity1(mLayoutInflater.inflate(R.layout.item_home3_2, parent, false));
         } else if (viewType == TYPE_COMMODITY2 || viewType == TYPE_COMMODITY3
-                || viewType == TYPE_COMMODITY4) {//数码办公||定制礼品||餐饮用具
+                || viewType == TYPE_COMMODITY4 || viewType == TYPE_COMMODITY5) {//定制礼品||数码用品||餐饮用品||为你推荐
             return new HolderTypeCommodity2(mLayoutInflater.inflate(R.layout.item_home4_2, parent, false));
         } else if (viewType == TYPE_COMMODITY1_HEAD || viewType == TYPE_COMMODITY2_HEAD
-                || viewType == TYPE_COMMODITY3_HEAD || viewType == TYPE_COMMODITY4_HEAD) {//Commodity
+                || viewType == TYPE_COMMODITY3_HEAD || viewType == TYPE_COMMODITY4_HEAD || viewType == TYPE_COMMODITY5_HEAD) {//Commodity
             return new HolderTypeCommodity_Head(mLayoutInflater.inflate(R.layout.item_home_commodity_head, parent, false));
         }
         return new HolderTypeCommodity2(mLayoutInflater.inflate(R.layout.item_home4_2, parent, false));
@@ -85,11 +87,23 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
         if (holder != null) {
             if (holder instanceof HolderTypeYiYuan) {
                 HolderTypeYiYuan mHolderTypeYiYuan = (HolderTypeYiYuan) holder;
-                mHolderTypeYiYuan.mName.setText("虎符龙节文具套装");
-                mHolderTypeYiYuan.mPhoto.setImageResource(R.drawable.home2_1);
+                int pos = getYiYuanPosition(position);
+                Commodity.DataBean commodity = mCommodity.get(pos);
+                mHolderTypeYiYuan.mName.setText(commodity.getName().length() > 7 ? commodity.getName().length() > 7 ? commodity.getName().substring(0, 7) : commodity.getName() : commodity.getName());
+                String path = commodity.getPhotoUrl();
+                if (!path.contains("http")) {
+                    path = path.substring(1, path.length());
+                    path = headUrl + path;
+                    Log.i("修改后", "path=" + path);
+                }
+                Log.i("HolderTypeYiYuan", "path=" + path);
+//                Glide.with(mContext).load(path).placeholder(R.drawable.item_recycle).dontAnimate().into(mHolderTypeYiYuan.mPhoto);
+                Glide.with(mContext).load(path).asBitmap().placeholder(R.drawable.home_yiyuan_239x239)
+                        .into(new MyBitmapImageViewTarget(mHolderTypeYiYuan.mPhoto));
                 if (position == 3) {
                     mHolderTypeYiYuan.mView.setVisibility(View.GONE);
                 }
@@ -105,41 +119,75 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
             } else if (holder instanceof HolderTypeCommodity1) {
                 HolderTypeCommodity1 mHolderTypeCommodity1 = (HolderTypeCommodity1) holder;
-                mHolderTypeCommodity1.mPhoto.setImageResource(R.drawable.home3_1);
-                mHolderTypeCommodity1.mName.setText("茶叶罐");
-                mHolderTypeCommodity1.mInfo.setText("禅定純锡茶叶罐");
-                if (position == 6 || position == 9) {
-                    GridLayoutManager.LayoutParams lp = (GridLayoutManager.LayoutParams) mHolderTypeCommodity1.itemView.getLayoutParams();
-                    lp.leftMargin = lp.leftMargin * 2;
+                final int pos = getHolderTypeCommodity(position);
+                Commodity.DataBean commodity = mCommodity.get(pos);
+                String path = commodity.getPhotoUrl();
+                if (!path.contains("http")) {
+                    path = path.substring(1, path.length());
+                    path = headUrl + path;
+                    Log.i("修改后", "path=" + path);
                 }
-                if (position == 8 || position == 11) {
-                    GridLayoutManager.LayoutParams lp = (GridLayoutManager.LayoutParams) mHolderTypeCommodity1.itemView.getLayoutParams();
-                    lp.rightMargin = lp.rightMargin * 2;
-                }
-
-                if (position == 6 || position == 7 || position == 8) {
-                    GridLayoutManager.LayoutParams lp = (GridLayoutManager.LayoutParams) mHolderTypeCommodity1.itemView.getLayoutParams();
-                    lp.topMargin = lp.topMargin * 4;
-                }
-
-                if (position == 9 || position == 10 || position == 11) {
-                    GridLayoutManager.LayoutParams lp = (GridLayoutManager.LayoutParams) mHolderTypeCommodity1.itemView.getLayoutParams();
-                    lp.bottomMargin = lp.bottomMargin * 4;
-                }
-
+                Glide.with(mContext).load(path).asBitmap().placeholder(R.drawable.home_hot_220x153)
+                        .into(new MyBitmapImageViewTarget(mHolderTypeCommodity1.mPhoto));
+                mHolderTypeCommodity1.mName.setText(commodity.getName().length() > 7 ? commodity.getName().length() > 7 ? commodity.getName().substring(0, 7) : commodity.getName() : commodity.getName());
+                mHolderTypeCommodity1.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String gid = mCommodity.get(pos).getCid();
+                        if (gid != null && !gid.equals("0")) {
+                            if (mOnItemClickListener != null) {
+                                mOnItemClickListener.onClickListener(v, pos);
+                            }
+                        }
+                    }
+                });
             } else if (holder instanceof HolderTypeCommodity2) {
                 HolderTypeCommodity2 mHolderTypeCommodity2 = (HolderTypeCommodity2) holder;
-                mHolderTypeCommodity2.mPhoto.setImageResource(R.drawable.home4_1);
-                mHolderTypeCommodity2.mName.setText("万仟堂 陶瓷同心杯");
-                mHolderTypeCommodity2.mPrice.setText("299元");
+                final int pos = getHolderTypeCommodity(position);
+                Commodity.DataBean commodity = mCommodity.get(pos);
+                String path = commodity.getPhotoUrl();
+                if (!path.contains("http")) {
+                    path = path.substring(1, path.length());
+                    path = headUrl + path;
+                    Log.i("修改后", "path=" + path);
+                }
+                Glide.with(mContext).load(path).asBitmap().placeholder(R.drawable.home_commodity_349x256)
+                        .into(new MyBitmapImageViewTarget(mHolderTypeCommodity2.mPhoto));
+
+                mHolderTypeCommodity2.mName.setText(commodity.getName().length() > 7 ? commodity.getName().length() > 7 ? commodity.getName().length() > 7 ? commodity.getName().substring(0, 7) : commodity.getName() : commodity.getName() : commodity.getName());
+                mHolderTypeCommodity2.mPrice.setText(commodity.getNowPrice());
+                mHolderTypeCommodity2.mOldPrice.setText(commodity.getOldPrice());
+                mHolderTypeCommodity2.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String gid = mCommodity.get(pos).getCid();
+                        if (gid != null && !gid.equals("0")) {
+                            if (mOnItemClickListener != null) {
+                                mOnItemClickListener.onClickListener(v, pos);
+                            }
+                        }
+                    }
+                });
             } else if (holder instanceof HolderTypeCommodityTitle) {
                 HolderTypeCommodityTitle mHolderTypeCommodityTitle = (HolderTypeCommodityTitle) holder;
-                mHolderTypeCommodityTitle.mTitle.setImageResource(R.drawable.home_title);
+                final int pos = getHolderTypeTitle(position);
+                Commodity.DataBean commodity = mCommodity.get(pos);
+                String path = commodity.getPhotoUrl();
+                if (!path.contains("http")) {
+                    path = path.substring(1, path.length());
+                    path = headUrl + path;
+                    Log.i("修改后", "path=" + path);
+                }
+                Glide.with(mContext).load(path).asBitmap().placeholder(R.drawable.home_title_720x197).into(new MyBitmapImageViewTarget(mHolderTypeCommodityTitle.mTitle));
                 mHolderTypeCommodityTitle.mTitle.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent startCommodityDetailsActivity = new Intent(mContext, CommodityDetailsActivity.class);
-                        mContext.startActivity(startCommodityDetailsActivity);
+                        String gid = mCommodity.get(pos).getCid();
+                        startCommodityDetailsActivity.putExtra("gid",gid);
+                        if (gid != null && !gid.equals("0")) {
+                            mContext.startActivity(startCommodityDetailsActivity);
+                        }
                     }
                 });
             } else if (holder instanceof HolderTypeCommodity_Head) {
@@ -150,18 +198,54 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         mHolderTypeCommodity_Head.mTitle.setText("商城热卖");
                         break;
                     case TYPE_COMMODITY2_HEAD:
-                        mHolderTypeCommodity_Head.mTitle.setText("数码办公");
-                        break;
-                    case TYPE_COMMODITY3_HEAD:
                         mHolderTypeCommodity_Head.mTitle.setText("定制礼品");
                         break;
+                    case TYPE_COMMODITY3_HEAD:
+                        mHolderTypeCommodity_Head.mTitle.setText("数码用品");
+                        break;
                     case TYPE_COMMODITY4_HEAD:
-                        mHolderTypeCommodity_Head.mTitle.setText("餐饮用具");
+                        mHolderTypeCommodity_Head.mTitle.setText("餐饮用品");
+                        break;
+                    case TYPE_COMMODITY5_HEAD:
+                        mHolderTypeCommodity_Head.mTitle.setText("为你推荐");
                         break;
                 }
             }
         }
+    }
 
+    private int getHolderTypeTitle(int position) {
+        if (position == 5) {
+            return position - 2;
+        } else if (position == 13) {
+            return position - 3;
+        } else if (position == 19) {
+            return position - 4;
+        } else if (position == 25) {
+            return position - 5;
+        } else if (position == 33) {
+            return position - 6;
+        }
+        return position - 6;
+    }
+
+    private int getHolderTypeCommodity(int position) {
+        if (position > 5 && position < 12) {
+            return position - 2;
+        } else if (position > 13 && position < 18) {
+            return position - 3;
+        } else if (position > 19 && position < 24) {
+            return position - 4;
+        } else if (position > 25 && position < 32) {
+            return position - 5;
+        } else if (position > 33) {
+            return position - 6;
+        }
+        return position - 6;
+    }
+
+    private int getYiYuanPosition(int position) {
+        return position - 1 > 0 ? position - 1 : 0;
     }
 
     @Override
@@ -172,30 +256,34 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             return TYPE_YIYUAN;
         } else if (position == 4) {
             return TYPE_COMMODITY1_HEAD;
-        } else if (position == 5 || position == 13 || position == 21
-                || position == 29) {
+        } else if (position == 5 || position == 13 || position == 19
+                || position == 25 || position == 33) {
             return TYPE_COMMODITY_TITLE;
         } else if (position == 12) {
             return TYPE_COMMODITY2_HEAD;
-        } else if (position == 20) {
+        } else if (position == 18) {
             return TYPE_COMMODITY3_HEAD;
-        } else if (position == 28) {
+        } else if (position == 24) {
             return TYPE_COMMODITY4_HEAD;
+        } else if (position == 32) {
+            return TYPE_COMMODITY5_HEAD;
         } else if (position > 5 && position < 12) {
             return TYPE_COMMODITY1;
-        } else if (position > 13 && position < 20) {
+        } else if (position > 13 && position < 18) {
             return TYPE_COMMODITY2;
-        } else if (position > 21 && position < 28) {
+        } else if (position > 19 && position < 24) {
             return TYPE_COMMODITY3;
-        } else if (position > 29 && position < 36) {
+        } else if (position > 25 && position < 32) {
             return TYPE_COMMODITY4;
+        } else if (position > 33) {
+            return TYPE_COMMODITY5;
         }
-        return super.getItemViewType(position);
+        return TYPE_COMMODITY5;
     }
 
     @Override
     public int getItemCount() {
-        return mCommodity.size();
+        return mCommodity.size() + 6;
     }
 
     @Override
@@ -215,12 +303,14 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         case TYPE_COMMODITY2:
                         case TYPE_COMMODITY3:
                         case TYPE_COMMODITY4:
+                        case TYPE_COMMODITY5:
                             return 3;
                         case TYPE_YiYUAN_HEAD:
                         case TYPE_COMMODITY1_HEAD:
                         case TYPE_COMMODITY2_HEAD:
                         case TYPE_COMMODITY3_HEAD:
                         case TYPE_COMMODITY4_HEAD:
+                        case TYPE_COMMODITY5_HEAD:
                         case TYPE_COMMODITY_TITLE:
                             return gmanager.getSpanCount();
 
@@ -259,14 +349,6 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             mPhoto = (ImageView) itemView.findViewById(R.id.item_home2_photo);
             mName = (TextView) itemView.findViewById(R.id.item_home2_name);
             mView = itemView.findViewById(R.id.item_home2_bg);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mOnItemClickListener != null) {
-                        mOnItemClickListener.onClickListener(v, getPosition());
-                    }
-                }
-            });
         }
 
     }
@@ -280,34 +362,21 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             mName = (TextView) itemView.findViewById(R.id.item_home3_2_name);
             mInfo = (TextView) itemView.findViewById(R.id.item_home3_2_info);
             mPhoto = (ImageView) itemView.findViewById(R.id.item_home3_2_photo);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mOnItemClickListener != null) {
-                        mOnItemClickListener.onClickListener(v, getPosition());
-                    }
-                }
-            });
         }
     }
 
     class HolderTypeCommodity2 extends RecyclerView.ViewHolder {
         ImageView mPhoto;
-        TextView mName, mPrice;
+        TextView mName, mPrice, mOldPrice;
 
         public HolderTypeCommodity2(View itemView) {
             super(itemView);
             mPhoto = (ImageView) itemView.findViewById(R.id.item_home4_2_photo);
             mName = (TextView) itemView.findViewById(R.id.item_home4_2_name);
             mPrice = (TextView) itemView.findViewById(R.id.item_home4_2_price);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mOnItemClickListener != null) {
-                        mOnItemClickListener.onClickListener(v, getPosition());
-                    }
-                }
-            });
+            mOldPrice = (TextView) itemView.findViewById(R.id.item_home4_2_old_price);
+            TextPaint textPaint = mOldPrice.getPaint();
+            textPaint.setFlags(TextPaint.STRIKE_THRU_TEXT_FLAG);
         }
     }
 

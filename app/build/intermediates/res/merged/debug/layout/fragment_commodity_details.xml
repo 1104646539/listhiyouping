@@ -6,12 +6,34 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/commodity_details_bottom">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<include layout="@layout/commodity_details1"/>-->
+
+    <!--<include layout="@layout/commodity_details2"/>-->
+
+    <!--<include layout="@layout/commodity_details3"/>-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:descendantFocusability="blocksDescendants"-->
+    <!--android:layout_height="match_parent">-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView_commodity_Details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@+id/commodity_details_bottom"
         android:background="#f1f2f6"/>
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
 
     <LinearLayout
         android:id="@+id/commodity_details_bottom"
@@ -121,9 +143,9 @@
                     android:src="@drawable/details_shoppingcart"/>
 
                 <TextView
+                    android:id="@+id/commodity_details_shoppingcart_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/commodity_details_shoppingcart_tv"
                     android:text="购物车"
                     android:textSize="8sp"/>
             </LinearLayout>

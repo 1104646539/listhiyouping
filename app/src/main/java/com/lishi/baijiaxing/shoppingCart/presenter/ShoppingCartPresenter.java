@@ -1,22 +1,28 @@
 package com.lishi.baijiaxing.shoppingCart.presenter;
 
+import com.lishi.baijiaxing.shoppingCart.ShoppingCartCallback;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
+import com.lishi.baijiaxing.shoppingCart.model.SCRecommendList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * View调用
  * Created by Administrator on 2016/8/17.
  */
 public interface ShoppingCartPresenter {
-    void loadData();
+    void loadCommodity();
 
-    void addStore(ArrayList<CommodityBean> commodityBeen);
+    void loadRecommend();
 
-    void removeStore(ArrayList<CommodityBean> commodityBeen);
+    void removeCommodity( List<String> deleteIds);
 
-    void pullLoad(ArrayList<HomeRecommendBean> homeRecommends);
+    void pullDownLoad();
 
-    void changeStore(ArrayList<CommodityBean> commodityBeen);
+    void changeCommodity(SCCommodityList.DataBean dataBean,String number);
+
+    void upCommodityInfo(SCCommodityList.DataBean dataBean);
 }

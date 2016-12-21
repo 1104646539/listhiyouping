@@ -60,9 +60,10 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/ed_login_name"
                     android:layout_marginLeft="12dp"
                     android:background="@color/base_bg_color"
-                    android:hint="用户名/邮箱/手机号"
+                    android:hint="用户名/邮箱/手机号/昵称"
                     android:textColorHint="@color/text_gray"
                     android:textSize="14sp"/>
             </LinearLayout>
@@ -89,9 +90,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/ed_login_paw"
                     android:layout_marginLeft="12dp"
                     android:background="@color/base_bg_color"
                     android:hint="请输入密码"
+                    android:password="true"
                     android:textColorHint="@color/text_gray"
                     android:textSize="14sp"/>
             </LinearLayout>
@@ -110,6 +113,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:paddingBottom="8dp"
+                android:id="@+id/tv_login_local"
                 android:paddingTop="8dp"
                 android:text="登录"
                 android:textColor="@color/base_bg_color"

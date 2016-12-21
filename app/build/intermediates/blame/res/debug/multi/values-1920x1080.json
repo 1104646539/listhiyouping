@@ -89,11 +89,11 @@
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 720,
+                        "startOffset": 767,
                         "endColumn": 47,
-                        "endOffset": 763
+                        "endOffset": 810
                     }
                 }
             },
@@ -108,11 +108,11 @@
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 671,
+                        "startOffset": 718,
                         "endColumn": 47,
-                        "endOffset": 714
+                        "endOffset": 761
                     }
                 }
             },
@@ -140,8 +140,27 @@
                     "startLine": 9,
                     "startColumn": 4,
                     "startOffset": 400,
+                    "endColumn": 45,
+                    "endOffset": 441
+                },
+                "from": {
+                    "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 671,
+                        "endColumn": 45,
+                        "endOffset": 712
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 446,
                     "endColumn": 40,
-                    "endOffset": 436
+                    "endOffset": 482
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
@@ -156,11 +175,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 441,
+                    "startOffset": 487,
                     "endColumn": 44,
-                    "endOffset": 481
+                    "endOffset": 527
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
@@ -175,11 +194,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 486,
+                    "startOffset": 532,
                     "endColumn": 50,
-                    "endOffset": 532
+                    "endOffset": 578
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
@@ -194,11 +213,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 537,
+                    "startOffset": 583,
                     "endColumn": 49,
-                    "endOffset": 582
+                    "endOffset": 628
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
@@ -213,11 +232,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 587,
+                    "startOffset": 633,
                     "endColumn": 40,
-                    "endOffset": 623
+                    "endOffset": 669
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
@@ -232,30 +251,30 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 628,
+                    "startOffset": 674,
                     "endColumn": 49,
-                    "endOffset": 673
+                    "endOffset": 719
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 825,
+                        "startOffset": 872,
                         "endColumn": 49,
-                        "endOffset": 870
+                        "endOffset": 917
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 678,
+                    "startOffset": 724,
                     "endColumn": 42,
-                    "endOffset": 716
+                    "endOffset": 762
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
@@ -270,20 +289,20 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 721,
+                    "startOffset": 767,
                     "endColumn": 52,
-                    "endOffset": 769
+                    "endOffset": 815
                 },
                 "from": {
                     "file": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\values-1920x1080\\dimens.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 769,
+                        "startOffset": 816,
                         "endColumn": 52,
-                        "endOffset": 817
+                        "endOffset": 864
                     }
                 }
             }

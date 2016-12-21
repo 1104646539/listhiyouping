@@ -123,7 +123,7 @@ public class CustomizeMagazine2Activity extends BaseActivity implements Magazine
 
                 // 返回图标ResId
 
-                .backResId(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_mtrl_am_alpha)
+//                .backResId(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_mtrl_am_alpha)
 
                 // 标题
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seckill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lishi.baijiaxing.seckill.SeckillActivity">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/navigation_seckill"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:left_src="@drawable/back_top"
+        app:right_src="@null"
+        app:text_title="利世秒杀"
+        app:title_color="@color/text_color"
+        app:title_size="7sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/shoppinglist"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/item_padding"
+        android:paddingBottom="6dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="抢购中 先下单先得哦"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="距结束"
+                android:textSize="12sp"/>
+
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/seckil_countDown"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                app:isHideTimeBackground="false"
+                app:isShowHour="true"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isTimeTextBold="true"
+                app:suffixGravity="center"
+                app:suffixTextColor="#000000"
+                app:suffixTextSize="14sp"
+                app:timeBgBorderColor="#4a4a54"
+                app:timeBgColor="#4a4a54"
+                app:timeTextColor="#000000"
+                app:timeTextSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_seckil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

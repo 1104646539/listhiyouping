@@ -19,33 +19,46 @@ import android.widget.Toast;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.details.CommodityDetailsActivity;
+import com.lishi.baijiaxing.free.FreeResultActivity;
 import com.lishi.baijiaxing.free.adapter.FreeDetailsAdapter;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
+import com.lishi.baijiaxing.free.model.FreeDetails;
 import com.lishi.baijiaxing.free.model.FreeDetailsBean;
 import com.lishi.baijiaxing.free.presenter.FreeDetailsPresenterImpl;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
 import com.lishi.baijiaxing.orderAddressManage.view.DeliveryAddressActivity;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
+import com.lishi.baijiaxing.submitOrder.model.SubmitOrder;
 import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
+import com.lishi.baijiaxing.userManager.view.UserManagerActivity;
+import com.lishi.baijiaxing.utils.LoginUtil;
 import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
+import com.lishi.baijiaxing.utils.StartLoginRequest;
+import com.lishi.baijiaxing.utils.UserUtil;
 import com.lishi.baijiaxing.view.BadgeView;
+import com.lishi.baijiaxing.wxapi.LoginActivity;
+import com.lishi.baijiaxing.wxapi.model.Login;
+import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
+import com.orhanobut.logger.Logger;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 免费领商品详情——详情
  * Created by Administrator on 2016/10/19.
  */
-public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements FreeDetailsView, View.OnClickListener {
+public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements FreeDetailsView, View.OnClickListener, YiYuanHotAdapter.OnItemClickListener {
     private View mView;
-    private static Fragment_FreeDetails_Details mFragment_freeDetails_details;
     private boolean isPrepare;
     private RecyclerView mRecyclerView;
-    private FreeDetailsBean freeDetailsBean;
+    private FreeDetails freeDetailsBean;
     private ArrayList<Integer> srcIds;
     private TextView tv_bottom1_1, tv_bottom1_2, tv_bottom1_3, tv_bottom1_4;
     private TextView tv_bottom2_1, tv_bottom2_2, tv_bottom2_3, tv_bottom2_4;
@@ -56,13 +69,12 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
     private FreeDetailsPresenterImpl mFreeDatailsPresenterImpl;
     private ImageView free_details_shoppingcart;
     private BadgeView mBadgeView;
+    private final static int REQUEST_FREE = 2;//免费申请
+    private final static int REQUEST_FREIGHT = 3;//付邮领
 
 
     public static Fragment_FreeDetails_Details newInstance() {
-        if (mFragment_freeDetails_details == null) {
-            mFragment_freeDetails_details = new Fragment_FreeDetails_Details();
-        }
-        return mFragment_freeDetails_details;
+        return new Fragment_FreeDetails_Details();
     }
 
     @Override
@@ -92,8 +104,12 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
         if (mFreeDatailsPresenterImpl == null) {
             mFreeDatailsPresenterImpl = new FreeDetailsPresenterImpl(this);
         }
-        int type = getActivity().getIntent().getIntExtra("type", -1);
-        mFreeDatailsPresenterImpl.loadData(type);
+        if (getActivity().getIntent() == null) {
+            return;
+        }
+        String gid = getActivity().getIntent().getStringExtra("gid");
+        String zid = getActivity().getIntent().getStringExtra("zid");
+        mFreeDatailsPresenterImpl.loadData("2", gid, zid);
 
     }
 
@@ -105,12 +121,13 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
         LinearLayoutManager manager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(manager);
 
-        FreeDetailsAdapter adapter = new FreeDetailsAdapter(getActivity(), freeDetailsBean);
+        FreeDetailsAdapter adapter = new FreeDetailsAdapter(getActivity(), freeDetailsBean.getData());
         mRecyclerView.setAdapter(adapter);
+        adapter.setOnItemClickListener(this);
     }
 
     private void initBottomView() {
-        int type = freeDetailsBean.getType();
+        int type = Integer.valueOf(freeDetailsBean.getData().getType());
         changeBottom(type);
         Log.e("initBottomView", "Type = Type = Type = Type = Type = " + type);
     }
@@ -173,10 +190,10 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
 
     }
 
+
     @Override
-    public void loadDataSuccess(FreeDetailsBean data) {
-        freeDetailsBean = data;
-        initView();
+    public void loadDataSuccess(Object data) {
+
     }
 
     @Override
@@ -198,10 +215,10 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
             case R.id.free_details_bottom1_1://已结束-> 直接购买
                 Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
                 ArrayList<CommodityBean> commodityBeens1 = new ArrayList<>();
-                CommodityBean commodityBeen = new CommodityBean(""
-                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
-                commodityBeens1.add(commodityBeen);
-                startSubmitOrderActivity.putParcelableArrayListExtra("list",commodityBeens1);
+//                CommodityBean commodityBeen = new CommodityBean(""
+//                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
+//                commodityBeens1.add(commodityBeen);
+                startSubmitOrderActivity.putParcelableArrayListExtra("list", commodityBeens1);
                 startActivity(startSubmitOrderActivity);
                 break;
             case R.id.free_details_bottom1_2://进行中->已申请 付邮领
@@ -209,16 +226,33 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
                 startActivityForResult(startDeliveryAddress1Activity, 1);
                 break;
             case R.id.free_details_bottom1_3://进行中->未申请 付邮领
-                Intent startDeliveryAddress2Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
-                startActivityForResult(startDeliveryAddress2Activity, 1);
+                if (LoginUtil.getInstance().isLogin()) {
+                    Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
+                    ArrayList<SCCommodityList.DataBean> dataBeanList = new ArrayList<>();
+                    SCCommodityList.DataBean dataBean = new SCCommodityList.DataBean();
+                    dataBean.setBuyNum("1");
+                    dataBean.setType("3");
+                    dataBean.setPrice("0");
+                    dataBean.setGid(freeDetailsBean.getData().getGid());
+                    dataBean.setName(freeDetailsBean.getData().getName());
+                    dataBean.setPhotoUrl(freeDetailsBean.getData().getCommodityUrls().get(0).getPhotoUrl());
+                    dataBeanList.add(dataBean);
+                    startSubmitOrder2Activity.putExtra("type", "3");
+                    startSubmitOrder2Activity.putParcelableArrayListExtra("list", dataBeanList);
+                    startSubmitOrder2Activity.putExtra("zid", freeDetailsBean.getData().getZid());
+                    startActivityForResult(startSubmitOrder2Activity, REQUEST_FREIGHT);
+                } else {
+                    Intent startLoginActivity2 = new Intent(getActivity(), LoginActivity.class);
+                    startActivityForResult(startLoginActivity2, StartLoginRequest.PERSONAL);
+                }
                 break;
             case R.id.free_details_bottom1_4://即将开始-> 直接购买
                 Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
                 ArrayList<CommodityBean> commodityBeens2 = new ArrayList<>();
-                CommodityBean commodityBeen2 = new CommodityBean(""
-                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
-                commodityBeens2.add(commodityBeen2);
-                startSubmitOrder2Activity.putParcelableArrayListExtra("list",commodityBeens2);
+//                CommodityBean commodityBeen2 = new CommodityBean(""
+//                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
+//                commodityBeens2.add(commodityBeen2);
+                startSubmitOrder2Activity.putParcelableArrayListExtra("list", commodityBeens2);
                 startActivity(startSubmitOrder2Activity);
                 break;
             case R.id.free_details_bottom2_1://即将开始-> 即将开始
@@ -228,8 +262,13 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
                 Toast.makeText(getActivity(), "您已参加过这次活动", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.free_details_bottom2_3://进行中->未申请 免费申请
-                Intent startDeliveryAddress3Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
-                startActivityForResult(startDeliveryAddress3Activity, 2);
+                if (LoginUtil.getInstance().isLogin()) {
+                    Intent startDeliveryAddress3Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
+                    startActivityForResult(startDeliveryAddress3Activity, REQUEST_FREE);
+                } else {
+                    Intent startLoginActivity2 = new Intent(getActivity(), LoginActivity.class);
+                    startActivityForResult(startLoginActivity2, StartLoginRequest.PERSONAL);
+                }
                 break;
             case R.id.free_details_bottom2_4://已结束-> 中奖名单
                 Intent startWinningActivity = new Intent(getActivity(), FreeWinningActivity.class);
@@ -247,10 +286,44 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == getActivity().RESULT_OK) {
             if (requestCode == 1) {
-                Toast.makeText(getActivity(), "付邮领成功", Toast.LENGTH_SHORT).show();     
+                Toast.makeText(getActivity(), "付邮领成功", Toast.LENGTH_SHORT).show();
             } else if (requestCode == 2) {
-                Toast.makeText(getActivity(), "免费申请成功", Toast.LENGTH_SHORT).show();
+                AddressList.DataBean address = data.getParcelableExtra("address");
+                //去申请免费领
+                mFreeDatailsPresenterImpl.submitApply(freeDetailsBean, address.getAid(), "2");
             }
         }
+    }
+
+    @Override
+    public void loadDetailsSuccess(FreeDetails freeDetails) {
+        freeDetailsBean = freeDetails;
+        if (freeDetails.getData() == null) {
+            Logger.d("免费领详情数据为空");
+            return;
+        }
+        initView();
+    }
+
+    @Override
+    public void loadDetailsFailed(String error) {
+    }
+
+    @Override
+    public void submitApplySuccess(SubmitOrder submitOrder) {
+        Intent startFreeresultActivity = new Intent(getActivity(), FreeResultActivity.class);
+        startFreeresultActivity.putExtra("type", "free");
+        startActivity(startFreeresultActivity);
+    }
+
+    @Override
+    public void submitApplyFailed(String error) {
+        Logger.d(error);
+        Toast.makeText(getActivity(), "操作失败:" + error, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onClickListener(View view, int position) {
+        Toast.makeText(getActivity(), "点击了:" + position, Toast.LENGTH_SHORT).show();
     }
 }

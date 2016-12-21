@@ -99,7 +99,7 @@ public class UserManagerActivity extends BaseActivity implements YiYuanHotAdapte
                 break;
             case 2://昵称
                 Intent startEditNickNameActivity = new Intent(this, EditNickNameActivity.class);
-                startEditNickNameActivity.putExtra("nickName", LocalUserInfo.getInstance().getNickName());
+//                startEditNickNameActivity.putExtra("nickName", LocalUserInfo.getInstance().getNickName());
                 startActivityForResult(startEditNickNameActivity, TYPE_EDIT_NICKNAME);
                 break;
             case 3://性别
@@ -155,7 +155,7 @@ public class UserManagerActivity extends BaseActivity implements YiYuanHotAdapte
 
                 // 返回图标ResId
 
-                .backResId(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_mtrl_am_alpha)
+//                .backResId(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_mtrl_am_alpha)
 
                 // 标题
 
@@ -198,28 +198,28 @@ public class UserManagerActivity extends BaseActivity implements YiYuanHotAdapte
 
         // 图片选择结果回调
 
-        if (resultCode == RESULT_OK && data != null) {
-            if (requestCode == TYPE_EDIT_NICKNAME) {//修改昵称
-                String nickName = data.getStringExtra("resultName");
-                LocalUserInfo.getInstance().setNickName(nickName);
-                adapter.notifyItemChanged(2);
-
-                LocalUserInfo.getInstance().setNickName(nickName);
-            } else if (requestCode == TYPE_EDIT_SEX) {//修改性别
-                String sex = data.getStringExtra("resultSex");
-                LocalUserInfo.getInstance().setSex(sex);
-                adapter.notifyItemChanged(3);
-                LocalUserInfo.getInstance().setSex(sex);
-            } else if (requestCode == REQUEST_CODE) {
-                List<String> pathList = data.getStringArrayListExtra(ImgSelActivity.INTENT_RESULT);
-                String path = pathList.get(0);
-                LocalUserInfo.getInstance().setPhotoUrl(path);
-                adapter.notifyDataSetChanged();
-                Toast.makeText(UserManagerActivity.this, "" + path, Toast.LENGTH_SHORT).show();
-                Log.i("onActivityResult", "选择头像=" + path);
-                LocalUserInfo.getInstance().setPhotoUrl(path);
-            }
-        }
+//        if (resultCode == RESULT_OK && data != null) {
+//            if (requestCode == TYPE_EDIT_NICKNAME) {//修改昵称
+//                String nickName = data.getStringExtra("resultName");
+//                LocalUserInfo.getInstance().setNickName(nickName);
+//                adapter.notifyItemChanged(2);
+//
+//                LocalUserInfo.getInstance().setNickName(nickName);
+//            } else if (requestCode == TYPE_EDIT_SEX) {//修改性别
+//                String sex = data.getStringExtra("resultSex");
+//                LocalUserInfo.getInstance().setSex(sex);
+//                adapter.notifyItemChanged(3);
+//                LocalUserInfo.getInstance().setSex(sex);
+//            } else if (requestCode == REQUEST_CODE) {
+//                List<String> pathList = data.getStringArrayListExtra(ImgSelActivity.INTENT_RESULT);
+//                String path = pathList.get(0);
+//                LocalUserInfo.getInstance().setPhotoUrl(path);
+//                adapter.notifyDataSetChanged();
+//                Toast.makeText(UserManagerActivity.this, "" + path, Toast.LENGTH_SHORT).show();
+//                Log.i("onActivityResult", "选择头像=" + path);
+//                LocalUserInfo.getInstance().setPhotoUrl(path);
+//            }
+//        }
 
     }
 }

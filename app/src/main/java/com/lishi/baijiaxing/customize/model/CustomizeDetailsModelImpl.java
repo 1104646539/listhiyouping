@@ -15,19 +15,19 @@ public class CustomizeDetailsModelImpl extends BaseModel implements CustomizeDet
 
     @Override
     public void loadData(CustomizeDetailsCallback callback) {
-        List<Integer> srcs = new ArrayList<>();
-        for (int i = 0; i < 1; i++) {
-            srcs.add(R.drawable.customize_details_commodityinfo);
-        }
-        List<NormsBean> nbs = new ArrayList<>();
-        List<String> classify = new ArrayList<>();
-        classify.add("标配");
-        classify.add("高配");
-        NormsBean nb = new NormsBean("规格", classify);
-        nbs.add(nb);
-        CustomizeCommodityBean mCustomizeCommodityBean = new CustomizeCommodityBean("", "220", 20, 500, 30, "56度恒温紫砂杯 可定制",
-                "标准配置", 1, "", srcs, nbs);
-        callback.onLoadSuccess(mCustomizeCommodityBean);
+//        List<Integer> srcs = new ArrayList<>();
+//        for (int i = 0; i < 1; i++) {
+//            srcs.add(R.drawable.customize_details_commodityinfo);
+//        }
+//        List<NormsBean> nbs = new ArrayList<>();
+//        List<String> classify = new ArrayList<>();
+//        classify.add("标配");
+//        classify.add("高配");
+//        NormsBean nb = new NormsBean("规格", classify);
+//        nbs.add(nb);
+//        CustomizeCommodityBean mCustomizeCommodityBean = new CustomizeCommodityBean("", "220", 20, 500, 30, "56度恒温紫砂杯 可定制",
+//                "标准配置", 1, "", srcs, nbs);
+//        callback.onLoadSuccess(mCustomizeCommodityBean);
     }
 
     @Override

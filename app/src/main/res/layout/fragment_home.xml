@@ -7,177 +7,245 @@
     android:background="@color/base_bg_color"
     android:orientation="vertical">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swiperefreshLayout_home"
+    <LinearLayout
+        android:id="@+id/home_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:orientation="vertical"
+        android:visibility="gone">
 
-        <com.lishi.baijiaxing.view.MyScrollView
-            android:id="@+id/scroll_home"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/ll_homeroot"
+            <com.liaoinstan.springview.widget.SpringView
+                android:id="@+id/springView_home"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:id="@+id/llAdvertiseBoard"
+                <com.lishi.baijiaxing.home.widget.HomeScrollView
+                    android:id="@+id/swiperefreshLayout_home"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:orientation="vertical"></LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="@color/item_padding"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/iv_rob"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/home_headline"/>
-
-                    <View
-                        android:layout_width="1px"
-                        android:layout_height="match_parent"
-                        android:background="@color/shoppinglist"/>
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
+                        android:id="@+id/ll_homeroot"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <LinearLayout
+                            android:id="@+id/llAdvertiseBoard"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/item_padding"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="5dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@color/cart_button_red"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/text_red"
                                 android:padding="2dp"
-                                android:text="新闻"
-                                android:textColor="#FFFFFF"/>
+                                android:text="节日倒计时"
+                                android:textColor="@color/base_bg_color"
+                                android:textSize="12sp"/>
 
                             <TextView
+                                android:id="@+id/home_festivalName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="距圣诞节还有"
+                                android:textColor="@color/text_color"/>
+
+                            <cn.iwgang.countdownview.CountdownView
+                                android:id="@+id/home_festivalCountDown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                app:isHideTimeBackground="false"
+                                app:isShowDay="true"
+                                app:isShowHour="true"
+                                app:isShowSecond="false"
+                                app:isShowTimeBgBorder="true"
+                                app:suffixDay="天"
+                                app:suffixGravity="center"
+                                app:suffixHour="小时"
+                                app:suffixLRMargin="3dp"
+                                app:suffixMinute="分"
+                                app:suffixTextSize="12sp"
+                                app:timeBgBorderColor="#E8E8E8"
+                                app:timeBgBorderRadius="1dp"
+                                app:timeBgBorderSize="1dp"
+                                app:timeBgColor="#FFFFFF"
+                                app:timeBgDivisionLineSize="1dp"
+                                app:timeBgRadius="3dp"
+                                app:timeBgSize="12sp"
+                                app:timeTextColor="@color/text_color"
+                                app:timeTextSize="12sp"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/item_padding"/>
+
+                        <com.lishi.baijiaxing.view.MyGridView
+                            android:id="@+id/home_gridview_navigation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="4"
+                            android:paddingTop="5dp"
+                            android:scrollbars="none"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/item_padding"
+                            android:orientation="horizontal"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="6dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="利世秒杀"
+                                    android:textColor="#e50508"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:text="距结束"
+                                    android:textColor="@color/black"/>
+
+                                <cn.iwgang.countdownview.CountdownView
+                                    android:id="@+id/home_seckilCountDown"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    app:isHideTimeBackground="false"
+                                    app:isShowDay="false"
+                                    app:isShowHour="true"
+                                    app:isShowSecond="true"
+                                    app:isShowTimeBgBorder="true"
+                                    app:suffixGravity="center"
+                                    app:suffixLRMargin="3dp"
+                                    app:suffixTextSize="12sp"
+                                    app:timeBgBorderColor="#E8E8E8"
+                                    app:timeBgBorderRadius="1dp"
+                                    app:timeBgBorderSize="1dp"
+                                    app:timeBgColor="#FFFFFF"
+                                    app:timeBgDivisionLineSize="1dp"
+                                    app:timeBgRadius="3dp"
+                                    app:timeBgSize="12sp"
+                                    app:timeTextColor="@color/text_color"
+                                    app:timeTextSize="12sp"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/home_seckil_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@drawable/home_seckil_more"
+                                android:gravity="center_vertical"
+                                android:text="更多"
+                                android:textColor="#e50508"/>
+                        </RelativeLayout>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants"
+                            android:scrollbars="none">
+
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:ellipsize="end"
-                                android:maxLines="1"
-                                android:text="全新开门红精选礼品已上线！"
-                                android:textColor="#323232"/>
-                        </LinearLayout>
+                                android:descendantFocusability="blocksDescendants">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                                <com.lishi.baijiaxing.view.MyGridView
+                                    android:id="@+id/recyclerView_homeSeckil"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:divider="@null"
+                                    android:numColumns="auto_fit"
+                                    android:scrollbars="none"></com.lishi.baijiaxing.view.MyGridView>
+                            </RelativeLayout>
+                        </HorizontalScrollView>
 
-                            <TextView
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/item_padding"/>
+
+                        <include layout="@layout/item_home1_1"></include>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerView_home"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="距圣诞节还有：71天13小时27分"
-                                android:textColor="#AAAAAA"/>
-                        </LinearLayout>
+                                android:layout_height="wrap_content"
+                                android:background="@color/base_bg_color">
+                            </android.support.v7.widget.RecyclerView>
+                        </RelativeLayout>
                     </LinearLayout>
-                </LinearLayout>
+                </com.lishi.baijiaxing.home.widget.HomeScrollView>
+            </com.liaoinstan.springview.widget.SpringView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="@color/item_padding"/>
+            <include
+                layout="@layout/top_navigation"/>
+        </RelativeLayout>
+    </LinearLayout>
 
-                <com.lishi.baijiaxing.view.MyGridView
-                    android:id="@+id/home_gridview_navigation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:numColumns="4"
-                    android:paddingTop="5dp"
-                    android:scrollbars="none"/>
+    <ImageView
+        android:id="@+id/home_toTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/home_totop"
+        android:visibility="gone"/>
 
-                <include layout="@layout/item_home_free_head"></include>
-                <include layout="@layout/item_home1_1"></include>
+    <LinearLayout
+        android:id="@+id/home_not_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:descendantFocusability="blocksDescendants">
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerView_home"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    </android.support.v7.widget.RecyclerView>
-                </RelativeLayout>
-
-                <!--<ImageView
-                    android:id="@+id/home_recycle_recommend_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/title_margin"
-                    android:layout_marginTop="@dimen/title_margin"
-                    android:background="@color/item_padding"
-                    android:src="@drawable/recommend_title"/>
-    
-                <com.lishi.baijiaxing.view.MyGridView
-                    android:id="@+id/gridview_home_recommend"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:numColumns="2"/>
-    
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-    
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:background="#00000000"/>
-    
-                    <LinearLayout
-                        android:id="@+id/footer"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="10dp"
-                        >
-    
-                        <TextView
-                            android:id="@+id/tv_home_gridview_load"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:gravity="center_vertical"
-                            android:text="上拉加载更多"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp"/>
-                    </LinearLayout>
-                </RelativeLayout>-->
-            </LinearLayout>
-        </com.lishi.baijiaxing.view.MyScrollView>
-    </android.support.v4.widget.SwipeRefreshLayout>
-
-    <include
-        layout="@layout/top_navigation"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="无网络连接，点击重试"/>
+    </LinearLayout>
 </FrameLayout>

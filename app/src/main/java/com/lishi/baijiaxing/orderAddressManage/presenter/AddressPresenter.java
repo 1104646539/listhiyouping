@@ -1,6 +1,7 @@
 package com.lishi.baijiaxing.orderAddressManage.presenter;
 
 import com.lishi.baijiaxing.bean.DeliveryAddressBean;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
 
 import java.util.ArrayList;
 
@@ -11,32 +12,9 @@ import java.util.ArrayList;
 public interface AddressPresenter {
     void loadAddressData();
 
-    void onLoadAddressDataSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
+    void changeAddress(AddressList.DataBean dataBean);
 
-    void onLoadAddressDataFailed();
+    void deleteAddress(AddressList.DataBean dataBean);
 
-    void changeAddress(ArrayList<DeliveryAddressBean> deliveryAddressBeens, int position, DeliveryAddressBean deliveryAddressBean);
-
-    void deleteAddress(ArrayList<DeliveryAddressBean> deliveryAddressBeens, int position);
-
-    void addAddress(ArrayList<DeliveryAddressBean> deliveryAddressBeens, DeliveryAddressBean deliveryAddressBean);
-
-    void setDefault(ArrayList<DeliveryAddressBean> deliveryAddressBeens, int position,boolean isCheck);
-
-    void onChangeAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onChangeAddressFailed();
-
-    void onDeleteAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onDeleteAddressFailed();
-
-    void onAddAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onAddAddressFailed();
-
-    void onSetDefaultSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onSetDefaultFailed();
-
+    void addAddress(AddressList.DataBean dataBean);
 }

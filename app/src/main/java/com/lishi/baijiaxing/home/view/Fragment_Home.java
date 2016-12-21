@@ -1,34 +1,35 @@
 package com.lishi.baijiaxing.home.view;
 
-import android.annotation.TargetApi;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.liaoinstan.springview.container.DefaultFooter;
+import com.liaoinstan.springview.container.DefaultHeader;
+import com.liaoinstan.springview.widget.SpringView;
 import com.lishi.baijiaxing.R;
-import com.lishi.baijiaxing.search.SearchActivity;
 import com.lishi.baijiaxing.base.BaseFragment;
 import com.lishi.baijiaxing.bean.GridNavigationBean;
-import com.lishi.baijiaxing.bean.HomeRecommendBean;
+import com.lishi.baijiaxing.bookmagazine.view.BookMagazineActivity;
 import com.lishi.baijiaxing.customize.view.CustomizeActivity;
 import com.lishi.baijiaxing.details.CommodityDetailsActivity;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
@@ -36,39 +37,51 @@ import com.lishi.baijiaxing.free.view.FreeActivity;
 import com.lishi.baijiaxing.free.view.FreeDetailsActivity;
 import com.lishi.baijiaxing.freeDesign.FreeDesignActivity;
 import com.lishi.baijiaxing.home.adater.HomeAdapter;
+import com.lishi.baijiaxing.home.adater.HomeNavigationAdapter;
+import com.lishi.baijiaxing.home.adater.HomeSeckilGridAdapter;
+import com.lishi.baijiaxing.home.model.AdList;
+import com.lishi.baijiaxing.home.model.Commodity;
+import com.lishi.baijiaxing.home.model.Festival;
 import com.lishi.baijiaxing.home.model.HomeBean;
-import com.lishi.baijiaxing.home.model.HomeCommodityBean;
+import com.lishi.baijiaxing.home.model.Seckill;
 import com.lishi.baijiaxing.home.presenter.HomePresenterImpl;
 import com.lishi.baijiaxing.home.widget.Advertisements;
+import com.lishi.baijiaxing.home.widget.HomeScrollView;
 import com.lishi.baijiaxing.home.widget.MyGridLayoutManager;
+import com.lishi.baijiaxing.hot.view.HotCommodityActivity;
 import com.lishi.baijiaxing.integral.IntegralActivity;
 import com.lishi.baijiaxing.latest.LatestActivity;
+import com.lishi.baijiaxing.search.SearchActivity;
+import com.lishi.baijiaxing.seckill.SeckillActivity;
+import com.lishi.baijiaxing.utils.NetUtils;
+import com.lishi.baijiaxing.utils.ProgressBarUtil;
+import com.lishi.baijiaxing.utils.TimeUtils;
 import com.lishi.baijiaxing.view.MyGridView;
-import com.lishi.baijiaxing.view.MyScrollView;
-import com.lishi.baijiaxing.weeklyChoiceness.WeeklyChoicenessActivity;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanActivity;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanDetailsActivity;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener, HomeView, YiYuanHotAdapter.OnItemClickListener {
+import cn.iwgang.countdownview.CountdownView;
+
+@SuppressLint("ValidFragment")
+public class Fragment_Home extends BaseFragment implements View.OnClickListener, HomeView, YiYuanHotAdapter.OnItemClickListener, AdapterView.OnItemClickListener, HomeScrollView.onScrollViewListener, SpringView.OnFreshListener {
     private static final String TAG = "Fragment_Home";
     private LinearLayout mLinearLayout;
     private LayoutInflater mInflater;
-    private int[] mGridViewIds = new int[]{R.drawable.icon_home1, R.drawable.icon_home2, R.drawable.icon_home3, R.drawable.icon_home4, R.drawable.icon_home5, R.drawable.icon_home6, R.drawable.icon_home7, R.drawable.icon_home8};
-    private String[] texts = new String[]{"免费领", "一元拼", "积分兑换", "免费设计", "天天微课", "每周精选", "个性定制", "最新活动"};
+    private int[] mGridViewIds = new int[]{R.drawable.icon_home1, R.drawable.icon_home2, R.drawable.icon_home3, R.drawable.icon_home4,
+            R.drawable.icon_home5, R.drawable.icon_home6, R.drawable.icon_home7, R.drawable.icon_home8};
+    private String[] texts = new String[]{"免费领", "一元拼", "积分兑换", "免费设计", "书籍杂志", "爆品排行", "个性定制", "最新活动"};
     private List<GridNavigationBean> mGridNavigations = new ArrayList<GridNavigationBean>();
     private Context mContext;
     private TextView tv_msg;
-    private TextView scanner;
-    private List<HomeCommodityBean> classifyDatas = new ArrayList<>();
-    private MyScrollView mScroll;
-    private SwipeRefreshLayout mSwipeRefreshLayout;
-    private ArrayList<HomeRecommendBean> recommendDatas = new ArrayList<>();
+    private ImageView tv_topnavigation_icon;
     private boolean isLoading = false;//是否正在加载中
     private TextView tv_load;
     private LinearLayout ll, footer;
@@ -80,60 +93,108 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
     private ImageView free_photo2;
     private ImageView free_photo3;
     private ImageView top_search;
-    /**
-     * 免费领更多
-     */
-    private TextView free_more;
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            if (msg.what == 1) {
-                mSwipeRefreshLayout.setRefreshing(false);
-            } else if (msg.what == 2) {
-                if (recommendDatas != null) {
-                    Log.i(TAG, recommendDatas.size() + "========原来的大小============");
-                    mHomePresenterImpl.recommendPullLoadData();
-                }
-            }
-        }
-    };
-
+    private HomeAdapter mAdapter;
+    private TextView home_festivalName;
+    private ImageView toTop;
+    private GridView seckilRecyclerView;
+    private CountdownView seckilCountDown, festivalCountDown;
+    private View navigation;
+    private LinearLayout search_ll;
+    private TextView home_seckil_more;
+    private HomeScrollView mPullToRefreshScrollView;
+    private ProgressBar load_progress;
+    private boolean isShowTop = false;
+    //获取的
+    private List<AdList.DataBean> mAdLists;//轮播图
+    private Seckill.DataBean mSeckill;//秒杀
+    private Festival.DataBean mFestival;//节日
+    private List<Commodity.DataBean> mCommodities = new ArrayList<>();//商品
+    private List<Commodity.DataBean> freeCommodity = new ArrayList<>();
+    //转换后
+    private JSONArray advertiseArray;
+    private HomeNavigationAdapter mHomeNavigationAdapter;
+    private boolean isPrepare = true;
+    private SpringView springView_home;
+    private TextView home_footer_text;
+    private ProgressBarUtil mProgressBarUtil;
+    private LinearLayout home_not_network, home_content;
+    private RelativeLayout home_footer, home_header;
+    private static Fragment_Home mFragment_home;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_home, container, false);
         mContext = getActivity();
         mInflater = LayoutInflater.from(getActivity());
-        findId(mView);
-        initView(mView);
+        findId();
+        if (!NetUtils.isConnected(getActivity())) {
+            home_not_network.setVisibility(View.VISIBLE);
+            Log.i("Fragment_Home", "无网络连接");
+        } else {
+            home_not_network.setVisibility(View.GONE);
+            Log.i("Fragment_Home", "有网络连接");
+            initView();
+        }
         return mView;
     }
 
-    private void findId(View view) {
-        tv_msg = (TextView) view.findViewById(R.id.tv_top_navigation_msg);
-        scanner = (TextView) view.findViewById(R.id.tv_topnavigation_scanner);
-        mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefreshLayout_home);
-        mLinearLayout = (LinearLayout) view.findViewById(R.id.llAdvertiseBoard);
-        gridView_navigation = (MyGridView) view.findViewById(R.id.home_gridview_navigation);
-//        tv_load = (TextView) view.findViewById(R.id.tv_home_gridview_load);
-        ll = (LinearLayout) view.findViewById(R.id.ll_homeroot);
-//        footer = (LinearLayout) view.findViewById(R.id.footer);
-        mScroll = (MyScrollView) view.findViewById(R.id.scroll_home);
-        free_more = (TextView) view.findViewById(R.id.free_more);
-        top_search = (ImageView) view.findViewById(R.id.top_search);
 
-        free_photo1 = (ImageView) view.findViewById(R.id.free_photo1);
-        free_photo2 = (ImageView) view.findViewById(R.id.free_photo2);
-        free_photo3 = (ImageView) view.findViewById(R.id.free_photo3);
+    public Fragment_Home() {
+
+    }
+
+    public static Fragment_Home newInstance() {
+        if (mFragment_home == null) {
+            mFragment_home = new Fragment_Home();
+        }
+        return new Fragment_Home();
+    }
+
+    private void findId() {
+        tv_msg = (TextView) mView.findViewById(R.id.tv_top_navigation_msg);
+        tv_topnavigation_icon = (ImageView) mView.findViewById(R.id.tv_topnavigation_icon);
+        mLinearLayout = (LinearLayout) mView.findViewById(R.id.llAdvertiseBoard);
+        gridView_navigation = (MyGridView) mView.findViewById(R.id.home_gridview_navigation);
+        tv_load = (TextView) mView.findViewById(R.id.tv_home_recyclerView_load);
+        load_progress = (ProgressBar) mView.findViewById(R.id.tv_home_recyclerView_progress);
+        ll = (LinearLayout) mView.findViewById(R.id.ll_homeroot);
+        top_search = (ImageView) mView.findViewById(R.id.top_search);
+        toTop = (ImageView) mView.findViewById(R.id.home_toTop);
+        seckilRecyclerView = (GridView) mView.findViewById(R.id.recyclerView_homeSeckil);
+        seckilCountDown = (CountdownView) mView.findViewById(R.id.home_seckilCountDown);
+        festivalCountDown = (CountdownView) mView.findViewById(R.id.home_festivalCountDown);
+        home_seckil_more = (TextView) mView.findViewById(R.id.home_seckil_more);
+        home_festivalName = (TextView) mView.findViewById(R.id.home_festivalName);
+        free_photo1 = (ImageView) mView.findViewById(R.id.free_photo1);
+        free_photo2 = (ImageView) mView.findViewById(R.id.free_photo2);
+        free_photo3 = (ImageView) mView.findViewById(R.id.free_photo3);
+        mPullToRefreshScrollView = (HomeScrollView) mView.findViewById(R.id.swiperefreshLayout_home);
+        springView_home = (SpringView) mView.findViewById(R.id.springView_home);
+        search_ll = (LinearLayout) mView.findViewById(R.id.home_search_ll);
+        home_not_network = (LinearLayout) mView.findViewById(R.id.home_not_network);
+        home_content = (LinearLayout) mView.findViewById(R.id.home_root);
+        home_footer = (RelativeLayout) mView.findViewById(R.id.home_footer);
+        home_header = (RelativeLayout) mView.findViewById(R.id.home_header);
+
+
+        tv_topnavigation_icon.setVisibility(View.VISIBLE);
+        navigation = mView.findViewById(R.id.ll_top_navigation);
+        home_seckil_more.setOnClickListener(this);
         free_photo1.setOnClickListener(this);
         free_photo2.setOnClickListener(this);
         free_photo3.setOnClickListener(this);
         top_search.setOnClickListener(this);
-        free_more.setOnClickListener(this);
-        
+        toTop.setOnClickListener(this);
+        home_not_network.setOnClickListener(this);
+        springView_home.setHeader(new DefaultHeader(getActivity()));
+        springView_home.setFooter(new DefaultFooter(getActivity()));
+        springView_home.setListener(this);
+        springView_home.setType(SpringView.Type.FOLLOW);
+
+        search_ll.getBackground().mutate().setAlpha(150);
     }
 
-    private void initView(View view) {
+    private void initView() {
         mHomePresenterImpl = new HomePresenterImpl(this);
         mHomePresenterImpl.loadData();
     }
@@ -144,9 +205,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
      * @param
      */
     private void initSwpieRefreshLayout() {
-        mSwipeRefreshLayout.setOnRefreshListener(this);
     }
-
 
     /**
      * 初始化TopNavigation
@@ -154,71 +213,21 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
      *
      * @param
      */
-    @TargetApi(Build.VERSION_CODES.M)
     private void initTopNavigation() {
-        final View d = mView.findViewById(R.id.ll_top_navigation);
-        d.getBackground().mutate().setAlpha(00);
-
+        navigation.getBackground().mutate().setAlpha(00);
 
         //处理imageView和textView点击事件冲突,将事件消费，返回true即可
         tv_msg.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                Toast.makeText(mContext, "点击了登录", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "点击了", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
-        scanner.setOnTouchListener(new View.OnTouchListener() {
+        tv_topnavigation_icon.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
-            }
-        });
-
-
-        mScroll.setScrollViewChangeListener(new MyScrollView.onScrollViewListener() {
-            @Override
-            public void onScrollViewChange(MyScrollView view, int x, int y, int oldx, int oldy) {
-                if (y > 0) {
-                    if (y <= 255) {
-                        if (y >= 100) {
-                            tv_msg.setTextColor(Color.BLACK);
-                            scanner.setTextColor(Color.BLACK);
-                            Drawable drawable1 = getResources().getDrawable(R.drawable.scanner_black);
-                            drawable1.setBounds(0, 0, drawable1.getMinimumWidth(), drawable1.getMinimumHeight());
-                            scanner.setCompoundDrawables(null, drawable1, null, null);
-
-                            Drawable drawable2 = getResources().getDrawable(R.drawable.message_black);
-                            drawable2.setBounds(0, 0, drawable2.getMinimumWidth(), drawable2.getMinimumHeight());
-                            tv_msg.setCompoundDrawables(null, drawable2, null, null);
-
-                        } else {
-                            tv_msg.setTextColor(Color.WHITE);
-                            scanner.setTextColor(Color.WHITE);
-                            Drawable drawable3 = getResources().getDrawable(R.drawable.scanner_white);
-                            drawable3.setBounds(0, 0, drawable3.getMinimumWidth(), drawable3.getMinimumHeight());
-                            scanner.setCompoundDrawables(null, drawable3, null, null);
-
-                            Drawable drawable4 = getResources().getDrawable(R.drawable.message_white);
-                            drawable4.setBounds(0, 0, drawable4.getMinimumWidth(), drawable4.getMinimumHeight());
-                            tv_msg.setCompoundDrawables(null, drawable4, null, null);
-                        }
-                        d.getBackground().mutate().setAlpha(y);
-                    } else {
-                        d.getBackground().mutate().setAlpha(255);
-                    }
-                } else {
-                    d.getBackground().mutate().setAlpha(00);
-                    scanner.setTextColor(Color.WHITE);
-                    tv_msg.setTextColor(Color.WHITE);
-                    Drawable drawable2 = getResources().getDrawable(R.drawable.scanner_white);
-                    drawable2.setBounds(0, 0, drawable2.getMinimumWidth(), drawable2.getMinimumHeight());
-                    scanner.setCompoundDrawables(null, drawable2, null, null);
-
-                    Drawable drawable4 = getResources().getDrawable(R.drawable.message_white);
-                    drawable4.setBounds(0, 0, drawable4.getMinimumWidth(), drawable4.getMinimumHeight());
-                    tv_msg.setCompoundDrawables(null, drawable4, null, null);
-                }
             }
         });
     }
@@ -234,36 +243,7 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
             gridNavigation = new GridNavigationBean(mGridViewIds[i], texts[i]);
             mGridNavigations.add(gridNavigation);
         }
-
-        BaseAdapter mAdapter = new BaseAdapter() {
-            @Override
-            public int getCount() {
-                return 8;
-            }
-
-            @Override
-            public Object getItem(int position) {
-                return mGridViewIds[position];
-            }
-
-            @Override
-            public long getItemId(int position) {
-                return position;
-            }
-
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view = LayoutInflater.from(mContext).inflate(R.layout.home_gridview_item, parent, false);
-                ImageView iv = (ImageView) view.findViewById(R.id.iv_home_gridview);
-                GridNavigationBean gridNavigation1 = mGridNavigations.get(position);
-                iv.setImageResource(gridNavigation1.getSrcId());
-                TextView tv = (TextView) view.findViewById(R.id.tv_home_gridview);
-                tv.setText(gridNavigation1.getText());
-                return view;
-            }
-        };
-        gridView_navigation.setAdapter(mAdapter);
-
+        gridView_navigation.setAdapter(new HomeNavigationAdapter(getActivity(), mGridNavigations));
         gridView_navigation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -291,11 +271,15 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
                 Intent startFreeDesignActivity = new Intent(getActivity(), FreeDesignActivity.class);
                 startActivity(startFreeDesignActivity);
                 break;
-            case 4://天天微课
+            case 4://书籍杂志
+                Intent startBookMagazineActivity = new Intent(getActivity(), BookMagazineActivity.class);
+                startActivity(startBookMagazineActivity);
                 break;
-            case 5://每周精选
-                Intent startWeeklyActivity = new Intent(getActivity(), WeeklyChoicenessActivity.class);
-                startActivity(startWeeklyActivity);
+            case 5://爆品排行
+//                Intent startWeeklyActivity = new Intent(getActivity(), WeeklyChoicenessActivity.class);
+//                startActivity(startWeeklyActivity);
+                Intent startHotCommodityActivity = new Intent(getActivity(), HotCommodityActivity.class);
+                startActivity(startHotCommodityActivity);
                 break;
             case 6://个性定制
                 Intent startCustomizeActivity = new Intent(getActivity(), CustomizeActivity.class);
@@ -314,27 +298,11 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
      *
      * @param
      */
-    private void initViewPager(JSONArray jsonArray) {
+    private void initViewPager() {
         mLinearLayout.setEnabled(true);
         mLinearLayout.requestLayout();
         // 添加图片的Url地址
-        mLinearLayout.addView(new Advertisements(getActivity(), true, mInflater, 2000).initView(jsonArray));
-    }
-
-    @Override
-    public void onRefresh() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    mSwipeRefreshLayout.setRefreshing(true);
-                    Thread.sleep(2000);
-                    mHandler.sendEmptyMessage(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        mLinearLayout.addView(new Advertisements(getActivity(), true, mInflater, 2000).initView(advertiseArray));
     }
 
     @Override
@@ -346,22 +314,30 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
                 startActivity(startFreeDetailsActivity1);
                 break;
             case R.id.free_photo2:
-                Intent startFreeDetailsActivity2 = new Intent(getActivity(), FreeDetailsActivity.class);
-                startFreeDetailsActivity2.putExtra("type", FreeCommodityBean.TYPE_START_BEFORE);
-                startActivity(startFreeDetailsActivity2);
+                Intent startLatest1Activity = new Intent(getActivity(), LatestActivity.class);
+                startActivity(startLatest1Activity);
                 break;
             case R.id.free_photo3:
-                Intent startFreeDetailsActivity3 = new Intent(getActivity(), FreeDetailsActivity.class);
-                startFreeDetailsActivity3.putExtra("type", FreeCommodityBean.TYPE_FINISH);
-                startActivity(startFreeDetailsActivity3);
-                break;
-            case R.id.free_more:
-                Intent startFreeActivity = new Intent(getActivity(), FreeActivity.class);
-                startActivity(startFreeActivity);
+                Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
+                Commodity.DataBean fcd = freeCommodity.get(2);
+                if (fcd.getCid().equals("") && fcd != null) {
+                    startCommodityDetails.putExtra("gid", fcd.getCid());
+                    startActivity(startCommodityDetails);
+                }
                 break;
             case R.id.top_search:
                 Intent startSearchActivity = new Intent(getActivity(), SearchActivity.class);
                 startActivity(startSearchActivity);
+                break;
+            case R.id.home_toTop:
+                mPullToRefreshScrollView.smoothScrollTo(0, 0);
+                break;
+            case R.id.home_seckil_more:
+                Intent startSeckilActivity = new Intent(mContext, SeckillActivity.class);
+                startActivity(startSeckilActivity);
+                break;
+            case R.id.home_not_network:
+                initView();
                 break;
         }
     }
@@ -377,68 +353,299 @@ public class Fragment_Home extends BaseFragment implements SwipeRefreshLayout.On
     }
 
     @Override
-    public void onRecommendonPullSuccess(ArrayList<HomeRecommendBean> datas) {
-        recommendDatas.addAll(datas);
-        tv_load.setText("上拉加载更多");
-        Log.i(TAG, recommendDatas.size() + "" + datas.size() + tv_load.getText().toString() + "==============接受的大小===============================");
+    public void onPullSuccess(List<Commodity.DataBean> datas) {
+        mCommodities.addAll(datas);
+        mAdapter.notifyDataSetChanged();
+//        tv_load.setText("上拉加载更多");
+        Log.i(TAG, "原来的数量" + mCommodities.size() + "接受的数量" + datas.size());
         isLoading = false;
-
+        springView_home.onFinishFreshAndLoad();
     }
 
 
     @Override
-    public void onPullloadFailed() {
+    public void onPullloadFailed(String error) {
+        Log.i("加载失败", "error=" + error);
+        isLoading = false;
+        springView_home.onFinishFreshAndLoad();
+    }
 
+    @Override
+    public void getAdListSuccess(List<AdList.DataBean> adLists) {
+        mAdLists = adLists;
+        advertiseArray = new JSONArray();
+        JSONObject head_img;
+        int size = mAdLists.size();
+        for (int i = 0; i < size; i++) {
+            try {
+                head_img = new JSONObject();
+                head_img.put("head_img", mAdLists.get(i).getPhotoUrl());
+                advertiseArray.put(head_img);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        initViewPager();
+        initGridView();
+        initTopNavigation();
+        initSwpieRefreshLayout();
+    }
+
+    @Override
+    public void getFestivalSuccess(Festival.DataBean festivals) {
+        mFestival = festivals;
+        initFestival();
+    }
+
+    private void initFestival() {
+        String festivalName = mFestival.getFestivalName();
+        String festivalTime = mFestival.getFestibalTime();
+        String nowTime = TimeUtils.timeStamp();
+
+        home_festivalName.setText("距离" + festivalName + "还有");
+        festivalCountDown.start(TimeUtils.countDownTime(festivalTime, nowTime));
+    }
+
+    @Override
+    public void getSeckillSuccess(Seckill.DataBean seckill) {
+        mSeckill = seckill;
+        String seckillTime = mSeckill.getSeckillTime();
+
+        int margin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, getResources().getDisplayMetrics());
+        seckilRecyclerView.setAdapter(new HomeSeckilGridAdapter(getActivity(), mSeckill, margin));
+        seckilCountDown.start(Integer.valueOf(seckillTime));
+        setGridWidthAndChildWidth(mSeckill.getSeckillList(), margin);
+        seckilRecyclerView.setOnItemClickListener(this);
+
+        Log.i("getSeckillSuccess", "url=" + mSeckill.getSeckillList().get(0).getPhotoUrl());
+    }
+
+    private void setGridWidthAndChildWidth(List<Seckill.DataBean.SeckillListBean> seckils, int margin) {
+        int screenWidth = getActivity().getResources().getDisplayMetrics().widthPixels;
+        int itemWidth = (int) (screenWidth / 3.5);
+        int gridviewWidth = itemWidth * seckils.size();
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                gridviewWidth, RecyclerView.LayoutParams.MATCH_PARENT);
+        seckilRecyclerView.setLayoutParams(params); //重点
+        seckilRecyclerView.setColumnWidth(itemWidth); //重点
+        seckilRecyclerView.setNumColumns(seckils.size()); //重点
+        seckilRecyclerView.setHorizontalSpacing(margin);
+
+        Log.i("gridviewWidth", "gridviewWidth=======================" + gridviewWidth);
+    }
+
+    @Override
+    public void getCommodityListSuccess(List<Commodity.DataBean> commodities) {
+        Log.i("getCommodityListSuccess", "commodities:" + commodities.size());
+        home_not_network.setVisibility(View.GONE);
+        home_content.setVisibility(View.VISIBLE);
+//        home_footer.setVisibility(View.VISIBLE);
+//        home_header.setVisibility(View.VISIBLE);
+        if (!isPrepare) {
+            mCommodities.clear();
+            freeCommodity.clear();
+            for (int i = 0; i < commodities.size(); i++) {
+                if (i < 3) {
+                    freeCommodity.add(commodities.get(i));
+                } else {
+                    mCommodities.add(commodities.get(i));
+                }
+            }
+            initFree(freeCommodity);
+            mAdapter.notifyDataSetChanged();
+        } else {
+            for (int i = 0; i < commodities.size(); i++) {
+                if (i < 3) {
+                    freeCommodity.add(commodities.get(i));
+                } else {
+                    mCommodities.add(commodities.get(i));
+                }
+            }
+            initFree(freeCommodity);
+            initRecyclerView();
+            isPrepare = false;
+        }
+        springView_home.onFinishFreshAndLoad();
+    }
+
+    private void initFree(List<Commodity.DataBean> freeCommodity) {
+        Log.i("initFree", "initFree 0:" + freeCommodity.get(0).getPhotoUrl());
+        Log.i("initFree", "initFree 1:" + freeCommodity.get(1).getPhotoUrl());
+        Log.i("initFree", "initFree 2:" + freeCommodity.get(2).getPhotoUrl());
+        Glide.with(this).load(freeCommodity.get(0).getPhotoUrl()).placeholder(R.drawable.home_free_322x357).into(free_photo1);
+        Glide.with(this).load(freeCommodity.get(1).getPhotoUrl()).placeholder(R.drawable.home_free2_393x176).into(free_photo2);
+        Glide.with(this).load(freeCommodity.get(2).getPhotoUrl()).placeholder(R.drawable.home_free2_393x176).into(free_photo3);
+    }
+
+    @Override
+    public void getAdListFailed(String error) {
+
+    }
+
+    @Override
+    public void getFestivalFailed(String error) {
+
+    }
+
+    @Override
+    public void getSeckillFailed(String error) {
+    }
+
+    @Override
+    public void getCommodityListFailed(String error) {
+        home_not_network.setVisibility(View.GONE);
+        if (!NetUtils.isConnected(getActivity())) {
+            home_not_network.setVisibility(View.VISIBLE);
+        }
+        springView_home.onFinishFreshAndLoad();
     }
 
     @Override
     public void showDialog() {
-
+        if (mProgressBarUtil == null) {
+            mProgressBarUtil = new ProgressBarUtil(getActivity());
+        }
+        mProgressBarUtil.show();
     }
 
     @Override
     public void closeDialog() {
+        if (mProgressBarUtil != null) {
+            mProgressBarUtil.dismiss();
+        }
         Log.e("closeDialog", "加载完成");
     }
 
     @Override
     public void loadDataSuccess(HomeBean data) {
-        initViewPager(data.getAdvertiseArray());
 
-        initTopNavigation();
-        initSwpieRefreshLayout();
-        initGridView();
-        //新版
-        initRecyclerView(data.getClassifyDatas());
     }
 
-    private void initRecyclerView(ArrayList<HomeCommodityBean> comm) {
+    /**
+     * 五大模块
+     */
+    private void initRecyclerView() {
         mRecyclerView = (RecyclerView) mView.findViewById(R.id.recyclerView_home);
         MyGridLayoutManager mManager = new MyGridLayoutManager(getActivity(), 6, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(mManager);
 
-        HomeAdapter mAdapter = new HomeAdapter(getActivity(), comm);
+        mAdapter = new HomeAdapter(getActivity(), mCommodities);
         mRecyclerView.setAdapter(mAdapter);
-        Log.i("initRecyclerView", "initRecyclerView" + comm.size());
+        Log.i("initRecyclerView", "initRecyclerView" + mCommodities.size());
 
         mAdapter.setOnItemClickListener(this);
-    }
 
+        //判断是否显示置顶图标
+        mPullToRefreshScrollView.setScrollViewChangeListener(this);
+
+        springView_home.setListener(this);
+    }
 
     @Override
     public void loadDataFailed(String error) {
 
     }
 
+    /**
+     * 一元拼和四大模块
+     *
+     * @param view
+     * @param position
+     */
     @Override
     public void onClickListener(View view, int position) {
         if (position > 0 && position <= 3) {
             Intent startYiYuanDetails = new Intent(getActivity(), YiYuanDetailsActivity.class);
-            startYiYuanDetails.putExtra("type",YiYuanActivity.TYPE_HOT);
+            startYiYuanDetails.putExtra("type", YiYuanActivity.TYPE_HOT);
             startActivity(startYiYuanDetails);
-        }else {
+        } else {
             Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
-            startActivity(startCommodityDetails);
+            if (mCommodities.get(position) != null && !mCommodities.get(position).getCid().equals("0")) {
+                if (mCommodities.get(position) != null && !mCommodities.get(position).equals("0") && NetUtils.isConnected(getActivity())) {
+                    startCommodityDetails.putExtra("gid", mCommodities.get(position).getCid());
+                    startActivity(startCommodityDetails);
+                }
+            }
         }
+    }
+
+    /**
+     * 秒杀
+     *
+     * @param parent
+     * @param view
+     * @param position
+     * @param id
+     */
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent startSeckilActivity = new Intent(mContext, CommodityDetailsActivity.class);
+        String gid = mSeckill.getSeckillList().get(position).getCid();
+        if (gid != null && !gid.equals("")) {
+            startSeckilActivity.putExtra("gid", gid);
+            startActivity(startSeckilActivity);
+        }
+    }
+
+    /**
+     * 显示，隐藏置顶图标和topNavigation
+     *
+     * @param
+     * @param
+     * @param
+     * @param
+     * @param
+     */
+    @Override
+    public void onScrollViewChange(HomeScrollView view, int x, int y, int oldx, int oldy) {
+        if (y > 500) {
+            if (!isShowTop) {
+                isShowTop = true;
+                toTop.setVisibility(View.VISIBLE);
+            }
+        } else {
+            if (isShowTop) {
+                isShowTop = false;
+                toTop.setVisibility(View.GONE);
+            }
+        }
+        if (y > 0) {
+            if (y >= 100) {
+                int alpha = (int) (40 * 1.0F + y * 1.0F * 0.5);
+                if (alpha > 240) {
+                    navigation.getBackground().mutate().setAlpha(240);
+                } else {
+                    navigation.getBackground().mutate().setAlpha(alpha);
+                }
+                search_ll.setBackgroundColor(Color.parseColor("#efefef"));
+            } else {
+                navigation.getBackground().mutate().setAlpha(0);
+                search_ll.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                search_ll.getBackground().mutate().setAlpha(150);
+            }
+        } else {
+            navigation.getBackground().mutate().setAlpha(0);
+            search_ll.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            search_ll.getBackground().mutate().setAlpha(150);
+        }
+
+    }
+
+    @Override
+    public void onRefresh() {
+        Log.i("springView_home", "下拉刷新");
+        if (mHomePresenterImpl == null) {
+            mHomePresenterImpl = new HomePresenterImpl(this);
+        }
+        mHomePresenterImpl.loadData();
+    }
+
+    @Override
+    public void onLoadmore() {
+        Log.i("springView_home", "onLoadmore:上拉加载");
+        if (mHomePresenterImpl == null) {
+            mHomePresenterImpl = new HomePresenterImpl(this);
+        }
+        mHomePresenterImpl.PullDownLoadData();
     }
 }

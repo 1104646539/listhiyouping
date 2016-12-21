@@ -1,10 +1,13 @@
 package com.lishi.baijiaxing.utils;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -18,11 +21,12 @@ import com.lishi.baijiaxing.R;
  * 进度条工具类
  * Created by Administrator on 2016/8/4.
  */
-public class ProgressBarUtil extends Dialog{
+public class ProgressBarUtil extends Dialog {
     private static final int CHANGE_TITLE_WHAT = 1;
     private static final int CHNAGE_TITLE_DELAYMILLIS = 300;
     private static final int MAX_SUFFIX_NUMBER = 3;
     private static final char SUFFIX = '.';
+    private final Context mContext;
 
 
     private ImageView iv_route;
@@ -56,21 +60,29 @@ public class ProgressBarUtil extends Dialog{
 
         ;
     };
+    private int scrrenWidth;
+    private int scrrenHeight;
 
     public ProgressBarUtil(Context context) {
         super(context);
+        this.mContext = context;
         init();
     }
 
     public ProgressBarUtil(Context context, int themeResId) {
         super(context, themeResId);
+        this.mContext = context;
         init();
     }
 
     private void init() {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.progressbar);
-        this.setCancelable(false);
+        scrrenWidth = ((Activity) mContext).getWindowManager().getDefaultDisplay().getWidth();
+        scrrenHeight = ((Activity) mContext).getWindowManager().getDefaultDisplay().getHeight();
+
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        addContentView(LayoutInflater.from(mContext).inflate(R.layout.progressbar, null, false)
+                , new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        this.setCancelable(true);
         iv_route = (ImageView) findViewById(R.id.iv_route);
         detail_tv = (TextView) findViewById(R.id.detail_tv);
         tv_point = (TextView) findViewById(R.id.tv_point);
@@ -95,8 +107,6 @@ public class ProgressBarUtil extends Dialog{
         handler.sendEmptyMessage(CHANGE_TITLE_WHAT);
         super.show();
     }
-    
-
 
 
     @Override

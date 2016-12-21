@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="@color/base_bg_color"
@@ -11,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:background="@color/item_padding"
         android:layout_marginRight="20dp"
+        android:background="@color/item_padding"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingTop="20dp">
@@ -123,15 +124,15 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:id="@+id/free_details_price"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="68"
                         android:textColor="@color/text_red"
                         android:textSize="18sp"/>
 
                     <TextView
-                 
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="2dp"
@@ -151,8 +152,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -167,13 +168,29 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/free_details_time1"
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/free_details_CountDown_start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1天13小时50分22秒"
-                        android:textColor="#717171"
-                        android:textSize="16sp"/>
+                        android:layout_gravity="center_vertical"
+                        android:foregroundGravity="center_vertical"
+                        app:isHideTimeBackground="true"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="true"
+                        app:isShowSecond="false"
+                        app:suffixDay="天"
+                        app:suffixGravity="center"
+                        app:suffixHour="时"
+                        app:suffixLRMargin="3dp"
+                        app:suffixMinute="分"
+                        app:suffixTextSize="14sp"
+                        app:timeBgBorderColor="#E8E8E8"
+                        app:timeBgColor="#FFFFFF"
+                        app:timeBgSize="14sp"
+                        app:timeTextColor="@color/text_color"
+                        app:timeTextSize="14sp"/>
 
                     <TextView
                         android:id="@+id/free_details_time2"
@@ -200,13 +217,29 @@
                         android:text="距离申请结束"
                         android:textSize="14sp"/>
 
-                    <TextView
-                        android:id="@+id/free_details_time4"
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/free_details_CountDown_end"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1天13小时50分22秒"
-                        android:textColor="#717171"
-                        android:textSize="16sp"/>
+                        android:layout_gravity="center_vertical"
+                        android:foregroundGravity="center_vertical"
+                        app:isHideTimeBackground="true"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="true"
+                        app:isShowSecond="false"
+                        app:suffixDay="天"
+                        app:suffixGravity="center"
+                        app:suffixHour="时"
+                        app:suffixLRMargin="3dp"
+                        app:suffixMinute="分"
+                        app:suffixTextSize="14sp"
+                        app:timeBgBorderColor="#E8E8E8"
+                        app:timeBgColor="#FFFFFF"
+                        app:timeBgSize="14sp"
+                        app:timeTextColor="@color/text_color"
+                        app:timeTextSize="14sp"/>
 
                 </LinearLayout>
 
@@ -215,8 +248,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:visibility="gone"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/free_details_time5"

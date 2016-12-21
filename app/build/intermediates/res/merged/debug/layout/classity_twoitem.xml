@@ -21,8 +21,11 @@
     <com.lishi.baijiaxing.view.MyGridView
         android:id="@+id/gridview_classity"
         android:layout_width="match_parent"
-        android:layout_margin="8dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:background="@color/base_bg_color"
-        android:numColumns="3"/>
+        android:horizontalSpacing="@dimen/classify_margin"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/classify_margin"/>
 </LinearLayout>

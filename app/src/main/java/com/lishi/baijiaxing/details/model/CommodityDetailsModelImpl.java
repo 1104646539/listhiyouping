@@ -1,39 +1,80 @@
 package com.lishi.baijiaxing.details.model;
 
+import android.util.Log;
+
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseModel;
 import com.lishi.baijiaxing.customize.model.NormsBean;
 import com.lishi.baijiaxing.details.CommodityCommentCallback;
 import com.lishi.baijiaxing.details.CommodityDetailsCallback;
+import com.lishi.baijiaxing.details.network.DetailsService;
+import com.lishi.baijiaxing.shoppingCart.model.SCOperation;
+import com.lishi.baijiaxing.utils.LoginUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by Administrator on 2016/11/1.
  */
 public class CommodityDetailsModelImpl extends BaseModel implements CommodityDetailsModel {
+    private DetailsService mDetailsService;
+
+    public CommodityDetailsModelImpl() {
+        mDetailsService = (DetailsService) getRetrofitManager().getHomeService(DetailsService.class);
+    }
+
     @Override
-    public void loadData(CommodityDetailsCallback callback) {
-        ArrayList<Integer> srcIds = new ArrayList<>();
-        srcIds.add(R.drawable.free_details_info1);
-        srcIds.add(R.drawable.free_details_info2);
-        srcIds.add(R.drawable.free_details_info3);
-        srcIds.add(R.drawable.free_details_info4);
-        srcIds.add(R.drawable.free_details_info5);
-        srcIds.add(R.drawable.free_details_info6);
+    public void loadData(final CommodityDetailsCallback callback, String gid) {
+        mDetailsService.getCommodityDetails("goodsDetails", gid).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<CommodityDetails>() {
+            @Override
+            public void onCompleted() {
 
-        List<NormsBean> normsBeens = new ArrayList<>();
-        List<String> classname = new ArrayList<>();
-        classname.add("默认");
-        classname.add("默认2");
-        NormsBean normsBean = new NormsBean("规格", classname);
-        normsBeens.add(normsBean);
+            }
 
-        CommodityDetailsBean mCommodityDetailsBean = new CommodityDetailsBean("", "【利世优品】万仟堂陶瓷同心杯带盖过滤 办公茶杯水杯【利世优品】万仟堂陶瓷同心杯带盖过滤 办公茶杯水杯"
-                , 250, srcIds, "", normsBeens,60);
+            @Override
+            public void onError(Throwable e) {
+                callback.loadFailed(e.toString());
+            }
 
-        callback.onLoadSuccess(mCommodityDetailsBean);
+            @Override
+            public void onNext(CommodityDetails commodityDetails) {
+                callback.loadSuccess(commodityDetails.getData());
+            }
+        });
+    }
+
+    @Override
+    public void addCart(final CommodityDetailsCallback callback, String gid, String number) {
+        if (!LoginUtil.getInstance().isLogin()) {
+            callback.addCartFailed("未登录");
+        }
+        mDetailsService.addCommodity(LoginUtil.getInstance().getLogin().getData().getUid(), LoginUtil.getInstance().getLogin().getData().getToken()
+                , LoginUtil.getInstance().getLogin().getData().getType(), gid, number).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<SCOperation>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        callback.addCartFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(SCOperation scOperation) {
+                        Log.i("addCart", "onNext:" + scOperation.getStatus() + scOperation.getMsg());
+                        callback.addCartSuccess(scOperation);
+                    }
+
+                });
+
     }
 
 }

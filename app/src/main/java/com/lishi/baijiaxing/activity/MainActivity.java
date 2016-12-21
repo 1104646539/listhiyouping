@@ -108,7 +108,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
         tv_my.setOnClickListener(this);
 
         //默认显示的的Fragment
-        fragment_Home = new Fragment_Home();
+        fragment_Home = Fragment_Home.newInstance();
         getFragmentManager().beginTransaction().add(R.id.ll_main, fragment_Home).commit();
         mFragmentHashMap.put("fragment_Home", fragment_Home);
         changeimg(pagenum);
@@ -122,7 +122,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
             case R.id.ll_main_1:
                 if (pagenum != 0) {
                     if (fragment_Home == null) {
-                        fragment_Home = new Fragment_Home();
+                        fragment_Home = Fragment_Home.newInstance();
                         mFragmentHashMap.put("fragment_Home", fragment_Home);
                     }
                     Fragment fragment = mFragmentHashMap.get(mStrings[pagenum]);
@@ -141,7 +141,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
             case R.id.ll_main_2:
                 if (pagenum != 1) {
                     if (fragment_Classify == null) {
-                        fragment_Classify = new Fragment_Classify();
+                        fragment_Classify = Fragment_Classify.newInstance();
                         mFragmentHashMap.put("fragment_Classify", fragment_Classify);
                     }
                     Fragment fragment = mFragmentHashMap.get(mStrings[pagenum]);
@@ -160,15 +160,15 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
             case R.id.ll_main_3:
                 if (pagenum != 2) {
                     if (fragment_cart == null) {
-                        fragment_cart = new Fragment_Cart();
+                        fragment_cart = Fragment_Cart.newInstance();
                         mFragmentHashMap.put("fragment_cart", fragment_cart);
                     }
                     Fragment fragment = mFragmentHashMap.get(mStrings[pagenum]);
-                    if (fragment == null) {
-                        Log.i("assf", "from为空___________________");
-                    } else if (fragment_cart == null) {
-                        Log.i("assf", "to为空___________________");
-                    }
+//                    if (fragment == null) {
+//                        Log.i("assf", "from为空___________________");
+//                    } else if (fragment_cart == null) {
+//                        Log.i("assf", "to为空___________________");
+//                    }
                     switchFragment(fragment, fragment_cart);
                     pagenum = 2;
                 }
@@ -179,15 +179,15 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
             case R.id.ll_main_4:
                 if (pagenum != 3) {
                     if (fragment_My == null) {
-                        fragment_My = new Fragment_Personal();
+                        fragment_My = Fragment_Personal.newInstance();
                         mFragmentHashMap.put("fragment_My", fragment_My);
                     }
                     Fragment fragment = mFragmentHashMap.get(mStrings[pagenum]);
-                    if (fragment == null) {
-                        Log.i("assf", "from为空___________________");
-                    } else if (fragment_My == null) {
-                        Log.i("assf", "to为空___________________");
-                    }
+//                    if (fragment == null) {
+//                        Log.i("assf", "from为空___________________");
+//                    } else if (fragment_My == null) {
+//                        Log.i("assf", "to为空___________________");
+//                    }
                     switchFragment(fragment, fragment_My);
                     pagenum = 3;
                 }
@@ -197,14 +197,29 @@ public class MainActivity extends BaseActivity implements OnClickListener, Class
     }
 
     private void changeimg(int num) {
+//        int size = imageViews.length;
+//        for (int i = 0; i < size; i++) {
+//            if (num == i) {
+//                imageViews[i].setImageResource(images_on[i]);
+//                mTextViews[i].setTextColor(Color.rgb(221, 39, 38));
+//            } else {
+//                imageViews[i].setImageResource(images_gray_on[i]);
+//                mTextViews[i].setTextColor(Color.rgb(150, 150, 150));
+//            }
+//
+//        }
+
+
         int size = imageViews.length;
         for (int i = 0; i < size; i++) {
             if (num == i) {
-                imageViews[i].setImageResource(images_on[i]);
-                mTextViews[i].setTextColor(Color.rgb(221, 39, 38));
+                imageViews[i].setSelected(true);
+                mTextViews[i].setSelected(true);
+//                mTextViews[i].setTextColor(Color.rgb(221, 39, 38));
             } else {
-                imageViews[i].setImageResource(images_gray_on[i]);
-                mTextViews[i].setTextColor(Color.rgb(150, 150, 150));
+                imageViews[i].setSelected(false);
+                mTextViews[i].setSelected(false);
+//                mTextViews[i].setTextColor(Color.rgb(150, 150, 150));
             }
 
         }

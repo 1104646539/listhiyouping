@@ -49,7 +49,7 @@ public class MeaningfulAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         MeaningfulViewHolder viewHolder = null;
         if (convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.item_meaningful_recyclerview, null, false);
+            convertView = mLayoutInflater.inflate(R.layout.item_meaningful_recyclerview, parent, false);
             viewHolder = new MeaningfulViewHolder();
             viewHolder.iv_icon = (ImageView) convertView.findViewById(R.id.iv_meaningful_icon);
             viewHolder.iv_brief = (ImageView) convertView.findViewById(R.id.iv_meaningful_brief);

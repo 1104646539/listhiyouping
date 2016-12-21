@@ -5,33 +5,30 @@
               android:background="@color/background_myorderform"
               android:orientation="vertical">
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:id="@+id/swiperefreshLayout_returnedGoods"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <com.liaoinstan.springview.widget.SpringView
+            android:id="@+id/springView_order_returnedgoods"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <ListView
+                android:id="@+id/listview_myorderform_returnedgoods"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:transcriptMode="disabled"
+                android:background="@color/base_bg_color"
+                android:divider="@color/background_myorderform"
+                android:dividerHeight="10dp"/>
+            <!--</LinearLayout>-->
+            <!--</ScrollView>-->
+        </com.liaoinstan.springview.widget.SpringView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/background_myorderform"/>
-
-                <com.lishi.baijiaxing.view.MyListView
-                    android:id="@+id/listview_myorderform_returnedgoods"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/base_bg_color"
-                    android:divider="@color/background_myorderform"
-                    android:dividerHeight="10dp"/>
-            </LinearLayout>
-        </ScrollView>
-    </android.support.v4.widget.SwipeRefreshLayout>
+        <include
+            android:id="@+id/returned_goods_order_null"
+            layout="@layout/order_null"
+            android:visibility="gone"/>
+    </FrameLayout>
 </LinearLayout>

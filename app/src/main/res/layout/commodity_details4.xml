@@ -7,7 +7,5 @@
     <ImageView
         android:id="@+id/commodity_details_brief"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/commodity_details_photo"/>
-</LinearLayout>
+        android:layout_height="wrap_content"/>
+</LinearLayout> 

@@ -138,4 +138,12 @@ public class CommodityDetailsActivity extends BaseActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar_details);
         back = (ImageView) findViewById(R.id.back_details);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mViewPager = null;
+        mTabLayout = null;
+        mTabLayout = null;
+    }
 }

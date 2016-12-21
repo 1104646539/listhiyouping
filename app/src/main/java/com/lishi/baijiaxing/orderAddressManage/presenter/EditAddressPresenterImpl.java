@@ -1,69 +1,74 @@
 package com.lishi.baijiaxing.orderAddressManage.presenter;
 
+import com.lishi.baijiaxing.base.BasePresenter;
+import com.lishi.baijiaxing.base.BaseView;
 import com.lishi.baijiaxing.bean.DeliveryAddressBean;
+import com.lishi.baijiaxing.orderAddressManage.EditAddressCallback;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
 import com.lishi.baijiaxing.orderAddressManage.model.EditAddressModelImpl;
+import com.lishi.baijiaxing.orderAddressManage.model.UpAddress;
 import com.lishi.baijiaxing.orderAddressManage.view.EditAddressView;
 
 /**
  * 编辑收货地址
  * Created by Administrator on 2016/8/22.
  */
-public class EditAddressPresenterImpl implements EditAddressPresenter {
+public class EditAddressPresenterImpl extends BasePresenter implements EditAddressPresenter, EditAddressCallback {
 
     private EditAddressModelImpl mEditAddressModel;
     private EditAddressView mEditAddressView;
 
-
-    public EditAddressPresenterImpl(EditAddressView editAddressView) {
-        this.mEditAddressView = editAddressView;
+    public EditAddressPresenterImpl(BaseView view) {
+        super(view);
+        mEditAddressView = (EditAddressView) view;
         mEditAddressModel = new EditAddressModelImpl();
     }
 
     @Override
-    public void changeAddress(DeliveryAddressBean deliveryAddressBean) {
-        mEditAddressModel.changeAddress(this, deliveryAddressBean);
-        mEditAddressView.changeAddress();
+    public void changeAddress(AddressList.DataBean dataBean) {
+        mEditAddressModel.changeAddress(this, dataBean);
     }
 
     @Override
-    public void deleteAddress(DeliveryAddressBean deliveryAddressBean) {
-        mEditAddressModel.deleteAddress(this, deliveryAddressBean);
-        mEditAddressView.deleteAddress();
+    public void deleteAddress(AddressList.DataBean dataBean) {
+        mEditAddressView.showDialog();
+        mEditAddressModel.deleteAddress(this, dataBean);
     }
 
     @Override
-    public void addAddress(DeliveryAddressBean deliveryAddressBean) {
-        mEditAddressModel.addAddress(this, deliveryAddressBean);
-        mEditAddressView.addAddress();
+    public void addAddress(AddressList.DataBean dataBean) {
+
     }
 
     @Override
-    public void onChangeAddressSuccess() {
-        mEditAddressView.onChangeAddressSuccess();
+    public void onChangeAddressSuccess(UpAddress upAddress) {
+        mEditAddressView.onChangeAddressSuccess(upAddress);
     }
 
     @Override
-    public void onChangeAddressFailed() {
-        mEditAddressView.onChangeAddressFailed();
+    public void onChangeAddressFailed(String error) {
+        mEditAddressView.onChangeAddressFailed(error);
     }
 
     @Override
-    public void onDeleteAddressSuccess() {
-        mEditAddressView.onDeleteAddressSuccess();
+    public void onDeleteAddressSuccess(UpAddress upAddress) {
+        mEditAddressView.onDeleteAddressSuccess(upAddress);
+        mEditAddressView.closeDialog();
     }
 
     @Override
-    public void onDeleteAddressFailed() {
-        mEditAddressView.onDeleteAddressFailed();
+    public void onDeleteAddressFailed(String error) {
+        mEditAddressView.onDeleteAddressFailed(error);
+        mEditAddressView.closeDialog();
     }
 
     @Override
-    public void onAddAddressSuccess() {
-        mEditAddressView.onAddAddressSuccess();
+    public void onAddAddressSuccess(UpAddress upAddress) {
+
     }
 
     @Override
-    public void onAddAddressFailed() {
-        mEditAddressView.onAddAddressFailed();
+    public void onAddAddressFailed(String error) {
+
     }
 }

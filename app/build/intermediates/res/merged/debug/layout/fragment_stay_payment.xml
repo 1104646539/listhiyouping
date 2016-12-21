@@ -5,28 +5,30 @@
               android:background="@color/background_myorderform"
               android:orientation="vertical">
 
-
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <com.liaoinstan.springview.widget.SpringView
+            android:id="@+id/springView_order_staypayment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/background_myorderform"/>
-
-            <com.lishi.baijiaxing.view.MyListView
+            <ListView
                 android:id="@+id/listview_myorderform_staypayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/base_bg_color"
                 android:divider="@color/background_myorderform"
+                android:transcriptMode="disabled"
                 android:dividerHeight="10dp"/>
-        </LinearLayout>
-    </ScrollView>
+            <!--</LinearLayout>-->
+            <!--</ScrollView>-->
+        </com.liaoinstan.springview.widget.SpringView>
+
+        <include
+            android:id="@+id/stay_payment_order_null"
+            layout="@layout/order_null"
+            android:visibility="gone"/>
+    </FrameLayout>
 </LinearLayout>

@@ -87,10 +87,10 @@ public class Fragment_MyCollect_Commodity extends Fragment {
 
     private void initData() {
         commodityBeans = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
-            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
-            commodityBeans.add(cbean);
-        }
+//        for (int i = 0; i < 8; i++) {
+//            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
+//            commodityBeans.add(cbean);
+//        }
     }
 
     public void CheckChange(boolean flag) {

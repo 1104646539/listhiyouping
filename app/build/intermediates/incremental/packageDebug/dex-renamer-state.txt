@@ -1,4 +1,7 @@
-#Tue Nov 15 17:25:24 CST 2016
-base.0=D\:\\lsGit\\listhiyouping\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=D\:\\lsGit\\listhiyouping\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+#Wed Dec 21 17:47:14 CST 2016
+base.0=D\:\\lsGit\\listhiyouping\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_7302836bf33eba5c8a1cbea8d2d4b91249649d95
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\lsGit\\listhiyouping\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_685e263017d1fa13ef23ec2fb5f0b9e1b09fe70d\\classes.dex
+base.1=D\:\\lsGit\\listhiyouping\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_685e263017d1fa13ef23ec2fb5f0b9e1b09fe70d
+file.0=D\:\\lsGit\\listhiyouping\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_7302836bf33eba5c8a1cbea8d2d4b91249649d95\\classes.dex

@@ -3,6 +3,7 @@ package com.lishi.baijiaxing.free.presenter;
 import com.lishi.baijiaxing.base.BasePresenter;
 import com.lishi.baijiaxing.base.BaseView;
 import com.lishi.baijiaxing.free.FreeCallback;
+import com.lishi.baijiaxing.free.model.FreeAdList;
 import com.lishi.baijiaxing.free.model.FreeModelImpl;
 import com.lishi.baijiaxing.free.view.FreeView;
 
@@ -20,8 +21,17 @@ public class FreePresenterImpl<T, V extends BaseView> extends BasePresenter impl
     }
 
     @Override
-    public void loadData(int type) {
-        mFreeModel.loadData(this, type);
+    public void loadData() {
+        mFreeModel.loadData(this);
     }
 
+    @Override
+    public void loadAdListSuccess(FreeAdList list) {
+        mFreeView.loadAdListSuccess(list);
+    }
+
+    @Override
+    public void loadAdListFailed(String error) {
+        mFreeView.loadAdListFailed(error);
+    }
 }

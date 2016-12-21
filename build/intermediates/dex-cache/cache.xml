@@ -2,301 +2,463 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.yuyh.imgsel\library\1.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2acd4fb3144144e45ec70128b6d07cca258d6747">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.yuyh.imgsel-library-1.2.0_9748c51132a77387c7f9a42eea2167c7258ee064.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.3.1\2c4076b466a0eb4d6ddf5721edd35cd1adc1f317\stetho-1.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2c4076b466a0eb4d6ddf5721edd35cd1adc1f317">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\stetho-1.3.1_188774134423d3687d973af0cf97acae42053549.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="D:\lsGit\listhiyouping\app\libs\universal-image-loader-1.9.3.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3_6a7f212c8f85c69322c8d9a094b28c381b940606.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.3_6a7f212c8f85c69322c8d9a094b28c381b940606\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\commons-cli-1.2_7ed28277f6d87070a38e23576b9febb034c7338a.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\jsr305-2.0.1_69d0b6c8ffa05193b3c0ebfa1d1d218ee290f911.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-2.0.1_69d0b6c8ffa05193b3c0ebfa1d1d218ee290f911\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\libs\open_sdk_r5043.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="fbc2fb9bce736c4b6d9146b932c4bf7a473f5786">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\open_sdk_r5043_07601409d057ebfc6f39da66274a5f196d2b2974.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\libs\libammsdk.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="11b09244aedaa51bfd09269637be7c32c60da314">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\libammsdk_01b00d5106c9c0fc5eca823225570c770c82bde4.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\okhttp-3.2.0_e97c4d684058659f4c78fd063d89ce0d8b400297.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.2.0_e97c4d684058659f4c78fd063d89ce0d8b400297\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.orhanobut\logger\1.14\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="a0c0f8655ca421b600cb9c483a4aa1facbe7c9ef">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.orhanobut-logger-1.14_951a95250b0d8442eb2844cf856d13411965aa50.jar" />
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_9a96e29d2e8b54d1790464e11ac3678c39d81029\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\de.hdodenhof-circleimageview-2.1.0_b4594a4457aa70b80922c8bc72734f674bc7b800.jar" />
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_07acff6b5aa1ac2adc845b71147ce876a5fe2c4b\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0-beta4\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\converter-gson-2.0.0-beta4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta4_c6e97f806b29334717938c473af852cff524d6ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp3\1.3.1\c596b3b33b5a92107bb70544bb5ee35f597bc6d8\stetho-okhttp3-1.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c596b3b33b5a92107bb70544bb5ee35f597bc6d8">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\stetho-okhttp3-1.3.1_0b96bc8e016f2feda1f795178da73782b0cf170b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\libs\mta-sdk-1.6.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c184c69f43b1fe46390f7123717c65bd844bccb6">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\mta-sdk-1.6.2_a02e725ed1640414c078a48d7e40c3cd7340a09b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.2.0\a56f28d5b7fab623c6c1d2afa08dd496d873ac21\logging-interceptor-3.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\logging-interceptor-3.2.0_8c091b18cda26f82f174b3fa9c0f816fb931a653.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_fb688e9e5af0a8e66bf7aabd34ddc6632eab09ea.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\io.reactivex-rxandroid-1.1.0_a0caf5647a4d29414794d18d7fb5dd7d2e163b6f.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.yuyh.easyadapter\library\1.0.0\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="d274320550b0352f154a1c8ba29930935800ffdd">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.yuyh.easyadapter-library-1.0.0_22dbe62aa44bf18f5ee7965b1ec8dbd4000d0d06.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.yuyh.easyadapter-library-1.0.0_22dbe62aa44bf18f5ee7965b1ec8dbd4000d0d06\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\gson-2.4_6890e801880bd242164763e4b5f4086b8128ed8f.jar" />
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_2e5dddecc3c8bf139573907456aa2a6e902b8db0\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_26c99dd3fb3df77ab60876968cf2424064b9dc06.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\glide-3.5.2_ea43fa33689a18fd8d7307d472bff1ec5c77700e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_5640f045f5ea334d2885342891d6c97debf6160a.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.wang.avi\library\1.0.1\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="4968500e276d051b8ed8135f1a0254120f6c600d">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.wang.avi-library-1.0.1_ff70f75602f4cb1ed6852114edf507ed326097ad.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.wang.avi-library-1.0.1_ff70f75602f4cb1ed6852114edf507ed326097ad\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_6c2a284fdd61d0d8ac24aa3991d9cfbc35ef85c7.jar" />
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_1f3ddf859a86296da03fddcf50d19f29d652df81\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0-beta4\739e00dea1f0ac04fdb9b6160d667e23cc50a791\retrofit-2.0.0-beta4.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta4_ff5e801f6eef544a1408f5132c8f2c7b6c1a5980.jar" />
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_bf6b2f4b24d58dd405ab230c0d9c08d748dab3b2\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.0\748f0546d5c3c27f1aef07270ffea0c45f0c42a4\rxjava-1.1.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="748f0546d5c3c27f1aef07270ffea0c45f0c42a4">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\rxjava-1.1.0_8ad53718875d263efc9f5dad95fc3130e7736adc.jar" />
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_8934a7856b56a2d32f9716dc0530427f4834ea94\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\okio-1.6.0_c410569bd3ae660f2a7eceb3af69efc833b46b70.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.0.0-beta4\bd49baf667542c7d06f71e598bdee7fe57272013\adapter-rxjava-2.0.0-beta4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="bd49baf667542c7d06f71e598bdee7fe57272013">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\adapter-rxjava-2.0.0-beta4_e23037635433fe189e1b58909ce389aa7d3d465e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_160790529bfcc916d809ac65e397f1ace4b6b18e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_2f45bba38984289580146f540c7a1944bec7c013.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_c0556badda5bc12459ad65a22b389a90ee007868.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="D:\lsGit\listhiyouping\app\libs\Volley.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="2dd908289a096a92b5f266cefb6c1bda32762cef">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\Volley_0a0c8de373410b61c7121facbfd73268a6d08ffd.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\2\Volley_0a0c8de373410b61c7121facbfd73268a6d08ffd\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\library-2.4.0_dd460f45d27a359687729c3c169358b1eda3100b.jar" />
+        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.databinding-adapters-1.2.1_94e2347f862aa147f1ea1124a31112b24e0fdc55\classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\libs\libammsdk.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c2f29c05b35e8c8713be2b81c41cf18f98b64a">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_01b00d5106c9c0fc5eca823225570c770c82bde4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\commons-cli-1.2_7ed28277f6d87070a38e23576b9febb034c7338a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\de.hdodenhof-circleimageview-2.1.0_b4594a4457aa70b80922c8bc72734f674bc7b800\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\libs\open_sdk_r5043.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fbc2fb9bce736c4b6d9146b932c4bf7a473f5786">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\2\open_sdk_r5043_07601409d057ebfc6f39da66274a5f196d2b2974\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0-beta4\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\converter-gson-2.0.0-beta4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.0.0-beta4_c6e97f806b29334717938c473af852cff524d6ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.4_6890e801880bd242164763e4b5f4086b8128ed8f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_df40c0af25b983bb711999d394258d64777053e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_fc5eb9f5823f1a5fd1ff2a0feebbca35251e4611\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.reactivex-rxandroid-1.1.0_a0caf5647a4d29414794d18d7fb5dd7d2e163b6f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\cn.bingoogolapple\bga-refreshlayout\1.1.7\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e53517cd5071ca1e42548f05322ad87461098b58">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\cn.bingoogolapple-bga-refreshlayout-1.1.7_9f2facb6a6b1985eb1db790dc45709efaa0b0545\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_26c99dd3fb3df77ab60876968cf2424064b9dc06\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_d16ad8e7f8ec166b7e635643f4fd58d1bd6fc68b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_6c17f24750b87db29b618d28f11f2c9964d822c7.jar" />
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_6c17f24750b87db29b618d28f11f2c9964d822c7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_a3c9958a622678a389eb1aceae9971e68c173cfb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_f0d5db4fff5fde0e39acd36dd3429cbac7bd2dbb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\libs\mta-sdk-1.6.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c184c69f43b1fe46390f7123717c65bd844bccb6">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\2\mta-sdk-1.6.2_a02e725ed1640414c078a48d7e40c3cd7340a09b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.orhanobut\logger\1.15\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2a156b99fc7cc034308f942906b09d32754a4470">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.orhanobut-logger-1.15_5aefa5c4dbde3592a975204355ee6e78e705b47f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.yuyh.imgsel\library\1.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2acd4fb3144144e45ec70128b6d07cca258d6747">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.yuyh.imgsel-library-1.2.0_9748c51132a77387c7f9a42eea2167c7258ee064\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0-beta4\739e00dea1f0ac04fdb9b6160d667e23cc50a791\retrofit-2.0.0-beta4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.0.0-beta4_ff5e801f6eef544a1408f5132c8f2c7b6c1a5980\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.github.iwgang\countdownview\2.1.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="313a0aad4620cba2bc02f818a5120a14f9dbd2bf">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.iwgang-countdownview-2.1.2_217052dfc6bbb646bb82633e8db4d03db3668f59\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.0.0-beta4\bd49baf667542c7d06f71e598bdee7fe57272013\adapter-rxjava-2.0.0-beta4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bd49baf667542c7d06f71e598bdee7fe57272013">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\adapter-rxjava-2.0.0-beta4_e23037635433fe189e1b58909ce389aa7d3d465e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_053d431190d44f31891d4ae327a19e243234cc8e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_22dff5cedfc0e79f6a3061de915bbefb76c606da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp3\1.3.1\c596b3b33b5a92107bb70544bb5ee35f597bc6d8\stetho-okhttp3-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c596b3b33b5a92107bb70544bb5ee35f597bc6d8">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\stetho-okhttp3-1.3.1_0b96bc8e016f2feda1f795178da73782b0cf170b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_dd460f45d27a359687729c3c169358b1eda3100b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ed26f066f4399f4be4b6763f419a6407bdfc2b0b">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7302836bf33eba5c8a1cbea8d2d4b91249649d95\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.databinding-library-1.2.1_0791ba27978701dc5d8cf5d6732b0b37fb2e8053\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.3.1\2c4076b466a0eb4d6ddf5721edd35cd1adc1f317\stetho-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2c4076b466a0eb4d6ddf5721edd35cd1adc1f317">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\stetho-1.3.1_188774134423d3687d973af0cf97acae42053549\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.android.databinding\baseLibrary\2.2.2\5e227e2d794cf680dd34fb04dd564ce58d6c764d\baseLibrary-2.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5e227e2d794cf680dd34fb04dd564ce58d6c764d">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\baseLibrary-2.2.2_b053c4729f0886f8abb3afb38abf6daadde54cfd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.2.0\a56f28d5b7fab623c6c1d2afa08dd496d873ac21\logging-interceptor-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.2.0_8c091b18cda26f82f174b3fa9c0f816fb931a653\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_878f60edf571a34281229023cd1263f09e469a37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.liaoinstan.springview\library\1.2.6\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="69fa933cdb0ded211ad967cd86ac50f7d1750f90">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.liaoinstan.springview-library-1.2.6_a8fa7b4bbcf54bd465e0a2ef4f3d9b4ea5956f1c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.yqritc\recyclerview-flexibledivider\1.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de2a8ef4f859178c128c931b0f5ce0fe31919670">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.yqritc-recyclerview-flexibledivider-1.4.0_a3b9785b0c830c8c837fca3e13efd23365638e0f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_e359fde0d3aa45f41d30eecc1edbc5d502563444\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.0\748f0546d5c3c27f1aef07270ffea0c45f0c42a4\rxjava-1.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="748f0546d5c3c27f1aef07270ffea0c45f0c42a4">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.0_8ad53718875d263efc9f5dad95fc3130e7736adc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1b9550376fda0a24a55438f9821a95dc384f8729">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_685e263017d1fa13ef23ec2fb5f0b9e1b09fe70d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_c410569bd3ae660f2a7eceb3af69efc833b46b70\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\lsGit\listhiyouping\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="D:\lsGit\listhiyouping\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_21746b6962165bc23e0b3debe708c3701f995776\classes.dex" />
     </item>
 
 </items>

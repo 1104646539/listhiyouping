@@ -1,6 +1,9 @@
 package com.lishi.baijiaxing.orderAddressManage.view;
 
+import com.lishi.baijiaxing.base.BaseView;
 import com.lishi.baijiaxing.bean.DeliveryAddressBean;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
+import com.lishi.baijiaxing.orderAddressManage.model.UpAddress;
 
 import java.util.ArrayList;
 
@@ -8,35 +11,20 @@ import java.util.ArrayList;
  * 收货地址管理
  * Created by Administrator on 2016/8/22.
  */
-public interface AddressView {
-    void loadAddressData();
+public interface AddressView extends BaseView {
+    void onLoadAddressDataSuccess(AddressList addressList);
 
-    void onLoadAddressDataSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
+    void onLoadAddressDataFailed(String error);
 
-    void onLoadAddressDataFailed();
+    void onChangeAddressSuccess(UpAddress upAddress);
 
-    void changeAddress();
+    void onChangeAddressFailed(String error);
 
-    void deleteAddress();
+    void onDeleteAddressSuccess(UpAddress upAddress);
 
-    void addAddress();
+    void onDeleteAddressFailed(String error);
 
-    void setDefault();
+    void onAddAddressSuccess(UpAddress address);
 
-    void onChangeAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onChangeAddressFailed();
-
-    void onDeleteAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onDeleteAddressFailed();
-
-    void onAddAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onAddAddressFailed();
-
-    void onSetDefaultSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen);
-
-    void onSetDefaultFailed();
-
+    void onAddAddressFailed(String error);
 }

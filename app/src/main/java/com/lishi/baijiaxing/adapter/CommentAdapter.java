@@ -50,7 +50,7 @@ public class CommentAdapter extends BaseAdapter {
         CommentViewHolder holder = null;
         if (convertView == null) {
             holder = new CommentViewHolder();
-            convertView = mLayoutInflater.inflate(R.layout.item_comment, null, false);
+            convertView = mLayoutInflater.inflate(R.layout.item_comment, parent, false);
             holder.iv_user_photo = (ImageView) convertView.findViewById(R.id.iv_comment_photo);
             holder.iv_comment_level = (ImageView) convertView.findViewById(R.id.iv_comment_comment_level);
             holder.iv_user_level = (ImageView) convertView.findViewById(R.id.iv_comment_user_level);

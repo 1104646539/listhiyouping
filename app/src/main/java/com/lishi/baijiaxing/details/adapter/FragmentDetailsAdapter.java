@@ -1,25 +1,34 @@
 package com.lishi.baijiaxing.details.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.BitmapRequestBuilder;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.model.GlideUrl;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.target.Target;
 import com.lishi.baijiaxing.R;
-import com.lishi.baijiaxing.details.model.CommodityDetailsBean;
-import com.lishi.baijiaxing.shoppingCart.adapter.ShoppingCartAdapter;
+import com.lishi.baijiaxing.details.model.CommodityDetails;
+import com.lishi.baijiaxing.utils.PhotoPathUtil;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
-
-import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/31.
  */
 public class FragmentDetailsAdapter extends RecyclerView.Adapter {
-    private CommodityDetailsBean mCommodityDetailsBeen;
+    private CommodityDetails.DataBean mCommodityDetailsBeen;
     private Context mContext;
     private LayoutInflater mLayoutInflater;
     private YiYuanHotAdapter.OnItemClickListener mOnItemClick;
@@ -28,11 +37,24 @@ public class FragmentDetailsAdapter extends RecyclerView.Adapter {
     private final static int TYPE_ITEM2 = 0X002;
     private final static int TYPE_ITEM3 = 0X003;
     private final static int TYPE_ITEM4 = 0X004;
+    private int OtherVALUE = 3;
+    private int screenWidth;
 
-    public FragmentDetailsAdapter(Context context, CommodityDetailsBean commodityDetailsBeen) {
+    private String number = "";
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    private BitmapRequestBuilder<GlideUrl, Bitmap> requestBuidler;
+
+    public FragmentDetailsAdapter(Context context, CommodityDetails.DataBean commodityDetailsBeen) {
         this.mCommodityDetailsBeen = commodityDetailsBeen;
         this.mContext = context;
         this.mLayoutInflater = LayoutInflater.from(mContext);
+        requestBuidler = Glide.with(mContext).from(GlideUrl.class)
+                .asBitmap().dontAnimate().diskCacheStrategy(DiskCacheStrategy.SOURCE).skipMemoryCache(false);
+        screenWidth = ((Activity) mContext).getWindowManager().getDefaultDisplay().getWidth();
     }
 
     public void setOnItemClick(YiYuanHotAdapter.OnItemClickListener onItemClick) {
@@ -55,30 +77,95 @@ public class FragmentDetailsAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if (holder instanceof FragmentDetails1ViewHolder) {
-            FragmentDetails1ViewHolder viewHolder = (FragmentDetails1ViewHolder) holder;
-            viewHolder.photo.setImageResource(R.drawable.commodity_details_photo);
-        } else if (holder instanceof FragmentDetails2ViewHolder) {
-            FragmentDetails2ViewHolder viewHolder = (FragmentDetails2ViewHolder) holder;
-            viewHolder.name.setText(mCommodityDetailsBeen.getName());
-            viewHolder.price.setText("￥" + mCommodityDetailsBeen.getPrice());
-        } else if (holder instanceof FragmentDetails3ViewHolder) {
-            FragmentDetails3ViewHolder viewHolder = (FragmentDetails3ViewHolder) holder;
-            if (mCommodityDetailsBeen.getNorms().equals("")) {
-                viewHolder.norms.setText("未选");
-            } else {
-                viewHolder.norms.setText(mCommodityDetailsBeen.getNorms());
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+        if (mCommodityDetailsBeen.getCommodityUrls() != null && mCommodityDetailsBeen.getCommodityUrls().size() > 0) {
+            if (holder instanceof FragmentDetails1ViewHolder) {
+                final FragmentDetails1ViewHolder viewHolder = (FragmentDetails1ViewHolder) holder;
+//                requestBuidler.load(new GlideUrl(mCommodityDetailsBeen.getCommodityUrls().get(0).getPhotoUrl())).dontAnimate()
+//                        .into(new SimpleTarget<Bitmap>(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL) {
+//
+//                            @Override
+//                            public void onResourceReady(Bitmap bitmap, GlideAnimation glideAnimation) {
+//                                LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) viewHolder.photo.getLayoutParams();
+//                                int bWidth = bitmap.getWidth();
+//                                int bHeight = bitmap.getHeight();
+//
+//                                int height = (int) (screenWidth * 1.0F / bWidth * 1.0F * bHeight);
+//                                lp.width = screenWidth;
+//                                lp.height = height;
+//                                viewHolder.photo.setLayoutParams(lp);
+//                                viewHolder.photo.setImageBitmap(bitmap);
+//                                Log.i("onResourceReady", "screenWidth:" + screenWidth
+//                                        + "bWidth:" + bWidth + "bHeight" + bHeight + "height:" + height);
+//                            }
+//                        });
+                String photoUrl = mCommodityDetailsBeen.getCommodityUrls().get(0).getPhotoUrl();
+                if (!photoUrl.equals("")) {
+                    photoUrl += PhotoPathUtil.getInstance().WIDTH_640;
+                }
+                Glide.with(mContext).load(photoUrl).placeholder(R.drawable.details_720x700)
+                        .into(viewHolder.photo);
+                
+            } else if (holder instanceof FragmentDetails2ViewHolder) {
+                FragmentDetails2ViewHolder viewHolder = (FragmentDetails2ViewHolder) holder;
+                viewHolder.name.setText(mCommodityDetailsBeen.getName());
+                viewHolder.price.setText("￥" + mCommodityDetailsBeen.getNowPrice());
+            } else if (holder instanceof FragmentDetails3ViewHolder) {
+                FragmentDetails3ViewHolder viewHolder = (FragmentDetails3ViewHolder) holder;
+                if (number.equals("")) {
+                    viewHolder.norms.setText("规格:");
+                    viewHolder.number.setText("1件");
+                } else {
+                    viewHolder.norms.setText("规格:");
+                    viewHolder.number.setText(number + "件");
+                }
+            } else if (holder instanceof FragmentDetails4ViewHolder) {
+                final FragmentDetails4ViewHolder viewHolder = (FragmentDetails4ViewHolder) holder;
+//            ImageLoader.getInstance().displayImage(mCommodityDetailsBeen.getBriefUrls().get(position - OtherVALUE), viewHolder.brief);
+//            Glide.with(mContext).load(mCommodityDetailsBeen.getBriefUrls().get(position - OtherVALUE)).asBitmap().dontAnimate()
+//                    .placeholder(R.drawable.default_ptr_rotate).into(new MyBitmapImageViewTarget(viewHolder.brief));
+                if (position >= getItemCount()) {
+                    return;
+                }
+                String photoUrl = mCommodityDetailsBeen.getBriefUrls().get(position - OtherVALUE);
+                if (!photoUrl.equals("")) {
+                    photoUrl += PhotoPathUtil.getInstance().WIDTH_640;
+                }
+                Glide.with(mContext).load(photoUrl).placeholder(R.drawable.details_720x700)
+                        .into(viewHolder.brief);
+                
+//                requestBuidler.load(new GlideUrl(mCommodityDetailsBeen.getBriefUrls().get(position - OtherVALUE))).placeholder(R.drawable.details_720x700)
+//                        .into(new SimpleTarget<Bitmap>(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL) {
+//
+//                            @Override
+//                            public void onResourceReady(Bitmap bitmap, GlideAnimation glideAnimation) {
+//                                LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) viewHolder.brief.getLayoutParams();
+//                                int bWidth = bitmap.getWidth();
+//                                int bHeight = bitmap.getHeight();
+//
+//                                int height = (int) (screenWidth * 1.0F / bWidth * 1.0F * bHeight);
+//                                lp.width = screenWidth;
+//                                lp.height = height;
+//                                viewHolder.brief.setLayoutParams(lp);
+//                                viewHolder.brief.setImageBitmap(bitmap);
+//                                Log.i("onResourceReady", "screenWidth:" + screenWidth
+//                                        + "bWidth:" + bWidth + "bHeight" + bHeight + "height:" + height);
+//
+//                            }
+//
+//                        });
+                Log.i("onBindViewHolder", "url:" + photoUrl);
             }
-        } else if (holder instanceof FragmentDetails4ViewHolder) {
-            FragmentDetails4ViewHolder viewHolder = (FragmentDetails4ViewHolder) holder;
-            viewHolder.brief.setImageResource(mCommodityDetailsBeen.getBrief().get(position - 3));
         }
     }
 
     @Override
     public int getItemCount() {
-        return mCommodityDetailsBeen.getBrief().size() + 3;
+        if (mCommodityDetailsBeen == null || mCommodityDetailsBeen.getBriefUrls() == null) {
+            return 0;
+        }
+        Log.i("getItemCount", "size:" + mCommodityDetailsBeen.getBriefUrls().size() + "gid:" + mCommodityDetailsBeen.getCid());
+        return mCommodityDetailsBeen.getBriefUrls().size() + OtherVALUE;
     }
 
     @Override
@@ -115,11 +202,12 @@ public class FragmentDetailsAdapter extends RecyclerView.Adapter {
     }
 
     class FragmentDetails3ViewHolder extends RecyclerView.ViewHolder {
-        TextView norms;
+        TextView norms, number;
 
         public FragmentDetails3ViewHolder(View itemView) {
             super(itemView);
             norms = (TextView) itemView.findViewById(R.id.commodity_details_norms);
+            number = (TextView) itemView.findViewById(R.id.commodity_details_number);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

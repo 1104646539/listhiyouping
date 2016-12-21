@@ -6,5 +6,9 @@ import com.lishi.baijiaxing.classify.ClassifyCallback;
  * Created by Administrator on 2016/8/17.
  */
 public interface ClassifyModel {
-    void loadData(ClassifyCallback callback);
+    void loadClassList(ClassifyCallback callback);
+
+    void loadClassOne(ClassifyCallback callback,String classId);
+
+    void loadAd(ClassifyCallback callback);
 }

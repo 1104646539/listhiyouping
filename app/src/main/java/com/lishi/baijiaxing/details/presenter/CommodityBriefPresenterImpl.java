@@ -4,6 +4,7 @@ import com.lishi.baijiaxing.base.BasePresenter;
 import com.lishi.baijiaxing.base.BaseView;
 import com.lishi.baijiaxing.details.CommodityBriefCallback;
 import com.lishi.baijiaxing.details.model.CommodityBriefModelImpl;
+import com.lishi.baijiaxing.details.model.CommodityDetails;
 import com.lishi.baijiaxing.details.view.CommodityBriefView;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by Administrator on 2016/11/1.
  */
-public class CommodityBriefPresenterImpl<T, V extends BaseView> extends BasePresenter implements CommodityBriefCallback, CommodityBriefPresenter {
+public class CommodityBriefPresenterImpl extends BasePresenter implements CommodityBriefCallback, CommodityBriefPresenter {
     private CommodityBriefModelImpl mCommodityBriefModel;
     private CommodityBriefView mCommodityBriefView;
 
@@ -22,17 +23,17 @@ public class CommodityBriefPresenterImpl<T, V extends BaseView> extends BasePres
     }
 
     @Override
-    public void loadData() {
-        mCommodityBriefModel.loadData(this);
+    public void loadData(String cid) {
+        mCommodityBriefModel.loadData(this, cid);
     }
 
     @Override
-    public void loadDataSuccess(ArrayList<Integer> integers) {
-        mCommodityBriefView.loadDataSuccess(integers);
+    public void loadSuccess(CommodityDetails commodityDetails) {
+        mCommodityBriefView.loadDataSuccess(commodityDetails);
     }
 
     @Override
-    public void loadDataFailed(String error) {
+    public void loadFailed(String error) {
         mCommodityBriefView.loadDataFailed(error);
     }
 }

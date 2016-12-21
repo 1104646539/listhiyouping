@@ -6,6 +6,7 @@
     <color name="text_gray">#969696</color>
     <color name="integral_gray">#BBBBBB</color>
     <color name="integral_blue">#2973ed</color>
+
     <color name="integral_red">#ff8431</color>
     <color name="cart_button_red">#ed292a</color>
     <color name="background_topteacher">#eeeadf</color>
@@ -24,7 +25,7 @@
     <color name="baixingtuteng">#714738</color>
     <color name="login_background">#fafafa</color>
     <color name="login_button_background">#a6634a</color>
-    <color name="hint_color">#BEBEBE</color>    
+    <color name="hint_color">#BEBEBE</color>
     <color name="rob_red">#ef2b2c</color>
     <color name="rob_progressbar">#f79592</color>
     <color name="background_myorderform">#f1f2f6</color>
@@ -39,6 +40,10 @@
     <color name="submit_order_textcolor">#38383c</color>
     <color name="gray_bg">#f1f2f6</color>
     <color name="text_gray_red">#de5152</color>
+    <color name="seckil_bg">#8d8d8f</color>
+
+    <color name="home_text_select">#dd2726</color>
+    <color name="home_text_not_select">#000000</color>
 
 
 </resources>

@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 
     <application
         android:name=".Application.MyApplication"
@@ -50,15 +51,11 @@
         <activity
             android:name=".activity.BeanActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            3
-        </activity>
-        <activity
-            android:name=".activity.TopTeacherDetailsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
             android:name=".submitOrder.view.SubmitOrderActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
         </activity>
         <activity
             android:name=".orderAddressManage.view.DeliveryAddressActivity"
@@ -244,6 +241,66 @@
         </activity>
         <activity
             android:name=".search.SearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".myOrders.view.AllOrderActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".refund.NotShipmentsRefundActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".refund.RefundProgressActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".seckill.SeckillActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+
+        <meta-data
+            android:name="com.lishi.baijiaxing.utils.GlideConfiguration"
+            android:value="GlideModule"/>
+
+        <activity
+            android:name=".hot.view.HotCommodityActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".bookmagazine.view.BookMagazineActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".pay.PayActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+        </activity>
+
+        <receiver
+            android:name=".pay.PayActivity$PayBroadcastReceiver"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="lishi.intent.action.PAY"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".pay.PayResultActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".search.SearchResultActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".free.FreeResultActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>

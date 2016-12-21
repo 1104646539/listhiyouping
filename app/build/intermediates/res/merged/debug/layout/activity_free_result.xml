@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_free_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lishi.baijiaxing.free.FreeResultActivity">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/topbar_free_result"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:left_src="@drawable/back_top"
+        app:text_title="申请成功"
+        app:title_color="@color/text_color"
+        app:title_size="8sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#C7C7C7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/free_result"/>
+
+        <TextView
+            android:id="@+id/free_result1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"       android:layout_marginTop="10dp"
+            android:text="免费领申请提交成功"
+            android:textColor="#774602"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/free_result2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="请在活动结束后进入个人中心查询中奖名单"
+            android:textColor="#774602"
+            android:textSize="14sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:minHeight="0dp"
+            android:maxWidth="0dp"
+            android:paddingTop="10dp"
+            android:id="@+id/free_result_close"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_background_red"
+            android:text="关闭"
+            android:textColor="#b0091b"/>
+    </LinearLayout>
+</LinearLayout>

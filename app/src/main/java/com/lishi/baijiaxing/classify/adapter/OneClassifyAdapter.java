@@ -8,30 +8,31 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.classify.model.ClassList;
 import com.lishi.baijiaxing.classify.view.Fragment_Classify;
+
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/6/12.
  */
 public class OneClassifyAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
-    private String[] mDatas;
-    private Context mContext;
-    
-    public OneClassifyAdapter(Context context, String[] datas) {
+    private List<ClassList.DataBean> mDatas;
+
+    public OneClassifyAdapter(Context context, List<ClassList.DataBean> datas) {
         mInflater = LayoutInflater.from(context);
         mDatas = datas;
-        mContext = context;
     }
 
     @Override
     public int getCount() {
-        return mDatas.length;
+        return mDatas.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mDatas[position];
+        return mDatas.get(position);
     }
 
     @Override
@@ -41,19 +42,14 @@ public class OneClassifyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = mInflater.inflate(R.layout.classity_onetitle, null, false);
+        View view = mInflater.inflate(R.layout.classity_onetitle, parent, false);
         TextView tv = (TextView) view.findViewById(R.id.tv_oneclass_title);
-        tv.setText(mDatas[position]);
-        if (position == Fragment_Classify.mPosition){
+        tv.setText(mDatas.get(position).getClassifyname());
+        if (position == Fragment_Classify.mPosition) {
             view.setBackgroundResource(R.color.item_padding);
-        }else{
+        } else {
             view.setBackgroundResource(R.color.base_bg_color);
         }
         return view;
-    }
-
-
-    class OneClassViewHolder {
-        private TextView mTextView_title;
     }
 }

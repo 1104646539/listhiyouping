@@ -98,7 +98,7 @@ public class RobAdapter extends BaseAdapter {
         }
 
         holder.iv_photo.setImageResource(R.drawable.rob_photo);
-        holder.tv_title.setText(robBean.getCommodityBean().getCommTitle());
+//        holder.tv_title.setText(robBean.getCommodityBean().getCommTitle());
         holder.tv_price.setText("￥" + robBean.getPrice());
         TextPaint textPaint = holder.tv_price.getPaint();
         textPaint.setFakeBoldText(true);//字体加粗

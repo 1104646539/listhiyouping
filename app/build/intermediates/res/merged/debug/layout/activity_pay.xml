@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg_color"
+    android:orientation="vertical">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/navigation_pay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/base_bg_color"
+        app:left_src="@drawable/back_top"
+        app:right_src="@null"
+        app:text_title="利世收银台"
+        app:title_color="@color/text_color"
+        app:title_size="7sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/shoppinglist"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

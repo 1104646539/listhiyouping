@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     android:orientation="vertical">
 
@@ -10,38 +11,94 @@
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/cart_swipeRefreshLayout"
+        <com.liaoinstan.springview.widget.SpringView
+            android:id="@+id/cart_springView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/ll_cart_bom"
             >
 
-            <ScrollView
+            <com.lishi.baijiaxing.view.MyScrollView
                 android:id="@+id/scroll_cart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/ll_cart_gridview"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
-                    <!--<com.lishi.baijiaxing.view.MyExpandableListView-->
-                    <!--android:id="@+id/cart_expandableListView"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:groupIndicator="@null"/>-->
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerView_shoppingcart"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerView_shoppingcart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/shoppingcart_null"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="80dp"
+                            android:layout_marginTop="80dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/shoppingcart_null"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="       购物车还是空的\n去挑选几件中意的商品吧"
+                                android:textColor="@color/text_gray"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingTop="20dp"
+                            android:id="@+id/shoppingcart_login"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:paddingBottom="20dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:paddingTop="5dp"
+                                android:id="@+id/shoppingcart_login_tv"
+                                android:paddingBottom="5dp"
+                                android:layout_marginRight="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="登录"
+                                android:background="@drawable/cart_login"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="登录后可同步账户购物车的商品"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </FrameLayout>
 
                     <LinearLayout
                         android:id="@+id/ll_cart_gridview_root"
@@ -60,55 +117,31 @@
                             android:background="@color/item_padding"
                             android:src="@drawable/recommend_title"/>
 
-                        <com.lishi.baijiaxing.view.MyGridView
-                            android:id="@+id/gridview_cart"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="#FFFFFF"
-                            android:numColumns="2"/>
-
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
 
-                            <TextView
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerView_cart_recommend"
                                 android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:background="#00000000"/>
-
-                            <LinearLayout
-                                android:id="@+id/ll_cart_footer"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:padding="10dp"
-                                >
-
-                                <TextView
-                                    android:id="@+id/tv_cart_gridview_load"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="5dp"
-                                    android:gravity="center_vertical"
-                                    android:text="上拉加载更多"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="18sp"/>
-                            </LinearLayout>
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:nestedScrollingEnabled="false"/>
                         </RelativeLayout>
                     </LinearLayout>
-
                 </LinearLayout>
-            </ScrollView>
-        </android.support.v4.widget.SwipeRefreshLayout>
-
+            </com.lishi.baijiaxing.view.MyScrollView>
+        </com.liaoinstan.springview.widget.SpringView>
 
         <LinearLayout
             android:id="@+id/ll_cart_bom"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:orientation="vertical"
             android:layout_alignParentBottom="true"
-            android:orientation="vertical">
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
             <View
                 android:layout_width="match_parent"

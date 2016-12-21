@@ -6,12 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.bean.DeliveryAddressBean;
 import com.lishi.baijiaxing.inter.OnAddressChange;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
+import com.orhanobut.logger.Logger;
 
 import java.util.List;
 
@@ -20,10 +23,10 @@ import java.util.List;
  */
 public class DeliveryAddressAdapter extends BaseAdapter {
     private Context mContext;
-    private List<DeliveryAddressBean> mDeliveryAddressBeen;
+    private List<AddressList.DataBean> mDeliveryAddressBeen;
     private LayoutInflater mLayoutInflater;
 
-    public DeliveryAddressAdapter(Context context, List<DeliveryAddressBean> deliveryAddressBeen) {
+    public DeliveryAddressAdapter(Context context, List<AddressList.DataBean> deliveryAddressBeen) {
         this.mContext = context;
         this.mDeliveryAddressBeen = deliveryAddressBeen;
         this.mLayoutInflater = LayoutInflater.from(mContext);
@@ -44,10 +47,6 @@ public class DeliveryAddressAdapter extends BaseAdapter {
         return position;
     }
 
-    public OnAddressChange getOnAddressChange() {
-        return mOnAddressChange;
-    }
-
     public void setOnAddressChange(OnAddressChange onAddressChange) {
         mOnAddressChange = onAddressChange;
     }
@@ -56,13 +55,13 @@ public class DeliveryAddressAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         DeliveryAddressViewHolder viewHolder = null;
         if (convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.item_deliveryaddress, null, false);
+            convertView = mLayoutInflater.inflate(R.layout.item_deliveryaddress, parent, false);
             viewHolder = new DeliveryAddressViewHolder();
             viewHolder.tv_name = (TextView) convertView.findViewById(R.id.tv_deliveryaddress_name);
             viewHolder.tv_number = (TextView) convertView.findViewById(R.id.tv_deliveryaddress_number);
             viewHolder.tv_address = (TextView) convertView.findViewById(R.id.tv_deliveryaddress_address);
             viewHolder.tv_default = (TextView) convertView.findViewById(R.id.tv_deliveryaddress_default);
-            viewHolder.mCheckBox = (CheckBox) convertView.findViewById(R.id.checkbox_deliveryaddress);
+            viewHolder.mCheckBox = (ImageView) convertView.findViewById(R.id.checkbox_deliveryaddress);
             viewHolder.left = (RelativeLayout) convertView.findViewById(R.id.left_address_check);
             viewHolder.right = (TextView) convertView.findViewById(R.id.right_address_tv);
             convertView.setTag(viewHolder);
@@ -72,60 +71,59 @@ public class DeliveryAddressAdapter extends BaseAdapter {
         viewHolder.left.setVisibility(View.VISIBLE);
         viewHolder.right.setVisibility(View.VISIBLE);
         viewHolder.right.setClickable(true);
-        final DeliveryAddressBean deliveryAddressBean = mDeliveryAddressBeen.get(position);
-        if (deliveryAddressBean.isChecked()) {
+        final AddressList.DataBean deliveryAddressBean = mDeliveryAddressBeen.get(position);
+        if (deliveryAddressBean.getIsDefalut().equals("1")) {
             viewHolder.tv_default.setVisibility(View.VISIBLE);
         } else {
             viewHolder.tv_default.setVisibility(View.INVISIBLE);
         }
-        viewHolder.tv_number.setText(deliveryAddressBean.getNumber() + "");
-        viewHolder.tv_name.setText("收货人：" + deliveryAddressBean.getName());
-        viewHolder.tv_address.setText("收货地址:" + deliveryAddressBean.toString());
+        viewHolder.tv_number.setText(deliveryAddressBean.getConsigneeNumber() + "");
+        viewHolder.tv_name.setText("收货人：" + deliveryAddressBean.getConsigneeName());
+        viewHolder.tv_address.setText("收货地址:" + deliveryAddressBean.getProvince() + deliveryAddressBean.getCity()
+                + deliveryAddressBean.getDistrict() + deliveryAddressBean.getDetails());
 
-        if (deliveryAddressBean.isChecked()) {
-            viewHolder.mCheckBox.setChecked(true);
+        if (deliveryAddressBean.getIsDefalut().equals("1")) {
+            viewHolder.mCheckBox.setSelected(true);
         } else {
-            viewHolder.mCheckBox.setChecked(false);
-        } 
+            viewHolder.mCheckBox.setSelected(false);
+        }
         //选中设为默认地址
         viewHolder.mCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (deliveryAddressBean.isChecked()) {
-                    if (mOnAddressChange != null) {
-                        mOnAddressChange.onCheckChangeListener(position, false);
-                    }
-                } else {
-                    if (mOnAddressChange != null) {
+                if (mOnAddressChange != null) {
+                    if (mDeliveryAddressBeen.get(position).getIsDefalut().equals("0")) {
                         mOnAddressChange.onCheckChangeListener(position, true);
+                    } else {
+                        mOnAddressChange.onCheckChangeListener(position, false);
                     }
                 }
             }
         });
         //编辑
         viewHolder.right.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mOnAddressChange != null) {
-                    mOnAddressChange.onEditClickListener(position);
-            }
-        }
+                                                @Override
+                                                public void onClick(View v) {
+                                                    if (mOnAddressChange != null) {
+                                                        mOnAddressChange.onEditClickListener(position);
+                                                    }
+                                                }
+                                            }
+
+        );
+        return convertView;
     }
 
-    );
+    class DeliveryAddressViewHolder {
+        TextView tv_default;
+        TextView tv_name;
+        TextView tv_number;
+        TextView tv_address;
+        ImageView mCheckBox;
+        RelativeLayout left;
+        TextView right;
+    }
 
-    return convertView;
-}
-
-class DeliveryAddressViewHolder {
-    TextView tv_default;
-    TextView tv_name;
-    TextView tv_number;
-    TextView tv_address;
-    CheckBox mCheckBox;
-    RelativeLayout left;
-    TextView right;
-}
     private OnAddressChange mOnAddressChange;
 
 }

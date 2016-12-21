@@ -1,50 +1,55 @@
 package com.lishi.baijiaxing.details.view;
 
-import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.adapter.CommentAdapter;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
-import com.lishi.baijiaxing.free.adapter.FreeCommentAdapter;
-import com.lishi.baijiaxing.free.model.FreeCommentBean;
-import com.lishi.baijiaxing.free.model.ReplyBean;
-import com.lishi.baijiaxing.free.presenter.FreeCommentPresenterImpl;
-import com.lishi.baijiaxing.free.view.FreeCommentView;
-import com.lishi.baijiaxing.utils.DividerItemDecoration;
+import com.lishi.baijiaxing.bean.CommentBean;
+import com.lishi.baijiaxing.details.presenter.CommodityCommentPresenterImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
- * 普通商品详情——评论
- * Created by Administrator on 2016/10/19.
+ * 详情——评论
+ * Created by Administrator on 2016/7/12.
  */
-public class Fragment_Commodity_Comment extends BaseFragmentV4 implements View.OnClickListener, FreeCommentView{
-    private View mView;
-    private static Fragment_Commodity_Comment mFragment_Commodity_Comment;
+public class Fragment_Commodity_Comment extends BaseFragmentV4 implements View.OnClickListener, CommodityCommentView {
+    private ListView mListView;
+    private List<CommentBean> mCommentBeen;
+    private TextView tv_all, tv_all_num, tv_good, tv_good_num, tv_ordinary, tv_ordinary_num, tv_disappointing, tv_disappointing_num, tv_photo, tv_photo_num;
+    private int page = 0;
+    private List<TextView> tv = new ArrayList<>();
+    private List<TextView> tv_num = new ArrayList<>();
+    private CommentAdapter adapter;
+    private static Fragment_Commodity_Comment mFragment_commodity_comment;
     private boolean isPrepare;
-    private ArrayList<FreeCommentBean> fcbs;
-    private RecyclerView mRecyclerView;
-    private TextView tv_send;
-    private EditText mEdit;
-    private String toName;
-    private String myName = "110";
-    private int mPosition = 0;
-    private FreeCommentAdapter adapter;
-    private InputMethodManager imm;
+    private View view;
+    private CommodityCommentPresenterImpl mCommodityCommentPresenterImpl;
 
-    private FreeCommentPresenterImpl mFreeCommentPresenter;
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_details_comment, container, false);
+        return view;
+    }
+
+    private void initView() {
+//        initData();
+        findView();
+        ClickEnevt();
+        adapter = new CommentAdapter(getActivity(), mCommentBeen);
+        mListView.setAdapter(adapter);
+    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -53,18 +58,163 @@ public class Fragment_Commodity_Comment extends BaseFragmentV4 implements View.O
         lazyLoad();
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_commodity_comment, container, false);
-        return mView;
+    public static Fragment_Commodity_Comment newInstance() {
+//        if (mFragment_commodity_comment == null) {
+//            mFragment_commodity_comment = new Fragment_Commodity_Comment();
+//        }
+        return new Fragment_Commodity_Comment();
     }
 
-    public static Fragment_Commodity_Comment newInstance() {
-        if (mFragment_Commodity_Comment == null) {
-            mFragment_Commodity_Comment = new Fragment_Commodity_Comment();
+    private void ClickEnevt() {
+        tv_all.setClickable(true);
+        tv_all_num.setClickable(true);
+        tv_good.setClickable(true);
+        tv_good_num.setClickable(true);
+        tv_ordinary.setClickable(true);
+        tv_ordinary_num.setClickable(true);
+        tv_disappointing.setClickable(true);
+        tv_disappointing_num.setClickable(true);
+        tv_photo.setClickable(true);
+        tv_photo_num.setClickable(true);
+
+        tv_all.setOnClickListener(this);
+        tv_all_num.setOnClickListener(this);
+        tv_good.setOnClickListener(this);
+        tv_good_num.setOnClickListener(this);
+        tv_ordinary.setOnClickListener(this);
+        tv_ordinary_num.setOnClickListener(this);
+        tv_disappointing.setOnClickListener(this);
+        tv_disappointing_num.setOnClickListener(this);
+        tv_photo.setOnClickListener(this);
+        tv_photo_num.setOnClickListener(this);
+    }
+
+    private void findView() {
+        mListView = (ListView) view.findViewById(R.id.listview_comment);
+
+        tv_all = (TextView) view.findViewById(R.id.tv_comment_all);
+        tv_all_num = (TextView) view.findViewById(R.id.tv_comment_all_num);
+        tv_good = (TextView) view.findViewById(R.id.tv_comment_good);
+        tv_good_num = (TextView) view.findViewById(R.id.tv_comment_good_num);
+        tv_ordinary = (TextView) view.findViewById(R.id.tv_comment_ordinary);
+        tv_ordinary_num = (TextView) view.findViewById(R.id.tv_comment_ordinary_num);
+        tv_disappointing = (TextView) view.findViewById(R.id.tv_comment_disappointing);
+        tv_disappointing_num = (TextView) view.findViewById(R.id.tv_comment_disappointing_num);
+        tv_photo = (TextView) view.findViewById(R.id.tv_comment_photo);
+        tv_photo_num = (TextView) view.findViewById(R.id.tv_comment_photo_num);
+
+        tv.add(tv_all);
+        tv.add(tv_good);
+        tv.add(tv_ordinary);
+        tv.add(tv_disappointing);
+        tv.add(tv_photo);
+        tv_num.add(tv_all_num);
+        tv_num.add(tv_good_num);
+        tv_num.add(tv_ordinary_num);
+        tv_num.add(tv_disappointing_num);
+        tv_num.add(tv_photo_num);
+
+    }
+
+//    private void initData() {
+//        mCommentBeen = new ArrayList<>();
+//        for (int i = 0; i < 7; i++) {
+//            if (i < 3) {
+//                CommentBean c = new CommentBean(null, R.drawable.user_photo, "咸鱼这名也不给起" + i, R.drawable.user_leve, "2016-7-9", R.drawable.star, "东西不错哦。下次再来买", "2016-7-1");
+//                mCommentBeen.add(c);
+//            } else {
+//                CommentBean c = new CommentBean(null, R.drawable.user_photo, "咸鱼这名也不给起" + i, R.drawable.user_leve, "2016-7-9", R.drawable.star, "很一般", "2016-7-1");
+//                mCommentBeen.add(c);
+//            }
+//        }
+//    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_comment_all:
+            case R.id.tv_comment_all_num:
+                page = 0;
+                changePage(page);
+                break;
+            case R.id.tv_comment_good:
+            case R.id.tv_comment_good_num:
+                page = 1;
+                changePage(page);
+                break;
+            case R.id.tv_comment_ordinary:
+            case R.id.tv_comment_ordinary_num:
+                page = 2;
+                changePage(page);
+                break;
+            case R.id.tv_comment_disappointing:
+            case R.id.tv_comment_disappointing_num:
+                page = 3;
+                changePage(page);
+                break;
+            case R.id.tv_comment_photo:
+            case R.id.tv_comment_photo_num:
+                page = 4;
+                changePage(page);
+                break;
         }
-        return mFragment_Commodity_Comment;
+
+    }
+
+    /**
+     * 更换评论分类
+     *
+     * @param page
+     */
+    private void changePage(int page) {
+        for (int i = 0; i < tv.size(); i++) {
+            if (page == i) {
+                tv.get(page).setTextColor(Color.rgb(237, 41, 42));
+                tv_num.get(page).setTextColor(Color.rgb(237, 41, 42));
+            } else {
+                tv.get(i).setTextColor(Color.rgb(0, 0, 0));
+                tv_num.get(i).setTextColor(Color.rgb(0, 0, 0));
+            }
+        }
+
+        for (int i = 0; i < mCommentBeen.size(); i++) {
+            if (page == 0) {
+                mCommentBeen.get(i).setImgs(null);
+                if (i < 3) {
+                    mCommentBeen.get(i).setComment_text("东西不错哦。下次再来买");
+                } else {
+                    mCommentBeen.get(i).setComment_text("很一般");
+                }
+            } else if (page == 1) {
+                mCommentBeen.get(i).setImgs(null);
+                mCommentBeen.get(i).setComment_text("东西不错哦。下次再来买");
+
+            } else if (page == 2) {
+                mCommentBeen.get(i).setImgs(null);
+                mCommentBeen.get(i).setComment_text("很一般");
+            } else if (page == 3) {
+                mCommentBeen.get(i).setImgs(null);
+                mCommentBeen.get(i).setComment_text("太差了");
+
+            } else if (page == 4) {
+                mCommentBeen.get(i).setComment_text("看图");
+                List<String> imgs = new ArrayList<>();
+                for (int j = 0; j < 2; j++) {
+                    imgs.add("http://www.bx5000.com/data/upload/shop/store/goods/1/1_05167225956232429_240.jpg");
+                }
+                mCommentBeen.get(i).setImgs(imgs);
+            }
+        }
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        adapter = null;
+        mListView = null;
+        tv = null;
+        tv_num = null;
     }
 
     @Override
@@ -77,106 +227,10 @@ public class Fragment_Commodity_Comment extends BaseFragmentV4 implements View.O
         if (!isPrepare || !isVisible) {
             return;
         }
-        if (mFreeCommentPresenter == null) {
-            mFreeCommentPresenter = new FreeCommentPresenterImpl(this);
+        if (mCommodityCommentPresenterImpl == null) {
+            mCommodityCommentPresenterImpl = new CommodityCommentPresenterImpl(this);
         }
-        mFreeCommentPresenter.loadData();
-    }
-
-    private void initView() {
-        initData();
-        findId();
-
-        imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        LinearLayoutManager manager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        mRecyclerView.setLayoutManager(manager);
-
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
-
-        adapter = new FreeCommentAdapter(getActivity(), fcbs);
-        mRecyclerView.setAdapter(adapter);
-
-        tv_send.setOnClickListener(this);
-        mEdit.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (count >= 10) {
-                    tv_send.setEnabled(true);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        adapter.setOnReplyClickLister(new FreeCommentAdapter.OnReplyClickLister() {
-            @Override
-            public void onReplyClickLister(View view, int position) {
-                toName = fcbs.get(position).getName();
-                mPosition = position;
-                mEdit.setHint("回复 " + toName);
-                imm.showSoftInputFromInputMethod(mEdit.getWindowToken(), 0);
-            }
-
-            @Override
-            public void onOntherReplyClickLister(View view, int postion) {
-                toName = "";
-                mPosition = 0;
-                mEdit.setHint("评论攒好运");
-            }
-        });
-
-
-    }
-
-    private void findId() {
-        mRecyclerView = (RecyclerView) mView.findViewById(R.id.recyclerView_commodity_comment);
-        tv_send = (TextView) mView.findViewById(R.id.details_comment_send);
-        mEdit = (EditText) mView.findViewById(R.id.details_comment_edit);
-    }
-
-    private void initData() {
-//        fcbs = new ArrayList<>();
-//        for (int i = 0; i < 15; i++) {
-//            ArrayList<ReplyBean> mReplyBean = new ArrayList<>();
-//            for (int j = 0; j < 2; j++) {
-//                ReplyBean rb = new ReplyBean("199****2222", "1111", "评论的真好");
-//                mReplyBean.add(rb);
-//            }
-//            FreeCommentBean fcb = new FreeCommentBean("186****1121", "", "2016-10-08 17:55:55", "这个真的好", mReplyBean, 2);
-//            fcbs.add(fcb);
-//        }
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.details_comment_send:
-                if (mEdit.getText().length() >= 10) {
-                    if (toName == null || toName.equals("")) {
-                        fcbs.add(0, new FreeCommentBean(myName, "", "2016-10-20  15:05:20", mEdit.getText().toString(), new ArrayList<ReplyBean>(), 0));
-                    } else {
-                        if (fcbs.get(mPosition).getReplyBeans() == null || fcbs.get(mPosition).getReplyBeans().size() == 0) {
-                            ArrayList<ReplyBean> rbs = new ArrayList<>();
-                            fcbs.get(mPosition).setReplyBeans(rbs);
-                        }
-                        fcbs.get(mPosition).getReplyBeans().add(new ReplyBean(myName, "", mEdit.getText().toString()));
-                    }
-                    mEdit.setText("");
-                    imm.hideSoftInputFromWindow(mEdit.getWindowToken(), 0);
-                    adapter.notifyDataSetChanged();
-                } else {
-                    Toast.makeText(getActivity(), "评论字数不能小于10", Toast.LENGTH_SHORT).show();
-                }
-                break;
-        }
+        mCommodityCommentPresenterImpl.loadData();
     }
 
     @Override
@@ -190,9 +244,10 @@ public class Fragment_Commodity_Comment extends BaseFragmentV4 implements View.O
     }
 
     @Override
-    public void loadDataSuccess(ArrayList<FreeCommentBean> data) {
-        this.fcbs = data;
+    public void loadDataSuccess(ArrayList<CommentBean> data) {
+        this.mCommentBeen = data;
         initView();
+        Log.i("评论加载成功", "Size=" + data.size());
     }
 
     @Override

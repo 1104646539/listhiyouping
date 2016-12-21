@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hot_commodity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.lishi.baijiaxing.view.TopNavigationBar
+        android:id="@+id/topbar_hot_commodity"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:left_src="@drawable/back_top"
+        app:text_title="爆品排行"
+        app:title_color="@color/text_color"
+        app:title_size="8sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/yiyuan_details_textColor"/>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/springView_hotCommodity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_hotCommodity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </com.liaoinstan.springview.widget.SpringView>
+</LinearLayout>

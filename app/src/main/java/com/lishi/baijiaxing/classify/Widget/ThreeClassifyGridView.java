@@ -11,7 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.classify.model.ClassOne;
 import com.lishi.baijiaxing.classify.model.ThreeClassify;
 import com.lishi.baijiaxing.classify.model.TwoClassify;
 
@@ -22,21 +24,23 @@ import java.util.List;
  * Created by Administrator on 2016/6/12.
  */
 public class ThreeClassifyGridView extends LinearLayout {
-    private TwoClassify mData;
+    //    private TwoClassify mData;
     private LayoutInflater mInflater;
     private TextView tv_title;
     private GridView mGridView;
-    private List<ThreeClassify> datas;
+    private ClassOne.DataBean mDatas;
+    private Context mContext;
 
     public GridView getGridView() {
         return mGridView;
     }
 
-    public ThreeClassifyGridView(Context context, TwoClassify data) {
+    public ThreeClassifyGridView(Context context, ClassOne.DataBean data) {
         super(context);
-        mData = data;
+        mContext = context;
+        mDatas = data;
         mInflater = LayoutInflater.from(context);
-        datas = mData.getClassDatas();
+//        datas = mData.getClassDatas();
         initView();
     }
 
@@ -47,17 +51,20 @@ public class ThreeClassifyGridView extends LinearLayout {
         tv_title = (TextView) rootView.findViewById(R.id.tv_classitythree_title);
         mGridView = (GridView) rootView.findViewById(R.id.gridview_classity);
 
-        tv_title.setText(mData.getClassname());
+        tv_title.setText(mDatas.getCategoryName());
 
         mGridView.setAdapter(new BaseAdapter() {
             @Override
             public int getCount() {
-                return datas.size();
+                if (mDatas == null || mDatas.getCategoryGoodsList() == null || mDatas.getCategoryGoodsList().size() == 0) {
+                    return 0;
+                }
+                return mDatas.getCategoryGoodsList().size();
             }
 
             @Override
             public Object getItem(int position) {
-                return datas.get(position);
+                return mDatas.getCategoryGoodsList().get(position);
             }
 
             @Override
@@ -78,9 +85,10 @@ public class ThreeClassifyGridView extends LinearLayout {
                     gridViewHolder = (GridViewHolder) convertView.getTag();
                 }
 
-                gridViewHolder.mTextView.setText(datas.get(position).getName());
-                gridViewHolder.mImageView.setImageResource(R.drawable.classity_item);
-
+                gridViewHolder.mTextView.setText(mDatas.getCategoryGoodsList().get(position).getName());
+//                gridViewHolder.mImageView.setImageResource(R.drawable.classity_item);
+                Glide.with(mContext).load(mDatas.getCategoryGoodsList().get(position).getPhotoUrl()).asBitmap()
+                        .placeholder(R.drawable.classify_photo_140x160).dontAnimate().into(gridViewHolder.mImageView);
 
                 return convertView;
             }

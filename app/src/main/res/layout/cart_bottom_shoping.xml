@@ -73,7 +73,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/ll_cart_bom_total"
                     android:gravity="right|center_vertical"
-                    android:text="含运费"
+                    android:text="不含运费"
                     android:textColor="@color/text_gray"
                     android:textSize="10sp"/>
             </LinearLayout>

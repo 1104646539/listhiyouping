@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/free_linear_photo"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/free_item_linear_height"
         android:background="@drawable/free_item_linear_bg"
         android:scaleType="centerCrop"
         android:src="@drawable/free_item_linear_photo"/>

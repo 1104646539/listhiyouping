@@ -4,24 +4,32 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\details_collect.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\freedesign_item6.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item6.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customize_magazine_item5_1.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_magazine_item5_1.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\freedesign_item6.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item6.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\refund_bottom.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\refund_bottom.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\orderform5.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\orderform5.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\integral_exchange_brief.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\integral_exchange_brief.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_item1_3.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_item1_3.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\checkbox_consent_true.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_consent_true.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\integral_exchange_brief.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\integral_exchange_brief.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\iv_collect2.png",
@@ -48,12 +56,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful_line3.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customzie_config_minus.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customzie_config_minus.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\src4.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src4.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customzie_config_minus.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customzie_config_minus.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\award.png",
@@ -84,16 +92,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect4.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_item1_1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_item1_1.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\rob_robicon_true.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\rob_robicon_true.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\password_invisibility.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\password_invisibility.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\backgroud_cancel.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\backgroud_cancel.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\password_invisibility.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\password_invisibility.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\weekly_choiceness_brief.png",
@@ -136,6 +148,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_magazine_edit_bg.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\refund_state2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\refund_state2.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\item_myorderform_photo.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\item_myorderform_photo.png"
     },
@@ -164,24 +180,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful6.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\plus.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\plus.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_icon.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\top_icon.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\latest_bottom.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\latest_bottom.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\plus.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\plus.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\iv_collect_grid1_2.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_collect_grid1_2.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\hot.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\hot.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\latest_bottom.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\latest_bottom.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home1_2.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home1_2.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\hot.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\hot.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\self_title.png",
@@ -192,12 +208,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\progress.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\background_payment.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\background_payment.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customize_details_commodityinfo.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_commodityinfo.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\background_payment.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\background_payment.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\recommend_title.png",
@@ -216,12 +232,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\icon_home4.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\message_white.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\message_white.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\details_home.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\details_home.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\message_white.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\message_white.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\order_null.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\order_null.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\login_weixin.png",
@@ -240,6 +260,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\freedesign_item4.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\shoppingcart_null.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\shoppingcart_null.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\navigation_classity.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\navigation_classity.png"
     },
@@ -250,6 +274,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\my_other2.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_other2.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\point_red.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\point_red.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\takepicture.png",
@@ -266,6 +294,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\store_photo.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\store_photo.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\progress_loading.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\progress_loading.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\password_visibility.png",
@@ -300,6 +332,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_magazine_item5_photo.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_title_720x197.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_title_720x197.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customize_magazine_item4_icon2.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_magazine_item4_icon2.png"
     },
@@ -318,6 +354,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customize_magazine2_item2_photo_bg.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_magazine2_item2_photo_bg.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\pay_wechat_icon.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\pay_wechat_icon.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\collect_recommend.png",
@@ -354,6 +394,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\clock.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\clock.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\arrow_up.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\arrow_up.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\navigation_my_clickble.png",
@@ -464,6 +508,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_levelbackground.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_seckil_more.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_seckil_more.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customize_details_love.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customize_details_love.png"
     },
@@ -478,6 +526,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\yi.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\yi.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\hot_commodity_flag.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\hot_commodity_flag.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\details.png",
@@ -536,6 +588,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful4.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\refund_state1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\refund_state1.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\src6.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\src6.png"
     },
@@ -572,8 +628,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\collect.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\pay_result_bg.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\pay_result_bg.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\mian.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\mian.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_item1_2.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_item1_2.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\grand_title.png",
@@ -652,8 +716,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\circler_commoditydetails.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\addr_check_no.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\addr_check_no.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_icon_84x84.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_icon_84x84.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\scanner_black.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\scanner_black.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_news_icon.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_news_icon.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\freedesign_item5.png",
@@ -696,16 +772,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commend_zan.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\seckil_item_photo.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\seckil_item_photo.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\user_leve.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\user_leve.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\free_item_linear_photo.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_item_linear_photo.png"
-    },
-    {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home1_1.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home1_1.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\customize_magazine2_item2_photo2.png",
@@ -852,6 +928,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\back_top.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\order_pay_success.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\order_pay_success.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\usermanager_headphoto.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\usermanager_headphoto.png"
     },
@@ -868,8 +948,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_grand_bottom.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\search_delete.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\search_delete.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\minus.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\minus.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\point_write.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\point_write.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\addr_check_ok.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\addr_check_ok.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\yiyuan.png",
@@ -944,6 +1036,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commoditydetaials_service.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\free_result.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_result.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\commend_head.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\commend_head.png"
     },
@@ -984,6 +1080,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\my_other4.png"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\arrow_down.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\arrow_down.png"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\navigation_cart_clickble.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\navigation_cart_clickble.png"
     },
@@ -1002,6 +1102,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\iv_grand1.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_grand1.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_totop.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home_totop.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\order_details_addr_service.png",
@@ -1100,20 +1204,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\customzie_norms_photo.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\iv_meaningful7.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful7.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\circular_red.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\circular_red.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\magazine_about_us_customize1.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\magazine_about_us_customize1.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\iv_meaningful7.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\iv_meaningful7.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home1_3.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\home1_3.png"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\magazine_about_us_customize1.png",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\magazine_about_us_customize1.png"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\iv_collect_grid2_1.png",

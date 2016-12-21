@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="【利世优品】万仟堂陶瓷同心杯带盖过滤 办公茶杯水杯"
             android:textColor="@color/text_color"
             android:textSize="16sp"/>
 
@@ -29,7 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="￥450"
             android:textColor="@color/text_red"
             android:textSize="18sp"/>
     </LinearLayout>

@@ -9,74 +9,24 @@ import android.os.Parcelable;
  * Created by Administrator on 2016/3/14.
  */
 public class CommodityBean implements Parcelable {
-    private String commImgUrl;//商品图片的url
-    private String commTitle;//商品标题
-    private String commInfo;//商品信息
-    private int commPrice;//商品价格
-    private int commId;//商品唯一id
-    private int commNum;//商品数量
+    private SCCommodityList.DataBean mDataBean;
     private boolean isChecked = false;//商品是否被选择
 
     public CommodityBean() {
-        
+
     }
 
-    public CommodityBean(String commImgUrl, String commTitle, String commInfo, int commPrice, int commId, int commNum, boolean isChecked) {
-        this.commImgUrl = commImgUrl;
-        this.commTitle = commTitle;
-        this.commInfo = commInfo;
-        this.commPrice = commPrice;
-        this.commId = commId;
-        this.commNum = commNum;
-        this.isChecked = isChecked;
+    public CommodityBean(SCCommodityList.DataBean dataBean) {
+        mDataBean = dataBean;
+        isChecked = false;
     }
 
-    public String getCommImgUrl() {
-        return commImgUrl;
+    public SCCommodityList.DataBean getDataBean() {
+        return mDataBean;
     }
 
-    public void setCommImgUrl(String commImgUrl) {
-        this.commImgUrl = commImgUrl;
-    }
-
-    public String getCommTitle() {
-        return commTitle;
-    }
-
-    public void setCommTitle(String commTitle) {
-        this.commTitle = commTitle;
-    }
-
-    public String getCommInfo() {
-        return commInfo;
-    }
-
-    public void setCommInfo(String commInfo) {
-        this.commInfo = commInfo;
-    }
-
-    public int getCommPrice() {
-        return commPrice;
-    }
-
-    public void setCommPrice(int commPrice) {
-        this.commPrice = commPrice;
-    }
-
-    public int getCommId() {
-        return commId;
-    }
-
-    public void setCommId(int commId) {
-        this.commId = commId;
-    }
-
-    public int getCommNum() {
-        return commNum;
-    }
-
-    public void setCommNum(int commNum) {
-        this.commNum = commNum;
+    public void setDataBean(SCCommodityList.DataBean dataBean) {
+        mDataBean = dataBean;
     }
 
     public boolean isChecked() {
@@ -94,22 +44,12 @@ public class CommodityBean implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.commImgUrl);
-        dest.writeString(this.commTitle);
-        dest.writeString(this.commInfo);
-        dest.writeInt(this.commPrice);
-        dest.writeInt(this.commId);
-        dest.writeInt(this.commNum);
+        dest.writeParcelable(this.mDataBean, flags);
         dest.writeByte(this.isChecked ? (byte) 1 : (byte) 0);
     }
 
     protected CommodityBean(Parcel in) {
-        this.commImgUrl = in.readString();
-        this.commTitle = in.readString();
-        this.commInfo = in.readString();
-        this.commPrice = in.readInt();
-        this.commId = in.readInt();
-        this.commNum = in.readInt();
+        this.mDataBean = in.readParcelable(SCCommodityList.DataBean.class.getClassLoader());
         this.isChecked = in.readByte() != 0;
     }
 

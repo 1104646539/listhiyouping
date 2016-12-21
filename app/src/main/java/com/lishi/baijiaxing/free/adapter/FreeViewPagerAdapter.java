@@ -13,7 +13,7 @@ import java.util.List;
 public class FreeViewPagerAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> mFragments;
     private FragmentManager mFragmentManager;
-    private String[] titles = new String[]{"进行中", "即将开始", "已结束"};
+    private String[] titles = new String[]{"即将开始", "进行中", "已结束"};
 
     public FreeViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
         super(fm);

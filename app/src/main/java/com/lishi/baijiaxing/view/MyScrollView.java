@@ -2,6 +2,7 @@ package com.lishi.baijiaxing.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.widget.ScrollView;
@@ -45,25 +46,48 @@ public class MyScrollView extends ScrollView {
         void onScrollViewChange(MyScrollView view, int x, int y, int oldx, int oldy);
     }
 
-    public MyScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
-    }
+//    public MyScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
+//        super(context, attrs, defStyleAttr);
+//        mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
+//    }
+//
+//    @Override
+//    public boolean onInterceptTouchEvent(MotionEvent e) {
+//        int action = e.getAction();
+//        switch (action) {
+//            case MotionEvent.ACTION_DOWN:
+//                downX = (int) e.getRawX();
+//                downY = (int) e.getRawY();
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                int moveY = (int) e.getRawY();
+//                if (Math.abs(moveY - downY) > mTouchSlop) {
+//                    return true;
+//                }
+//        }
+//        return super.onInterceptTouchEvent(e);
+//    }
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent e) {
-        int action = e.getAction();
-        switch (action) {
-            case MotionEvent.ACTION_DOWN:
-                downX = (int) e.getRawX();
-                downY = (int) e.getRawY();
-                break;
-            case MotionEvent.ACTION_MOVE:
-                int moveY = (int) e.getRawY();
-                if (Math.abs(moveY - downY) > mTouchSlop) {
-                    return true;
-                }
+    protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY, int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {
+        Log.i("overScrollBy", "deltaX=" + deltaX + "deltaY=" + deltaY + "scrollX=" + scrollX
+                + "scrollY=" + scrollY + "scrollRangeX=" + scrollRangeX + "scrollRangeY=" + scrollRangeY
+                + "maxOverScrollX=" + maxOverScrollX + "maxOverScrollY=" + maxOverScrollY + "isTouchEvent=" + isTouchEvent);
+        if (deltaY > 0) {
+            if (mOnLoadMore != null && scrollRangeY - 20 >= scrollY) {
+                mOnLoadMore.onLoadMore();
+            }
         }
-        return super.onInterceptTouchEvent(e);
+        return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, maxOverScrollY, isTouchEvent);
+    }
+
+    private OnLoadMore mOnLoadMore;
+
+    public void setOnLoadMore(OnLoadMore onLoadMore) {
+        mOnLoadMore = onLoadMore;
+    }
+
+    public interface OnLoadMore {
+        void onLoadMore();
     }
 }

@@ -57,8 +57,8 @@ public class BrowsingHistoryAdapter extends BaseAdapter {
         }
         CommodityBean commodityBean = mCommodityBeen.get(position);
         viewHolder.iv_brief.setImageResource(R.drawable.classity_item);
-        viewHolder.tv_info.setText(commodityBean.getCommTitle());
-        viewHolder.tv_price.setText(commodityBean.getCommPrice() + "");
+//        viewHolder.tv_info.setText(commodityBean.getCommTitle());
+//        viewHolder.tv_price.setText(commodityBean.getCommPrice() + "");
         return convertView;
     }
 

@@ -5,18 +5,14 @@
               android:background="@color/item_padding"
               android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/base_bg_color"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/base_bg_color"
         android:orientation="horizontal"
-        android:paddingBottom="3dp"
-        android:paddingTop="3dp">
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -57,7 +53,7 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="好评"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
 
             <TextView
@@ -66,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="2000"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
         </LinearLayout>
 
@@ -83,7 +79,7 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="中评"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
 
             <TextView
@@ -92,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="300"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
         </LinearLayout>
 
@@ -109,7 +105,7 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="差评"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
 
             <TextView
@@ -118,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="5"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
         </LinearLayout>
 
@@ -129,20 +125,22 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_comment_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:id="@+id/tv_comment_photo"
                 android:text="晒图"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
 
             <TextView
+                android:id="@+id/tv_comment_photo_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_comment_photo_num"
                 android:gravity="center"
                 android:text="500"
+                android:textColor="@color/black"
                 android:textSize="14sp"/>
         </LinearLayout>
     </LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.text.InputFilter;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -75,6 +76,7 @@ public class TopNavigationBar extends RelativeLayout {
         iv_left = new ImageView(context);
         iv_right = new ImageView(context);
         tv_title = new TextView(context);
+        tv_title.setFilters(new InputFilter[]{new InputFilter.LengthFilter(8)});
 
         //设置到控件上
         tv_title.setText(text_title + "");
@@ -87,7 +89,7 @@ public class TopNavigationBar extends RelativeLayout {
             iv_left.setVisibility(View.VISIBLE);
             iv_left.setImageDrawable(left_iv);
             iv_left.setClickable(true);
-            iv_left.setPadding((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()), 0, (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()), 0);
+            iv_left.setPadding((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()), 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()), 0);
             iv_left.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {

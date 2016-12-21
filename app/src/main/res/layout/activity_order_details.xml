@@ -10,7 +10,7 @@
     tools:context=".submitOrder.view.SubmitOrderActivity">
 
     <com.lishi.baijiaxing.view.TopNavigationBar
-        android:id="@+id/navigation_submit"
+        android:id="@+id/navigation_orderDetails"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/base_bg_color"
@@ -51,7 +51,6 @@
                         android:id="@+id/order_details_orderNum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="订单号:2015222212"
                         android:textColor="@color/text_color"/>
 
                     <TextView
@@ -59,7 +58,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="等待付款"
                         android:textColor="@color/text_red"/>
 
                 </RelativeLayout>
@@ -96,9 +94,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="2dp"
                                 android:layout_toRightOf="@id/order_details_addr_headImage"
-                                android:text="咸鱼这"
                                 android:textColor="@color/text_color"
-                                android:textSize="12sp"/>
+                                android:textSize="14sp"/>
                         </LinearLayout>
 
                         <TextView
@@ -106,9 +103,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:text="165****2220"
-                            android:textColor="@color/text_color"
-                            android:textSize="12sp"/>
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
 
                     </RelativeLayout>
 
@@ -122,7 +118,6 @@
                             android:id="@+id/order_details_addrDetails"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="广东深圳布吉文博宫"
                             android:textSize="12sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -211,7 +206,6 @@
                                 android:id="@+id/order_details_payWay"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="在线支付"
                                 android:textColor="@color/submit_order_textcolor"
                                 android:textSize="12sp"/>
 
@@ -296,7 +290,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:layout_marginTop="8dp"
-                            android:text="不开发票"
                             android:textColor="@color/submit_order_textcolor"
                             android:textSize="12sp"/>
 
@@ -365,7 +358,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:text="￥43"
                             android:textColor="@color/text_red"/>
                     </RelativeLayout>
 
@@ -379,7 +371,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:text="运费"
+                            android:text="+运费"
                             android:textColor="@color/text_color"/>
 
                         <TextView
@@ -387,7 +379,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:text="+￥0"
                             android:textColor="@color/text_red"/>
                     </RelativeLayout>
                 </LinearLayout>
@@ -429,7 +420,6 @@
                                 android:id="@+id/order_details_buyPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="￥49.00:"
                                 android:textColor="@color/text_red"/>
                         </LinearLayout>
 
@@ -452,9 +442,9 @@
                                 android:id="@+id/order_details_startTime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2016-6-29 11:20:10"
                                 android:textColor="@color/text_gray"
                                 android:textSize="12sp"/>
+
                         </LinearLayout>
                     </RelativeLayout>
                 </LinearLayout>
@@ -488,46 +478,37 @@
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="剩余付款时间"
-                        android:textSize="12sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:orientation="horizontal">
-
-                        <TextView
+                    <!--    <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="23"
-                            android:textColor="@color/text_color"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="小时"
-                            android:textColor="@color/text_color"
+                            android:text="剩余付款时间"
                             android:textSize="12sp"/>
-
-                        <TextView
+    
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/order_details_festivalCountDown"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="32"
-                            android:textColor="@color/text_color"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="分钟"
-                            android:textColor="@color/text_color"
-                            android:textSize="12sp"/>
-                    </LinearLayout>
+                            android:layout_gravity="center_horizontal"
+                            app:isHideTimeBackground="false"
+                            app:isShowDay="false"
+                            app:isShowHour="true"
+                            app:isShowSecond="false"
+                            app:isShowMinute="true"
+                            app:isShowTimeBgBorder="true"
+                            app:suffixGravity="center"
+                            app:suffixHour="小时"
+                            app:suffixLRMargin="3dp"
+                            app:suffixMinute="分"
+                            app:suffixTextSize="12sp"
+                            app:timeBgBorderColor="#E8E8E8"
+                            app:timeBgBorderRadius="1dp"
+                            app:timeBgBorderSize="1dp"
+                            app:timeBgColor="#FFFFFF"
+                            app:timeBgDivisionLineSize="1dp"
+                            app:timeBgRadius="3dp"
+                            app:timeBgSize="12sp"
+                            app:timeTextColor="@color/text_color"
+                            app:timeTextSize="12sp"/>-->
                 </LinearLayout>
 
                 <LinearLayout

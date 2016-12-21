@@ -1,17 +1,16 @@
 package com.lishi.baijiaxing.home.model;
 
+import android.hardware.camera2.params.Face;
+import android.util.Log;
+
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseModel;
-import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.home.HomeCallBack;
 import com.lishi.baijiaxing.home.network.HomeService;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
+import java.util.List;
 
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -22,82 +21,18 @@ import rx.schedulers.Schedulers;
  */
 public class HomeModelImpl extends BaseModel implements HomeModel {
     private HomeService mHomeService;
+    private int page = 1;
+    private boolean isPrepare = true;
 
     public HomeModelImpl() {
         mHomeService = (HomeService) getRetrofitManager().getHomeService(HomeService.class);
     }
 
     @Override
-    public void loadData(final HomeCallBack callBack) {
-
-        HomeRecommendBean recommend1 = new HomeRecommendBean(551, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        HomeRecommendBean recommend2 = new HomeRecommendBean(522, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        HomeRecommendBean recommend3 = new HomeRecommendBean(553, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        HomeRecommendBean recommend4 = new HomeRecommendBean(524, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        ArrayList<HomeRecommendBean> recommendDatas = new ArrayList<HomeRecommendBean>();
-        recommendDatas.add(recommend1);
-        recommendDatas.add(recommend2);
-        recommendDatas.add(recommend3);
-        recommendDatas.add(recommend4);
-
-        ArrayList<HomeCommodityBean> classifyDatas = new ArrayList<>();
-        for (int i = 0; i < 36; i++) {
-            CommodityBean c = new CommodityBean();
-            HomeCommodityBean homeCommodity1 = new HomeCommodityBean(c);
-            classifyDatas.add(homeCommodity1);
-        }
-        JSONArray advertiseArray = new JSONArray();
-        try {
-            JSONObject head_img0 = new JSONObject();
-            head_img0.put("head_img", "http://www.bx5000.com/data/upload/shop/editor/web-101-102-1-3.jpg");
-            JSONObject head_img1 = new JSONObject();
-            head_img1.put("head_img", "http://www.bx5000.com/data/upload/shop/editor/web-101-101-2.jpg");
-            JSONObject head_img2 = new JSONObject();
-            head_img2.put("head_img", "http://www.bx5000.com/data/upload/shop/editor/web-101-101-3.jpg");
-            advertiseArray.put(head_img0);
-            advertiseArray.put(head_img1);
-            advertiseArray.put(head_img2);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        final HomeBean mHomeBean = new HomeBean(advertiseArray, classifyDatas, recommendDatas);
-
-
-        callBack.onLoadBefore();
-        mHomeService.loadData("phone.get", "18696287339", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<HomeBean>() {
-                    @Override
-                    public void onCompleted() {
-                        callBack.onLoadComplete();
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        callBack.onLoadFailed(e.toString());
-                    }
-
-                    @Override
-                    public void onNext(HomeBean homeBean) {
-                        callBack.onLoadSuccess(mHomeBean);
-                    }
-                });
-
-//        callBack.onLoadSuccess(mHomeBean);
-    }
-
-    @Override
     public void pullRecommendData(final HomeCallBack callBack) {
-        final ArrayList<HomeRecommendBean> mHomeRecommends = new ArrayList<>();
-        HomeRecommendBean recommend5 = new HomeRecommendBean(555, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        HomeRecommendBean recommend6 = new HomeRecommendBean(528, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        mHomeRecommends.add(recommend5);
-        mHomeRecommends.add(recommend6);
-
-        mHomeService.pullToRefresh("phone.get", "18696287339", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
+        mHomeService.pullToRefresh("sucpList", String.valueOf(++page)).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<HomeBean>() {
+                .subscribe(new Subscriber<Commodity>() {
                     @Override
                     public void onCompleted() {
 
@@ -105,12 +40,109 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
 
                     @Override
                     public void onError(Throwable e) {
+                        page--;
                         callBack.pullToRefreshFailed(e.toString());
                     }
 
                     @Override
-                    public void onNext(HomeBean homeRecommends) {
-                        callBack.pullToRefreshSuccess(mHomeRecommends);
+                    public void onNext(Commodity commodities) {
+                        callBack.pullToRefreshSuccess(commodities.getData());
+                    }
+                });
+    }
+
+    @Override
+    public void getAdList(final HomeCallBack callBack) {
+        mHomeService.getAdList("adList").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<AdList>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.i("getAdList", "失败数据" + e.toString());callBack.getAdListFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(AdList adLists) {
+//                        Log.i("getAdList", "成功数据" + adLists.get(0).toString());
+                        callBack.getAdListSuccess(adLists.getData());
+                    }
+                });
+    }
+
+
+    @Override
+    public void getFestival(final HomeCallBack callBack) {
+        mHomeService.getFestival("festival").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Festival>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.i("getFestival", "失败数据" + e.toString());callBack.getFestivalFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(Festival festival) {
+                        Log.i("getFestival", "成功数据" + festival.toString());
+                        callBack.getFestivalSuccess(festival.getData().get(0));
+                    }
+                });
+    }
+
+    @Override
+    public void getSeckill(final HomeCallBack callBack) {
+        mHomeService.getSeckilBean("seckill").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Seckill>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.i("getSeckill", "失败数据" + e.toString());callBack.getSeckillFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(Seckill seckill) {
+                        Log.i("getSeckill", "成功数据" + seckill.toString());
+                        callBack.getSeckillSuccess(seckill.getData());
+                    }
+                });
+    }
+
+    @Override
+    public void getCommodityList(final HomeCallBack callBack) {
+        mHomeService.getCommodity("commodityList").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Commodity>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.i("加载失败", "失败数据" + e.toString());
+                        if (isPrepare) {
+                            isPrepare = false;
+                        }callBack.getCommodityListFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(Commodity commodity) {
+                        callBack.getCommodityListSuccess(commodity.getData());
+                        Log.i("getCommodityList", "成功数据" + commodity.toString() + "size" + commodity.getMsg());
+                        if (isPrepare) {
+                            isPrepare = false;
+                        } else {
+                            page = 1;
+                        }
                     }
                 });
     }

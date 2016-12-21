@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application
         android:name="com.lishi.baijiaxing.Application.MyApplication"
@@ -51,15 +52,11 @@
         <activity
             android:name="com.lishi.baijiaxing.activity.BeanActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-            3
-        </activity>
-        <activity
-            android:name="com.lishi.baijiaxing.activity.TopTeacherDetailsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name="com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
         <activity
             android:name="com.lishi.baijiaxing.orderAddressManage.view.DeliveryAddressActivity"
@@ -244,7 +241,67 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
-            android:name="com.lishi.baijiaxing.SearchActivity"
+            android:name="com.lishi.baijiaxing.search.SearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.myOrders.view.AllOrderActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.refund.NotShipmentsRefundActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.refund.RefundProgressActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.seckill.SeckillActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.lishi.baijiaxing.utils.GlideConfiguration"
+            android:value="GlideModule" />
+
+        <activity
+            android:name="com.lishi.baijiaxing.hot.view.HotCommodityActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.bookmagazine.view.BookMagazineActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.pay.PayActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" >
+        </activity>
+
+        <receiver
+            android:name="com.lishi.baijiaxing.pay.PayActivity$PayBroadcastReceiver"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="lishi.intent.action.PAY" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.lishi.baijiaxing.pay.PayResultActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.search.SearchResultActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lishi.baijiaxing.free.FreeResultActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity

@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.userManager.model.UserListBean;
 import com.lishi.baijiaxing.utils.LocalUserInfo;
+import com.lishi.baijiaxing.utils.UserUtil;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 
 import org.apache.commons.cli.TypeHandler;
@@ -66,7 +67,7 @@ public class UserManagerAdapter extends RecyclerView.Adapter {
             UserManagerItem1ViewHolder viewHolder = (UserManagerItem1ViewHolder) holder;
             viewHolder.tv_classify.setText("头像");
             try {
-                String path = LocalUserInfo.getInstance().getPhotoUrl();
+                String path = UserUtil.getInstance().getLogin().getData().getHeadimg();
                 if (path == null || path.equals("")) {
                     Glide.with(mContext).load(R.drawable.tou).into(viewHolder.headPhoto);
                 } else {
@@ -81,15 +82,24 @@ public class UserManagerAdapter extends RecyclerView.Adapter {
             switch (position) {
                 case 1:
                     viewHolder.tv_classify.setText("会员名");
-                    viewHolder.value.setText(LocalUserInfo.getInstance().getNid());
+                    viewHolder.value.setText(UserUtil.getInstance().getLogin().getData().getNickname());
                     break;
                 case 2:
                     viewHolder.tv_classify.setText("昵称");
-                    viewHolder.value.setText(LocalUserInfo.getInstance().getNickName());
+                    viewHolder.value.setText(UserUtil.getInstance().getLogin().getData().getNickname());
                     break;
                 case 3:
                     viewHolder.tv_classify.setText("性别");
-                    viewHolder.value.setText(LocalUserInfo.getInstance().getSex());
+                    String sex = "";
+                    if (UserUtil.getInstance().getLogin().getData().getSex().equals("0")) {
+                        sex = "女";
+                        viewHolder.value.setText(sex);
+                    } else if (UserUtil.getInstance().getLogin().getData().getSex().equals("1")) {
+                        sex = "男";
+                        viewHolder.value.setText(sex);
+                    } else {
+                        viewHolder.value.setText(UserUtil.getInstance().getLogin().getData().getSex());
+                    }
                     break;
                 case 4:
                     viewHolder.tv_classify.setText("收货地址");

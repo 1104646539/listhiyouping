@@ -12,17 +12,20 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/1.
  */
 public class ShoppingCartAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private ArrayList<CommodityBean> mCommodityBeen;
+    private List<CommodityBean> mCommodityBeen;
     private LayoutInflater mLayoutInflater;
     private OnItemClick mOnItemClick;
 
@@ -30,7 +33,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter {
         mOnItemClick = onItemClick;
     }
 
-    public ShoppingCartAdapter(Context context, ArrayList<CommodityBean> commodityBeens) {
+    public ShoppingCartAdapter(Context context, List<CommodityBean> commodityBeens) {
         this.mCommodityBeen = commodityBeens;
         this.mContext = context;
         this.mLayoutInflater = LayoutInflater.from(mContext);
@@ -43,11 +46,13 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+        CommodityBean dataBean = mCommodityBeen.get(position);
         final ShoppingCartViewHolder viewHolder = (ShoppingCartViewHolder) holder;
-        viewHolder.photo.setImageResource(R.drawable.classity_item);
-        viewHolder.mCheckBox.setChecked(mCommodityBeen.get(position).isChecked());
-        viewHolder.price.setText(mCommodityBeen.get(position).getCommPrice() + "");
-        viewHolder.num.setText(mCommodityBeen.get(position).getCommNum() + "");
+        Glide.with(mContext).load(dataBean.getDataBean().getPhotoUrl()).placeholder(R.drawable.sp_343x394).into(viewHolder.photo);
+        viewHolder.mCheckBox.setChecked(dataBean.isChecked());
+        viewHolder.price.setText(dataBean.getDataBean().getPrice());
+        viewHolder.num.setText(dataBean.getDataBean().getBuyNum());
+        viewHolder.name.setText(dataBean.getDataBean().getName());
         viewHolder.iv_cartlist_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

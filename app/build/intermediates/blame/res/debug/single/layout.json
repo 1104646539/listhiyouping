@@ -13,7 +13,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_details_item6.xml",
@@ -32,12 +32,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\classity_gridview_item.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_list_no_connect.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\view_list_no_connect.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\acfun_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\acfun_footer.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_list_no_connect.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\view_list_no_connect.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay_result.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\pay_result.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_logistics_query.xml",
@@ -45,7 +53,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cart_bomall.xml",
@@ -53,11 +61,15 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_orderform.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_orderform.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_hot_commodity.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_hot_commodity.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_mycollect_store.xml",
@@ -68,12 +80,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_shopping_cart.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\commodity_details2.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\commodity_details2.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_password.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_edit_password.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\commodity_details2.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\commodity_details2.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_refund.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_refund.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\myfree_item.xml",
@@ -88,12 +104,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_details_bottom.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_item3.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\customize_item3.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\yiyuan_details3_hot.xml",
@@ -120,12 +136,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_free_design.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_dialogue_helper.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_dialogue_helper.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_yi_yuan_details.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_yi_yuan_details.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_dialogue_helper.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_dialogue_helper.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_details2.xml",
@@ -149,7 +165,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_details_item4.xml",
@@ -157,35 +173,47 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_tablayout_title.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_tablayout_title.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\commodity_details_config.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\commodity_details_config.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_scroll_view.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\act_scroll_view.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item2.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item2.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rotation_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\rotation_header.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\commodity_details_config.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\commodity_details_config.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_yi_yuan.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_yi_yuan.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item2.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item2.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pay_result.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_pay_result.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_home3_1.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_home3_1.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_customize_details.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_customize_details.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_norms.xml",
@@ -213,11 +241,19 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vw_xscrollview_layout.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\vw_xscrollview_layout.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refund_reason.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\refund_reason.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_details6.xml",
@@ -245,7 +281,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_pager_img_sel.xml",
@@ -260,8 +296,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_edit_sex.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vw_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\vw_header.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_coupons.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_coupons.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_stickiness.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_stickiness.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\latest_item1_photo.xml",
@@ -272,20 +316,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_design_timeline.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_design_timeline.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_returned_goods.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_returned_goods.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_design_timeline.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_design_timeline.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_tablayout_title2.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_tablayout_title2.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\search_item.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\search_item.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine2_item4.xml",
@@ -296,12 +344,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\weekly_item.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay_item_1.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\pay_item_1.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_not_involuntary.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_not_involuntary.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_details_item1.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\customize_details_item1.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_seckil.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_seckil.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\order_null.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\order_null.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_collect.xml",
@@ -314,6 +374,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_img_sel.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.yuyh.imgsel\\library\\1.2.0\\res\\layout\\activity_img_sel.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_submit_order.xml",
@@ -332,8 +396,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\home_item_recyclerview_self.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_refund_progress.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\content_refund_progress.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_home_commodity_head.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_home_commodity_head.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_refund_progress.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_refund_progress.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
@@ -356,6 +428,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_design_item_right.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_design_item_right.xml"
     },
@@ -368,12 +444,16 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_top_teacher_details.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_seckill.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_seckill.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_yi_yuan.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_my_yi_yuan.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_freedetails_details.xml",
@@ -381,7 +461,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_img_sel_folder.xml",
@@ -409,7 +489,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_yiyuan_hot.xml",
@@ -420,16 +500,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_browsing_history.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item4.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item4.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine2_item2.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine2_item2.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item4.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item4.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\meituan_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\meituan_header.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_gift_item1.xml",
@@ -449,7 +537,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_classify.xml",
@@ -461,7 +549,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_cart.xml",
@@ -480,8 +568,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_magazine_about_us.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vw_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\vw_footer.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_integral.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_integral.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_book_magazine.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_book_magazine.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pay.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_pay.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
@@ -504,6 +608,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\latest_bottom.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ali_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\ali_header.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item3.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item3.xml"
     },
@@ -521,7 +629,11 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_hot_commodity.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_hot_commodity.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item_grid.xml",
@@ -552,8 +664,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\advertisement_item_fitxy.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vw_scroll_view_content.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\vw_scroll_view_content.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\default_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\default_header.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_refund_progress.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_refund_progress.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\usermanager_item1.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\usermanager_item1.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vw_list_item.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\vw_list_item.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_yiyuan_details.xml",
@@ -561,7 +689,11 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rotation_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\rotation_footer.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_details_details.xml",
@@ -577,11 +709,11 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_mycollect_store.xml",
@@ -605,11 +737,15 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_retrieve3.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_retrieve3.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\meituan_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\meituan_footer.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\classity_onetitle.xml",
@@ -621,7 +757,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_mycollect_commodity.xml",
@@ -641,7 +777,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_meaningful_recyclerview.xml",
@@ -661,7 +797,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item1.xml",
@@ -673,7 +809,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_cart.xml",
@@ -684,8 +820,20 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_progress_query.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\home_footer.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_action.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\integral_item_head.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\integral_item_head.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\acfun_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\acfun_header.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_weekly_choiceness.xml",
@@ -694,10 +842,6 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item_bottom.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item_bottom.xml"
-    },
-    {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cart_topnavigation.xml",
@@ -713,11 +857,11 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_customize_magazine.xml",
@@ -745,15 +889,23 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\advertisement_item_fitcenter.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\advertisement_item_fitcenter.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay_item_0.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\pay_item_0.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_search.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_search.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_logisticsquery.xml",
@@ -765,7 +917,11 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_hot_commodity_ad.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_hot_commodity_ad.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_comment.xml",
@@ -776,12 +932,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_details3.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_myorderform.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_myorderform.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_customize_magazine2.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_customize_magazine2.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_myorderform.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_myorderform.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_coupons.xml",
@@ -790,6 +946,18 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_item4.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\customize_item4.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_meituan.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_meituan.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_free_result.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_free_result.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ali_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\ali_footer.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_free.xml",
@@ -809,7 +977,7 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gift_card.xml",
@@ -840,6 +1008,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_details_comment.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\search_item_bottom.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\search_item_bottom.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_shoppinglist_commodity.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_shoppinglist_commodity.xml"
     },
@@ -868,20 +1040,28 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\customize_norms_item.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\top_navigation_classify.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\top_navigation_classify.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_yiyuan_comment.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_yiyuan_comment.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_header.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\home_header.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\free_item_grid.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\free_item_grid.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_cartlist.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_cartlist.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_home2.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_home2.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_cartlist.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_cartlist.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_about_us_iv.xml",
@@ -892,8 +1072,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.yuyh.imgsel\\library\\1.2.0\\res\\layout\\item_img_sel.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_all_order.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_all_order.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_my.xml",
@@ -924,6 +1108,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_home_rob.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_mooc_style.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_mooc_style.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
@@ -942,6 +1130,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_home_yiyuan_head.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_home_yiyuan_head.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_lines_media.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
@@ -988,24 +1180,28 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_about_us_customize2.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_customize_comment.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_customize_comment.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\yiyuan_details3_newest.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\yiyuan_details3_newest.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_customize_details.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_customize_details.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\yiyuan_details3_newest.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\yiyuan_details3_newest.xml"
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_customize_comment.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_customize_comment.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_normal.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_normal.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\classity_twoitem.xml",
@@ -1032,12 +1228,24 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_stay_payment.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\default_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.liaoinstan.springview\\library\\1.2.6\\res\\layout\\default_footer.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\magazine_item6.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\magazine_item6.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_normal_refresh_footer.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_normal_refresh_footer.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_home1_1.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_home1_1.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\swpie_footer.xml",
@@ -1060,8 +1268,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\fragment_stay_take_goods.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cart_bottom_shoping.xml",
@@ -1076,6 +1288,10 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_latest.xml"
     },
     {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\yiyuan_details5.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\yiyuan_details5.xml"
     },
@@ -1085,11 +1301,15 @@
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_manager.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_user_manager.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search_result.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\activity_search_result.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_rob_rob.xml",

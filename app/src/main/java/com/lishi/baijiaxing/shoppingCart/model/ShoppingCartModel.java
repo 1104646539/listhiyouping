@@ -4,19 +4,23 @@ import com.lishi.baijiaxing.bean.HomeRecommendBean;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartCallback;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.http.Field;
 
 /**
  * Created by Administrator on 2016/8/17.
  */
 public interface ShoppingCartModel {
+    void loadCommodityList(ShoppingCartCallback callback);
 
-    void loadData(ShoppingCartCallback cartCallback);
+    void loadRecommendList(ShoppingCartCallback callback);
 
-    void addStore(ShoppingCartCallback cartCallback, ArrayList<CommodityBean> commodityBeen);
+    void removeCommodity(ShoppingCartCallback callback, List<String> deleteIds);
 
-    void changeStore(ShoppingCartCallback cartCallback, ArrayList<CommodityBean> commodityBeen);
+    void pullDownLoad(ShoppingCartCallback cartCallback);
 
-    void pullLoad(ShoppingCartCallback cartCallback, ArrayList<HomeRecommendBean> homeRecommend);
+    void changeCommodity(ShoppingCartCallback cartCallback, SCCommodityList.DataBean dataBean, String number);
 
-    void deleteStore(ShoppingCartCallback cartCallback, ArrayList<CommodityBean> commodityBeen);
+    void upCommodityInfo(ShoppingCartCallback cartCallback, SCCommodityList.DataBean dataBean);
 }

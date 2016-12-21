@@ -7,36 +7,44 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.adapter.DeliveryAddressAdapter;
 import com.lishi.baijiaxing.base.BaseActivity;
 import com.lishi.baijiaxing.bean.DeliveryAddressBean;
 import com.lishi.baijiaxing.inter.OnAddressChange;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
+import com.lishi.baijiaxing.orderAddressManage.model.UpAddress;
 import com.lishi.baijiaxing.orderAddressManage.presenter.AddressPresenterImpl;
 import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
+import com.lishi.baijiaxing.utils.ProgressBarUtil;
 import com.lishi.baijiaxing.view.MyListView;
 import com.lishi.baijiaxing.view.TopNavigationBar;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 /**
  * 收货地址管理
  */
-public class DeliveryAddressActivity extends BaseActivity implements OnAddressChange, View.OnClickListener, AdapterView.OnItemClickListener, AddressView {
+public class DeliveryAddressActivity extends BaseActivity implements OnAddressChange, View.OnClickListener, AddressView, AdapterView.OnItemClickListener {
     private MyListView mMyListView;
-    private ArrayList<DeliveryAddressBean> mDeliveryAddressBeans;
+    //    private ArrayList<DeliveryAddressBean> mDeliveryAddressBeans;
     private DeliveryAddressAdapter adapter;
+    private AddressList mAddressList;
     private int mPosition = 0;
     private TextView tv_deliveryaddress_add;
     private boolean isAdd = false;
     private TopNavigationBar navigation_deliveryaddress;
     private AddressPresenterImpl mAddressPresenter;
+    private ProgressBarUtil mProgressBarUtil;
+    private boolean isChangeDeflute = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_delivery_address);
         findId();
         initView();
@@ -49,12 +57,13 @@ public class DeliveryAddressActivity extends BaseActivity implements OnAddressCh
     }
 
     private void initView() {
-        mAddressPresenter = new AddressPresenterImpl(this);
-        initData();
+        if (mAddressPresenter == null) {
+            mAddressPresenter = new AddressPresenterImpl(this);
+        }
+        mAddressPresenter.loadAddressData();
 
         tv_deliveryaddress_add.setOnClickListener(this);
 
-        mMyListView.setOnItemClickListener(this);
         navigation_deliveryaddress.setOnTopClick(new TopNavigationBar.OnTopClick() {
             @Override
             public void onTopLeftClick(View view) {
@@ -68,20 +77,22 @@ public class DeliveryAddressActivity extends BaseActivity implements OnAddressCh
         });
     }
 
-    private void initData() {
-        mAddressPresenter.loadAddressData();
-    }
 
     @Override
     public void onCheckChangeListener(int position, boolean checkble) {
         Log.i("onCheckChangeListener", "点击了" + position + "" + checkble);
-        mAddressPresenter.setDefault(mDeliveryAddressBeans, position, checkble);
+        if (mAddressList.getData().get(position).getIsDefalut().equals("0")) {
+            mAddressList.getData().get(position).setIsDefalut("1");
+        } else {
+            mAddressList.getData().get(position).setIsDefalut("0");
+        }
+        mAddressPresenter.changeAddress(mAddressList.getData().get(position));
     }
 
     @Override
     public void onEditClickListener(int position) {
         Intent startEditAddressActivity = new Intent(DeliveryAddressActivity.this, EditAddressActivity.class);
-        startEditAddressActivity.putExtra("data", mDeliveryAddressBeans.get(position));
+        startEditAddressActivity.putExtra("data", mAddressList.getData().get(position));
         startActivityForResult(startEditAddressActivity, 0);
         Log.i("as", "下标是——————" + position);
         mPosition = position;
@@ -90,25 +101,30 @@ public class DeliveryAddressActivity extends BaseActivity implements OnAddressCh
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
-            DeliveryAddressBean deliveryAddress = data.getParcelableExtra("data");
-            if (deliveryAddress != null) {//更新地址信息
+            AddressList.DataBean dataBean = data.getParcelableExtra("result");
+            if (dataBean != null) {//更新地址信息
                 if (requestCode == 0) {//编辑地址
-                    mAddressPresenter.changeAddress(mDeliveryAddressBeans, mPosition, deliveryAddress);
+                    if (mAddressPresenter == null) {
+                        mAddressPresenter = new AddressPresenterImpl(this);
+                    }
+                    mAddressPresenter.changeAddress(dataBean);
                 } else if (requestCode == 1) {//新增地址
-                    Log.i("asd", "是否为默认" + deliveryAddress.isChecked());
+                    Log.i("asd", "是否为默认" + dataBean.getIsDefalut());
                     isAdd = true;
-                    mAddressPresenter.addAddress(mDeliveryAddressBeans, deliveryAddress);
-                }
-                if (deliveryAddress.isChecked()) {
-//                    SetDefault();
-                    mAddressPresenter.setDefault(mDeliveryAddressBeans, mPosition, true);
+                    Log.i("onActivityResult", "接受到新增地址");
+                    if (mAddressPresenter == null) {
+                        mAddressPresenter = new AddressPresenterImpl(this);
+                    }
+                    mAddressPresenter.addAddress(dataBean);
                 }
             } else {
-                mAddressPresenter.deleteAddress(mDeliveryAddressBeans, mPosition);
                 Log.i("ad", "_____________删除");
             }
-//            adapter.notifyDataSetChanged();
-
+        } else {
+            if (mAddressPresenter == null) {
+                mAddressPresenter = new AddressPresenterImpl(this);
+            }
+            mAddressPresenter.loadAddressData();
         }
     }
 
@@ -127,102 +143,101 @@ public class DeliveryAddressActivity extends BaseActivity implements OnAddressCh
     /**
      * 选择收货地址
      *
-     * @param parent
-     * @param view
-     * @param position
-     * @param id
+     * @param 
+     * @param 
+     * @param 
+     * @param 
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("delivery", "点击了" + position);
-        DeliveryAddressBean deliveryAddressBean = mDeliveryAddressBeans.get(position);
+        AddressList.DataBean deliveryAddressBean = mAddressList.getData().get(position);
         Intent intent = new Intent(DeliveryAddressActivity.this, SubmitOrderActivity.class);
         setResult(RESULT_OK, intent.putExtra("address", deliveryAddressBean));
         finish();
     }
 
     @Override
-    public void loadAddressData() {
+    public void onLoadAddressDataSuccess(AddressList addressList) {
+        Log.i("DeliveryAddressActivity", "onLoadAddressDataSuccess：" + addressList.getData().toString());
+        mAddressList = addressList;
+        adapter = new DeliveryAddressAdapter(this, mAddressList.getData());
+        mMyListView.setAdapter(adapter);
+        mMyListView.setOnItemClickListener(this);
+        adapter.setOnAddressChange(this);
+    }
+
+    @Override
+    public void onLoadAddressDataFailed(String error) {
+        Log.i("onAddAddressSuccess", "加载地址失败");
+    }
+
+    @Override
+    public void onChangeAddressSuccess(UpAddress upAddress) {
+        Log.i("onAddAddressSuccess", "修改地址成功");
+        if (mAddressPresenter == null) {
+            mAddressPresenter = new AddressPresenterImpl(this);
+        }
+
+        mAddressPresenter.loadAddressData();
+    }
+
+    @Override
+    public void onChangeAddressFailed(String error) {
+        Log.i("onAddAddressSuccess", "修改地址失败");
+    }
+
+    @Override
+    public void onDeleteAddressSuccess(UpAddress upAddress) {
+        Log.i("onAddAddressSuccess", "删除地址成功");
+        if (mAddressPresenter == null) {
+            mAddressPresenter = new AddressPresenterImpl(this);
+        }
+        mAddressPresenter.loadAddressData();
+    }
+
+    @Override
+    public void onDeleteAddressFailed(String error) {
+        Log.i("onAddAddressSuccess", "删除地址失败");
+    }
+
+    @Override
+    public void onAddAddressSuccess(UpAddress address) {
+        Log.i("onAddAddressSuccess", "添加地址成功");
+        if (mAddressPresenter == null) {
+            mAddressPresenter = new AddressPresenterImpl(this);
+        }
+        mAddressPresenter.loadAddressData();
+    }
+
+    @Override
+    public void onAddAddressFailed(String error) {
+        Log.i("onAddAddressSuccess", "添加地址成功");
 
     }
 
     @Override
-    public void onLoadAddressDataSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen) {
-        if (deliveryAddressBeen != null) {
-            mDeliveryAddressBeans = deliveryAddressBeen;
-            adapter = new DeliveryAddressAdapter(this, mDeliveryAddressBeans);
-            mMyListView.setAdapter(adapter);
-            adapter.setOnAddressChange(this);
+    public void showDialog() {
+        if (mProgressBarUtil == null) {
+            mProgressBarUtil = new ProgressBarUtil(this);
+        }
+        mProgressBarUtil.show();
+    }
+
+    @Override
+    public void closeDialog() {
+        if (mProgressBarUtil != null) {
+            mProgressBarUtil.dismiss();
         }
     }
 
     @Override
-    public void onLoadAddressDataFailed() {
+    public void loadDataSuccess(Object data) {
 
     }
 
     @Override
-    public void changeAddress() {
-
-    }
-
-    @Override
-    public void deleteAddress() {
-
-    }
-
-    @Override
-    public void addAddress() {
-
-    }
-
-    @Override
-    public void setDefault() {
-
-    }
-
-    @Override
-    public void onChangeAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen) {
-        mDeliveryAddressBeans = deliveryAddressBeen;
-        adapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onChangeAddressFailed() {
-
-    }
-
-    @Override
-    public void onDeleteAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen) {
-        mDeliveryAddressBeans = deliveryAddressBeen;
-        adapter.notifyDataSetChanged();
-    }
-
-
-    @Override
-    public void onDeleteAddressFailed() {
-
-    }
-
-    @Override
-    public void onAddAddressSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen) {
-        mDeliveryAddressBeans = deliveryAddressBeen;
-        adapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onAddAddressFailed() {
-
-    }
-
-    @Override
-    public void onSetDefaultSuccess(ArrayList<DeliveryAddressBean> deliveryAddressBeen) {
-        mDeliveryAddressBeans = deliveryAddressBeen;
-        adapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onSetDefaultFailed() {
+    public void loadDataFailed(String error) {
 
     }
 }

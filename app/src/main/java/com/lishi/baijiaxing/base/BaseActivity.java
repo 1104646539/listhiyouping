@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import com.lishi.baijiaxing.utils.ActivityManager;
 
 public class BaseActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         InitView();

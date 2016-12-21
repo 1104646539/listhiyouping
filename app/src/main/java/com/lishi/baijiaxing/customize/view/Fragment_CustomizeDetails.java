@@ -1,5 +1,6 @@
 package com.lishi.baijiaxing.customize.view;
 
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,17 +24,25 @@ import com.lishi.baijiaxing.customize.model.CustomizeCommodityBean;
 import com.lishi.baijiaxing.customize.model.NormsBean;
 import com.lishi.baijiaxing.customize.presenter.CustomizeDetailsPresenterImpl;
 import com.lishi.baijiaxing.customize.widget.MyNormsView;
+import com.lishi.baijiaxing.shoppingCart.ShoppingCartActivity;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.submitOrder.view.SubmitOrderActivity;
 import com.lishi.baijiaxing.utils.DividerItemDecoration;
+import com.lishi.baijiaxing.utils.ShoppingBadgeUtil;
+import com.lishi.baijiaxing.view.BadgeView;
 import com.lishi.baijiaxing.view.TopNavigationBar;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 import com.lishi.baijiaxing.yiyuan.presenter.YiYuanHotDetailsPresenterImpl;
 import com.lishi.baijiaxing.yiyuan.presenter.YiYuanNewestDetailsPresenterImpl;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanActivity;
 
+import java.util.ArrayList;
+
 /**
+ * 个性定制详情
  * Created by Administrator on 2016/10/28.
  */
-public class Fragment_CustomizeDetails extends BaseFragmentV4 implements CustomizeDetailsView, YiYuanHotAdapter.OnItemClickListener {
+public class Fragment_CustomizeDetails extends BaseFragmentV4 implements CustomizeDetailsView, YiYuanHotAdapter.OnItemClickListener, View.OnClickListener {
     private static Fragment_CustomizeDetails mFragment_customizeDetails;
     private boolean isPrepare;
     private View mView;
@@ -48,7 +57,10 @@ public class Fragment_CustomizeDetails extends BaseFragmentV4 implements Customi
     private TextView config_norms;
     private TextView uploadLogo;
     private CustomizeDetailsPresenterImpl mCustomizeDetailsPresenterImpl;
-
+    private ImageView shoppingCart_iv;
+    private TextView shoppingCart_tv;
+    private TextView buy, addShoppingCart;
+    private BadgeView mBadgeView;
 
     public static Fragment_CustomizeDetails newInstance() {
         if (mFragment_customizeDetails == null) {
@@ -85,14 +97,40 @@ public class Fragment_CustomizeDetails extends BaseFragmentV4 implements Customi
         mRecyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(this);
+
+        mBadgeView = new BadgeView(getActivity());
+        mBadgeView.setTargetView(shoppingCart_iv);
+        if (ShoppingBadgeUtil.getInstance().getBadgeCount() == 0) {
+            mBadgeView.setVisibility(View.GONE);
+        } else {
+            mBadgeView.setVisibility(View.VISIBLE);
+            mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+        }
     }
 
     private void initData() {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mBadgeView != null) {
+            mBadgeView.setBadgeCount(ShoppingBadgeUtil.getInstance().getBadgeCount());
+        }
+    }
+
     private void findId() {
         mRecyclerView = (RecyclerView) mView.findViewById(R.id.recyclerView_customizeDetails);
+        addShoppingCart = (TextView) mView.findViewById(R.id.customize_details_bottom_add);
+        buy = (TextView) mView.findViewById(R.id.customize_details_bottom_buy);
+        shoppingCart_iv = (ImageView) mView.findViewById(R.id.customize_shoppingCart_iv);
+        shoppingCart_tv = (TextView) mView.findViewById(R.id.customize_shoppingCart_tv);
+
+        addShoppingCart.setOnClickListener(this);
+        buy.setOnClickListener(this);
+        shoppingCart_iv.setOnClickListener(this);
+        shoppingCart_tv.setOnClickListener(this);
     }
 
     @Override
@@ -255,5 +293,33 @@ public class Fragment_CustomizeDetails extends BaseFragmentV4 implements Customi
     @Override
     public void loadDataFailed(String error) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.customize_details_bottom_add:
+                int count = mBadgeView.getBadgeCount();
+                mBadgeView.setBadgeCount(++count);
+                mBadgeView.setVisibility(View.VISIBLE);
+                //保存
+                ShoppingBadgeUtil.getInstance().setBadgeCount(count);
+                break;
+            case R.id.customize_details_bottom_buy:
+                Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
+                ArrayList<CommodityBean> commodityBeens = new ArrayList<>();
+//                CommodityBean commodityBeen = new CommodityBean(mCustomizeCommodityBean.getPhotoUrl()
+//                        , mCustomizeCommodityBean.getCommodityBrief(), "", Integer.valueOf(mCustomizeCommodityBean.getPrice())
+//                        , 11200, Integer.valueOf("1"), true);
+//                commodityBeens.add(commodityBeen);
+                startSubmitOrderActivity.putParcelableArrayListExtra("list", commodityBeens);
+                startActivity(startSubmitOrderActivity);
+                break;
+            case R.id.customize_shoppingCart_iv:
+            case R.id.customize_shoppingCart_tv:
+                Intent startShoppingCartActivity = new Intent(getActivity(), ShoppingCartActivity.class);
+                startActivity(startShoppingCartActivity);
+                break;
+        }
     }
 }

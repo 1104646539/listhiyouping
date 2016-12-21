@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.home.adater.AdvertisementAdapter;
+import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 
 import org.json.JSONArray;
 
@@ -32,6 +33,20 @@ public class Advertisements implements OnPageChangeListener {
     private LayoutInflater inflater;
     private boolean fitXY;
     private int timeDratioin;//多长时间切换一次pager
+    private AdvertisementAdapter adapter;
+    private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
+    private boolean isShowPoint = true;
+
+    public void setShowPoint(boolean showPoint) {
+        isShowPoint = showPoint;
+    }
+
+    public void setOnItemClickListener(YiYuanHotAdapter.OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+        if (adapter != null) {
+            adapter.setOnItemClickListener(mOnItemClickListener);
+        }
+    }
 
     List<View> views;
     // 底部小点图片
@@ -44,6 +59,7 @@ public class Advertisements implements OnPageChangeListener {
     TimerTask task;
     int count = 0;
 
+
     private Handler runHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -55,8 +71,6 @@ public class Advertisements implements OnPageChangeListener {
                     break;
             }
         }
-
-        ;
     };
 
     public Advertisements(Context context, boolean fitXY, LayoutInflater inflater, int timeDratioin) {
@@ -80,9 +94,12 @@ public class Advertisements implements OnPageChangeListener {
             }
             ll.addView(inflater.inflate(R.layout.advertisement_board_dot, null, false));
         }
-        initDots(view, ll);
-
-        AdvertisementAdapter adapter = new AdvertisementAdapter(context, views, advertiseArray);
+        
+        if (isShowPoint) {
+            initDots(view, ll);
+        }
+        
+        adapter = new AdvertisementAdapter(context, views, advertiseArray);
         vpAdvertise.setOffscreenPageLimit(3);
         vpAdvertise.setAdapter(adapter);
 

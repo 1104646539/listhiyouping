@@ -2,9 +2,7 @@ package com.lishi.baijiaxing.submitOrder.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,36 +12,47 @@ import android.widget.TextView;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.activity.CouponsActivity;
 import com.lishi.baijiaxing.base.BaseActivity;
-import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.bean.CouponsBean;
-import com.lishi.baijiaxing.bean.DeliveryAddressBean;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
 import com.lishi.baijiaxing.orderAddressManage.view.DeliveryAddressActivity;
+import com.lishi.baijiaxing.orderAddressManage.view.EditAddressActivity;
+import com.lishi.baijiaxing.pay.PayActivity;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
 import com.lishi.baijiaxing.submitOrder.adapter.SubmitOrderAdapter;
+import com.lishi.baijiaxing.submitOrder.model.SubmitOrder;
 import com.lishi.baijiaxing.submitOrder.model.SubmitOrderBean;
+import com.lishi.baijiaxing.submitOrder.model.WriteOrder;
 import com.lishi.baijiaxing.submitOrder.presenter.SubmitOrderPresenterImpl;
 import com.lishi.baijiaxing.view.MyListView;
 import com.lishi.baijiaxing.view.TopNavigationBar;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 提交订单
  */
 public class SubmitOrderActivity extends BaseActivity implements View.OnClickListener, SubmitOrderView {
     private MyListView mMyListView;
-    private SubmitOrderBean mSubmitOrderBean;
+    //    private SubmitOrderBean mSubmitOrderBean;
     private ImageView iv_left;
     private ImageView iv_right;
     private LinearLayout mLinearLayout_address;
     private RelativeLayout ll_submit_coupon;
-    private DeliveryAddressBean mDeliveryAddressBean;//收货地址
+    private AddressList.DataBean mDeliveryAddressBean;//收货地址
     private CouponsBean mCouponsBean;
     private TextView tv_deliveryaddress_name;
     private TextView tv_deliveryaddress_number;
     private TextView tv_deliveryaddress_address;
     private TopNavigationBar navigation_submit;
-    private ArrayList<CommodityBean> mCommodityBeen;
+    private List<SCCommodityList.DataBean> mCommodityBeen;
     private SubmitOrderPresenterImpl mSubmitOrderPresenter;
+    private WriteOrder mWriteOrder;
+    private LinearLayout submit_order_addAddress;
+    private TextView submit_order_addAddress_null;//添加收货地址
+    private TextView submit_order_submit;//提交订单
+    private String mForm = "";
     /**
      * 支付方式LinearLayout
      */
@@ -78,13 +87,14 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
      * 总价
      */
     private TextView tv_counttotalprice;
+    private String mZid ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_submit_order);
         findId();
+
         initView();
     }
 
@@ -98,6 +108,8 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
         tv_deliveryaddress_number = (TextView) findViewById(R.id.tv_deliveryaddress_number);
         tv_deliveryaddress_address = (TextView) findViewById(R.id.tv_deliveryaddress_address);
         navigation_submit = (TopNavigationBar) findViewById(R.id.navigation_submit);
+        submit_order_addAddress_null = (TextView) findViewById(R.id.submit_order_addAddress_null);
+        submit_order_addAddress = (LinearLayout) findViewById(R.id.submit_order_addAddress);
 
 
         tv_counttotalprice = (TextView) findViewById(R.id.tv_submitorder_totalprice);
@@ -109,6 +121,7 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
         ed_message = (EditText) findViewById(R.id.submit_order_leaveMessage);
         commodityPrice = (TextView) findViewById(R.id.submit_order_commodityPrice);
         freight = (TextView) findViewById(R.id.submit_order_freight);
+        submit_order_submit = (TextView) findViewById(R.id.submit_order_submit);
 
         tv_counttotalprice.setOnClickListener(this);
         deliveryMethod_ll.setOnClickListener(this);
@@ -118,32 +131,18 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
         ed_message.setOnClickListener(this);
         commodityPrice.setOnClickListener(this);
         freight.setOnClickListener(this);
+        submit_order_addAddress_null.setOnClickListener(this);
+        submit_order_submit.setOnClickListener(this);
+        ed_message.clearFocus();
+
     }
 
     private void initView() {
-        mSubmitOrderPresenter = new SubmitOrderPresenterImpl(this);
         initData();
-        iv_left.setVisibility(View.VISIBLE);
-        iv_right.setVisibility(View.VISIBLE);
-
-        mLinearLayout_address.setOnClickListener(this);
-        ll_submit_coupon.setOnClickListener(this);
-        navigation_submit.setOnTopClick(new TopNavigationBar.OnTopClick() {
-            @Override
-            public void onTopLeftClick(View view) {
-                finish();
-            }
-
-            @Override
-            public void onTopRightClick(View view) {
-            }
-        });
-
-        bill.setText(mSubmitOrderBean.getBill());
-        coupons.setText("请选择");
-        integral.setText("无可用");
-        commodityPrice.setText("￥" + countCommodityPrice());
-        freight.setText("+￥" + mSubmitOrderBean.getFreight());
+        if (mSubmitOrderPresenter == null) {
+            mSubmitOrderPresenter = new SubmitOrderPresenterImpl(this);
+        }
+        mSubmitOrderPresenter.loadOrderData(mForm);
     }
 
     /**
@@ -153,19 +152,21 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
      */
     private int countCommodityPrice() {
         int commodityPrice = 0;
-        for (int i = 0; i < mSubmitOrderBean.getSubmitOrderCommodityBeen().size(); i++) {
-            commodityPrice += mSubmitOrderBean.getSubmitOrderCommodityBeen().get(i).getCommPrice() * mSubmitOrderBean.getSubmitOrderCommodityBeen().get(i).getBuyNum();
+        for (int i = 0; i < mCommodityBeen.size(); i++) {
+            commodityPrice += Double.valueOf(mCommodityBeen.get(i).getPrice()) * Integer.valueOf(mCommodityBeen.get(i).getBuyNum());
         }
         return commodityPrice;
     }
 
     /**
      * 计算总价
+     *
+     * @param
      */
     private void CountTotalPrice() {
         double totalprice = 0;
         for (int i = 0; i < mCommodityBeen.size(); i++) {
-            totalprice += mCommodityBeen.get(i).getCommNum() * mCommodityBeen.get(i).getCommPrice();
+            totalprice += Integer.valueOf(mCommodityBeen.get(i).getBuyNum()) * Double.valueOf(mCommodityBeen.get(i).getPrice());
         }
         if (mCouponsBean != null) {
             if (totalprice > mCouponsBean.getAstrict_money()) {
@@ -174,16 +175,21 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
                 totalprice = 0;
             }
         }
-        totalprice += mSubmitOrderBean.getFreight();
+        totalprice += Double.valueOf(mWriteOrder.getData().getFreight());
         tv_counttotalprice.setText("￥" + totalprice);
     }
 
-    public void setDeliveryAddressBean(DeliveryAddressBean deliveryAddressBean) {
+    public void setDeliveryAddressBean(AddressList.DataBean deliveryAddressBean) {
         mDeliveryAddressBean = deliveryAddressBean;
-        if (mDeliveryAddressBean != null) {
-            tv_deliveryaddress_name.setText(mDeliveryAddressBean.getName());
-            tv_deliveryaddress_number.setText(mDeliveryAddressBean.getNumber());
+        if (mDeliveryAddressBean == null || mDeliveryAddressBean.equals("")) {
+            submit_order_addAddress.setVisibility(View.GONE);
+            submit_order_addAddress_null.setVisibility(View.VISIBLE);
+        } else {
+            tv_deliveryaddress_name.setText(mDeliveryAddressBean.getConsigneeName());
+            tv_deliveryaddress_number.setText(mDeliveryAddressBean.getConsigneeNumber());
             tv_deliveryaddress_address.setText(mDeliveryAddressBean.toString());
+            submit_order_addAddress.setVisibility(View.VISIBLE);
+            submit_order_addAddress_null.setVisibility(View.GONE);
         }
     }
 
@@ -202,24 +208,20 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void initData() {
-//        mCommodityBeen = new ArrayList<>();
-//        for (int i = 0; i < 1; i++) {
-//            CommodityBean c = new CommodityBean("", "韩国进口九日儿童海苔2gX40包饭紫菜...韩国进口九日儿童海苔2gX40包饭紫菜...", "", 200, 20210, 2, true);
-//            mCommodityBeen.add(c);
-//        }
         mCommodityBeen = getIntent().getParcelableArrayListExtra("list");
-        
-        mSubmitOrderPresenter.loadOrderData(mCommodityBeen);
-
-        Log.e("mCommodityBeen", "mCommodityBeen=" + mCommodityBeen.size()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        mForm = getIntent().getStringExtra("type");
+        if (mForm.equals("3")) {
+            mZid = getIntent().getStringExtra("zid");
+        }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ll_address_root://收货地址
-                Intent startDeliveryAddressActivity = new Intent(SubmitOrderActivity.this, DeliveryAddressActivity.class);
-                startActivityForResult(startDeliveryAddressActivity, 1);
+            case R.id.submit_order_addAddress_null:
+                Intent startDeliveryAddressActivity1 = new Intent(SubmitOrderActivity.this, DeliveryAddressActivity.class);
+                startActivityForResult(startDeliveryAddressActivity1, 1);
                 break;
             case R.id.submit_order_deliveryMethod_ll://配送方式
                 break;
@@ -231,7 +233,41 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
                 break;
             case R.id.submit_order_integral://积分
                 break;
+            case R.id.submit_order_submit://提交订单
+                submitOrder();
+                break;
         }
+    }
+
+    /**
+     * 提交订单
+     */
+    private void submitOrder() {
+        SubmitOrderBean sob = new SubmitOrderBean();
+        sob.setDeliveryAddressBean(mDeliveryAddressBean);
+        sob.setDataBeen(mCommodityBeen);
+        if (mWriteOrder.getData().getInvoice() == null || mWriteOrder.getData().getInvoice().equals("")) {
+            sob.setBill("不开发票");
+        } else {
+            sob.setBill(mWriteOrder.getData().getInvoice());
+        }
+        if (mWriteOrder.getData().getCoupon() == null || mWriteOrder.getData().getCoupon().equals("")) {
+            sob.setCoupons(mWriteOrder.getData().getCoupon());
+        } else {
+            sob.setCoupons("无优惠券");
+        }
+        if (mWriteOrder.getData().getIntegral() == null || mWriteOrder.getData().getIntegral().equals("")) {
+            sob.setIntegral(mWriteOrder.getData().getIntegral());
+        } else {
+            sob.setIntegral("无积分");
+        }
+        sob.setLeaveMsg(ed_message.getText().toString().trim());
+        sob.setFrom(mForm);
+        sob.setZid(mZid);
+        if (mSubmitOrderPresenter == null) {
+            mSubmitOrderPresenter = new SubmitOrderPresenterImpl(this);
+        }
+        mSubmitOrderPresenter.submitOrderData(sob);
     }
 
     @Override
@@ -242,28 +278,123 @@ public class SubmitOrderActivity extends BaseActivity implements View.OnClickLis
                 setCouponsBean(couponsBean);
                 CountTotalPrice();
             } else if (requestCode == 1) {//收货地址
-                DeliveryAddressBean deliveryAddressBean = data.getParcelableExtra("address");
+                AddressList.DataBean deliveryAddressBean = data.getParcelableExtra("address");
                 setDeliveryAddressBean(deliveryAddressBean);
             }
         }
     }
 
-    @Override
-    public void loadOrderData() {
-
-    }
 
     @Override
-    public void onLoadOrderDataSuccess(SubmitOrderBean submitOrderBean) {
-        mSubmitOrderBean = submitOrderBean;
-        SubmitOrderAdapter adapter = new SubmitOrderAdapter(this, submitOrderBean.getSubmitOrderCommodityBeen());
+    public void onLoadOrderDataSuccess(WriteOrder writeOrder) {
+        this.mWriteOrder = writeOrder;
+        iv_left.setVisibility(View.VISIBLE);
+        iv_right.setVisibility(View.VISIBLE);
+
+        mLinearLayout_address.setOnClickListener(this);
+        ll_submit_coupon.setOnClickListener(this);
+        navigation_submit.setOnTopClick(new TopNavigationBar.OnTopClick() {
+            @Override
+            public void onTopLeftClick(View view) {
+                finish();
+            }
+
+            @Override
+            public void onTopRightClick(View view) {
+            }
+        });
+
+        SubmitOrderAdapter adapter = new SubmitOrderAdapter(this, mCommodityBeen);
         mMyListView.setAdapter(adapter);
+
+        setOrderInfo();
+        Logger.d(writeOrder);
+
+        if (writeOrder.getData().getAddr() == null || writeOrder.getData().getAddr().equals("")) {
+
+        } else {
+            setDeliveryAddressBean(writeOrder.getData().getAddr());
+        }
         CountTotalPrice();
-        setDeliveryAddressBean(submitOrderBean.getDeliveryAddressBean());
     }
 
     @Override
-    public void onLoadOrderDataFailed() {
+    public void onLoadOrderDataFailed(String error) {
+        Logger.d(error);
+    }
+
+    @Override
+    public void onSubmitOrderSuccess(SubmitOrder submitOrder) {
+        Logger.d("sn" + submitOrder.getData().getSn() + "price" + submitOrder.getData().getPrice());
+        Intent startPayActivity = new Intent(this, PayActivity.class);
+        startPayActivity.putExtra("order", submitOrder.getData());
+        startActivity(startPayActivity);
+        setResult(RESULT_OK);
+        finish();
+    }
+
+    @Override
+    public void onSubmitOrderFailed(String error) {
+        Logger.d(error);
+    }
+
+    @Override
+    public void showDialog() {
 
     }
+
+    @Override
+    public void closeDialog() {
+
+    }
+
+    @Override
+    public void loadDataSuccess(Object data) {
+
+    }
+
+    @Override
+    public void loadDataFailed(String error) {
+
+    }
+
+    public void setOrderInfo() {
+        if (mWriteOrder.getData().getInvoice() == null || mWriteOrder.getData().getInvoice().equals("")) {
+            bill.setText("不开发票");//发票
+        } else {
+            bill.setText(mWriteOrder.getData().getInvoice());
+        }
+
+        if (mWriteOrder.getData().getCoupon() == null || mWriteOrder.getData().getCoupon().equals("")) {
+            coupons.setText("无优惠券");//优惠券
+        } else {
+            coupons.setText(mWriteOrder.getData().getInvoice());
+        }
+
+//        coupons.setText("请选择");//优惠券
+        if (mWriteOrder.getData().getIntegral() == null || mWriteOrder.getData().getIntegral().equals("")) {
+            integral.setText("无可用");//积分
+        } else {
+            integral.setText(mWriteOrder.getData().getIntegral());
+        }
+        if (mWriteOrder.getData().getFreight() == null || mWriteOrder.getData().getFreight().equals("")) {
+            freight.setText("+￥0");//邮费
+        } else {
+            freight.setText("+￥" + mWriteOrder.getData().getFreight());
+        }
+        commodityPrice.setText("￥" + countCommodityPrice());//总价
+        
+        Logger.d(freight);
+    }
+
+
+//    @Override
+//    public void onLoadOrderDataSuccess(SubmitOrderBean submitOrderBean) {
+//        mSubmitOrderBean = submitOrderBean;
+//        SubmitOrderAdapter adapter = new SubmitOrderAdapter(this, submitOrderBean.getSubmitOrderCommodityBeen());
+//        mMyListView.setAdapter(adapter);
+//        CountTotalPrice();
+//        setDeliveryAddressBean(submitOrderBean.getDeliveryAddressBean());
+//    }
+
 }

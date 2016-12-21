@@ -8,7 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
 import com.lishi.baijiaxing.submitOrder.model.SubmitOrderCommodityBean;
 
 import java.util.List;
@@ -19,10 +22,10 @@ import java.util.List;
  */
 public class SubmitOrderAdapter extends BaseAdapter {
     private Context mContext;
-    private List<SubmitOrderCommodityBean> mSocbs;
+    private List<SCCommodityList.DataBean> mSocbs;
     private LayoutInflater mLayoutInflater;
 
-    public SubmitOrderAdapter(Context context, List<SubmitOrderCommodityBean> socbs) {
+    public SubmitOrderAdapter(Context context, List<SCCommodityList.DataBean> socbs) {
         this.mContext = context;
         this.mSocbs = socbs;
         mLayoutInflater = LayoutInflater.from(mContext);
@@ -57,12 +60,12 @@ public class SubmitOrderAdapter extends BaseAdapter {
         } else {
             viewHolder = (SubmitOrderViewHolder) convertView.getTag();
         }
-        SubmitOrderCommodityBean submitOrderCommodityBean = mSocbs.get(position);
+        SCCommodityList.DataBean submitOrderCommodityBean = mSocbs.get(position);
 
-        viewHolder.tv_name.setText(submitOrderCommodityBean.getCommName());
+        viewHolder.tv_name.setText(submitOrderCommodityBean.getName());
         viewHolder.tv_number.setText("数量:x  " + submitOrderCommodityBean.getBuyNum());
-        viewHolder.iv_photo.setImageResource(R.drawable.classity_item);
-        viewHolder.tv_price.setText("￥" + submitOrderCommodityBean.getCommPrice());
+        Glide.with(mContext).load(submitOrderCommodityBean.getPhotoUrl()).into(viewHolder.iv_photo);
+        viewHolder.tv_price.setText("￥" + submitOrderCommodityBean.getPrice());
 
         return convertView;
     }

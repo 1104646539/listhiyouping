@@ -8,7 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.myOrders.model.OrderDetails;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.submitOrder.model.SubmitOrderCommodityBean;
 
@@ -19,10 +21,10 @@ import java.util.List;
  */
 public class OrderDetailsAdapter extends BaseAdapter {
     private Context mContext;
-    private List<CommodityBean> mCommodityBeen;
+    private List<OrderDetails.DataBean.CommodityListBean> mCommodityBeen;
     private LayoutInflater mLayoutInflater;
 
-    public OrderDetailsAdapter(Context context, List<CommodityBean> commodityBeen) {
+    public OrderDetailsAdapter(Context context, List<OrderDetails.DataBean.CommodityListBean> commodityBeen) {
         this.mContext = context;
         this.mCommodityBeen = commodityBeen;
         mLayoutInflater = LayoutInflater.from(mContext);
@@ -57,12 +59,12 @@ public class OrderDetailsAdapter extends BaseAdapter {
         } else {
             viewHolder = (OrderDetailsViewHolder) convertView.getTag();
         }
-        CommodityBean commodityBean = mCommodityBeen.get(position);
+        OrderDetails.DataBean.CommodityListBean commodityBean = mCommodityBeen.get(position);
 
-        viewHolder.tv_name.setText(commodityBean.getCommTitle());
-        viewHolder.tv_number.setText("x  " + commodityBean.getCommNum());
-        viewHolder.iv_photo.setImageResource(R.drawable.order_details_com_photo);
-        viewHolder.tv_price.setText("￥" + commodityBean.getCommPrice());
+        viewHolder.tv_name.setText(commodityBean.getName());
+        viewHolder.tv_number.setText("x  " + commodityBean.getBuyNum());
+        viewHolder.tv_price.setText("￥" + commodityBean.getPrice());
+        Glide.with(mContext).load(commodityBean.getPhotoUrl()).into(viewHolder.iv_photo);
 
         return convertView;
     }

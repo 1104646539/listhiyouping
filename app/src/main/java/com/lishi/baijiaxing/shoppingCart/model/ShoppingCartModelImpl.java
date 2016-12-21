@@ -1,12 +1,18 @@
 package com.lishi.baijiaxing.shoppingCart.model;
 
+import android.util.Log;
+
+import com.facebook.stetho.common.LogUtil;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseModel;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
 import com.lishi.baijiaxing.shoppingCart.ShoppingCartCallback;
 import com.lishi.baijiaxing.shoppingCart.network.ShoppingCartService;
+import com.lishi.baijiaxing.utils.LoginUtil;
+import com.lishi.baijiaxing.utils.UserUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -25,25 +31,65 @@ public class ShoppingCartModelImpl extends BaseModel implements ShoppingCartMode
 
 
     @Override
-    public void loadData(final ShoppingCartCallback cartCallback) {
-
-        ArrayList<CommodityBean> commodityBeans = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
-            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救",
-                    "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200, 1000, 2, false);
-            commodityBeans.add(cbean);
+    public void loadCommodityList(final ShoppingCartCallback callback) {
+        if (!LoginUtil.getInstance().isLogin()) {
+            callback.loadCommodityListFailed("未登录");
+            return;
         }
-        ArrayList<HomeRecommendBean> homeRecommendBeens = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            HomeRecommendBean hrb = new HomeRecommendBean(200, 320, R.drawable.src7, "尽享丝滑尽享丝滑尽享丝滑尽享丝滑尽享丝滑尽享丝滑尽享丝滑");
-            homeRecommendBeens.add(hrb);
+        mShoppingCartService.getCommodityList(LoginUtil.getInstance().getLogin().getData().getUid(), LoginUtil.getInstance().getLogin().getData().getToken(),
+                LoginUtil.getInstance().getLogin().getData().getType()).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<SCCommodityList>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.i("mShoppingCartService", "onError" + e.toString());
+                        callback.loadCommodityListFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(SCCommodityList commodityList) {
+                        Log.i("mShoppingCartService", "status:" + commodityList.getData().size() + "msg:" + commodityList.getData().size());
+                        callback.loadCommodityListSuccess(commodityList);
+                    }
+                });
+    }
+
+    @Override
+    public void loadRecommendList(final ShoppingCartCallback callback) {
+        mShoppingCartService.getRecommendList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<SCRecommendList>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.i("mShoppingCartService", "onError" + e.toString());
+                        callback.loadRecommendListFailed(e.toString());
+                    }
+
+                    @Override
+                    public void onNext(SCRecommendList commodityList) {
+                        Log.i("mShoppingCartService", "status:" + commodityList.getStatus() + "msg:" + commodityList.getMsg());
+                        callback.loadRecommendListSuccess(commodityList);
+                    }
+                });
+    }
+
+    @Override
+    public void removeCommodity(final ShoppingCartCallback callback, List<String> deleteIds) {
+        if (!LoginUtil.getInstance().isLogin()) {
+            callback.removeCommodityFailed("未登录");
+            return;
         }
-        final ShoppingBean shoppingBean = new ShoppingBean(commodityBeans, homeRecommendBeens);
-
-        cartCallback.onLoadBefore();
-        mShoppingCartService.loadData("phone.get", "18696287339", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<CommodityBean>() {
+        mShoppingCartService.removeCommodity(LoginUtil.getInstance().getLogin().getData().getUid(), LoginUtil.getInstance().getLogin().getData().getToken(),
+                LoginUtil.getInstance().getLogin().getData().getType(), deleteIds.toString()).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<SCOperation>() {
                     @Override
                     public void onCompleted() {
 
@@ -51,71 +97,33 @@ public class ShoppingCartModelImpl extends BaseModel implements ShoppingCartMode
 
                     @Override
                     public void onError(Throwable e) {
-
+                        Log.i("mShoppingCartService", "onError" + e.toString());
+                        callback.removeCommodityFailed(e.toString());
                     }
 
                     @Override
-                    public void onNext(CommodityBean commodityBean) {
-                        cartCallback.onLoadSuccess(shoppingBean);
-                    }
-                });
-    }
-
-    @Override
-    public void addStore(final ShoppingCartCallback cartCallback, final ArrayList<CommodityBean> commodityBeens) {
-        mShoppingCartService.addStore("phone.get", "18696287331", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<CommodityBean>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onNext(CommodityBean commodityBean) {
-                        cartCallback.addStoreSuccess(commodityBeens);
-                    }
-                });
-    }
-
-    @Override
-    public void changeStore(final ShoppingCartCallback cartCallback, final ArrayList<CommodityBean> commodityBeens) {
-        mShoppingCartService.changeStore("phone.get", "18696287330", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<CommodityBean>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onNext(CommodityBean commodityBean) {
-                        cartCallback.changeStoreSuccess(commodityBeens);
+                    public void onNext(SCOperation scOperation) {
+                        Log.i("mShoppingCartService", "status:" + scOperation.getStatus() + "msg:" + scOperation.getMsg());
+                        callback.removeCommoditySuccess(scOperation);
                     }
                 });
     }
 
 
     @Override
-    public void pullLoad(final ShoppingCartCallback cartCallback, final ArrayList<HomeRecommendBean> homeRecommend) {
-        HomeRecommendBean recommend5 = new HomeRecommendBean(555, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        HomeRecommendBean recommend6 = new HomeRecommendBean(528, 666, R.drawable.src7, "三味书屋-手帕+香水30*30（订购从速，赶紧的。啦啦啦啦啦啦啦啦）");
-        homeRecommend.add(recommend5);
-        homeRecommend.add(recommend6);
+    public void pullDownLoad(ShoppingCartCallback cartCallback) {
 
-        mShoppingCartService.pullLoad("phone.get", "18696287339", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<HomeRecommendBean>() {
+    }
+
+    @Override
+    public void changeCommodity(final ShoppingCartCallback callback, SCCommodityList.DataBean dataBean, String number) {
+        if (!LoginUtil.getInstance().isLogin()) {
+            callback.changeCommodityFailed("未登录");
+            return;
+        }
+        mShoppingCartService.changeCommodity(LoginUtil.getInstance().getLogin().getData().getUid(), LoginUtil.getInstance().getLogin().getData().getToken(),
+                LoginUtil.getInstance().getLogin().getData().getType(), dataBean.getCid(), number).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<SCOperation>() {
                     @Override
                     public void onCompleted() {
 
@@ -123,22 +131,27 @@ public class ShoppingCartModelImpl extends BaseModel implements ShoppingCartMode
 
                     @Override
                     public void onError(Throwable e) {
-
+                        Log.i("mShoppingCartService", "onError" + e.toString());
+                        callback.changeCommodityFailed(e.toString());
                     }
 
                     @Override
-                    public void onNext(HomeRecommendBean homeRecommendBean) {
-                        cartCallback.onLoadSuccess(homeRecommend);
+                    public void onNext(SCOperation scOperation) {
+                        Log.i("mShoppingCartService", "status:" + scOperation.getStatus() + "msg:" + scOperation.getMsg());
+                        callback.changeCommoditySuccess(scOperation);
                     }
                 });
     }
 
     @Override
-    public void deleteStore(final ShoppingCartCallback cartCallback, final ArrayList<CommodityBean> commodityBeens) {
-
-        mShoppingCartService.removeStore("phone.get", "18696287339", "10003", "b59bc3ef6191eb9f747dd4e83c99f2a4", "json").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<CommodityBean>() {
+    public void upCommodityInfo(final ShoppingCartCallback callback, SCCommodityList.DataBean dataBean) {
+        if (!LoginUtil.getInstance().isLogin()) {
+            callback.upCommodityInfoFailed("未登录");
+            return;
+        }
+        mShoppingCartService.upCommodityInfo(LoginUtil.getInstance().getLogin().getData().getUid(), LoginUtil.getInstance().getLogin().getData().getToken(),
+                LoginUtil.getInstance().getLogin().getData().getType(), dataBean.getCid()).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<SCCommodityList>() {
                     @Override
                     public void onCompleted() {
 
@@ -146,14 +159,15 @@ public class ShoppingCartModelImpl extends BaseModel implements ShoppingCartMode
 
                     @Override
                     public void onError(Throwable e) {
-                        cartCallback.removeStoreFailed(e.toString());
+                        Log.i("mShoppingCartService", "onError" + e.toString());
+                        callback.upCommodityInfoFailed(e.toString());
                     }
 
                     @Override
-                    public void onNext(CommodityBean commodityBean) {
-                        cartCallback.removeStoreSuccess(commodityBeens);
+                    public void onNext(SCCommodityList commodityList) {
+                        Log.i("mShoppingCartService", "status:" + commodityList.getData().size() + "msg:" + commodityList.getData().size());
+                        callback.upCommodityInfoSuccess(commodityList);
                     }
                 });
     }
-
 }

@@ -77,7 +77,7 @@ public class MyNormsView extends LinearLayout {
             } else {
                 viewHolder = (NormGridViewHolder) convertView.getTag();
             }
-            viewHolder.tv_norms.setText(mNorms.getClassifys().get(position));
+            viewHolder.tv_norms.setText(mNorms.getClassifys().get(position).getNormsName());
             if (mNorms.getCheckableIndex() == position) {
                 viewHolder.tv_norms.setBackgroundResource(R.drawable.customzie_config_checkable);
             } else {

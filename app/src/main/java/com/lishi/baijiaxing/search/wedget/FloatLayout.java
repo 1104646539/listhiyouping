@@ -169,6 +169,15 @@ public class FloatLayout extends ViewGroup {
              * 测量每个子view的大小
              */
             View child = getChildAt(i);
+            final int finalI = i;
+            child.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onItemClickListener(v, finalI);
+                    }
+                }
+            });
             measureChild(child, widthMeasureSpec, heightMeasureSpec);
             /**
              * 获取LayoutParams
@@ -178,8 +187,8 @@ public class FloatLayout extends ViewGroup {
             /**
              * 获取子View的实际宽高
              */
-            int childWidth = getMeasuredWidth() + mp.leftMargin + mp.rightMargin;
-            int childHeight = getMeasuredHeight() + mp.topMargin + mp.bottomMargin;
+            int childWidth = child.getMeasuredWidth() + mp.leftMargin + mp.rightMargin;
+            int childHeight = child.getMeasuredHeight() + mp.topMargin + mp.bottomMargin;
             /**
              * 如果加入子View后的宽度大于ViewGroup的宽度，则累加高度，开启下一行（当前行的宽度装不下子View了）
              * ViewGroup的宽度取最大宽度
@@ -211,5 +220,15 @@ public class FloatLayout extends ViewGroup {
         int nWidth = wMode == MeasureSpec.EXACTLY ? wSize : width;
         int nHeight = hMode == MeasureSpec.EXACTLY ? hSize : height;
         setMeasuredDimension(nWidth, nHeight);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    private OnItemClickListener mOnItemClickListener;
+
+    public interface OnItemClickListener {
+        void onItemClickListener(View v, int position);
     }
 }

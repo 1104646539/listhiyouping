@@ -49,7 +49,7 @@ public class CustomizeActivity extends BaseActivity implements YiYuanHotAdapter.
         mTopNavigation = (TopNavigationBar) findViewById(R.id.topbar_customize);
     }
 
-    @Override
+    @Override   
     public void onClickListener(View view, int position) {
         switch (position) {
             case 0:
@@ -71,6 +71,8 @@ public class CustomizeActivity extends BaseActivity implements YiYuanHotAdapter.
             case 6://50元优惠券
                 break;
             default:
+                Intent startCustomizeDetails = new Intent(this, CustomizeDetailsActivity.class);
+                startActivity(startCustomizeDetails);
                 break;
         }
     }

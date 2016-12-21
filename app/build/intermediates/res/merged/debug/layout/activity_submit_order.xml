@@ -41,8 +41,38 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <include
-                    layout="@layout/item_deliveryaddress"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/submit_order_addAddress"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <include
+                            layout="@layout/item_deliveryaddress"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/submit_order_addAddress_null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_red"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="80dp"
+                        android:paddingRight="80dp"
+                        android:paddingTop="6dp"
+                        android:text="选择地址"
+                        android:textColor="@color/base_bg_color"/>
+                </LinearLayout>
 
                 <com.lishi.baijiaxing.view.MyListView
                     android:id="@+id/listview_submit_order"
@@ -68,8 +98,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="支付配送"
-                        android:textSize="16sp"
-                        android:textColor="@color/submit_order_textcolor"/>
+                        android:textColor="@color/submit_order_textcolor"
+                        android:textSize="16sp"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -207,7 +237,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:layout_marginTop="8dp"
-                            android:text="减50"
                             android:textColor="@color/text_red"
                             android:textSize="12sp"/>
 
@@ -257,7 +286,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:layout_marginTop="8dp"
-                            android:text="无可用"
                             android:textColor="@color/submit_order_textcolor"
                             android:textSize="12sp"/>
 
@@ -320,7 +348,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:text="￥43"
                             android:textColor="@color/text_red"/>
                     </RelativeLayout>
 
@@ -394,7 +421,6 @@
                         android:id="@+id/tv_submitorder_totalprice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="￥199.00"
                         android:textColor="@color/text_red"
                         android:textSize="12sp"/>
                 </LinearLayout>

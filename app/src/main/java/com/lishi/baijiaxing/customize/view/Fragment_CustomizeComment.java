@@ -25,7 +25,7 @@ import com.lishi.baijiaxing.utils.DividerItemDecoration;
 
 import java.util.ArrayList;
 
-/**
+/**个性定制评论
  * Created by Administrator on 2016/10/28.
  */
 public class Fragment_CustomizeComment extends BaseFragmentV4 implements View.OnClickListener, CustomizeCommentView {

@@ -122,10 +122,10 @@ public class Fragment_YiYuanDetails extends BaseFragmentV4 implements View.OnCli
 
                 Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
                 ArrayList<CommodityBean> commodityBeens = new ArrayList<>();
-                CommodityBean commodityBeen = new CommodityBean(""
-                        , mYiYuanHotDetailsBean.getName(), "", Integer.valueOf(mYiYuanHotDetailsBean.getPrice())
-                        , 11200, Integer.valueOf("1"), true);
-                commodityBeens.add(commodityBeen);
+//                CommodityBean commodityBeen = new CommodityBean(""
+//                        , mYiYuanHotDetailsBean.getName(), "", Integer.valueOf(mYiYuanHotDetailsBean.getPrice())
+//                        , 11200, Integer.valueOf("1"), true);
+//                commodityBeens.add(commodityBeen);
                 startSubmitOrderActivity.putParcelableArrayListExtra("list", commodityBeens);
                 startActivity(startSubmitOrderActivity);
                 break;
@@ -133,10 +133,10 @@ public class Fragment_YiYuanDetails extends BaseFragmentV4 implements View.OnCli
                 Toast.makeText(getActivity(), "点击了Newest购买", Toast.LENGTH_SHORT).show();
                 Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
                 ArrayList<CommodityBean> commodityBeens2 = new ArrayList<>();
-                CommodityBean commodityBeen2 = new CommodityBean(""
-                        , mYiYuanHotDetailsBean.getName(), "", Integer.valueOf(mYiYuanHotDetailsBean.getPrice())
-                        , 11200, Integer.valueOf("1"), true);
-                commodityBeens2.add(commodityBeen2);
+//                CommodityBean commodityBeen2 = new CommodityBean(""
+//                        , mYiYuanHotDetailsBean.getName(), "", Integer.valueOf(mYiYuanHotDetailsBean.getPrice())
+//                        , 11200, Integer.valueOf("1"), true);
+//                commodityBeens2.add(commodityBeen2);
                 startSubmitOrder2Activity.putParcelableArrayListExtra("list", commodityBeens2);
                 startActivity(startSubmitOrder2Activity);
                 break;

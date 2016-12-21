@@ -3,27 +3,39 @@ package com.lishi.baijiaxing.shoppingCart;
 import com.lishi.baijiaxing.base.BaseRequestCallBack;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
+import com.lishi.baijiaxing.shoppingCart.model.SCOperation;
+import com.lishi.baijiaxing.shoppingCart.model.SCRecommendList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * View回调
  * Created by Administrator on 2016/10/8.
  */
 public interface ShoppingCartCallback extends BaseRequestCallBack {
-    void addStoreSuccess(ArrayList<CommodityBean> commodityBeen);
+    void removeCommoditySuccess(SCOperation scOperation);
 
-    void addStoreFailed(String error);
+    void removeCommodityFailed(String error);
 
-    void removeStoreSuccess(ArrayList<CommodityBean> commodityBeen);
+    void loadCommodityListSuccess(SCCommodityList commodityList);
 
-    void removeStoreFailed(String error);
+    void loadRecommendListSuccess(SCRecommendList commodityList);
 
-    void changeStoreSuccess(ArrayList<CommodityBean> commodityBeen);
+    void loadCommodityListFailed(String error);
 
-    void changeStoreFailed(String error);
+    void loadRecommendListFailed(String error);
 
-    void pullloadSuccess(ArrayList<HomeRecommendBean> homeRecommends);
+    void pullDownloadSuccess(SCRecommendList recommendLists);
 
-    void pullloadFailed(String error);
+    void pullDownloadFailed(String error);
+
+    void changeCommodityFailed(String error);
+
+    void changeCommoditySuccess(SCOperation scOperation);
+
+    void upCommodityInfoSuccess(SCCommodityList scCommodityList);
+
+    void upCommodityInfoFailed(String error);
 }

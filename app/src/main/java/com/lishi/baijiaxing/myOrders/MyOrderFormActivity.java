@@ -42,7 +42,7 @@ public class MyOrderFormActivity extends AppCompatActivity implements View.OnCli
     private void initView() {
         initData();
         mAdapter = new MyOrderFormFragmentAdapter(getSupportFragmentManager(), mFragments);
-        mViewPager.setOffscreenPageLimit(1);
+        mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(mAdapter);
         mTablayout.setupWithViewPager(mViewPager);
 

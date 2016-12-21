@@ -31,7 +31,6 @@ import java.util.ArrayList;
  */
 public class Fragment_FreeDetails_Comment extends BaseFragmentV4 implements View.OnClickListener, FreeCommentView {
     private View mView;
-    private static Fragment_FreeDetails_Comment mFragment_freeDetails_comment;
     private boolean isPrepare;
     private ArrayList<FreeCommentBean> fcbs;
     private RecyclerView mRecyclerView;
@@ -60,10 +59,7 @@ public class Fragment_FreeDetails_Comment extends BaseFragmentV4 implements View
     }
 
     public static Fragment_FreeDetails_Comment newInstance() {
-        if (mFragment_freeDetails_comment == null) {
-            mFragment_freeDetails_comment = new Fragment_FreeDetails_Comment();
-        }
-        return mFragment_freeDetails_comment;
+        return new Fragment_FreeDetails_Comment();
     }
 
     @Override

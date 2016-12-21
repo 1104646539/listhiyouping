@@ -55,6 +55,17 @@
     <string name="magazine_item3_3">每两月一期一对一的服务，及杂志固有的广泛传阅性 使之具有持续的传播力与影响力！</string>
     <string name="magazine_item3_4">个性定制具有专属性与极强的针对性！</string>
 
+    <string name="btn_scroll_view">ScrollView demo</string>
+    <string name="btn_list_view">ListView demo</string>
+
+    <string name="header_hint_refresh_normal">Pull to refresh</string>
+    <string name="header_hint_refresh_ready">Release to refresh</string>
+    <string name="header_hint_refresh_loading">Refreshing&#8230;</string>
+    <string name="header_hint_refresh_time">Time：</string>
+    <string name="footer_hint_load_normal">Load more</string>
+    <string name="footer_hint_load_ready">Release to load more</string>
+
+
     <string-array name="province_item">
         <item>北京</item>
         <item>天津</item>
@@ -4174,6 +4185,8 @@
         <item>台湾</item>
 
     </string-array>
+    <string name="title_activity_refund_progress">RefundProgressActivity</string>
+    <string name="pay_result_hint">注意：利世优品平台及销售商不会以订单异常、系统升 级为由要求您点击任何网址链接进行退款操作。</string>
 
 
 </resources>

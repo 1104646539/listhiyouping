@@ -10,27 +10,27 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.free.adapter.FreeFragmentGridAdapter;
 import com.lishi.baijiaxing.free.adapter.FreeFragmentLinearAdapter;
-import com.lishi.baijiaxing.free.model.FreeCommodityBean;
+import com.lishi.baijiaxing.free.model.FreeList;
 import com.lishi.baijiaxing.free.presenter.FreeFragmentPresenterImpl;
-
-import java.util.ArrayList;
+import com.orhanobut.logger.Logger;
+import com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration;
 
 /**
  * Created by Administrator on 2016/10/17.
  */
 public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, FreeFragmentGridAdapter.OnFreeGridItemClick {
-    static Fragment_Free mFragment_free;
     /**
      * 数据类型
      */
     private int type = -1;
     private View mView;
-    private ArrayList<FreeCommodityBean> mFreeCommodityBeen;
+    private FreeList mFreeList;
     private boolean isPrepared;
     private FreeFragmentPresenterImpl mFreeFragmentPresenterImpl;
     private RecyclerView mRecyclerView;
@@ -39,10 +39,8 @@ public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, F
      */
     private boolean isGrid = true;
 
-
-    public static synchronized Fragment_Free newInstance() {
-        mFragment_free = new Fragment_Free();
-        return mFragment_free;
+    public static Fragment_Free newInstance() {
+        return new Fragment_Free();
     }
 
     @Override
@@ -102,35 +100,35 @@ public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, F
     }
 
     @Override
-    public void loadDataSuccess(ArrayList<FreeCommodityBean> data) {
-        Log.e("loadDataSuccess", "Fragment" + data.size());
-        mFreeCommodityBeen = data;
-        initLayoutManager();
+    public void loadDataSuccess(Object data) {
+
     }
 
     private void initLayoutManager() {
+        VerticalDividerItemDecoration verticalDividerItemDecoration = new VerticalDividerItemDecoration.Builder(getActivity()).build();
         if (isGrid) {
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(gridLayoutManager);
 
-            FreeFragmentGridAdapter adapter = new FreeFragmentGridAdapter(getActivity(), mFreeCommodityBeen);
+            FreeFragmentGridAdapter adapter = new FreeFragmentGridAdapter(getActivity(), mFreeList.getData());
             mRecyclerView.setAdapter(adapter);
+            mRecyclerView.removeItemDecoration(verticalDividerItemDecoration);
             adapter.setMonFreeGridClickLister(this);
         } else {
             LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(layoutManager);
-
-            FreeFragmentLinearAdapter adapter = new FreeFragmentLinearAdapter(getActivity(), mFreeCommodityBeen);
+            mRecyclerView.removeItemDecoration(verticalDividerItemDecoration);
+            FreeFragmentLinearAdapter adapter = new FreeFragmentLinearAdapter(getActivity(), mFreeList.getData());
             mRecyclerView.setAdapter(adapter);
-
+            mRecyclerView.addItemDecoration(verticalDividerItemDecoration);
+            adapter.setOnFreeGridItemClick(this);
         }
     }
 
     @Override
     public void loadDataFailed(String error) {
-        Log.e("loadDataFailed", "Fragment error= " + error);
-    }
 
+    }
 
     public void setType(int type) {
         this.type = type;
@@ -142,6 +140,9 @@ public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, F
     }
 
     public void setGrid(boolean grid) {
+        if (mFreeList.getData() == null || mFreeList.getData().size() == 0) {
+            return;
+        }
         isGrid = grid;
         initLayoutManager();
     }
@@ -149,7 +150,34 @@ public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, F
     @Override
     public void onFreeGridClickLister(View view, int position) {
         Intent startFreeCommodityDetailsActivity = new Intent(getActivity(), FreeDetailsActivity.class);
-        startFreeCommodityDetailsActivity.putExtra("type", mFreeCommodityBeen.get(position).getType());
+        startFreeCommodityDetailsActivity.putExtra("zid", mFreeList.getData().get(position).getZid());
+        startFreeCommodityDetailsActivity.putExtra("gid", mFreeList.getData().get(position).getGid());
+        Logger.d("zid" + mFreeList.getData().get(position).getZid() + "gid" + mFreeList.getData().get(position).getGid());
         startActivity(startFreeCommodityDetailsActivity);
+    }
+
+    @Override
+    public void loadFreeListSuccess(FreeList freeList) {
+        Log.e("loadDataSuccess", "Fragment" + freeList.getData().size());
+        mFreeList = freeList;
+        if (mFreeList.getData() == null || mFreeList.getData().size() == 0) {
+            Toast.makeText(getActivity(), "type:" + type + "无商品", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        initLayoutManager();
+    }
+
+    @Override
+    public void loadFreeListFailed(String error) {
+        Log.e("loadDataFailed", "Fragment error= " + error);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mFreeList = null;
+        mRecyclerView = null;
+        mView = null;
+        isPrepared = false;
     }
 }

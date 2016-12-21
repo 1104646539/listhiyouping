@@ -1,25 +1,23 @@
 package com.lishi.baijiaxing.orderAddressManage.view;
 
-/**编辑收货地址
+import com.lishi.baijiaxing.base.BaseView;
+import com.lishi.baijiaxing.orderAddressManage.model.UpAddress;
+
+/**
+ * 编辑收货地址
  * Created by Administrator on 2016/8/22.
  */
-public interface EditAddressView {
-    void changeAddress();
+public interface EditAddressView extends BaseView {
+    void onChangeAddressSuccess(UpAddress address);
 
-    void deleteAddress();
+    void onChangeAddressFailed(String error);
 
-    void addAddress();
+    void onDeleteAddressSuccess(UpAddress address);
 
-    void onChangeAddressSuccess();
+    void onDeleteAddressFailed(String error);
 
-    void onChangeAddressFailed();
+    void onAddAddressSuccess(UpAddress address);
 
-    void onDeleteAddressSuccess();
-
-    void onDeleteAddressFailed();
-
-    void onAddAddressSuccess();
-
-    void onAddAddressFailed();
+    void onAddAddressFailed(String error);
 
 }

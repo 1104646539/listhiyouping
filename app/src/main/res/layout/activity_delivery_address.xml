@@ -31,18 +31,20 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_above="@+id/ll_address_bottom"
+            android:layout_height="match_parent">
 
             <com.lishi.baijiaxing.view.MyListView
                 android:id="@+id/listview_deliveryaddress"
                 android:layout_width="match_parent"
                 android:dividerHeight="1px"
                 android:divider="@color/shoppinglist"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
         </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:id="@+id/ll_address_bottom"
             android:layout_height="wrap_content"
             android:background="@color/base_bg_color"
             android:layout_alignParentBottom="true"

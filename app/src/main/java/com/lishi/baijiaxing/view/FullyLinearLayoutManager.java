@@ -88,7 +88,7 @@ public class FullyLinearLayoutManager extends LinearLayoutManager {
                         getPaddingLeft() + getPaddingRight(), p.width);
 
                 int childHeightSpec = ViewGroup.getChildMeasureSpec(heightSpec,
-                        getPaddingTop() + getPaddingBottom(), p.height);
+                            getPaddingTop() + getPaddingBottom(), p.height);
 
                 view.measure(childWidthSpec, childHeightSpec);
                 measuredDimension[0] = view.getMeasuredWidth() + p.leftMargin + p.rightMargin;

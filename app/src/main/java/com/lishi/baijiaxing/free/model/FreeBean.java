@@ -13,7 +13,6 @@ import java.util.ArrayList;
  */
 public class FreeBean extends BaseBean {
     JSONArray mJsonArray;
-//    ArrayList<FreeCommodityBean> mFreeCommodityBeen;
 
     public FreeBean() {
     }
@@ -29,12 +28,4 @@ public class FreeBean extends BaseBean {
     public void setJsonArray(JSONArray jsonArray) {
         mJsonArray = jsonArray;
     }
-//
-//    public ArrayList<FreeCommodityBean> getFreeCommodityBeen() {
-//        return mFreeCommodityBeen;
-//    }
-//
-//    public void setFreeCommodityBeen(ArrayList<FreeCommodityBean> freeCommodityBeen) {
-//        mFreeCommodityBeen = freeCommodityBeen;
-//    }
 }

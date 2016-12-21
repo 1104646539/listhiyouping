@@ -38,13 +38,16 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 0) {
-                Intent ss = new Intent();
-                ss.putExtra("result", "success");
+            Intent ss = new Intent();
+            if (msg.what == 0) {//成功
+                WXUserInfo mWXUserInfo = (WXUserInfo) msg.obj;
+                ss.putExtra("state", "success");
+                ss.putExtra("result", mWXUserInfo);
                 setResult(RESULT_OK, ss);
-                Log.e("handleMessage", "页面关闭页面关闭页面关闭页面关闭");
+            } else if (msg.what == 1) {//失败
+                ss.putExtra("result", "failed");
+                setResult(RESULT_OK, ss);
             }
-            Log.i("handleMessage","");
             finish();
         }
     };
@@ -64,7 +67,9 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
             return;
         }
         wxLogin();
+        
     }
+
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -110,19 +115,22 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
                 result = R.string.errcode_success;
                 String code = ((SendAuth.Resp) resp).code;
                 startWxToken(code);
-                Toast.makeText(this, "result=" + "发送成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "操作成功", Toast.LENGTH_SHORT).show();
                 break;
             case BaseResp.ErrCode.ERR_USER_CANCEL:
                 result = R.string.errcode_cancel;
-                Toast.makeText(this, "result=" + "发送取消", Toast.LENGTH_SHORT).show();
-                mHandler.sendEmptyMessage(2);
+                Toast.makeText(this, "操作取消", Toast.LENGTH_SHORT).show();
+                mHandler.sendEmptyMessage(1);
                 break;
             case BaseResp.ErrCode.ERR_AUTH_DENIED:
                 result = R.string.errcode_deny;
-                Toast.makeText(this, "result=" + "发送拒绝", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "操作拒绝", Toast.LENGTH_SHORT).show();
+                mHandler.sendEmptyMessage(1);
                 break;
             default:
                 result = R.string.errcode_unknown;
+                mHandler.sendEmptyMessage(1);
+                Toast.makeText(this, "操作返回", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -141,6 +149,7 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
             @Override
             public void onFailure(Call call, IOException e) {
                 Log.e("onFailure", "error=" + e.toString());
+                mHandler.sendEmptyMessage(1);
             }
 
             @Override
@@ -176,12 +185,7 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
             public void onResponse(Call call, Response response) throws IOException {
                 Gson gson = new Gson();
                 WXUserInfo wxUserInfo = gson.fromJson(response.body().string(), WXUserInfo.class);
-                Log.e("onResponse", "userInfo success=" + wxUserInfo.toString());
-                LocalUserInfo.getInstance().setNickName(wxUserInfo.getNickname());
-                LocalUserInfo.getInstance().setNid("wx" + wxUserInfo.getNickname());
-                LocalUserInfo.getInstance().setSex(wxUserInfo.getSex() == 0 ? "女" : "男");
-                LocalUserInfo.getInstance().setPhotoUrl(wxUserInfo.getHeadimgurl());
-                mHandler.sendEmptyMessage(0);
+                mHandler.sendMessage(mHandler.obtainMessage(0, wxUserInfo));
             }
         });
     }

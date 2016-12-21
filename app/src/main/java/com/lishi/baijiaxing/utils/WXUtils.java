@@ -23,6 +23,7 @@ public class WXUtils {
             "https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code";
 
     public static String GET_REQUEST_USER_INFO =
-            "https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID";
+            "https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
 
+    public static String GET_WXPAY_INFO = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 }

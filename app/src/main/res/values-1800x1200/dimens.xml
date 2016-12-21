@@ -13,7 +13,7 @@
     <dimen name="recommend_textmargin">5dp</dimen>
     <!-- 首页的item高度，1800*1200分辨率下 -->
     <dimen name="home_height_90">150dp</dimen>
-    <dimen name="home_height_170">260dp</dimen>
+    <dimen name="home_height_170">260dp</dimen>    <dimen name="home_icon_size">40dp</dimen>
     <dimen name="home_height_150">250dp</dimen>
     <dimen name="topnatigationbar_left">10dp</dimen>
 

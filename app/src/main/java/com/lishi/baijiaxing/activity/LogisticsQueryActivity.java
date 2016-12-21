@@ -58,21 +58,21 @@ public class LogisticsQueryActivity extends BaseActivity {
 
     private void initData() {
         mLogisticsBeans = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
-            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
-            LogisticsBean logisticsBean = new LogisticsBean(111, cbean, LogisticsStateBean.Query);
-            mLogisticsBeans.add(logisticsBean);
-        }
-        for (int i = 0; i < 2; i++) {
-            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
-            LogisticsBean logisticsBean = new LogisticsBean(111, cbean, LogisticsStateBean.CONFIRM);
-            mLogisticsBeans.add(logisticsBean);
-        }
-        for (int i = 0; i < 2; i++) {
-            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
-            LogisticsBean logisticsBean = new LogisticsBean(111, cbean, LogisticsStateBean.WAIT);
-            mLogisticsBeans.add(logisticsBean);
-        }
+//        for (int i = 0; i < 2; i++) {
+//            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
+//            LogisticsBean logisticsBean = new LogisticsBean(111, cbean, LogisticsStateBean.Query);
+//            mLogisticsBeans.add(logisticsBean);
+//        }
+//        for (int i = 0; i < 2; i++) {
+//            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
+//            LogisticsBean logisticsBean = new LogisticsBean(111, cbean, LogisticsStateBean.CONFIRM);
+//            mLogisticsBeans.add(logisticsBean);
+//        }
+//        for (int i = 0; i < 2; i++) {
+//            CommodityBean cbean = new CommodityBean("", "联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救者联想(lenovo）拯救", "颜色：6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸6代新平台15.6寸", 5200 + i, 1000, 2, false);
+//            LogisticsBean logisticsBean = new LogisticsBean(111, cbean, LogisticsStateBean.WAIT);
+//            mLogisticsBeans.add(logisticsBean);
+//        }
     }
 
     @Override

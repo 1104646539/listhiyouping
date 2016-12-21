@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:padding="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/pay_item1_icon"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pay_wechat_icon"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/pay_item1_name"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:text="微信支付"
+            android:textColor="@color/text_color"/>
+
+        <TextView
+            android:id="@+id/pay_item1_brief"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信安全支付"/>
+
+    </LinearLayout>
+</LinearLayout>

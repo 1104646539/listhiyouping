@@ -17,9 +17,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitManager {
     Retrofit mRetrofit;
     OkHttpClient mOkHttpClient;
-    String BaseUrl = "http://api.k780.com:88";
-
-    private HomeService mHomeService;
+    String BaseUrl = "http://www.risevip.com";
+    String testUrl = "http://test.risevip.com";
 
     public static RetrofitManager builder() {
         return new RetrofitManager();
@@ -35,7 +34,8 @@ public class RetrofitManager {
                 mOkHttpClient = new OkHttpClient.Builder()
                         .addNetworkInterceptor(new StethoInterceptor())
                         .retryOnConnectionFailure(true)
-                        .connectTimeout(15, TimeUnit.SECONDS).build();
+                        .connectTimeout(10, TimeUnit.SECONDS)
+                        .readTimeout(10, TimeUnit.SECONDS).build();
             }
         }
 
@@ -43,7 +43,7 @@ public class RetrofitManager {
             if (mRetrofit == null) {
                 mRetrofit = new Retrofit.Builder()
                         .client(mOkHttpClient)
-                        .baseUrl(BaseUrl)
+                        .baseUrl(testUrl)
                         .addConverterFactory(GsonConverterFactory.create())
                         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                         .build();

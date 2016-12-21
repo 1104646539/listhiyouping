@@ -1,6 +1,8 @@
 package com.lishi.baijiaxing.customize.model;
 
 import com.lishi.baijiaxing.base.BaseBean;
+import com.lishi.baijiaxing.customize.widget.MyNormsView;
+import com.lishi.baijiaxing.details.model.CommodityDetails;
 
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class NormsBean extends BaseBean {
     /**
      * 产品详情分类
      */
-    private List<String> classifys;
+    private List<CommodityDetails.DataBean.NormsListBean> classifys;
 
     /**
      * 选中的规格默认为第一个
@@ -27,18 +29,10 @@ public class NormsBean extends BaseBean {
 
 
 
-    public NormsBean(String classifyName, List<String> classifys) {
+    public NormsBean(String classifyName, List<CommodityDetails.DataBean.NormsListBean> classifys) {
         this.classifyName = classifyName;
         this.classifys = classifys;
         this.checkableIndex = 0;
-    }
-
-    public int getCheckableIndex() {
-        return checkableIndex;
-    }
-
-    public void setCheckableIndex(int checkableIndex) {
-        this.checkableIndex = checkableIndex;
     }
 
     public String getClassifyName() {
@@ -49,11 +43,19 @@ public class NormsBean extends BaseBean {
         this.classifyName = classifyName;
     }
 
-    public List<String> getClassifys() {
+    public List<CommodityDetails.DataBean.NormsListBean> getClassifys() {
         return classifys;
     }
 
-    public void setClassifys(List<String> classifys) {
+    public void setClassifys(List<CommodityDetails.DataBean.NormsListBean> classifys) {
         this.classifys = classifys;
+    }
+
+    public int getCheckableIndex() {
+        return checkableIndex;
+    }
+
+    public void setCheckableIndex(int checkableIndex) {
+        this.checkableIndex = checkableIndex;
     }
 }

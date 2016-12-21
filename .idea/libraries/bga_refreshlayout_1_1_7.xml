@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="bga-refreshlayout-1.1.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.bingoogolapple/bga-refreshlayout/1.1.7/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.bingoogolapple/bga-refreshlayout/1.1.7/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bingoogolapple/bga-refreshlayout/1.1.7/15d6e00e9095222d81c0b5f4b26b0b87a3748da0/bga-refreshlayout-1.1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:paddingBottom="10dp"
-              android:background="@color/base_bg_color"
-              android:paddingLeft="20dp"
               android:layout_marginBottom="8dp"
               android:layout_marginTop="8dp"
+              android:background="@color/base_bg_color"
+              android:orientation="horizontal"
+              android:paddingBottom="10dp"
+              android:paddingLeft="20dp"
               android:paddingRight="20dp"
               android:paddingTop="10dp">
 
@@ -22,15 +22,20 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="已选"/>
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/commodity_details_norms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:text="某某颜色"
+                android:textColor="@color/text_color"/>
+
+            <TextView
+                android:id="@+id/commodity_details_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:textColor="@color/text_color"/>
         </LinearLayout>
 

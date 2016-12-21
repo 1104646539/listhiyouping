@@ -9,6 +9,9 @@ import android.widget.TextView;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseActivity;
 
+/**
+ * 修改性别
+ */
 public class EditSexActivity extends BaseActivity implements View.OnClickListener {
     private TextView editSexItem1;
     private TextView editSexItem2;

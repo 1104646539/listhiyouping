@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_margin="8dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
               android:orientation="vertical">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/iv_classity_three"
-        android:layout_marginBottom="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/classity_item"/>
+        android:layout_width="@dimen/classify_item_height"
+        android:layout_height="@dimen/classify_item_height"
+        android:layout_margin="3dp"
+        android:scaleType="centerInside"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
         android:id="@+id/tv_classity_three"
-        android:text="苹果鼠标"
-        android:textColor="#646464"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:lines="1"
+        android:layout_margin="3dp"
+        android:textColor="@color/text_color"
+        android:textSize="10sp"/>
 </LinearLayout>

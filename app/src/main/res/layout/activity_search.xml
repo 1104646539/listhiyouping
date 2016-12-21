@@ -34,7 +34,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
-            android:layout_weight="7"
+            android:layout_weight="1"
             android:background="@drawable/top_navigation_background">
 
             <ImageView
@@ -53,6 +53,7 @@
                 android:layout_gravity="center_vertical"
                 android:background="#00FFFFFF"
                 android:lines="1"
+                android:maxLines="1"
                 android:paddingBottom="3dp"
                 android:paddingTop="3dp"
                 android:textSize="16sp"/>
@@ -78,49 +79,71 @@
         android:layout_marginTop="5dp"
         android:background="@color/text_gray"/>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp">
+            android:layout_marginBottom="10dp"
+            android:text="热搜"
+            android:textColor="@color/text_red"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="热搜"
-                android:textColor="@color/text_red"/>
+        <com.lishi.baijiaxing.search.wedget.FloatLayout
+            android:id="@+id/search_hot_floatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.lishi.baijiaxing.search.wedget.FloatLayout>
+    </LinearLayout>
 
-            <com.lishi.baijiaxing.search.wedget.FloatLayout
-                android:id="@+id/search_hot_floatLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </com.lishi.baijiaxing.search.wedget.FloatLayout>
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="历史搜索"
-                android:textColor="@color/text_red"/>
+            android:layout_marginBottom="10dp"
+            android:text="历史搜索"
+            android:textColor="@color/text_color"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView_search"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
-        </LinearLayout>
-    </ScrollView>
+                android:layout_height="match_parent"
+                android:layout_above="@+id/search_bottom"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:id="@+id/search_bottom"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center_horizontal"
+                          android:layout_alignParentBottom="true"
+                          android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/search_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/search_delete_bg"
+                    android:drawableLeft="@drawable/search_delete"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="清空历史记录"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

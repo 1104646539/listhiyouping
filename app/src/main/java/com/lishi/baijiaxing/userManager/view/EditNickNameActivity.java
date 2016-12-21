@@ -11,6 +11,9 @@ import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseActivity;
 import com.lishi.baijiaxing.view.TopNavigationBar;
 
+/**
+ * 修改昵称
+ */
 public class EditNickNameActivity extends BaseActivity {
     private TopNavigationBar mTopNavigationBar;
     private EditText mEditText;

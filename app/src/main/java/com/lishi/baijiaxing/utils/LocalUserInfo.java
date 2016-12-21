@@ -15,21 +15,14 @@ public class LocalUserInfo implements Parcelable {
      */
     String nid;
     /**
-     * 头像url
-     */
-    String photoUrl;
-    /**
-     * 性别
-     */
-    String sex;
-    /**
      * 昵称
      */
     String nickName;
+
     /**
-     * 会员等级
+     * 密码
      */
-    String level;
+    String paw;
 
     public String getNid() {
         return nid;
@@ -37,22 +30,6 @@ public class LocalUserInfo implements Parcelable {
 
     public void setNid(String nid) {
         this.nid = nid;
-    }
-
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
-
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
     }
 
     public String getNickName() {
@@ -63,40 +40,18 @@ public class LocalUserInfo implements Parcelable {
         this.nickName = nickName;
     }
 
-    public String getLevel() {
-        return level;
+    public String getPaw() {
+        return paw;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public void setPaw(String paw) {
+        this.paw = paw;
     }
 
-    private LocalUserInfo() {
-    }
-
-    public static LocalUserInfo getInstance() {
-        return LocalUserInfoHolder.localUserInfo;
-    }
-
-    private static class LocalUserInfoHolder {
-        static LocalUserInfo localUserInfo = new LocalUserInfo();
-    }
-
-    public boolean isNull() {
-        if (LocalUserInfoHolder.localUserInfo != null) {
-            if (LocalUserInfoHolder.localUserInfo.nid == null || LocalUserInfoHolder.localUserInfo.nickName == null) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public LocalUserInfo(String nid, String photoUrl, String sex, String nickName, String level) {
+    public LocalUserInfo(String nid, String nickName, String paw) {
         this.nid = nid;
-        this.photoUrl = photoUrl;
-        this.sex = sex;
         this.nickName = nickName;
-        this.level = level;
+        this.paw = paw;
     }
 
     @Override
@@ -107,18 +62,14 @@ public class LocalUserInfo implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.nid);
-        dest.writeString(this.photoUrl);
-        dest.writeString(this.sex);
         dest.writeString(this.nickName);
-        dest.writeString(this.level);
+        dest.writeString(this.paw);
     }
 
     protected LocalUserInfo(Parcel in) {
         this.nid = in.readString();
-        this.photoUrl = in.readString();
-        this.sex = in.readString();
         this.nickName = in.readString();
-        this.level = in.readString();
+        this.paw = in.readString();
     }
 
     public static final Creator<LocalUserInfo> CREATOR = new Creator<LocalUserInfo>() {

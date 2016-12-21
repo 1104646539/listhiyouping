@@ -35,7 +35,7 @@
         <item name="android:indeterminateDrawable">
             @android:drawable/progress_indeterminate_horizontal
         </item>
-        <item name="android:maxHeight">16dp</item>
+        <item name="android:maxHeight">12dp</item>
         <item name="android:maxWidth">160dp</item>
         <item name="android:progressDrawable">@drawable/rob_progressbar_sytle</item>
 
@@ -76,4 +76,23 @@
     </style>
 
     <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="dialog">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/navpage</item>
+    </style>
 </resources>

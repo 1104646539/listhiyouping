@@ -7,5 +7,9 @@ public interface ClassityPresenter {
     /**
      * view调用
      */
-    void loadData();
+    void loadClassList();
+
+    void loadAd();
+
+    void loadClassOne(String classId);
 }

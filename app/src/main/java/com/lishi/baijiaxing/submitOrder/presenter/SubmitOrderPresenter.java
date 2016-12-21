@@ -10,9 +10,7 @@ import java.util.ArrayList;
  * Created by Administrator on 2016/8/22.
  */
 public interface SubmitOrderPresenter {
-    void loadOrderData(ArrayList<CommodityBean> commodityBeen);
+    void loadOrderData(String form);
 
-    void onLoadOrderDataSuccess(SubmitOrderBean submitOrderBean);
-
-    void onLoadOrderDataFailed();
+    void submitOrderData(SubmitOrderBean submitOrderBean);
 }

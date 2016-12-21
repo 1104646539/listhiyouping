@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/item_padding"
     android:orientation="vertical"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
@@ -17,7 +18,7 @@
         app:title_size="8sp"/>
 
     <!-- android:fillViewport="true" 解决scrollview嵌套viewpager不显示的问题  -->
-    <com.lishi.baijiaxing.view.MyScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -55,26 +56,27 @@
                         app:tabTextColor="@color/text_color"></android.support.design.widget.TabLayout>
 
                     <ImageView
+                        android:id="@+id/iv_free_changeState"
                         android:layout_width="wrap_content"
-                        android:clickable="true"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:id="@+id/iv_free_changeState"
                         android:layout_marginRight="15dp"
+                        android:clickable="true"
                         android:src="@drawable/shape_change"/>
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:descendantFocusability="blocksDescendants">
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:descendantFocusability="blocksDescendants">-->
 
-                    <com.lishi.baijiaxing.free.view.CustomViewPager
-                        android:id="@+id/viewpager_free"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"></com.lishi.baijiaxing.free.view.CustomViewPager>
-                </RelativeLayout>
+                <com.lishi.baijiaxing.free.view.CustomViewPager
+                    android:id="@+id/viewpager_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.lishi.baijiaxing.free.view.CustomViewPager>
+                <!--</RelativeLayout>-->
             </LinearLayout>
         </LinearLayout>
-    </com.lishi.baijiaxing.view.MyScrollView>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

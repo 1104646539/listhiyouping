@@ -22,8 +22,8 @@
         android:id="@+id/shoppingcart_commodity_photo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="8dp"
-        android:src="@drawable/classity_item"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
 
 
     <LinearLayout
@@ -39,7 +39,6 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="@string/item_cart_title"
             android:textSize="13sp"/>
 
 
@@ -65,7 +64,6 @@
                 android:layout_centerVertical="true"
                 android:layout_gravity="center_vertical"
                 android:layout_toRightOf="@id/item_rmb"
-                android:text="1999.00"
                 android:textColor="@android:color/holo_red_dark"/>
 
             <LinearLayout

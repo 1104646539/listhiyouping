@@ -44,5 +44,6 @@ public class HomeBean extends BaseBean {
     public void setRecommendDatas(ArrayList<HomeRecommendBean> recommendDatas) {
         this.recommendDatas = recommendDatas;
     }
+    
 }
 

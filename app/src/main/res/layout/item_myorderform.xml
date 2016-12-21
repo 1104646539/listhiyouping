@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
-                android:text="等待付款"
+                android:text="待付款"
                 android:textColor="@color/rob_red"
                 android:textSize="14sp"
                 android:visibility="gone"/>
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="15dp"
-                android:text="交易成功"
+                android:text="待评价"
                 android:textColor="@color/rob_red"
                 android:textSize="14sp"
                 android:visibility="gone"/>
@@ -216,7 +216,7 @@
                 android:background="@drawable/edittext_black"
                 android:minHeight="0dp"
                 android:padding="5dp"
-                android:text="申请售后"
+                android:text="申请退款"
                 android:textSize="12sp"/>
 
             <Button
@@ -259,7 +259,7 @@
                 android:background="@drawable/edittext_black"
                 android:minHeight="0dp"
                 android:padding="5dp"
-                android:text="申请售后"
+                android:text="申请退款"
                 android:textSize="12sp"/>
 
 
@@ -314,7 +314,7 @@
                 android:background="@color/rob_red"
                 android:minHeight="0dp"
                 android:padding="5dp"
-                    android:text="评价"
+                android:text="评价"
                 android:textColor="@color/base_bg_color"
                 android:textSize="12sp"/>
         </LinearLayout>

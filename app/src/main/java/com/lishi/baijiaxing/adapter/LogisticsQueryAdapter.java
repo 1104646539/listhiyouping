@@ -66,9 +66,9 @@ public class LogisticsQueryAdapter extends BaseAdapter {
         holder.iv_photo.setImageResource(R.drawable.classity_item);
         LogisticsBean logisticsBean = mLogisticsBeen.get(position);
         CommodityBean commodityBean = logisticsBean.getCommodityBean();
-        holder.tv_title.setText(commodityBean.getCommTitle());
-        holder.tv_info.setText(commodityBean.getCommInfo());
-        holder.tv_price.setText(commodityBean.getCommPrice()+"");
+//        holder.tv_title.setText(commodityBean.getCommTitle());
+//        holder.tv_info.setText(commodityBean.getCommInfo());
+//        holder.tv_price.setText(commodityBean.getCommPrice()+"");
 
         if (logisticsBean.getState() == LogisticsStateBean.Query) {//物流查询
             holder.tv_query.setVisibility(View.VISIBLE);

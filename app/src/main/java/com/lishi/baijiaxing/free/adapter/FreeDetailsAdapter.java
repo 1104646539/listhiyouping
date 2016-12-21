@@ -10,19 +10,36 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
+import com.lishi.baijiaxing.free.model.FreeDetails;
 import com.lishi.baijiaxing.free.model.FreeDetailsBean;
 import com.lishi.baijiaxing.home.widget.Advertisements;
+import com.lishi.baijiaxing.utils.PhotoPathUtil;
+import com.lishi.baijiaxing.utils.TimeUtils;
+import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
+import com.orhanobut.logger.Logger;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cn.iwgang.countdownview.CountdownView;
 
 /**
  * Created by Administrator on 2016/10/19.
  */
-public class FreeDetailsAdapter extends RecyclerView.Adapter {
+public class FreeDetailsAdapter extends RecyclerView.Adapter implements YiYuanHotAdapter.OnItemClickListener {
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    private FreeDetailsBean mFreeDetailsBean;
+    private FreeDetails.DataBean mFreeDetailsBean;
     private final int MAX_HEAD = 5;
+    private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
+
+    public void setOnItemClickListener(YiYuanHotAdapter.OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
 
     private static final int TYPE_PHOTO = 0X001;
     private static final int TYPE_NAME = 0X002;
@@ -31,7 +48,7 @@ public class FreeDetailsAdapter extends RecyclerView.Adapter {
     private static final int TYPE_INFOTITLE = 0X005;
     private static final int TYPE_INFO = 0X006;
 
-    public FreeDetailsAdapter(Context context, FreeDetailsBean detailsBean) {
+    public FreeDetailsAdapter(Context context, FreeDetails.DataBean detailsBean) {
         this.mContext = context;
         this.mLayoutInflater = LayoutInflater.from(mContext);
         this.mFreeDetailsBean = detailsBean;
@@ -60,30 +77,59 @@ public class FreeDetailsAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof FreeDetailsPhotoViewHolder) {
             FreeDetailsPhotoViewHolder viewHolder = (FreeDetailsPhotoViewHolder) holder;
-            viewHolder.mLinearLayout.setEnabled(false);
-            viewHolder.mLinearLayout.addView(new Advertisements(mContext, true, LayoutInflater.from(mContext), 20000).initView(mFreeDetailsBean.getJSONArray()));
+//            viewHolder.mLinearLayout.setEnabled(false);
+            JSONArray jsonArray = new JSONArray();
+            JSONObject head_img;
+            int size = mFreeDetailsBean.getCommodityUrls().size();
+            for (int i = 0; i < size; i++) {
+                try {
+                    head_img = new JSONObject();
+                    head_img.put("head_img", mFreeDetailsBean.getCommodityUrls().get(i).getPhotoUrl());
+                    jsonArray.put(head_img);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            Advertisements advertisements = new Advertisements(mContext, true, LayoutInflater.from(mContext), 20000);
+            viewHolder.mLinearLayout.addView(advertisements
+                    .initView(jsonArray));
+            if (size <= 1) {
+                advertisements.setShowPoint(false);
+            }
+            if (mOnItemClickListener != null) {
+                advertisements.setOnItemClickListener(mOnItemClickListener);
+            }
         } else if (holder instanceof FreeDetailsNameViewHolder) {
             FreeDetailsNameViewHolder viewHolder = (FreeDetailsNameViewHolder) holder;
             viewHolder.mTextView.setText(mFreeDetailsBean.getName());
         } else if (holder instanceof FreeDetailsTime1ViewHolder) {
             FreeDetailsTime1ViewHolder viewHolder = (FreeDetailsTime1ViewHolder) holder;
-            if (mFreeDetailsBean.getType() == FreeCommodityBean.TYPE_BE_BEING_APPLY_NOT ||
-                    mFreeDetailsBean.getType() == FreeCommodityBean.TYPE_BE_BEING_APPLY_OK) {
+            if (mFreeDetailsBean.getType().equals(String.valueOf(FreeCommodityBean.TYPE_BE_BEING_APPLY_NOT)) ||
+                    mFreeDetailsBean.getType().equals(String.valueOf(FreeCommodityBean.TYPE_BE_BEING_APPLY_OK))) {
                 viewHolder.ll2.setVisibility(View.VISIBLE);
                 viewHolder.ll1.setVisibility(View.GONE);
                 viewHolder.ll3.setVisibility(View.GONE);
-            } else if (mFreeDetailsBean.getType() == FreeCommodityBean.TYPE_START_BEFORE) {
+                viewHolder.mCountdownView_start.setVisibility(View.GONE);
+                viewHolder.mCountdownView_end.setVisibility(View.VISIBLE);
+                viewHolder.mCountdownView_end.start(TimeUtils.countDownTime(mFreeDetailsBean.getTime(), TimeUtils.timeStamp()));
+            } else if (mFreeDetailsBean.getType().equals(String.valueOf(FreeCommodityBean.TYPE_START_BEFORE))) {
                 viewHolder.ll2.setVisibility(View.GONE);
                 viewHolder.ll1.setVisibility(View.VISIBLE);
                 viewHolder.ll3.setVisibility(View.GONE);
-            } else if (mFreeDetailsBean.getType() == FreeCommodityBean.TYPE_FINISH) {
+                viewHolder.mCountdownView_end.setVisibility(View.GONE);
+                viewHolder.mCountdownView_start.setVisibility(View.VISIBLE);
+                viewHolder.mCountdownView_start.start(TimeUtils.countDownTime(mFreeDetailsBean.getTime(), TimeUtils.timeStamp()));
+            } else if (mFreeDetailsBean.getType().equals(String.valueOf(FreeCommodityBean.TYPE_FINISH))) {
                 viewHolder.ll2.setVisibility(View.GONE);
                 viewHolder.ll1.setVisibility(View.GONE);
                 viewHolder.ll3.setVisibility(View.VISIBLE);
+                viewHolder.mCountdownView_end.setVisibility(View.GONE);
+                viewHolder.mCountdownView_start.setVisibility(View.GONE);
             }
-
+            Logger.d("DetailsType:" + mFreeDetailsBean.getType() + "time:" + mFreeDetailsBean.getTime()
+                    + "count:" + TimeUtils.countDownTime(mFreeDetailsBean.getTime(), TimeUtils.timeStamp()));
             viewHolder.tv_limitNum.setText(mFreeDetailsBean.getLimitNum() + "");
-            viewHolder.tv_peopleNum.setText(mFreeDetailsBean.getPeopleNum() + "");
+            viewHolder.tv_peopleNum.setText(mFreeDetailsBean.getApplyNum() + "");
             viewHolder.tv_price.setText(mFreeDetailsBean.getPrice() + "");
             viewHolder.tv_price.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
@@ -93,7 +139,11 @@ public class FreeDetailsAdapter extends RecyclerView.Adapter {
             FreeDetailsInfoTitleViewHolder viewHolder = (FreeDetailsInfoTitleViewHolder) holder;
         } else if (holder instanceof FreeDetailsInfoViewHolder) {
             FreeDetailsInfoViewHolder viewHolder = (FreeDetailsInfoViewHolder) holder;
-            viewHolder.info.setImageResource(mFreeDetailsBean.getSrcs().get(position - MAX_HEAD));
+            String photoUrl = mFreeDetailsBean.getBriefUrls().get(position - MAX_HEAD);
+            if (!photoUrl.equals("")) {
+                photoUrl += PhotoPathUtil.WIDTH_640;
+            }
+            Glide.with(mContext).load(photoUrl).placeholder(R.drawable.details_720x700).into(viewHolder.info);
         }
     }
 
@@ -116,7 +166,12 @@ public class FreeDetailsAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return mFreeDetailsBean.getSrcs().size() + MAX_HEAD;
+        return mFreeDetailsBean.getBriefUrls().size() + MAX_HEAD;
+    }
+
+    @Override
+    public void onClickListener(View view, int position) {
+
     }
 
     class FreeDetailsPhotoViewHolder extends RecyclerView.ViewHolder {
@@ -142,15 +197,16 @@ public class FreeDetailsAdapter extends RecyclerView.Adapter {
         TextView tv_peopleNum;
         TextView tv_price;
 
-        TextView mTextView1;
         TextView mTextView2;
         TextView mTextView3;
-        TextView mTextView4;
         TextView mTextView5;
 
         LinearLayout ll1;
         LinearLayout ll2;
         LinearLayout ll3;
+        CountdownView mCountdownView_start;
+        CountdownView mCountdownView_end;
+
 
         public FreeDetailsTime1ViewHolder(View itemView) {
             super(itemView);
@@ -159,14 +215,14 @@ public class FreeDetailsAdapter extends RecyclerView.Adapter {
             tv_peopleNum = (TextView) itemView.findViewById(R.id.free_details_peopleNum);
             tv_price = (TextView) itemView.findViewById(R.id.free_details_price);
 
-            mTextView1 = (TextView) itemView.findViewById(R.id.free_details_time1);
             mTextView2 = (TextView) itemView.findViewById(R.id.free_details_time2);
             mTextView3 = (TextView) itemView.findViewById(R.id.free_details_time3);
-            mTextView4 = (TextView) itemView.findViewById(R.id.free_details_time4);
             mTextView5 = (TextView) itemView.findViewById(R.id.free_details_time5);
             ll1 = (LinearLayout) itemView.findViewById(R.id.free_details_ll1);
             ll2 = (LinearLayout) itemView.findViewById(R.id.free_details_ll2);
             ll3 = (LinearLayout) itemView.findViewById(R.id.free_details_ll3);
+            mCountdownView_start = (CountdownView) itemView.findViewById(R.id.free_details_CountDown_start);
+            mCountdownView_end = (CountdownView) itemView.findViewById(R.id.free_details_CountDown_end);
         }
     }
 

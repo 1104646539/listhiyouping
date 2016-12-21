@@ -60,7 +60,6 @@ public class FreeDetailsActivity extends BaseActivity implements View.OnClickLis
             }
 
         });
-
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

@@ -11,6 +11,9 @@ import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.base.BaseActivity;
 import com.lishi.baijiaxing.view.TopNavigationBar;
 
+/**
+ *修改密码
+ */
 public class EditPasswordActivity extends BaseActivity implements View.OnClickListener {
     private EditText ed_oldPassword, ed_newPassword, ed_confirmPassword;
     private TextView confirm;

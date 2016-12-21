@@ -36,10 +36,6 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\item_recycle.png",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-hdpi\\item_recycle.png"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_listview_headview_red_arrow.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-hdpi\\common_listview_headview_red_arrow.png"
     },

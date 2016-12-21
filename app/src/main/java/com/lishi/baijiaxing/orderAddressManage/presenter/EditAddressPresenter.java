@@ -1,26 +1,15 @@
 package com.lishi.baijiaxing.orderAddressManage.presenter;
 
 import com.lishi.baijiaxing.bean.DeliveryAddressBean;
+import com.lishi.baijiaxing.orderAddressManage.model.AddressList;
 
 /**
  * Created by Administrator on 2016/8/22.
  */
 public interface EditAddressPresenter {
-    void changeAddress(DeliveryAddressBean deliveryAddressBean);
+    void changeAddress(AddressList.DataBean dataBean);
 
-    void deleteAddress(DeliveryAddressBean deliveryAddressBean);
+    void deleteAddress(AddressList.DataBean dataBean);
 
-    void addAddress(DeliveryAddressBean deliveryAddressBean);
-
-    void onChangeAddressSuccess();
-
-    void onChangeAddressFailed();
-
-    void onDeleteAddressSuccess();
-
-    void onDeleteAddressFailed();
-
-    void onAddAddressSuccess();
-
-    void onAddAddressFailed();
+    void addAddress(AddressList.DataBean dataBean);
 }

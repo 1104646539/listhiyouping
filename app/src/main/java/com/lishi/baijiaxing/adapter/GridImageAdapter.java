@@ -42,7 +42,7 @@ public class GridImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         GridImageViewHolder holder = null;
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_image, null, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_image, parent, false);
             holder = new GridImageViewHolder();
             holder.iv = (ImageView) convertView.findViewById(R.id.iv_image);
             convertView.setTag(holder);

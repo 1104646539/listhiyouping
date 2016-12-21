@@ -9,10 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
 import com.lishi.baijiaxing.free.model.FreeCommodityBean;
+import com.lishi.baijiaxing.free.model.FreeList;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 免费领Grid
@@ -20,7 +22,7 @@ import java.util.ArrayList;
  */
 public class FreeFragmentGridAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private ArrayList<FreeCommodityBean> mFreeCommodityBeen;
+    private List<FreeList.DataBean> mFreeCommodityBeen;
     private LayoutInflater mLayoutInflater;
     private OnFreeGridItemClick monFreeGridClickLister;
 
@@ -28,7 +30,7 @@ public class FreeFragmentGridAdapter extends RecyclerView.Adapter {
         this.monFreeGridClickLister = monFreeGridClickLister;
     }
 
-    public FreeFragmentGridAdapter(Context context, ArrayList<FreeCommodityBean> freeCommodityBeen) {
+    public FreeFragmentGridAdapter(Context context, List<FreeList.DataBean> freeCommodityBeen) {
         this.mContext = context;
         this.mFreeCommodityBeen = freeCommodityBeen;
         this.mLayoutInflater = LayoutInflater.from(mContext);
@@ -42,13 +44,14 @@ public class FreeFragmentGridAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         int type = getItemViewType(position);
-        FreeCommodityBean fcb = mFreeCommodityBeen.get(position);
+        FreeList.DataBean fcb = mFreeCommodityBeen.get(position);
         final FreeGridViewHolder viewHolder = (FreeGridViewHolder) holder;
-        viewHolder.iv_photo.setImageResource(R.drawable.free_grid_photo);
+//        viewHolder.iv_photo.setImageResource(R.drawable.free_grid_photo);
+        Glide.with(mContext).load(fcb.getPotpUrl()).into(viewHolder.iv_photo);
         viewHolder.tv_title.setText(fcb.getName());
         viewHolder.tv_price.setText("￥" + fcb.getPrice() + "");
         viewHolder.tv_limitNum.setText("限量" + fcb.getLimitNum() + "件");
-        viewHolder.tv_peopleNum.setText(fcb.getPeopleNum() + "人已申请");
+        viewHolder.tv_peopleNum.setText(fcb.getApplyNum() + "人已申请");
         if (type == FreeCommodityBean.TYPE_BE_BEING_APPLY_NOT) {
             viewHolder.tv_state.setText("立即申请");
             viewHolder.tv_state.setBackgroundResource(R.drawable.tv_background_red);
@@ -82,7 +85,7 @@ public class FreeFragmentGridAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemViewType(int position) {
-        int type = mFreeCommodityBeen.get(position).getType();
+        int type = Integer.valueOf(mFreeCommodityBeen.get(position).getType());
         return type;
     }
 

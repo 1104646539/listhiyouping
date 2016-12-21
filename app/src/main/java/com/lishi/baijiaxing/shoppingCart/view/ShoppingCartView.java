@@ -3,6 +3,9 @@ package com.lishi.baijiaxing.shoppingCart.view;
 import com.lishi.baijiaxing.base.BaseView;
 import com.lishi.baijiaxing.shoppingCart.model.CommodityBean;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
+import com.lishi.baijiaxing.shoppingCart.model.SCCommodityList;
+import com.lishi.baijiaxing.shoppingCart.model.SCOperation;
+import com.lishi.baijiaxing.shoppingCart.model.SCRecommendList;
 import com.lishi.baijiaxing.shoppingCart.model.ShoppingBean;
 
 import java.util.ArrayList;
@@ -10,20 +13,28 @@ import java.util.ArrayList;
 /**
  * Created by Administrator on 2016/8/17.
  */
-public interface ShoppingCartView extends BaseView<ShoppingBean> {
-    void onAddDataSuccess(ArrayList<CommodityBean> commodityBeen);
-
-    void onAddDataFailed(String error);
-
-    void onPullLoadDataSuccess(ArrayList<HomeRecommendBean> homeRecommend);
+public interface ShoppingCartView extends BaseView {
+    void onPullLoadDataSuccess(SCRecommendList recommendList);
 
     void onPullLoadDataFailed(String error);
 
-    void onDeleteDataSuccess(ArrayList<CommodityBean> commodityBeen);
+    void onRemoveDataSuccess(SCOperation operation);
 
-    void onDeleteDataFailed(String error);
+    void onRemoveDataFailed(String error);
 
-    void onChangeStoreSuccess(ArrayList<CommodityBean> commodityBeen);
+    void onLoadCommoditySuccess(SCCommodityList scCommodityList);
 
-    void onChangeStoreFailed(String error);
+    void onLoadRecommendSuccess(SCRecommendList scRecommendList);
+
+    void onLoadCommodityFailed(String error);
+
+    void onLoadRecommendFailed(String error);
+
+    void onChangeCommoditySuccess(SCOperation scOperation);
+
+    void onChangeCommodityFailed(String error);
+
+    void upCommodityInfoSuccess(SCCommodityList scCommodityList);
+
+    void upCommodityInfoFailed(String error);
 }

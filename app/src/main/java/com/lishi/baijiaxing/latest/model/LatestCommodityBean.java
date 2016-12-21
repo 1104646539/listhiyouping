@@ -8,14 +8,14 @@ import com.lishi.baijiaxing.base.BaseBean;
 public class LatestCommodityBean extends BaseBean {
     private String name;
     private String photoUrl;
-    private String cid;
+    private String gid;
     private String price;
     private String brief;
 
     public LatestCommodityBean(String name, String photoUrl, String cid, String price, String brief) {
         this.name = name;
         this.photoUrl = photoUrl;
-        this.cid = cid;
+        this.gid = cid;
         this.price = price;
         this.brief = brief;
     }
@@ -37,11 +37,11 @@ public class LatestCommodityBean extends BaseBean {
     }
 
     public String getCid() {
-        return cid;
+        return gid;
     }
 
     public void setCid(String cid) {
-        this.cid = cid;
+        this.gid = cid;
     }
 
     public String getPrice() {

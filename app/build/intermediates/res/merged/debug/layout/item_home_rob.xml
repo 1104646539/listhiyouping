@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_robitem_img"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_seckill_height"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/item_recycle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/iv_robitem_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:src="@drawable/item_recycle"/>
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_robitem_price"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
             android:gravity="center_horizontal"
             android:text="￥168"
-            android:textColor="@color/text_red"/>
+            android:textColor="@color/text_red"
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/tv_robitem_price_rob"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="￥245"
-            android:textColor="#55000000"/>
+            android:textColor="#55000000"
+            android:textSize="12sp"/>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
