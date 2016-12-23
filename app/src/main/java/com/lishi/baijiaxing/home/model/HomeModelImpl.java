@@ -8,6 +8,8 @@ import com.lishi.baijiaxing.base.BaseModel;
 import com.lishi.baijiaxing.home.HomeCallBack;
 import com.lishi.baijiaxing.home.network.HomeService;
 import com.lishi.baijiaxing.bean.HomeRecommendBean;
+import com.lishi.baijiaxing.utils.Status;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,7 @@ import rx.schedulers.Schedulers;
  */
 public class HomeModelImpl extends BaseModel implements HomeModel {
     private HomeService mHomeService;
-    private int page = 1;
+    private int mPage = 1;
     private boolean isPrepare = true;
 
     public HomeModelImpl() {
@@ -30,7 +32,8 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
 
     @Override
     public void pullRecommendData(final HomeCallBack callBack) {
-        mHomeService.pullToRefresh("sucpList", String.valueOf(++page)).subscribeOn(Schedulers.io())
+
+        mHomeService.pullToRefresh("sucpList", String.valueOf(mPage + 1)).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<Commodity>() {
                     @Override
@@ -40,17 +43,26 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        page--;
                         callBack.pullToRefreshFailed(e.toString());
                     }
 
                     @Override
                     public void onNext(Commodity commodities) {
-                        callBack.pullToRefreshSuccess(commodities.getData());
+                        if (commodities.getStatus().equals(Status.STATUS_GETUSERINFO_SUCCESS)) {
+                            mPage += 1;
+                            if (commodities.getData().getPageNum().equals(String.valueOf(mPage))) {
+                                callBack.onLastPage(commodities.getMsg());
+                            } 
+                            callBack.pullToRefreshSuccess(commodities.getData().getCommodityList());
+                            Logger.d("status:"+commodities.getStatus()+"getPageNum:"+commodities.getData().getPageNum()+"mPage:"+mPage);
+                        } else {
+                            callBack.pullToRefreshFailed(commodities.getMsg());
+                        }
                     }
                 });
     }
 
+    
     @Override
     public void getAdList(final HomeCallBack callBack) {
         mHomeService.getAdList("adList").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -61,7 +73,8 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.i("getAdList", "失败数据" + e.toString());callBack.getAdListFailed(e.toString());
+                        Log.i("getAdList", "失败数据" + e.toString());
+                        callBack.getAdListFailed(e.toString());
                     }
 
                     @Override
@@ -84,7 +97,8 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.i("getFestival", "失败数据" + e.toString());callBack.getFestivalFailed(e.toString());
+                        Log.i("getFestival", "失败数据" + e.toString());
+                        callBack.getFestivalFailed(e.toString());
                     }
 
                     @Override
@@ -106,7 +120,8 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.i("getSeckill", "失败数据" + e.toString());callBack.getSeckillFailed(e.toString());
+                        Log.i("getSeckill", "失败数据" + e.toString());
+                        callBack.getSeckillFailed(e.toString());
                     }
 
                     @Override
@@ -131,17 +146,18 @@ public class HomeModelImpl extends BaseModel implements HomeModel {
                         Log.i("加载失败", "失败数据" + e.toString());
                         if (isPrepare) {
                             isPrepare = false;
-                        }callBack.getCommodityListFailed(e.toString());
+                        }
+                        callBack.getCommodityListFailed(e.toString());
                     }
 
                     @Override
                     public void onNext(Commodity commodity) {
-                        callBack.getCommodityListSuccess(commodity.getData());
+                        callBack.getCommodityListSuccess(commodity.getData().getCommodityList());
                         Log.i("getCommodityList", "成功数据" + commodity.toString() + "size" + commodity.getMsg());
                         if (isPrepare) {
                             isPrepare = false;
                         } else {
-                            page = 1;
+                            mPage = 1;
                         }
                     }
                 });

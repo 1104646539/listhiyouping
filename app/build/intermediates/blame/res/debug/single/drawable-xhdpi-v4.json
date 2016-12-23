@@ -76,12 +76,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info4.jpg",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info4.jpg"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_back.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.yuyh.imgsel\\library\\1.2.0\\res\\drawable-xhdpi-v4\\ic_back.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\free_details_info4.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\free_details_info4.jpg"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\latest_item_head.jpg",
@@ -162,6 +162,10 @@
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\details720.jpg",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\drawable-xhdpi\\details720.jpg"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\home_commodity_349x256.jpg",

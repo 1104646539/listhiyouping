@@ -27,7 +27,7 @@ public class HomePresenterImpl<T, V extends BaseView> extends BasePresenter impl
     }
 
     @Override
-    public void pullToRefreshSuccess(List<Commodity.DataBean> data) {
+    public void pullToRefreshSuccess(List<Commodity.DataBean.CommodityListBean> data) {
         mHomeView.onPullSuccess(data);
     }
 
@@ -53,7 +53,7 @@ public class HomePresenterImpl<T, V extends BaseView> extends BasePresenter impl
     }
 
     @Override
-    public void getCommodityListSuccess(List<Commodity.DataBean> commodities) {
+    public void getCommodityListSuccess(List<Commodity.DataBean.CommodityListBean> commodities) {
         mHomeView.getCommodityListSuccess(commodities);
         mHomeView.closeDialog();
     }
@@ -76,6 +76,11 @@ public class HomePresenterImpl<T, V extends BaseView> extends BasePresenter impl
     @Override
     public void getCommodityListFailed(String error) {
         mHomeView.getCommodityListFailed(error); mHomeView.closeDialog();
+    }
+
+    @Override
+    public void onLastPage(String status) {
+        mHomeView.onLastPage(status);
     }
 
     @Override

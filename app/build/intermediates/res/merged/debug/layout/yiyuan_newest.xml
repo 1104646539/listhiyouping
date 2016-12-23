@@ -4,8 +4,19 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView_yiyuan_newest"
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/springView_Lottery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_yiyuan_newest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>-->
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/listView_yiyuan_newest"
+            android:transcriptMode="disabled"
+            android:layout_height="match_parent"></ListView>
+    </com.liaoinstan.springview.widget.SpringView>
 </LinearLayout>

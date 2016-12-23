@@ -9,22 +9,25 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.yiyuan.model.LotteryList;
 import com.lishi.baijiaxing.yiyuan.model.YiYuanHotBean;
 import com.lishi.baijiaxing.yiyuan.model.YiYuanNewestBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/21.
  */
 public class YiYuanNewestAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private ArrayList<YiYuanNewestBean> mYiYuanNewestBeans;
+    private List<LotteryList.DataBean.CommodityListBean> mYiYuanNewestBeans;
     private LayoutInflater mLayoutInflater;
     private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
 
-    public YiYuanNewestAdapter(Context context, ArrayList<YiYuanNewestBean> yiYuanNewestBeen) {
+    public YiYuanNewestAdapter(Context context, List<LotteryList.DataBean.CommodityListBean> yiYuanNewestBeen) {
         this.mContext = context;
         this.mYiYuanNewestBeans = yiYuanNewestBeen;
         this.mLayoutInflater = LayoutInflater.from(mContext);
@@ -43,14 +46,14 @@ public class YiYuanNewestAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof YiYuanNewestViewHolder) {
             YiYuanNewestViewHolder viewHolder = (YiYuanNewestViewHolder) holder;
-            YiYuanNewestBean yiYuanNewestBean = mYiYuanNewestBeans.get(position);
+            LotteryList.DataBean.CommodityListBean yiYuanNewestBean = mYiYuanNewestBeans.get(position);
 
             viewHolder.iv_photo.setImageResource(R.drawable.yiyuan_hot_photo);
             viewHolder.tv_name.setText(yiYuanNewestBean.getName());
-            viewHolder.tv_num.setText("" + yiYuanNewestBean.getNum());
-            viewHolder.tv_winningName.setText(yiYuanNewestBean.getWinningName());
-            viewHolder.tv_winningNum.setText("" + yiYuanNewestBean.getWinningNum());
-
+            viewHolder.tv_num.setText(yiYuanNewestBean.getOoid());
+            viewHolder.tv_winningName.setText(yiYuanNewestBean.getWinningUser());
+//            viewHolder.tv_winningNum.setText("" + yiYuanNewestBean.getWinningNum());
+            Glide.with(mContext).load(yiYuanNewestBean.getPhotoUrl()).into(viewHolder.iv_photo);
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

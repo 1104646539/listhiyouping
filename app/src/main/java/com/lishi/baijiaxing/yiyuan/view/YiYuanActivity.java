@@ -43,7 +43,25 @@ public class YiYuanActivity extends BaseActivity {
         mFreagment.add(Fragment_YiYuanNewest.newInstance());
 
         mViewPager.setAdapter(new YiYuanAdapter(getSupportFragmentManager(), mFreagment, new String[]{"热门抢购", "最新揭晓"}));
+        mViewPager.setCurrentItem(0);
+        mViewPager.setOffscreenPageLimit(1);
         mTabLayout.setupWithViewPager(mViewPager);
+        mTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         mTopNavigationBar.setOnTopClick(new TopNavigationBar.OnTopClick() {
             @Override

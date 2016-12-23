@@ -50,7 +50,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    private List<Commodity.DataBean> mCommodity;
+    private List<Commodity.DataBean.CommodityListBean> mCommodity;
     private YiYuanHotAdapter.OnItemClickListener mOnItemClickListener;
     private String headUrl = "http://risevip.oss-cn-shenzhen.aliyuncs.com";
 
@@ -58,7 +58,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         mOnItemClickListener = onItemClickListener;
     }
 
-    public HomeAdapter(Context context, List<Commodity.DataBean> commodity) {
+    public HomeAdapter(Context context, List<Commodity.DataBean.CommodityListBean> commodity) {
         this.mContext = context;
         this.mLayoutInflater = LayoutInflater.from(mContext);
         this.mCommodity = commodity;
@@ -92,7 +92,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             if (holder instanceof HolderTypeYiYuan) {
                 HolderTypeYiYuan mHolderTypeYiYuan = (HolderTypeYiYuan) holder;
                 int pos = getYiYuanPosition(position);
-                Commodity.DataBean commodity = mCommodity.get(pos);
+                Commodity.DataBean.CommodityListBean commodity = mCommodity.get(pos);
                 mHolderTypeYiYuan.mName.setText(commodity.getName().length() > 7 ? commodity.getName().length() > 7 ? commodity.getName().substring(0, 7) : commodity.getName() : commodity.getName());
                 String path = commodity.getPhotoUrl();
                 if (!path.contains("http")) {
@@ -120,7 +120,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             } else if (holder instanceof HolderTypeCommodity1) {
                 HolderTypeCommodity1 mHolderTypeCommodity1 = (HolderTypeCommodity1) holder;
                 final int pos = getHolderTypeCommodity(position);
-                Commodity.DataBean commodity = mCommodity.get(pos);
+                Commodity.DataBean.CommodityListBean commodity = mCommodity.get(pos);
                 String path = commodity.getPhotoUrl();
                 if (!path.contains("http")) {
                     path = path.substring(1, path.length());
@@ -133,7 +133,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 mHolderTypeCommodity1.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String gid = mCommodity.get(pos).getCid();
+                        String gid = mCommodity.get(pos).getGid();
                         if (gid != null && !gid.equals("0")) {
                             if (mOnItemClickListener != null) {
                                 mOnItemClickListener.onClickListener(v, pos);
@@ -144,7 +144,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             } else if (holder instanceof HolderTypeCommodity2) {
                 HolderTypeCommodity2 mHolderTypeCommodity2 = (HolderTypeCommodity2) holder;
                 final int pos = getHolderTypeCommodity(position);
-                Commodity.DataBean commodity = mCommodity.get(pos);
+                Commodity.DataBean.CommodityListBean commodity = mCommodity.get(pos);
                 String path = commodity.getPhotoUrl();
                 if (!path.contains("http")) {
                     path = path.substring(1, path.length());
@@ -160,7 +160,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 mHolderTypeCommodity2.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String gid = mCommodity.get(pos).getCid();
+                        String gid = mCommodity.get(pos).getGid();
                         if (gid != null && !gid.equals("0")) {
                             if (mOnItemClickListener != null) {
                                 mOnItemClickListener.onClickListener(v, pos);
@@ -171,7 +171,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             } else if (holder instanceof HolderTypeCommodityTitle) {
                 HolderTypeCommodityTitle mHolderTypeCommodityTitle = (HolderTypeCommodityTitle) holder;
                 final int pos = getHolderTypeTitle(position);
-                Commodity.DataBean commodity = mCommodity.get(pos);
+                Commodity.DataBean.CommodityListBean commodity = mCommodity.get(pos);
                 String path = commodity.getPhotoUrl();
                 if (!path.contains("http")) {
                     path = path.substring(1, path.length());
@@ -183,7 +183,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     @Override
                     public void onClick(View v) {
                         Intent startCommodityDetailsActivity = new Intent(mContext, CommodityDetailsActivity.class);
-                        String gid = mCommodity.get(pos).getCid();
+                        String gid = mCommodity.get(pos).getGid();
                         startCommodityDetailsActivity.putExtra("gid",gid);
                         if (gid != null && !gid.equals("0")) {
                             mContext.startActivity(startCommodityDetailsActivity);

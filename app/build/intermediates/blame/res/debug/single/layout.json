@@ -16,12 +16,12 @@
         "source": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_details_item6.xml",
-        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\customize_details_item6.xml"
-    },
-    {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_deliveryaddress.xml",
         "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\item_deliveryaddress.xml"
+    },
+    {
+        "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\customize_details_item6.xml",
+        "source": "D:\\lsGit\\listhiyouping\\app\\src\\main\\res\\layout\\customize_details_item6.xml"
     },
     {
         "merged": "D:\\lsGit\\listhiyouping\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_yiyuan_newest.xml",

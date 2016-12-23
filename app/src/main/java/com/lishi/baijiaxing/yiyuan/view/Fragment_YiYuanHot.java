@@ -14,27 +14,25 @@ import com.lishi.baijiaxing.base.BaseFragmentV4;
 import com.lishi.baijiaxing.base.BaseView;
 import com.lishi.baijiaxing.utils.DividerItemDecoration;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
+import com.lishi.baijiaxing.yiyuan.model.HotList;
 import com.lishi.baijiaxing.yiyuan.model.YiYuanHotBean;
 import com.lishi.baijiaxing.yiyuan.presenter.YiYuanHotPresenterImpl;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 
 /**
  * Created by Administrator on 2016/10/21.
  */
-public class Fragment_YiYuanHot extends BaseFragmentV4 implements BaseView<ArrayList<YiYuanHotBean>> {
+public class Fragment_YiYuanHot extends BaseFragmentV4 implements YiYuanHotView {
     private View mView;
     private boolean isPrepare;
-    private static Fragment_YiYuanHot mFragment_YiYuanHot;
-    private ArrayList<YiYuanHotBean> mYiYuanHotBeans;
+    private HotList mHotList;
     private RecyclerView mRecyclerView;
     private YiYuanHotPresenterImpl mYiYuanHotPresenter;
 
     public static Fragment_YiYuanHot newInstance() {
-        if (mFragment_YiYuanHot == null) {
-            mFragment_YiYuanHot = new Fragment_YiYuanHot();
-        }
-        return mFragment_YiYuanHot;
+        return new Fragment_YiYuanHot();
     }
 
 
@@ -67,7 +65,7 @@ public class Fragment_YiYuanHot extends BaseFragmentV4 implements BaseView<Array
         LinearLayoutManager manager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
-        YiYuanHotAdapter adapter = new YiYuanHotAdapter(getActivity(), mYiYuanHotBeans);
+        YiYuanHotAdapter adapter = new YiYuanHotAdapter(getActivity(), mHotList.getData());
         mRecyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new YiYuanHotAdapter.OnItemClickListener() {
@@ -78,7 +76,6 @@ public class Fragment_YiYuanHot extends BaseFragmentV4 implements BaseView<Array
                 startActivity(startYiYuanDetailsActivity);
             }
         });
-
     }
 
     private void findId() {
@@ -103,13 +100,27 @@ public class Fragment_YiYuanHot extends BaseFragmentV4 implements BaseView<Array
     }
 
     @Override
-    public void loadDataSuccess(ArrayList<YiYuanHotBean> data) {
-        mYiYuanHotBeans = data;
-        initView();
+    public void loadDataSuccess(Object data) {
+
     }
 
     @Override
     public void loadDataFailed(String error) {
+
+    }
+
+    @Override
+    public void loadHotListSuccess(HotList hotList) {
+        mHotList = hotList;
+        Logger.d("status:"+hotList.getStatus()+"msg:"+hotList.getMsg()+"hotlist:"+hotList.getData());
+        if (mHotList.getData() == null||mHotList.getData().size()==0) {
+            return;
+        }
+        initView();
+    }
+
+    @Override
+    public void loadHotListFailed(String error) {
 
     }
 }

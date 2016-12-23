@@ -53,7 +53,7 @@ public class FragmentDetailsAdapter extends RecyclerView.Adapter {
         this.mContext = context;
         this.mLayoutInflater = LayoutInflater.from(mContext);
         requestBuidler = Glide.with(mContext).from(GlideUrl.class)
-                .asBitmap().dontAnimate().diskCacheStrategy(DiskCacheStrategy.SOURCE).skipMemoryCache(false);
+                .asBitmap().dontAnimate().diskCacheStrategy(DiskCacheStrategy.RESULT).skipMemoryCache(false);
         screenWidth = ((Activity) mContext).getWindowManager().getDefaultDisplay().getWidth();
     }
 
@@ -103,9 +103,9 @@ public class FragmentDetailsAdapter extends RecyclerView.Adapter {
                 if (!photoUrl.equals("")) {
                     photoUrl += PhotoPathUtil.getInstance().WIDTH_640;
                 }
-                Glide.with(mContext).load(photoUrl).placeholder(R.drawable.details_720x700)
+                requestBuidler.load(new GlideUrl(photoUrl)).placeholder(R.drawable.details720)
                         .into(viewHolder.photo);
-                
+
             } else if (holder instanceof FragmentDetails2ViewHolder) {
                 FragmentDetails2ViewHolder viewHolder = (FragmentDetails2ViewHolder) holder;
                 viewHolder.name.setText(mCommodityDetailsBeen.getName());
@@ -131,9 +131,9 @@ public class FragmentDetailsAdapter extends RecyclerView.Adapter {
                 if (!photoUrl.equals("")) {
                     photoUrl += PhotoPathUtil.getInstance().WIDTH_640;
                 }
-                Glide.with(mContext).load(photoUrl).placeholder(R.drawable.details_720x700)
+                requestBuidler.load(new GlideUrl(photoUrl)).placeholder(R.drawable.details720)
                         .into(viewHolder.brief);
-                
+
 //                requestBuidler.load(new GlideUrl(mCommodityDetailsBeen.getBriefUrls().get(position - OtherVALUE))).placeholder(R.drawable.details_720x700)
 //                        .into(new SimpleTarget<Bitmap>(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL) {
 //

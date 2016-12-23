@@ -10,21 +10,24 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lishi.baijiaxing.R;
+import com.lishi.baijiaxing.yiyuan.model.HotList;
 import com.lishi.baijiaxing.yiyuan.model.YiYuanHotBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/21.
  */
 public class YiYuanHotAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private ArrayList<YiYuanHotBean> mYiYuanHotBeens;
+    private List<HotList.DataBean> mYiYuanHotBeens;
     private LayoutInflater mLayoutInflater;
     private OnItemClickListener mOnItemClickListener;
 
-    public YiYuanHotAdapter(Context context, ArrayList<YiYuanHotBean> yiYuanHotBeen) {
+    public YiYuanHotAdapter(Context context, List<HotList.DataBean> yiYuanHotBeen) {
         this.mContext = context;
         this.mYiYuanHotBeens = yiYuanHotBeen;
         this.mLayoutInflater = LayoutInflater.from(mContext);
@@ -43,7 +46,7 @@ public class YiYuanHotAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof YiYuanHotViewHolder) {
             YiYuanHotViewHolder viewHolder = (YiYuanHotViewHolder) holder;
-            YiYuanHotBean yiYuanHotBean = mYiYuanHotBeens.get(position);
+            HotList.DataBean yiYuanHotBean = mYiYuanHotBeens.get(position);
 
             viewHolder.iv_photo.setImageResource(R.drawable.yiyuan_hot_photo);
             viewHolder.tv_name.setText(yiYuanHotBean.getName());
@@ -51,6 +54,7 @@ public class YiYuanHotAdapter extends RecyclerView.Adapter {
             viewHolder.tv_progress.setText(progress + "%");
             viewHolder.mProgressBar.setMax(100);
             viewHolder.mProgressBar.setProgress(progress);
+            Glide.with(mContext).load(yiYuanHotBean.getPhotoUrl()).into(viewHolder.iv_photo);
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -63,9 +67,9 @@ public class YiYuanHotAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private int countProgress(YiYuanHotBean yiYuanHotBean) {
-        int max = yiYuanHotBean.getMax_num();
-        int now = yiYuanHotBean.getNow_num();
+    private int countProgress(HotList.DataBean yiYuanHotBean) {
+        int max = Integer.valueOf(yiYuanHotBean.getMaxNum());
+        int now = Integer.valueOf(yiYuanHotBean.getNowNum());
         float progress = (now * 100 / max);
         return (int) progress;
     }

@@ -13,11 +13,10 @@ import java.util.List;
 public class FreeDetails implements Parcelable {
 
 
-   
- /**
+    /**
      * status : 200
      * msg : 请求数据成功
-     * data : {"commodityUrls":[{"photoUrl":"http://risevip.oss-cn-shenzhen.aliyuncs.com/Uploads/goods/201610/goods_img/6346_P_1476901941250.jpg"}],"name":"《52个生活小妙招》周历 2017年保险办公记事本周历 挂历 加印LOGO 礼品定制","applyNum":"250","price":"18.00","limitNum":"10","type":2,"time":"1482422399","gid":"6346","zid":"12","briefUrls":["http://www.risevip.com/Public/admin/js/ueditor/php/../../../bdimages/upload1/20161020/1476930775360143.gif"]}
+     * data : {"commodityUrls":[{"photoUrl":"http://risevip.oss-cn-shenzhen.aliyuncs.com/Uploads/goods/201610/goods_img/6346_P_1476901941250.jpg"}],"name":"《52个生活小妙招》周历 2017年保险办公记事本周历 挂历 加印LOGO 礼品定制","applyNum":"250","price":"18.00","limitNum":"10","type":2,"time":"1482422399","gid":"6346","form":"2","briefUrls":["http://www.risevip.com/Public/admin/js/ueditor/php/../../../bdimages/upload1/20161020/1476930775360143.gif"],"zid":"33"}
      */
 
     private String status;
@@ -58,8 +57,9 @@ public class FreeDetails implements Parcelable {
          * type : 2
          * time : 1482422399
          * gid : 6346
-         * zid : 12
+         * form : 2
          * briefUrls : ["http://www.risevip.com/Public/admin/js/ueditor/php/../../../bdimages/upload1/20161020/1476930775360143.gif"]
+         * zid : 33
          */
 
         private String name;
@@ -69,6 +69,7 @@ public class FreeDetails implements Parcelable {
         private String type;
         private String time;
         private String gid;
+        private String form;
         private String zid;
         private List<CommodityUrlsBean> commodityUrls;
         private List<String> briefUrls;
@@ -129,6 +130,14 @@ public class FreeDetails implements Parcelable {
             this.gid = gid;
         }
 
+        public String getForm() {
+            return form;
+        }
+
+        public void setForm(String form) {
+            this.form = form;
+        }
+
         public String getZid() {
             return zid;
         }
@@ -153,7 +162,7 @@ public class FreeDetails implements Parcelable {
             this.briefUrls = briefUrls;
         }
 
-        public static class CommodityUrlsBean {
+        public static class CommodityUrlsBean implements Parcelable {
             /**
              * photoUrl : http://risevip.oss-cn-shenzhen.aliyuncs.com/Uploads/goods/201610/goods_img/6346_P_1476901941250.jpg
              */
@@ -167,9 +176,35 @@ public class FreeDetails implements Parcelable {
             public void setPhotoUrl(String photoUrl) {
                 this.photoUrl = photoUrl;
             }
-        }
 
-        public DataBean() {
+            @Override
+            public int describeContents() {
+                return 0;
+            }
+
+            @Override
+            public void writeToParcel(Parcel dest, int flags) {
+                dest.writeString(this.photoUrl);
+            }
+
+            public CommodityUrlsBean() {
+            }
+
+            protected CommodityUrlsBean(Parcel in) {
+                this.photoUrl = in.readString();
+            }
+
+            public static final Creator<CommodityUrlsBean> CREATOR = new Creator<CommodityUrlsBean>() {
+                @Override
+                public CommodityUrlsBean createFromParcel(Parcel source) {
+                    return new CommodityUrlsBean(source);
+                }
+
+                @Override
+                public CommodityUrlsBean[] newArray(int size) {
+                    return new CommodityUrlsBean[size];
+                }
+            };
         }
 
         @Override
@@ -186,9 +221,13 @@ public class FreeDetails implements Parcelable {
             dest.writeString(this.type);
             dest.writeString(this.time);
             dest.writeString(this.gid);
+            dest.writeString(this.form);
             dest.writeString(this.zid);
             dest.writeList(this.commodityUrls);
             dest.writeStringList(this.briefUrls);
+        }
+
+        public DataBean() {
         }
 
         protected DataBean(Parcel in) {
@@ -199,6 +238,7 @@ public class FreeDetails implements Parcelable {
             this.type = in.readString();
             this.time = in.readString();
             this.gid = in.readString();
+            this.form = in.readString();
             this.zid = in.readString();
             this.commodityUrls = new ArrayList<CommodityUrlsBean>();
             in.readList(this.commodityUrls, CommodityUrlsBean.class.getClassLoader());

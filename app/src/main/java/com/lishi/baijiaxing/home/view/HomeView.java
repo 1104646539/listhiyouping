@@ -15,7 +15,7 @@ import java.util.List;
  * Created by Administrator on 2016/8/17.
  */
 public interface HomeView extends BaseView<HomeBean> {
-    void onPullSuccess(List<Commodity.DataBean> datas);
+    void onPullSuccess(List<Commodity.DataBean.CommodityListBean> datas);
 
     void onPullloadFailed(String error);
 
@@ -25,7 +25,7 @@ public interface HomeView extends BaseView<HomeBean> {
 
     void getSeckillSuccess(Seckill.DataBean seckill);
 
-    void getCommodityListSuccess(List<Commodity.DataBean> commodities);
+    void getCommodityListSuccess(List<Commodity.DataBean.CommodityListBean> commodities);
 
     void getAdListFailed(String error);
 
@@ -34,4 +34,6 @@ public interface HomeView extends BaseView<HomeBean> {
     void getSeckillFailed(String error);
 
     void getCommodityListFailed(String error);
+
+    void onLastPage(String status);
 }

@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/yiYuan_hot_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/free_item_linear_height"
+        android:layout_height="@dimen/free_item_linear_height"
         android:scaleType="centerCrop"
         android:src="@drawable/yiyuan_hot_photo"/>
 

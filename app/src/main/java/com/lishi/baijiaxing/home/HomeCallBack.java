@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Administrator on 2016/9/29.
  */
 public interface HomeCallBack extends BaseRequestCallBack {
-    void pullToRefreshSuccess(List<Commodity.DataBean> data);
+    void pullToRefreshSuccess(List<Commodity.DataBean.CommodityListBean> data);
 
     void pullToRefreshFailed(String error);
 
@@ -24,7 +24,7 @@ public interface HomeCallBack extends BaseRequestCallBack {
 
     void getSeckillSuccess(Seckill.DataBean seckillBeen);
 
-    void getCommodityListSuccess(List<Commodity.DataBean> commodities);
+    void getCommodityListSuccess(List<Commodity.DataBean.CommodityListBean> commodities);
 
     void getAdListFailed(String error);
 
@@ -33,4 +33,6 @@ public interface HomeCallBack extends BaseRequestCallBack {
     void getSeckillFailed(String error);
 
     void getCommodityListFailed(String error);
+
+    void onLastPage(String status);
 }

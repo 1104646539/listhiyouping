@@ -56,10 +56,12 @@ import com.lishi.baijiaxing.seckill.SeckillActivity;
 import com.lishi.baijiaxing.utils.NetUtils;
 import com.lishi.baijiaxing.utils.ProgressBarUtil;
 import com.lishi.baijiaxing.utils.TimeUtils;
+import com.lishi.baijiaxing.view.MyDefaultFooter;
 import com.lishi.baijiaxing.view.MyGridView;
 import com.lishi.baijiaxing.yiyuan.adapter.YiYuanHotAdapter;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanActivity;
 import com.lishi.baijiaxing.yiyuan.view.YiYuanDetailsActivity;
+import com.orhanobut.logger.Logger;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -108,8 +110,8 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
     private List<AdList.DataBean> mAdLists;//轮播图
     private Seckill.DataBean mSeckill;//秒杀
     private Festival.DataBean mFestival;//节日
-    private List<Commodity.DataBean> mCommodities = new ArrayList<>();//商品
-    private List<Commodity.DataBean> freeCommodity = new ArrayList<>();
+    private List<Commodity.DataBean.CommodityListBean> mCommodities = new ArrayList<>();//商品
+    private List<Commodity.DataBean.CommodityListBean> freeCommodity = new ArrayList<>();
     //转换后
     private JSONArray advertiseArray;
     private HomeNavigationAdapter mHomeNavigationAdapter;
@@ -120,6 +122,7 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
     private LinearLayout home_not_network, home_content;
     private RelativeLayout home_footer, home_header;
     private static Fragment_Home mFragment_home;
+    private MyDefaultFooter mMyDefaultFooter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -187,7 +190,8 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
         toTop.setOnClickListener(this);
         home_not_network.setOnClickListener(this);
         springView_home.setHeader(new DefaultHeader(getActivity()));
-        springView_home.setFooter(new DefaultFooter(getActivity()));
+        mMyDefaultFooter = new MyDefaultFooter(getActivity());
+        springView_home.setFooter(mMyDefaultFooter);
         springView_home.setListener(this);
         springView_home.setType(SpringView.Type.FOLLOW);
 
@@ -319,9 +323,9 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
                 break;
             case R.id.free_photo3:
                 Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
-                Commodity.DataBean fcd = freeCommodity.get(2);
-                if (fcd.getCid().equals("") && fcd != null) {
-                    startCommodityDetails.putExtra("gid", fcd.getCid());
+                Commodity.DataBean.CommodityListBean fcd = freeCommodity.get(2);
+                if (fcd != null && fcd.getGid() != null) {
+                    startCommodityDetails.putExtra("gid", fcd.getGid());
                     startActivity(startCommodityDetails);
                 }
                 break;
@@ -353,7 +357,7 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
     }
 
     @Override
-    public void onPullSuccess(List<Commodity.DataBean> datas) {
+    public void onPullSuccess(List<Commodity.DataBean.CommodityListBean> datas) {
         mCommodities.addAll(datas);
         mAdapter.notifyDataSetChanged();
 //        tv_load.setText("上拉加载更多");
@@ -435,7 +439,7 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
     }
 
     @Override
-    public void getCommodityListSuccess(List<Commodity.DataBean> commodities) {
+    public void getCommodityListSuccess(List<Commodity.DataBean.CommodityListBean> commodities) {
         Log.i("getCommodityListSuccess", "commodities:" + commodities.size());
         home_not_network.setVisibility(View.GONE);
         home_content.setVisibility(View.VISIBLE);
@@ -468,7 +472,7 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
         springView_home.onFinishFreshAndLoad();
     }
 
-    private void initFree(List<Commodity.DataBean> freeCommodity) {
+    private void initFree(List<Commodity.DataBean.CommodityListBean> freeCommodity) {
         Log.i("initFree", "initFree 0:" + freeCommodity.get(0).getPhotoUrl());
         Log.i("initFree", "initFree 1:" + freeCommodity.get(1).getPhotoUrl());
         Log.i("initFree", "initFree 2:" + freeCommodity.get(2).getPhotoUrl());
@@ -498,6 +502,13 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
             home_not_network.setVisibility(View.VISIBLE);
         }
         springView_home.onFinishFreshAndLoad();
+    }
+
+    @Override
+    public void onLastPage(String status) {
+        springView_home.onFinishFreshAndLoad();
+        mMyDefaultFooter.setMoreLoad(false);
+        Logger.d("home:"+"到底了");
     }
 
     @Override
@@ -560,9 +571,9 @@ public class Fragment_Home extends BaseFragment implements View.OnClickListener,
             startActivity(startYiYuanDetails);
         } else {
             Intent startCommodityDetails = new Intent(getActivity(), CommodityDetailsActivity.class);
-            if (mCommodities.get(position) != null && !mCommodities.get(position).getCid().equals("0")) {
+            if (mCommodities.get(position) != null && !mCommodities.get(position).getGid().equals("0")) {
                 if (mCommodities.get(position) != null && !mCommodities.get(position).equals("0") && NetUtils.isConnected(getActivity())) {
-                    startCommodityDetails.putExtra("gid", mCommodities.get(position).getCid());
+                    startCommodityDetails.putExtra("gid", mCommodities.get(position).getGid());
                     startActivity(startCommodityDetails);
                 }
             }

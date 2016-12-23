@@ -71,6 +71,8 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
     private BadgeView mBadgeView;
     private final static int REQUEST_FREE = 2;//免费申请
     private final static int REQUEST_FREIGHT = 3;//付邮领
+    private final static int REQUEST_NOWBUY = 4;//立即购买
+    private boolean isSuccess = false;
 
 
     public static Fragment_FreeDetails_Details newInstance() {
@@ -128,8 +130,8 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
 
     private void initBottomView() {
         int type = Integer.valueOf(freeDetailsBean.getData().getType());
+        Logger.d("initBottomView,Type:" + type);
         changeBottom(type);
-        Log.e("initBottomView", "Type = Type = Type = Type = Type = " + type);
     }
 
     private void changeBottom(int position) {
@@ -213,20 +215,39 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.free_details_bottom1_1://已结束-> 直接购买
-                Intent startSubmitOrderActivity = new Intent(getActivity(), SubmitOrderActivity.class);
-                ArrayList<CommodityBean> commodityBeens1 = new ArrayList<>();
-//                CommodityBean commodityBeen = new CommodityBean(""
-//                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
-//                commodityBeens1.add(commodityBeen);
-                startSubmitOrderActivity.putParcelableArrayListExtra("list", commodityBeens1);
-                startActivity(startSubmitOrderActivity);
+                nowBuy();
                 break;
             case R.id.free_details_bottom1_2://进行中->已申请 付邮领
-                Intent startDeliveryAddress1Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
-                startActivityForResult(startDeliveryAddress1Activity, 1);
+                if (LoginUtil.getInstance().isLogin()) {
+                    if (freeDetailsBean.getData().getForm().equals("2")) {
+                        Toast.makeText(getActivity(), "form：" + freeDetailsBean.getData().getForm(), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
+                    ArrayList<SCCommodityList.DataBean> dataBeanList = new ArrayList<>();
+                    SCCommodityList.DataBean dataBean = new SCCommodityList.DataBean();
+                    dataBean.setBuyNum("1");
+                    dataBean.setType("3");
+                    dataBean.setPrice("0");
+                    dataBean.setGid(freeDetailsBean.getData().getGid());
+                    dataBean.setName(freeDetailsBean.getData().getName());
+                    dataBean.setPhotoUrl(freeDetailsBean.getData().getCommodityUrls().get(0).getPhotoUrl());
+                    dataBeanList.add(dataBean);
+                    startSubmitOrder2Activity.putExtra("type", "3");
+                    startSubmitOrder2Activity.putParcelableArrayListExtra("list", dataBeanList);
+                    startSubmitOrder2Activity.putExtra("zid", freeDetailsBean.getData().getZid());
+                    startActivityForResult(startSubmitOrder2Activity, REQUEST_FREIGHT);
+                } else {
+                    Intent startLoginActivity2 = new Intent(getActivity(), LoginActivity.class);
+                    startActivityForResult(startLoginActivity2, StartLoginRequest.PERSONAL);
+                }
                 break;
             case R.id.free_details_bottom1_3://进行中->未申请 付邮领
                 if (LoginUtil.getInstance().isLogin()) {
+                    if (freeDetailsBean.getData().getForm().equals("2")) {
+                        Toast.makeText(getActivity(), "form：" + freeDetailsBean.getData().getForm(), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
                     ArrayList<SCCommodityList.DataBean> dataBeanList = new ArrayList<>();
                     SCCommodityList.DataBean dataBean = new SCCommodityList.DataBean();
@@ -247,13 +268,7 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
                 }
                 break;
             case R.id.free_details_bottom1_4://即将开始-> 直接购买
-                Intent startSubmitOrder2Activity = new Intent(getActivity(), SubmitOrderActivity.class);
-                ArrayList<CommodityBean> commodityBeens2 = new ArrayList<>();
-//                CommodityBean commodityBeen2 = new CommodityBean(""
-//                        , freeDetailsBean.getName(), "", freeDetailsBean.getPrice(), 11200, Integer.valueOf("1"), true);
-//                commodityBeens2.add(commodityBeen2);
-                startSubmitOrder2Activity.putParcelableArrayListExtra("list", commodityBeens2);
-                startActivity(startSubmitOrder2Activity);
+                nowBuy();
                 break;
             case R.id.free_details_bottom2_1://即将开始-> 即将开始
                 Toast.makeText(getActivity(), "活动即将开始，请持续关注", Toast.LENGTH_SHORT).show();
@@ -262,7 +277,12 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
                 Toast.makeText(getActivity(), "您已参加过这次活动", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.free_details_bottom2_3://进行中->未申请 免费申请
+
                 if (LoginUtil.getInstance().isLogin()) {
+                    if (freeDetailsBean.getData().getForm().equals("1")) {
+                        Toast.makeText(getActivity(), "form：" + freeDetailsBean.getData().getForm(), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     Intent startDeliveryAddress3Activity = new Intent(getActivity(), DeliveryAddressActivity.class);
                     startActivityForResult(startDeliveryAddress3Activity, REQUEST_FREE);
                 } else {
@@ -281,12 +301,33 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
         }
     }
 
+    /**
+     * 立即购买
+     */
+    private void nowBuy() {
+        Intent startSubmitActivity = new Intent(getActivity(), SubmitOrderActivity.class);
+        ArrayList<SCCommodityList.DataBean> dataBeanList = new ArrayList<>();
+        SCCommodityList.DataBean dataBean = new SCCommodityList.DataBean();
+        dataBean.setBuyNum("1");
+        dataBean.setType("1");
+        dataBean.setPrice(freeDetailsBean.getData().getPrice());
+        dataBean.setGid(freeDetailsBean.getData().getGid());
+        dataBean.setName(freeDetailsBean.getData().getName());
+        dataBean.setPhotoUrl(freeDetailsBean.getData().getCommodityUrls().get(0).getPhotoUrl());
+        dataBeanList.add(dataBean);
+        startSubmitActivity.putExtra("type", "1");
+        startSubmitActivity.putParcelableArrayListExtra("list", dataBeanList);
+        startActivityForResult(startSubmitActivity, REQUEST_NOWBUY);
+        startActivity(startSubmitActivity);
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == getActivity().RESULT_OK) {
             if (requestCode == 1) {
-                Toast.makeText(getActivity(), "付邮领成功", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "付邮领成功", Toast.LENGTH_SHORT).show();
+                lazyLoad();
             } else if (requestCode == 2) {
                 AddressList.DataBean address = data.getParcelableExtra("address");
                 //去申请免费领
@@ -311,13 +352,16 @@ public class Fragment_FreeDetails_Details extends BaseFragmentV4 implements Free
 
     @Override
     public void submitApplySuccess(SubmitOrder submitOrder) {
+        isSuccess = true;
         Intent startFreeresultActivity = new Intent(getActivity(), FreeResultActivity.class);
         startFreeresultActivity.putExtra("type", "free");
-        startActivity(startFreeresultActivity);
+        startActivityForResult(startFreeresultActivity, 3);
+        lazyLoad();
     }
 
     @Override
     public void submitApplyFailed(String error) {
+        isSuccess = false;
         Logger.d(error);
         Toast.makeText(getActivity(), "操作失败:" + error, Toast.LENGTH_SHORT).show();
     }

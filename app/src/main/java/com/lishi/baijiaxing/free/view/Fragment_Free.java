@@ -72,6 +72,12 @@ public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, F
         initView();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        lazyLoad();
+    }
+
     /**
      * 初始化
      */
@@ -112,15 +118,15 @@ public class Fragment_Free extends BaseFragmentV4 implements FreeFragmentView, F
 
             FreeFragmentGridAdapter adapter = new FreeFragmentGridAdapter(getActivity(), mFreeList.getData());
             mRecyclerView.setAdapter(adapter);
-            mRecyclerView.removeItemDecoration(verticalDividerItemDecoration);
+//            mRecyclerView.removeItemDecoration(verticalDividerItemDecoration);
             adapter.setMonFreeGridClickLister(this);
         } else {
             LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(layoutManager);
-            mRecyclerView.removeItemDecoration(verticalDividerItemDecoration);
+//            mRecyclerView.removeItemDecoration(verticalDividerItemDecoration);
             FreeFragmentLinearAdapter adapter = new FreeFragmentLinearAdapter(getActivity(), mFreeList.getData());
             mRecyclerView.setAdapter(adapter);
-            mRecyclerView.addItemDecoration(verticalDividerItemDecoration);
+//            mRecyclerView.addItemDecoration(verticalDividerItemDecoration);
             adapter.setOnFreeGridItemClick(this);
         }
     }
